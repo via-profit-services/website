@@ -1,0 +1,27 @@
+/node_modules/
+/.env
+/log
+/sandbox.js
+
+# jest
+/coverage
+
+# webpack temporary dir
+/build
+/dist
+
+# SSL cert
+/.keys
+/source-code*
+
+# localstorage for server
+*.localdb.json
+
+# react-intl extracted
+/extracted-messages
+
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions

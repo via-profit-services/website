@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "@via-profit-services/eslint-config/react"
+  ],
+  "rules": {
+    "file-progress/activate": 1
+  },
+  "plugins": [
+    "file-progress"
+  ]
+}
