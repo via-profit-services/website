@@ -16,9 +16,6 @@ const config: Configuration =  {
         use: [
           {
             loader: 'raw-loader',
-            options: {
-              name: 'markdown/[name].[hash].[ext]',
-            },
           },
         ],
       },

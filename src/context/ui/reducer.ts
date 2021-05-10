@@ -1,9 +1,9 @@
-import { Store, Action } from './types';
+import { UIStore, Action } from './context';
 
-export const reducer = (state: Store, action: Action): Store => {
+export const reducer = (state: UIStore, action: Action): UIStore => {
   switch (action.type) {
     case 'setUI': {
-      const newState: Store = {
+      const newState: UIStore = {
         ...state,
         ...action.payload,
       };

@@ -12,6 +12,15 @@ const config: Configuration = {
         use: ['babel-loader'],
       },
       {
+        test: /\.md$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'raw-loader',
+          },
+        ],
+      },
+      {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
         exclude: /node_modules/,
         use: [

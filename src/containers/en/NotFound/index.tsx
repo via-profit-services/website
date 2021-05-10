@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { useIntl } from 'react-intl';
 import { Link, Route } from 'react-router-dom';
 
-import ContentArea from '~/components/ui/ContentArea';
+import ContentArea from '~/components/ContentArea';
 
 const scope = 'containers.NotFound';
 

@@ -1,15 +1,5 @@
 import 'styled-components'
 
-
-interface GridParams {
-  visible: boolean;
-  column: number;
-  columns: number;
-  gutter: number;
-  maxWidth: number;
-  safeFrame: number;
-}
-
 declare module 'styled-components' {
   export interface DefaultTheme {
     fontSize: number;
@@ -20,9 +10,11 @@ declare module 'styled-components' {
       terms: number;
     };
     grid: {
-      desktop: GridParams;
-      tablet: GridParams;
-      mobile: GridParams;
+      visible: boolean;
+      column: number;
+      columns: number;
+      gutter: number;
+      safeFrame: number;
     };
     color: {
       text: {
@@ -30,19 +22,26 @@ declare module 'styled-components' {
         secondary: string;
       };
       primary: {
-        darkBlue: string;
-        blue: string;
-        lightBlue: string;
-        black: string;
-        white: string;
-        gray: string;
-        lightGray: string;
-        darkGray: string;
+        main: string;
+        light: string;
+        dark: string;
       };
       secondary: {
-        yellow: string;
-        green: string;
-        red: string;
+        main: string;
+        light: string;
+        dark: string;
+      };
+      background: {
+        main: string;
+        dark: string;
+      };
+      appBar: {
+        background: string;
+        color: string;
+      };
+      link: {
+        primary: string;
+        visited: string;
       };
       hover: string;
     };

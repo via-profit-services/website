@@ -3,13 +3,13 @@ import { useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 
 import buildUrl from '~/utils/buildUrl';
-import { Context } from '~/context/ui';
+import { UIContext } from '~/context/ui';
 
 const scope = 'containers.Docs.index';
 
 const DocsNavBar: React.FC = () => {
   const intl = useIntl();
-  const { state } = useContext(Context);
+  const { state } = useContext(UIContext);
   const { locale } = state;
 
   return (

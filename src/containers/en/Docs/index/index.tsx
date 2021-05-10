@@ -1,14 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useIntl } from 'react-intl';
+import ReactMarkdown from 'react-markdown';
 
-import ContentArea from '~/components/ui/ContentArea';
+import ContentArea from '~/components/ContentArea';
 import DocsNavBar from '~/components/DocsNavBar';
+import docsIndexMarkdown from '~/docs/en/index.md';
 
+const scope = 'containers.Docs.index';
 
-const scope = 'containers.Docs.knex';
-
-const DocsKnex: React.FC = () => {
+const DocsIndex: React.FC = () => {
   const intl = useIntl();
 
   return (
@@ -16,17 +17,18 @@ const DocsKnex: React.FC = () => {
       <Helmet>
         <title>{intl.formatMessage({
           id: `${scope}.meta.title`,
-          defaultMessage: 'Knex',
+          defaultMessage: 'Index',
         })}</title>
 
       </Helmet>
       <ContentArea>
         <DocsNavBar />
-        <h1>Knex</h1>
-        <p>Knex documentation</p>
+        <ReactMarkdown>
+          {docsIndexMarkdown}
+        </ReactMarkdown>
       </ContentArea>
     </>
   )
 }
 
-export default DocsKnex;
+export default DocsIndex;

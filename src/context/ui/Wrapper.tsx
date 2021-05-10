@@ -1,11 +1,10 @@
 import React, { useReducer } from 'react';
 
-import { Context, initialState as initState } from './context';
+import { UIContext, UIStore, initialState as initState } from './context';
 import reducer from './reducer';
-import { Store } from './types';
 
 interface WrapperProps {
-  initialState?: Partial<Store>;
+  initialState?: Partial<UIStore>;
   children: React.ReactNode | React.ReactNode[];
 }
 
@@ -17,9 +16,9 @@ const Wrapper: React.FC<WrapperProps> = (props) => {
   });
 
   return (
-    <Context.Provider value={{ state, dispatch }}>
+    <UIContext.Provider value={{ state, dispatch }}>
       <>{children}</>
-    </Context.Provider>
+    </UIContext.Provider>
   )
 };
 

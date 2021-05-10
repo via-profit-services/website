@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useIntl } from 'react-intl';
 
-import { Context } from '~/context/ui';
+import { UIContext } from '~/context/ui';
 
 const scope = 'components.Meta';
 export const Meta: React.FC = () => {
-  const { state } = useContext(Context);
+  const { state } = useContext(UIContext);
   const { locale } = state;
   const intl = useIntl();
 

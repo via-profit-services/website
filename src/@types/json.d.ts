@@ -1,4 +1,7 @@
 declare module "*.json" {
-  const value: any;
+  type JSONValue = JSON | string | number | null | boolean;
+  type JSON = Record<string | number, JSON | JSONValue | JSONValue[] | JSON[]>;
+  
+  const value: JSON;
   export default value;
 }

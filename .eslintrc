@@ -3,7 +3,12 @@
     "@via-profit-services/eslint-config/react"
   ],
   "rules": {
-    "file-progress/activate": 1
+    "file-progress/activate": 1,
+    "import/extensions": ["error", "never",
+      {
+      "md": "always"
+      }
+    ]
   },
   "plugins": [
     "file-progress"

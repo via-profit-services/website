@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-import common from './common';
+import light from './light';
+import dark from './dark';
 
-export { common };
+export { light, dark };
