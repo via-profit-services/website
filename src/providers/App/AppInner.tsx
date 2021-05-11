@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { IntlProvider, ReactIntlErrorCode, IntlConfig } from 'react-intl';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 
-import UIContextWrapper ,{ UIStore, UIContext } from '~/context/ui';
+import { UIStore, UIContext } from '~/context/ui';
 import ErrorBoundary from '~/components/ui/ErrorBoundary';
 import Meta from '~/components/Meta';
 import Routes from '~/routes/Routes';
@@ -10,6 +10,7 @@ import * as messagesList from '~/translations';
 import * as themes from '~/themes';
 import GlobalStyles from '~/themes/GlobalStyles';
 import AppBar from '~/components/AppBar';
+import Footer from '~/components/Footer';
 
 
 
@@ -46,6 +47,7 @@ const AppInner: React.FC<AppInnerProps> = (props) => {
         <ErrorBoundary>
           <AppBar />
           <Routes />
+          <Footer />
         </ErrorBoundary>
       </ThemeProvider>
     </IntlProvider>

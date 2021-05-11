@@ -6,20 +6,22 @@ import LightThemeIcon from 'mdi-react/WeatherSunnyIcon';
 import { UIContext, actionSetUI } from '~/context/ui';
 
 
-const Button = styled.button`
+const Button = styled.a`
   border: none;
   outline: 0;
   background: none;
-  padding: 0;
+  padding: ${props => props.theme.grid.gutter / 2}px;
   margin: 0;
   color: inherit;
+  cursor: pointer;
 `;
 
 const ThemeButton: React.FC = () => {
   const { state, dispatch } = useContext(UIContext);
   const { theme } = state;
 
-  const handleChangeTheme = () => {
+  const handleChangeTheme: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
+    event.preventDefault();
     const newTheme = theme === 'light' ? 'dark' : 'light';
     dispatch(actionSetUI({
       theme: newTheme,
@@ -28,6 +30,7 @@ const ThemeButton: React.FC = () => {
 
   return (
     <Button
+      href="#theme-button"
       onClick={handleChangeTheme}
     >
       {theme === 'light' && <LightThemeIcon />}

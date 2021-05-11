@@ -30,35 +30,40 @@ const RightSidebarWrapper = styled.div`
 
 const LeftSidebar = styled.div`
   position: sticky;
-  top: 40px;
+  top: 70px;
 `;
 
 const RightSidebar = styled.div`
   position: sticky;
-  top: 40px;
+  top: 70px;
 `;
 
 export type ContentAreaProps = {
   children: React.ReactNode | React.ReactNode[];
+  sidebar?: React.ReactNode | React.ReactNode[];
   menuBar?: React.ReactNode | React.ReactNode[];
 };
 
 const ContentArea: React.FC<ContentAreaProps> = (props) => {
-  const { children, menuBar } = props;
+  const { children, sidebar, menuBar } = props;
 
   return (
     <Container>
-      <LeftSidebarWrapper>
-        <LeftSidebar>
-          Left sidebar
-        </LeftSidebar>
-      </LeftSidebarWrapper>
+      {typeof sidebar !== 'undefined' && (
+        <LeftSidebarWrapper>
+          <LeftSidebar>
+            {sidebar}
+          </LeftSidebar>
+        </LeftSidebarWrapper>
+      )}
       <ContentWrapper>
         {children}
       </ContentWrapper>
-      <RightSidebarWrapper>
-        <RightSidebar>{menuBar}</RightSidebar>
-      </RightSidebarWrapper>
+      {typeof menuBar !== 'undefined' && (
+        <RightSidebarWrapper>
+          <RightSidebar>{menuBar}</RightSidebar>
+        </RightSidebarWrapper>
+      )}
     </Container>
   )
 }

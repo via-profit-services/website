@@ -33,3 +33,29 @@ declare module '*!raw' {
   const content: string | any;
   export default content;
 }
+
+declare module '*.woff' {
+  const content: string | any;
+  export default content;
+}
+
+declare module "*.md" {
+  const markdown: string;
+  export default markdown;
+}
+
+declare module "*.json" {
+  type JSONValue = JSON | string | number | null | boolean;
+  type JSON = Record<string | number, JSON | JSONValue | JSONValue[] | JSON[]>;
+  
+  const value: JSON;
+  export default value;
+}
+
+declare module '*.css' {
+  interface IClassNames {
+    [className: string]: string
+  }
+  const classNames: IClassNames;
+  export = classNames;
+}

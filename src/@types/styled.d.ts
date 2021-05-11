@@ -10,9 +10,6 @@ declare module 'styled-components' {
       terms: number;
     };
     grid: {
-      visible: boolean;
-      column: number;
-      columns: number;
       gutter: number;
       safeFrame: number;
     };

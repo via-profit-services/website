@@ -22,7 +22,10 @@ const DocsCore: React.FC = () => {
         })}</title>
 
       </Helmet>
-      <ContentArea menuBar={<DocsNavBar />}>
+      <ContentArea
+        sidebar={<>Sidebar</>}
+        menuBar={<DocsNavBar />}
+      >
         <MarkdownRender
           components={{
             img: ({ src, alt }) => {

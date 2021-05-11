@@ -9,11 +9,8 @@ const light: DefaultTheme = {
     terms: 20,
   },
   grid: {
-    visible: false,
-    column: 88,
-    columns: 12,
     gutter: 24,
-    safeFrame: 1096,
+    safeFrame: 1760,
   },
   color: {
     text: {
@@ -35,7 +32,7 @@ const light: DefaultTheme = {
       dark: '#c8c8c8',
     },
     appBar: {
-      background: '#58018a',
+      background: 'rgba(24, 2, 64, 0.9)',
       color: '#fff',
     },
     link: {

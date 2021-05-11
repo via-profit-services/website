@@ -3,6 +3,6 @@ import React from 'react';
 
 import LoadingIndicator from '~/components/ui/LoadingIndicator';
 
-export default loadable(() => import(/* webpackChunkName: "Docs" */'./index'), {
+export default loadable(() => import(/* webpackChunkName: "Examples" */'./index'), {
   fallback: <LoadingIndicator />,
 });

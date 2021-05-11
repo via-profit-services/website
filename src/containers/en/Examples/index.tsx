@@ -4,9 +4,9 @@ import { useIntl } from 'react-intl';
 
 import ContentArea from '~/components/ContentArea';
 
-const scope = 'containers.Contact';
+const scope = 'containers.Examples';
 
-const Contact: React.FC = () => {
+const Examples: React.FC = () => {
   const intl = useIntl();
 
   return (
@@ -14,16 +14,16 @@ const Contact: React.FC = () => {
       <Helmet>
         <title>{intl.formatMessage({
           id: `${scope}.meta.title`,
-          defaultMessage: 'Contact',
+          defaultMessage: 'Examples',
         })}</title>
 
       </Helmet>
       <ContentArea>
-        <h1>Contact</h1>
-        <p>Lorem ipsum of contact</p>
+        <h1>Examples</h1>
+        <p>Lorem ipsum of Examples</p>
       </ContentArea>
     </>
   )
 }
 
-export default Contact;
+export default Examples;
