@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import { useIntl } from 'react-intl';
 import ReactMarkdown from 'react-markdown';
 
+import AppBar from '~/components/AppBar';
+import Footer from '~/components/Footer';
 import ContentArea from '~/components/ContentArea';
 import DocsNavBar from '~/components/DocsNavBar';
 import docsIndexMarkdown from '~/docs/en/index.md';
@@ -21,12 +23,15 @@ const DocsIndex: React.FC = () => {
         })}</title>
 
       </Helmet>
-      <ContentArea>
-        <DocsNavBar />
+      <AppBar />
+      <ContentArea
+        sidebar={<DocsNavBar />}
+      >
         <ReactMarkdown>
           {docsIndexMarkdown}
         </ReactMarkdown>
       </ContentArea>
+      <Footer />
     </>
   )
 }

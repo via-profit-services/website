@@ -6,25 +6,26 @@ const Container = styled.div`
   margin: 0 auto;
   display: flex;
   max-width: ${props => props.theme.grid.safeFrame}px;
-  padding: 0 ${props => props.theme.grid.gutter / 2}px;
   width: 100%;
 `;
 
 const ContentWrapper = styled.div`
   flex: 1;
   width: 1px;
-  padding: 0 15px;
+  padding: 0 ${props => props.theme.grid.gutter / 2}px;
 `;
 
 const LeftSidebarWrapper = styled.div`
   width: 240px;
-  padding: 0 15px 0 0;
+  padding-left: ${props => props.theme.grid.gutter / 2}px;
   border-right: 1px solid #bebebe;
+  background: #28293c;
+  /* box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%); */
 `;
 
 const RightSidebarWrapper = styled.div`
   width: 160px;
-  padding: 0 0 0 15px;
+  padding-right: ${props => props.theme.grid.gutter / 2}px;
 `;
 
 
@@ -39,9 +40,9 @@ const RightSidebar = styled.div`
 `;
 
 export type ContentAreaProps = {
-  children: React.ReactNode | React.ReactNode[];
-  sidebar?: React.ReactNode | React.ReactNode[];
-  menuBar?: React.ReactNode | React.ReactNode[];
+  children: React.ReactNode;
+  sidebar?: React.ReactNode;
+  menuBar?: React.ReactNode;
 };
 
 const ContentArea: React.FC<ContentAreaProps> = (props) => {
@@ -49,7 +50,7 @@ const ContentArea: React.FC<ContentAreaProps> = (props) => {
 
   return (
     <Container>
-      {typeof sidebar !== 'undefined' && (
+      {sidebar && (
         <LeftSidebarWrapper>
           <LeftSidebar>
             {sidebar}
@@ -59,7 +60,7 @@ const ContentArea: React.FC<ContentAreaProps> = (props) => {
       <ContentWrapper>
         {children}
       </ContentWrapper>
-      {typeof menuBar !== 'undefined' && (
+      {menuBar && (
         <RightSidebarWrapper>
           <RightSidebar>{menuBar}</RightSidebar>
         </RightSidebarWrapper>

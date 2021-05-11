@@ -10,7 +10,6 @@ const Button = styled.a`
   border: none;
   outline: 0;
   background: none;
-  padding: ${props => props.theme.grid.gutter / 2}px;
   margin: 0;
   color: inherit;
   cursor: pointer;

@@ -32,7 +32,7 @@ const light: DefaultTheme = {
       dark: '#c8c8c8',
     },
     appBar: {
-      background: 'rgba(24, 2, 64, 0.9)',
+      background: '#7200b4',
       color: '#fff',
     },
     link: {

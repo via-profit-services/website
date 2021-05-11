@@ -75,7 +75,7 @@ export default createGlobalStyle`
   }
   a {
     color: ${props => props.theme.color.link.primary};
-    font-weight: bold;
+    font-weight: 200;
   }
   a:visited {
     color: ${props => props.theme.color.link.visited};

@@ -4,6 +4,8 @@ import { useIntl } from 'react-intl';
 
 import MarkdownRender from '~/components/MarkdownRender';
 import ContentArea from '~/components/ContentArea';
+import AppBar from '~/components/AppBar';
+import Footer from '~/components/Footer';
 import DocsNavBar from '~/components/DocsNavBar';
 import introducion from '~/docs/en/core/v1.1.2/introduction.md';
 import badgeImage from '~/../assets/images/via-profit-services-cover.png';
@@ -22,6 +24,7 @@ const DocsCore: React.FC = () => {
         })}</title>
 
       </Helmet>
+      <AppBar />
       <ContentArea
         sidebar={<>Sidebar</>}
         menuBar={<DocsNavBar />}
@@ -42,6 +45,7 @@ const DocsCore: React.FC = () => {
           {introducion}
         </MarkdownRender>
       </ContentArea>
+      <Footer />
     </>
   )
 }

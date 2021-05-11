@@ -9,9 +9,6 @@ import Routes from '~/routes/Routes';
 import * as messagesList from '~/translations';
 import * as themes from '~/themes';
 import GlobalStyles from '~/themes/GlobalStyles';
-import AppBar from '~/components/AppBar';
-import Footer from '~/components/Footer';
-
 
 
 type AppInnerProps = {
@@ -45,9 +42,7 @@ const AppInner: React.FC<AppInnerProps> = (props) => {
         <Meta />
         <GlobalStyles />
         <ErrorBoundary>
-          <AppBar />
           <Routes />
-          <Footer />
         </ErrorBoundary>
       </ThemeProvider>
     </IntlProvider>

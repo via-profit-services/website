@@ -4,6 +4,8 @@ import { useIntl } from 'react-intl';
 
 import MarkdownRender from '~/components/MarkdownRender';
 import ContentArea from '~/components/ContentArea';
+import AppBar from '~/components/AppBar';
+import Footer from '~/components/Footer';
 import DocsNavBar from '~/components/DocsNavBar';
 import introduction from '~/docs/en/knex/v1.1.2/introduction.md';
 
@@ -21,12 +23,14 @@ const DocsKnex: React.FC = () => {
         })}</title>
 
       </Helmet>
+      <AppBar />
       <ContentArea>
         <DocsNavBar />
         <MarkdownRender>
           {introduction}
         </MarkdownRender>
       </ContentArea>
+      <Footer />
     </>
   )
 }
