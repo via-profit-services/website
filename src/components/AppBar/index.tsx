@@ -3,15 +3,14 @@ import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
-import buildUrl from '~/utils/buildUrl';
-import { UIContext } from '~/context/ui';
+import { UIContext, useUrlMap } from '~/context/ui';
 import ThemeButton from './ThemeButton';
 import Logo from '~/components/Logo';
 import { GITHUB_URL, VIAPROFIT_URL } from '~/utils/constants';
 
 
 const TopbarWrapper = styled.div`
-  background: #541b76;
+  background: #3c1255;
 `;
 
 const Topbar = styled.div`
@@ -22,7 +21,6 @@ const Topbar = styled.div`
   width: 100%;
   max-width: ${props => props.theme.grid.safeFrame}px;
   padding: 0 ${props => props.theme.grid.gutter / 2}px;
-  background: #541b76;
 `;
 
 
@@ -35,7 +33,7 @@ const Menu = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: ${props => props.theme.color.appBar.background};
+  background: #541b76;
   color: ${props => props.theme.color.appBar.color};
   z-index: ${props => props.theme.zIndex.appBar};
   position: sticky;
@@ -89,7 +87,7 @@ const TopBarLink = styled.a<{ margin?: boolean }>`
 
 
 const Item = styled(Link)`
-  font-weight: 200;
+  font-weight: normal;
   padding: 18px 12px;
   text-decoration: none;
   color: inherit;
@@ -98,14 +96,29 @@ const Item = styled(Link)`
   }
 `;
 
+
+const Version = styled.div`
+  font-weight: normal;
+  padding: 0.03em 0.6em;
+  text-decoration: none;
+  color: inherit;
+  background: #d0c3ff;
+  color: #3c1255;
+  border-radius: 10px;
+  margin-left: 12px;
+`;
+
 const Flex = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
 `;
 
 const scope = 'components.AppBar';
 
 const AppBar: React.FC = () => {
   const { state } = useContext(UIContext);
+  const { urlMap } = useUrlMap();
   const { locale } = state;
 
 
@@ -119,6 +132,9 @@ const AppBar: React.FC = () => {
                 id={`${scope}title`}
                 defaultMessage="@via-profit-services"
               />
+              <Version>
+                v1.0.0
+              </Version>
             </Flex>
             <TopBarLink
               href={VIAPROFIT_URL}
@@ -145,32 +161,38 @@ const AppBar: React.FC = () => {
       </TopbarWrapper>
       <Menu>
         <Toolbar>
-          <Item to={buildUrl(locale, '/')}>
+          <LogoLink to={urlMap.home}>
+            <Logo variant="inline" primary="#fff" secondary="#d0c3ff" />
+          </LogoLink>
+          
+          <Flex />
+          
+          <Item to={urlMap.home}>
             <FormattedMessage
               id={`${scope}`}
-              defaultMessage="Via Profit Services"
+              defaultMessage="Home"
             />
           </Item>
-          <Item to={buildUrl(locale, '/docs')}>
+          <Item to={urlMap.docs.introduction}>
             <FormattedMessage
               id={`${scope}`}
               defaultMessage="Docs"
             />
           </Item>
-          <Item to={buildUrl(locale, '/examples')}>
+          <Item to={urlMap.examples}>
             <FormattedMessage
               id={`${scope}`}
               defaultMessage="Examples"
             />
           </Item>
-          <Item to={buildUrl(locale, '/About')}>
+          <Item to={urlMap.about}>
             <FormattedMessage
               id={`${scope}`}
               defaultMessage="About"
             />
           </Item>
 
-          <Flex />
+          
 
           <IconsBar>
             <ThemeButton />

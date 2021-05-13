@@ -44,6 +44,11 @@ declare module "*.md" {
   export default markdown;
 }
 
+declare module "*.mustache" {
+  const mustache: string;
+  export default mustache;
+}
+
 declare module "*.json" {
   type JSONValue = JSON | string | number | null | boolean;
   type JSON = Record<string | number, JSON | JSONValue | JSONValue[] | JSON[]>;

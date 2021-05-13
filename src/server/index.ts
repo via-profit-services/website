@@ -7,12 +7,10 @@ import path from 'path';
 
 import renderHTML from './renderHTML';
 
-const app = express();
-const publicPath = path.resolve(__dirname, '../public');
-console.log('publicPath', publicPath)
-
 dotenv.config();
 
+const app = express();
+const publicPath = path.resolve(__dirname, './public');
 const server = http.createServer(app);
 
 const corsDefaultPolicy = [
@@ -38,7 +36,9 @@ app.use(helmet({
   },
 }));
 
-// Static content (images, fonts, etc.)
+/**
+ * Static files
+ */
 app.use('/public', express.static(publicPath));
 
 /**
@@ -88,15 +88,31 @@ app.use('/version', (_req, res) => {
 
 /**
  * Route
+ * Response application favicon
+ */
+app.use('/favicon.ico', (_req, res) => {
+  res.status(404).end();
+});
+
+
+/**
+ * Route
  * Common location. Just render HTML
  */
-app.use('/', async (req, res) => {
-  const { html, context } = renderHTML({ req });
+app.use('/', async (req, res, next) => {
+  const { url } = req;
+  if (url.match(/^\/public\//)) {
+    return next();
+  }
   
+  const { html, context } = renderHTML({ req });
+
   return res
     .status(context.statusCode || 200)
     .send(html);
 });
+
+
 
 // Start the http server to serve HTML page
 server.listen(Number(process.env.SERVER_PORT), process.env.SERVER_HOSTNAME, () => {

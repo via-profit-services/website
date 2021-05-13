@@ -1,19 +1,44 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import ReactMarkdown, { ReactMarkdownOptions } from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { materialOceanic as syntaxTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { UIContext } from '~/context/ui';
+const background = '#292d3e';
+const color = '#c3cee3';
 
+const style = {
+  ...syntaxTheme,
+  'code[class*=\"language-\"]': {
+    ...syntaxTheme['code[class*=\"language-\"]'],
+    background,
+    color,
+  },
+  'pre[class*="language-"]': {
+    ...syntaxTheme['pre[class*="language-"]'],
+    background,
+    color,
+    borderRadius: '8px',
+  },
+  comment: {
+    color: '#697098',
+  },
+  function: {
+    color: '#82aaff',
+  },
+  'class-name': {
+    color: '#82aaff',
+  },
+};
+
+const CodeSSR = styled.code({
+  ...style['pre[class*="language-"]'],
+  display: 'block',
+});
 
 const MarkdownRender: React.FC<ReactMarkdownOptions> = (props) => {
   const { children, components, ...otherProps } = props;
-  const { state } = useContext(UIContext);
-  const { theme } = state;
-  // const style = theme === 'light' ? atomOneLight : atomOneDark;
-  const style = materialDark;
 
   return (
     <ReactMarkdown
@@ -27,21 +52,26 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = (props) => {
           </Link>
         ),
         code: ({ className, children , inline}) => {
+          const codeString = String(children).replace(/\n$/, '');
+
           const language = String(className || '')
             .replace(/^language-/, '')
             .replace(/^ts$/, 'typescript');
 
           if (inline) {
-            return <code className="inline-code">{children}</code>
+            return <code>{codeString}</code>
+          }
+
+          if (typeof window === 'undefined') {
+            return <CodeSSR>{codeString}</CodeSSR>
           }
 
           return (
             <SyntaxHighlighter
-              showLineNumbers
               language={language}
               style={style}
             >
-              {children}
+              {codeString}
             </SyntaxHighlighter>
           )
         },

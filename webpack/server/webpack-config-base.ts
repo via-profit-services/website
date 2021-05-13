@@ -12,7 +12,7 @@ const config: Configuration = {
         use: ['babel-loader'],
       },
       {
-        test: /\.md$/,
+        test: /\.(md|mustache)$/,
         exclude: /node_modules/,
         use: [
           {
@@ -27,7 +27,7 @@ const config: Configuration = {
           {
             loader: 'file-loader',
             options: {
-              name: 'images/[contenthash]-[name].[ext]',
+              name: 'images/[contenthash].[ext]',
               emitFile: false,
             },
           },
@@ -81,7 +81,7 @@ const config: Configuration = {
           {
             loader: 'file-loader',
             options: {
-              name: 'fonts/[name].[contenthash].[ext]',
+              name: 'fonts/[contenthash].[ext]',
               emitFile: false,
             },
           },
@@ -94,7 +94,7 @@ const config: Configuration = {
           loader: 'file-loader',
           options: {
             limit: 0,
-            name: 'video/[name].[contenthash].[ext]',
+            name: 'video/[contenthash].[ext]',
           },
         },
       },

@@ -1,5 +1,3 @@
-/* eslint-disable import/max-dependencies */
-/* eslint-disable import/no-extraneous-dependencies */
 import fs from 'fs';
 import { ChunkExtractor } from '@loadable/server';
 import { Request } from 'express';
@@ -10,24 +8,32 @@ import { renderToString } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
 import { StaticRouter, StaticContext } from 'react-router';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+import NodeCache from 'node-cache';
 
+import mainTemplate from '~/../assets/templates/main.mustache';
 import App from '~/providers/App';
 
-interface IProps {
+interface Props {
   req: Request;
 }
 
-const renderHTML = (props: IProps) => {
+type RenderHTMLPayload = {
+  html: string;
+  context: StaticContext;
+};
+
+const htmlCache = new NodeCache({ stdTTL: 60 * 60 * 24 });
+
+const renderHTML = (props: Props): RenderHTMLPayload => {
   const { req } = props;
-  const statsFile = path.resolve(__dirname, '../public/loadable-stats.json');
-  const templateFilePath = path.resolve(__dirname, './templates/');
+  const data = htmlCache.get<RenderHTMLPayload>(req.url);
+
+  if (data) {
+    return data;
+  }
 
   const webExtractor = new ChunkExtractor({
-    statsFile,
-    entrypoints: ['index']
-    // entrypoints: process.env.NODE_ENV === 'development' ? ['index'] : ['main'],
-    // entrypoints: 'index',
-    // publicPath: '/public/',
+    statsFile: path.resolve(__dirname, './stats.json'),
   });
 
   const context: StaticContext = {
@@ -46,15 +52,10 @@ const renderHTML = (props: IProps) => {
 
   const htmlContent = renderToString(jsx);
   const helmet = Helmet.renderStatic();
-  const commonTemplate = fs.readFileSync(path.join(templateFilePath, 'main.mustache'), 'utf8');
-  const countersTemplate = fs.readFileSync(path.join(templateFilePath, 'counters.mustache'), 'utf8');
   const styleTags = sheet.getStyleTags();
   sheet.seal();
 
-  const counters = Mustache.render(countersTemplate, {});
-
-  const html = Mustache.render(commonTemplate, {
-    counters,
+  const html = Mustache.render(mainTemplate, {
     helmet: {
       title: helmet.title.toString(),
       base: helmet.base.toString(),
@@ -75,10 +76,11 @@ const renderHTML = (props: IProps) => {
     },
   });
 
-  return {
-    html,
-    context,
-  };
+  const payload = { context, html };
+
+  htmlCache.set<RenderHTMLPayload>(req.url, payload);
+
+  return payload;
 };
 
 export default renderHTML;

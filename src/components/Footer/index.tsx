@@ -20,6 +20,11 @@ const ContentInner = styled.div`
   border-top: 1px solid #1e1f2e;
 `;
 
+
+const BottomBar = styled.div`
+  background: #1e1f2e;
+`;
+
 const BottomInner = styled.div`
   display: flex;
   justify-content: center;
@@ -27,9 +32,9 @@ const BottomInner = styled.div`
   padding: 0 ${props => props.theme.grid.gutter / 2}px;
   margin: 0 auto;
   font-size: 0.9em;
-  background: #1e1f2e;
   padding: 12px 0;
 `;
+
 
 const FooterLink = styled(Link)`
   color: #8c8c8c;
@@ -131,9 +136,11 @@ const Footer: React.FC = () => {
           Section github
         </FooterSection>
       </ContentInner>
-      <BottomInner>
-        Other data
-      </BottomInner>
+      <BottomBar>
+        <BottomInner>
+          Other data
+        </BottomInner>
+      </BottomBar>
     </Container>
   )
 }

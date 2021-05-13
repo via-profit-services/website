@@ -11,6 +11,7 @@ export default createGlobalStyle`
     font-family: 'SF UI Text';
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     src: local('SF UI Text Regular'), url('${SFUITextRegular}') format('woff');
   }
 
@@ -18,6 +19,7 @@ export default createGlobalStyle`
     font-family: 'SF UI Text';
     font-style: normal;
     font-weight: 100;
+    font-display: swap;
     src: local('SF UI Text Light'), url('${SFUITextLight}') format('woff');
   }
 
@@ -25,6 +27,7 @@ export default createGlobalStyle`
     font-family: 'SF UI Text';
     font-style: normal;
     font-weight: 200;
+    font-display: swap;
     src: local('SF UI Text Semibold'), url('${SFUITextSemibold}') format('woff');
   }
 
@@ -32,6 +35,7 @@ export default createGlobalStyle`
     font-family: 'SF UI Text';
     font-style: normal;
     font-weight: 300;
+    font-display: swap;
     src: local('SF UI Text Bold'), url('${SFUITextBold}') format('woff');
   }
 
@@ -39,6 +43,7 @@ export default createGlobalStyle`
     font-family: 'SF UI Text';
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
     src: local('SF UI Text Italic'), url('${SFUITextRegularItalic}') format('woff');
   }
 
@@ -46,6 +51,7 @@ export default createGlobalStyle`
     font-family: 'SF UI Text';
     font-style: italic;
     font-weight: 300;
+    font-display: swap;
     src: local('SF UI Text Semibold Italic'), url('${SFUITextSemiboldItalic}') format('woff');
   }
 

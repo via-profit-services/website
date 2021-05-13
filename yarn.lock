@@ -3586,26 +3586,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:*":
-  version: 4.14.157
-  resolution: "@types/lodash@npm:4.14.157"
-  checksum: ea8d890a4d78f4690f9d8e5cb03f3581e8ea59047696e2c2114087ec471e891b3ce683e5344c9c15ea7bd9730b79e5fd808b3eff80a01741503ea59922c2bb83
-  languageName: node
-  linkType: hard
-
 "@types/lodash@npm:^4.14.165":
   version: 4.14.168
   resolution: "@types/lodash@npm:4.14.168"
   checksum: 9a4e25f89fc035b9f0388f1f7be85e5eff49f9e6db0d93432c9a89fce0916f8a89db4e8290415f7ea02de6b00d3573826378dcb655b7b2d20530a6e8d6dd6fd0
-  languageName: node
-  linkType: hard
-
-"@types/lowdb@npm:^1.0.9":
-  version: 1.0.9
-  resolution: "@types/lowdb@npm:1.0.9"
-  dependencies:
-    "@types/lodash": "*"
-  checksum: aac376176e7ed67de9711c9f1dd123a18874227a9a7f877013d0f5613ab2a6a44715ca98809987d71155a394cf3096ab537351a5ca8d7c89be1e0f61d02861e8
   languageName: node
   linkType: hard
 
@@ -3680,10 +3664,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:12.7.2":
-  version: 12.7.2
-  resolution: "@types/node@npm:12.7.2"
-  checksum: f70fc5759f82fb0857ef0afd1386d83333810d30e2e16982a3794e2cd57e59ed73a6efd42c5d00bb8e8e319ea61a151d29c1b9dd8f01878746cfb5713c1f5bd5
+"@types/node@npm:^15.0.3":
+  version: 15.0.3
+  resolution: "@types/node@npm:15.0.3"
+  checksum: 72bfbac4282443a7b5d5b43c7c39fe855aa1687b5fa5629b735fd2ceacf371b711ccfc956c8af1b1cbd9c74c79be845a801a4c7275048f340aa0df3beec6b10f
   languageName: node
   linkType: hard
 
@@ -4375,12 +4359,11 @@ __metadata:
     "@types/loadable__component": ^5.13.3
     "@types/loadable__server": ^5.12.5
     "@types/loadable__webpack-plugin": ^5.7.2
-    "@types/lowdb": ^1.0.9
     "@types/mini-css-extract-plugin": ^1.4.2
     "@types/mocha": 5.2.7
     "@types/moment-timezone": ^0.5.13
     "@types/mustache": ^4.0.1
-    "@types/node": 12.7.2
+    "@types/node": ^15.0.3
     "@types/nodemailer": ^6.4.0
     "@types/prop-types": 15.7.1
     "@types/react": 16.9.2
@@ -4440,8 +4423,6 @@ __metadata:
     enzyme: ^3.11.0
     enzyme-adapter-react-16: ^1.15.6
     eslint: ^7.24.0
-    eslint-config-airbnb: ^18.2.1
-    eslint-config-airbnb-base: ^14.2.1
     eslint-config-prettier: ^8.2.0
     eslint-config-standard: ^16.0.2
     eslint-import-resolver-alias: ^1.1.2
@@ -4494,6 +4475,7 @@ __metadata:
     mini-css-extract-plugin: ^1.5.0
     mkdir: ^0.0.2
     mustache: ^4.2.0
+    node-cache: ^5.1.2
     node-fetch: ^2.6.1
     node-plop: ^0.26.2
     nodemailer: ^6.5.0
@@ -7274,17 +7256,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clone@npm:2.x, clone@npm:^2.1.1, clone@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "clone@npm:2.1.2"
+  checksum: 85232d66015d2d703dc59812e30049931d97c7815bf70569ae4fb7a66be257f46fcf47040e4e7050966ca195a9e615d59d73ba9e39fc37eedba1a76865f27ab1
+  languageName: node
+  linkType: hard
+
 "clone@npm:^1.0.2":
   version: 1.0.4
   resolution: "clone@npm:1.0.4"
   checksum: aaaa58f9906002d9c07630682536cb00581ee02d7a76cfa8573ad59784add4d5d6d4afe894c21899b974044f153f8c5c6419ffc8b1cdde61bf104ad52e3a185d
-  languageName: node
-  linkType: hard
-
-"clone@npm:^2.1.1, clone@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "clone@npm:2.1.2"
-  checksum: 85232d66015d2d703dc59812e30049931d97c7815bf70569ae4fb7a66be257f46fcf47040e4e7050966ca195a9e615d59d73ba9e39fc37eedba1a76865f27ab1
   languageName: node
   linkType: hard
 
@@ -7594,13 +7576,6 @@ __metadata:
     write-file-atomic: ^3.0.0
     xdg-basedir: ^4.0.0
   checksum: 81dd877bf784af29e7bbeb14e183fef21df07d9eceb3e94601a0689accb168b55f4661c629d32f079f88ea1bff3396434beb0d022414b601e72cf89adf4167e1
-  languageName: node
-  linkType: hard
-
-"confusing-browser-globals@npm:^1.0.10":
-  version: 1.0.10
-  resolution: "confusing-browser-globals@npm:1.0.10"
-  checksum: 47e9365de6afe12e11b8dfbd12ce38d20bf8f4fd4614c838f88be5deb7c84dd20a5f00e432a6dd7e85d9e2be4601553cc6f28cc54d4cb07a3b04508aae0b4bd0
   languageName: node
   linkType: hard
 
@@ -9534,37 +9509,6 @@ __metadata:
     escodegen: bin/escodegen.js
     esgenerate: bin/esgenerate.js
   checksum: c49da32cd173570f2076f0d52b80761b2a876dfea2046bfc8c5dc84f76b70105e35b2fed10fe0a8487df14674d46bc30245f3a27e8838601c3c85e68f693f363
-  languageName: node
-  linkType: hard
-
-"eslint-config-airbnb-base@npm:^14.2.1":
-  version: 14.2.1
-  resolution: "eslint-config-airbnb-base@npm:14.2.1"
-  dependencies:
-    confusing-browser-globals: ^1.0.10
-    object.assign: ^4.1.2
-    object.entries: ^1.1.2
-  peerDependencies:
-    eslint: ^5.16.0 || ^6.8.0 || ^7.2.0
-    eslint-plugin-import: ^2.22.1
-  checksum: ef1057740ed109bd6df0cddbd973e6ceee42551c6aa7f31c8cae53438011765b67b2fe47ad9f5e72593a8661abef4acef2478b0aae8861a5a89baa911715e611
-  languageName: node
-  linkType: hard
-
-"eslint-config-airbnb@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "eslint-config-airbnb@npm:18.2.1"
-  dependencies:
-    eslint-config-airbnb-base: ^14.2.1
-    object.assign: ^4.1.2
-    object.entries: ^1.1.2
-  peerDependencies:
-    eslint: ^5.16.0 || ^6.8.0 || ^7.2.0
-    eslint-plugin-import: ^2.22.1
-    eslint-plugin-jsx-a11y: ^6.4.1
-    eslint-plugin-react: ^7.21.5
-    eslint-plugin-react-hooks: ^4 || ^3 || ^2.3.0 || ^1.7.0
-  checksum: 694d1833ffebe06ab0f3e1535c6772ae93da7992f5d6abbbfb319a207ea1f20d7ed2cc47ae3364bcf27737253a3f07f3ddd2c073ccbec5104540f4d024eec39e
   languageName: node
   linkType: hard
 
@@ -16782,6 +16726,15 @@ fsevents@~2.3.1:
   dependencies:
     node-gyp: latest
   checksum: 9b5c1f5f24acb9255fd47914b0f0b80c76d735b7b91611366cd30217f8ead5fafcd1cfeb65e467612b40420b6ad3faf1e7fa3666bd4e15a2bdf1762748f3fa8a
+  languageName: node
+  linkType: hard
+
+"node-cache@npm:^5.1.2":
+  version: 5.1.2
+  resolution: "node-cache@npm:5.1.2"
+  dependencies:
+    clone: 2.x
+  checksum: 2790fee0366b9c2f747106cbfeaf2b5f60b20201320dd77ebd097d51703c406898aa1c84819cc57fd54a39962bba413956eb721a7a04357add241c53471b4818
   languageName: node
   linkType: hard
 

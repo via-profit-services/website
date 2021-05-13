@@ -8,10 +8,10 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { merge } from 'webpack-merge';
 import 'webpack-dev-server';
 
-dotenv.config();
-
-
 import baseConfig from './webpack-config-base';
+
+
+dotenv.config();
 
 module.exports = merge(baseConfig, {
   mode: 'development',
@@ -20,9 +20,6 @@ module.exports = merge(baseConfig, {
   },
   output: {
     path: path.join(__dirname, '../../build/public/'),
-    // filename: '[name].js',
-    // chunkFilename: '[name].app.chunk.[hash].js',
-    // publicPath: '/static/',
   },
   optimization: {
     minimize: false,

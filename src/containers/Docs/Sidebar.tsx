@@ -33,10 +33,10 @@ const ListItemLink = styled(Link)<{ active?: boolean }>`
   display: flex;
   padding: 10px 12px;
   text-decoration: none;
-  color: #fff;
+  color: #212121;
   font-weight: 200;
   &:visited {
-    color: #fff;
+    color: #212121;
   }
   ${props => props?.active && css`
     color: red;
@@ -45,12 +45,13 @@ const ListItemLink = styled(Link)<{ active?: boolean }>`
 
 const ListItemCollapsedLink = styled.a<{ active?: boolean }>`
   display: flex;
+  justify-content: space-between;
   padding: 10px 12px;
   text-decoration: none;
-  color: #fff;
+  color: #212121;
   font-weight: 200;
   &:visited {
-    color: #fff;
+    color: #212121;
   }
   ${props => props?.active && css`
     color: red;
@@ -99,9 +100,14 @@ const Sidebar: React.FC = (props) => {
 
       <ListLi>
         <ListItemCollapsedLink
-          onClick={() => toggleExpanded(urlMap.docs.core.introduction)}
+          href={`#-${urlMap.docs.core.introduction}`}
+          onClick={(e) => {
+            e.preventDefault();
+            toggleExpanded(urlMap.docs.core.introduction);
+          }}
         >
           Core
+          <ChevronIcon />
         </ListItemCollapsedLink>
         <Collapsable expanded={matchExpanded(urlMap.docs.core.introduction)}>
           <List withPadding>
@@ -131,9 +137,31 @@ const Sidebar: React.FC = (props) => {
       </ListLi>
 
       <ListLi>
-        <ListItemLink to={urlMap.docs.knex.introduction} >
+        <ListItemCollapsedLink
+          href={`#-${urlMap.docs.knex.introduction}`}
+          onClick={(e) => {
+            e.preventDefault();
+            toggleExpanded(urlMap.docs.knex.introduction);
+          }}
+        >
           Knex
-        </ListItemLink>
+          <ChevronIcon />
+        </ListItemCollapsedLink>
+        <Collapsable expanded={matchExpanded(urlMap.docs.knex.introduction)}>
+          <List withPadding>
+            <ListLi>
+              <ListItemLink to={urlMap.docs.knex.introduction} >
+                Introduction
+              </ListItemLink>
+            </ListLi>
+
+            <ListLi>
+              <ListItemLink to={urlMap.docs.knex.api} >
+                API
+              </ListItemLink>
+            </ListLi>
+          </List>
+        </Collapsable>
       </ListLi>
     </List>
   )

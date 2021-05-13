@@ -3,6 +3,6 @@ import React from 'react';
 
 import LoadingIndicator from '~/components/ui/LoadingIndicator';
 
-export default loadable(() => import('./DocsKnexIntroduction'), {
+export default loadable(() => import('~/containers/Docs/knex/v1/api/index'), {
   fallback: <LoadingIndicator />,
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import DocsCoreVer1 from '~/containers/Docs/core/v1/DocsCoreVer1';
+import DocsCoreVer1 from '~/containers/Docs/core/v1';
 import NotFound from '~/containers/NotFound/Loadable';
 
 const DocsCore: React.FC = () => (

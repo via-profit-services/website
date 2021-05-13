@@ -8,6 +8,9 @@ const useUrlMap = () => {
   const { locale } = state;
 
   const urlMap = {
+    home: buildUrl(locale, '/'),
+    about: buildUrl(locale, '/about'),
+    examples: buildUrl(locale, '/examples'),
     docs: {
       introduction: buildUrl(locale, '/docs'),
       core: {

@@ -53,7 +53,7 @@ const config: Configuration =  {
           {
             loader: 'file-loader',
             options: {
-              name: 'fonts/[name].[hash].[ext]',
+              name: 'public/fonts/[contenthash].[ext]',
             },
           },
         ],
@@ -66,7 +66,7 @@ const config: Configuration =  {
             loader: 'url-loader',
             options: {
               limit: 0, // For server side render
-              name: 'images/[hash]-[name].[ext]',
+              name: 'public/images/[contenthash].[ext]',
             },
           },
         ],
@@ -83,7 +83,7 @@ const config: Configuration =  {
           loader: 'url-loader',
           options: {
             limit: 0,
-            name: 'video/[name].[hash].[ext]',
+            name: 'public/video/[contenthash].[ext]',
           },
         },
       },
