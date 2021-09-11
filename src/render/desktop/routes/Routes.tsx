@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { Switch, Route, useLocation, useRouteMatch } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import { useIntl } from 'react-intl';
+import { Switch, Route, useParams } from 'react-router-dom';
 import loadable from '@loadable/component';
-import { useDispatch, useSelector } from 'react-redux';
 
-import { LOCALE_VARIANTS } from '~/utils/constants';
+import { DEFAULT_LOCALE } from '~/utils/constants';
 import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
 
 const Home = loadable(() => import('~/render/desktop/containers/Home'), {
@@ -21,30 +22,34 @@ const Fallback = loadable(
   },
 );
 
-const Routes: React.FC = () => (
-  <Switch>
-    <Route path={['/:locale/docs', '/docs']} component={Docs} />
-    <Route path={['/:locale', '/']} component={Home} />
-    <Route component={() => <>Fallback inner</>} />
-  </Switch>
-);
+const Routes: React.FC = () => {
+  const intl = useIntl();
+  const { locale } = useParams<{ locale?: string }>();
 
-// const Routes = () => <Route path={['/:locale', '/']} component={InnerRouter} />;
+  return (
+    <>
+      <Helmet
+        defaultTitle={intl.formatMessage({
+          defaultMessage: 'Via Profit Services',
+          description: 'Helmet «defaultTitle» param',
+        })}
+        titleTemplate={intl.formatMessage({
+          defaultMessage: '%s — Via Profit Services',
+          description: 'Helmet «titleTemplate» param',
+        })}>
+        <html lang={locale || DEFAULT_LOCALE} />
+        <meta charSet="utf-8" />
+        <meta name="author" content="Via Profit" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Helmet>
 
-// export const ARoutes: React.FC = () => {
-//   // const { path, params, url } = useRouteMatch<{ locale?: string }>();
-//   // console.info({ params, path, url });
-//   const { pathname } = useLocation();
-//   console.info({ pathname });
-
-//   return (
-//     <Switch>
-//       {/* <Route path={['/:locale', '/']}> */}
-//       <Route exact path="/" component={Home} />
-//       <Route component={() => <>Fallback Desktop routes</>} />
-//       {/* </Route> */}
-//     </Switch>
-//   );
-// };
+      <Switch>
+        <Route path={['/:locale/docs', '/docs']} component={Docs} />
+        <Route path={['/:locale', '/']} component={Home} />
+        <Route component={Fallback} />
+      </Switch>
+    </>
+  );
+};
 
 export default Routes;

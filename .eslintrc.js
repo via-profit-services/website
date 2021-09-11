@@ -6,6 +6,7 @@ module.exports = {
       {
         mustache: 'always',
         md: 'always',
+        json: 'always',
       },
     ],
   },
