@@ -15,7 +15,7 @@
     "defaultMessage": "Via Profit"
   },
   "ejfCfL": {
-    "defaultMessage": "@via-profit-services/core installation and setup",
+    "defaultMessage": "Установка и настройка @via-profit-services/core",
     "description": "Meta description of installation and setup"
   },
   "jeNkjc": {
@@ -30,7 +30,7 @@
     "description": "Helmet «titleTemplate» param"
   },
   "xnJwur": {
-    "defaultMessage": "Installation and setup",
+    "defaultMessage": "Установка и настройка",
     "description": "Meta title of installation and setup"
   }
 }
