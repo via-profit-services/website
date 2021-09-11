@@ -14,7 +14,23 @@
   "baPNbY": {
     "defaultMessage": "Via Profit"
   },
+  "ejfCfL": {
+    "defaultMessage": "@via-profit-services/core installation and setup",
+    "description": "Meta description of installation and setup"
+  },
   "jeNkjc": {
     "defaultMessage": "Введение в @via-profit-services/core v2.0.x"
+  },
+  "kiw+og": {
+    "defaultMessage": "Via Profit Services",
+    "description": "Helmet «defaultTitle» param"
+  },
+  "uSEDuF": {
+    "defaultMessage": "%s — Via Profit Services",
+    "description": "Helmet «titleTemplate» param"
+  },
+  "xnJwur": {
+    "defaultMessage": "Installation and setup",
+    "description": "Meta title of installation and setup"
   }
 }
