@@ -61,7 +61,8 @@ const bootstrap = async () => {
   const reduxStore = createReduxStore(reduxState);
 
   const render = () => {
-    ReactDom.hydrate(
+    (ReactDom as any).hydrateRoot(
+      document.getElementById('app'),
       <BrowserRouter>
         <ReduxProvider store={reduxStore}>
           <React.Suspense fallback={null}>
@@ -69,7 +70,6 @@ const bootstrap = async () => {
           </React.Suspense>
         </ReduxProvider>
       </BrowserRouter>,
-      document.getElementById('app'),
     );
   };
 

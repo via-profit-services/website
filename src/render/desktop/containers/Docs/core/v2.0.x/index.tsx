@@ -9,6 +9,11 @@ const Fallback = Loadable(
   { fallback: <LoadingIndicator /> },
 );
 
+const Setup = Loadable(
+  () => import('~/render/desktop/containers/Docs/core/v2.0.x/setup'),
+  { fallback: <LoadingIndicator /> },
+);
+
 const Introduction = Loadable(
   () => import('~/render/desktop/containers/Docs/core/v2.0.x/introduction'),
   { fallback: <LoadingIndicator /> },
@@ -34,9 +39,10 @@ const Core: React.FC = () => {
   return (
     <Switch>
       <Route strict exact path={path} component={Introduction} />
+      <Route strict path={`${path}/setup`} component={Setup} />
       <Route strict path={`${path}/api`} component={Api} />
       <Route strict path={`${path}/middlewares`} component={Middlewares} />
-      <Route component={() => <>Fallback Docs / Core / v2.0.x</>} />
+      <Route component={Fallback} />
     </Switch>
   );
 };

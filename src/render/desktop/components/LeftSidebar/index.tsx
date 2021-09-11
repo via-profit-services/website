@@ -128,6 +128,11 @@ const Sidebar: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to={buildUrl('/docs/core/v2.0.x/setup')}>
+                  Core v2.0.x setup
+                </Link>
+              </li>
+              <li>
                 <Link to={buildUrl('/docs/core/v2.0.x/api')}>
                   Core v2.0.x api
                 </Link>

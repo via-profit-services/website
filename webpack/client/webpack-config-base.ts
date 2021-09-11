@@ -1,5 +1,5 @@
 import path from 'path';
-import { Configuration } from 'webpack';
+import { Configuration, ProvidePlugin } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const config: Configuration = {
@@ -103,10 +103,8 @@ const config: Configuration = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss'],
-    mainFields: ['browser', 'jsnext:main', 'main'],
     alias: {
       '~': path.resolve(__dirname, '../../src'),
-      moment$: 'moment/moment.js',
     },
   },
   node: {},

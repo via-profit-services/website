@@ -19,12 +19,8 @@ import createReduxStore from '~/redux/store';
 import mainTemplate from '~/../assets/templates/main.mustache';
 import reduxDefaultState from '~/redux/defaultState';
 
-const ApplicationDesktop = loadable(
-  () => import('~/render/desktop/providers/ApplicationDesktop'),
-);
-const ApplicationTouchable = loadable(
-  () => import('~/render/touchable/providers/ApplicationTouchable'),
-);
+const ApplicationDesktop = loadable(() => import('~/render/desktop'));
+const ApplicationTouchable = loadable(() => import('~/render/touchable'));
 
 interface Props {
   req: Request;

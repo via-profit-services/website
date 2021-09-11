@@ -27,13 +27,11 @@ type UrlParams = {
 const Core: React.FC = () => {
   const { path, params, url } = useRouteMatch<UrlParams>();
 
-  console.info({ path, url, params });
-
   return (
     <Switch>
       <Route strict path={`${path}/v1.2.x`} component={CoreVer1dot2} />
       <Route strict path={`${path}/v2.0.x`} component={CoreVer2dot0} />
-      <Route component={() => <>Fallback Docs / Core / index</>} />
+      <Route component={Fallback} />
     </Switch>
   );
 };

@@ -36,7 +36,7 @@ const Core: React.FC = () => {
       <Route strict exact path={path} component={Introduction} />
       <Route strict path={`${path}/api`} component={Api} />
       <Route strict path={`${path}/middlewares`} component={Middlewares} />
-      <Route component={() => <>Fallback Docs / Core / v1.2.x</>} />
+      <Route component={Fallback} />
     </Switch>
   );
 };

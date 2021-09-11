@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactMarkdown, { Options } from 'react-markdown';
+import ReactMarkdown, { ReactMarkdownOptions } from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialOceanic as syntaxTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Link } from 'react-router-dom';
@@ -39,7 +39,7 @@ const CodeSSR = styled.code({
   display: 'block',
 });
 
-const MarkdownRender: React.FC<Options> = props => {
+const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
   const { children, components, ...otherProps } = props;
 
   return (
