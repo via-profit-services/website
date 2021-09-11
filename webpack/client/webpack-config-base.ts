@@ -1,14 +1,25 @@
 import path from 'path';
 import { Configuration } from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-const config: Configuration =  {
+const config: Configuration = {
   target: 'web',
   module: {
     rules: [
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              plugins:
+                process.env.NODE_ENV === 'development'
+                  ? ['react-refresh/babel']
+                  : [],
+            },
+          },
+        ],
       },
       {
         test: /\.md$/,
@@ -22,8 +33,8 @@ const config: Configuration =  {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          // MiniCssExtractPlugin.loader,
+          // 'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
         ],
       },
@@ -31,7 +42,8 @@ const config: Configuration =  {
         test: /\.(scss|sass)$/,
         use: [
           'style-loader',
-          // MiniCssExtractPlugin.loader, // Node Sass does not work with Yarn PnP feature and doesn't support @use rule.
+          // MiniCssExtractPlugin.loader,
+          // Node Sass does not work with Yarn PnP feature and doesn't support @use rule.
           'css-loader',
           'sass-loader',
         ],
@@ -97,9 +109,7 @@ const config: Configuration =  {
       moment$: 'moment/moment.js',
     },
   },
-  node: {
-    
-  },
+  node: {},
 };
 
 export default config;

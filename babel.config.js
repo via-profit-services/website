@@ -1,7 +1,5 @@
-/* eslint-disable no-template-curly-in-string */
-const babelConfig = {
+module.exports = {
   plugins: [
-    'react-hot-loader/babel',
     '@loadable/babel-plugin',
     '@babel/plugin-transform-runtime',
     '@babel/plugin-transform-regenerator',
@@ -24,6 +22,58 @@ const babelConfig = {
         allowNamespaces: true,
       },
     ],
+    [
+      'babel-plugin-import',
+      {
+        libraryName: '@material-ui/styles',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+      },
+      'mui-styles',
+    ],
+    [
+      'babel-plugin-import',
+      {
+        libraryName: '@material-ui/core/colors',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+      },
+      'mui-core-colors',
+    ],
+    [
+      'babel-plugin-import',
+      {
+        libraryName: '@material-ui/core',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+      },
+      'core',
+    ],
+    [
+      'babel-plugin-import',
+      {
+        libraryName: '@material-ui/icons',
+        libraryDirectory: 'esm',
+        camel2DashComponentName: false,
+      },
+      'icons',
+    ],
+    [
+      'babel-plugin-import',
+      {
+        libraryName: 'lodash',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+      },
+    ],
+    [
+      'babel-plugin-formatjs',
+      {
+        idInterpolationPattern: '[sha512:contenthash:base64:6]',
+        removeDefaultMessage: true,
+        ast: true,
+      },
+    ],
   ],
   presets: [
     [
@@ -36,14 +86,3 @@ const babelConfig = {
     '@babel/typescript',
   ],
 };
-
-
-if (process.env.EXTRACT_INTL_MESSAGES) {
-  babelConfig.plugins.push(['react-intl', {
-    messagesDir: './extracted-messages',
-    extractSourceLocation: true,
-    extractFromFormatMessageCall: true,
-  }]);
-}
-
-module.exports = babelConfig;

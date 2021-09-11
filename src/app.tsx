@@ -1,43 +1,91 @@
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
-
-import * as OfflinePlugin from 'offline-plugin/runtime';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { loadableReady } from '@loadable/component';
+import loadable, { loadableReady } from '@loadable/component';
+import { Provider as ReduxProvider, useSelector } from 'react-redux';
 
-import App from '~/providers/App';
+import createReduxStore from '~/redux/store';
+import reduxDefaultState from '~/redux/defaultState';
+
+const ApplicationDesktop = loadable(
+  () => import('~/render/desktop/providers/ApplicationDesktop'),
+);
+
+const ApplicationTouchable = loadable(
+  () => import('~/render/touchable/providers/ApplicationTouchable'),
+);
+
+const ModeSwitcher: React.FC = () => {
+  const mode = useSelector<ReduxState, ReduxSelectedMode>(state => state.mode);
+
+  return (
+    <>
+      {mode === 'desktop' && <ApplicationDesktop />}
+      {mode === 'touchable' && <ApplicationTouchable />}
+    </>
+  );
+};
 
 const bootstrap = async () => {
-  const MOUNT_NODE = document.getElementById('app') as HTMLElement;
+  let reduxState = { ...reduxDefaultState };
+
+  // parse preloaded states from base64 string
+  if (typeof window !== 'undefined' && (window as any)?.__PRELOADED_STATES__) {
+    const statesStr = (window as any).__PRELOADED_STATES__ || '';
+    delete (window as any).__PRELOADED_STATES__;
+    try {
+      const decodedStatesStr = window.atob(statesStr.replace(/</g, '\\u003c'));
+      const preloadedStates = JSON.parse(
+        decodedStatesStr,
+      ) as Partial<ServerToClientTransfer>;
+
+      reduxState = {
+        ...reduxState,
+        ...preloadedStates.REDUX,
+      };
+    } catch (err) {
+      console.error('Failed to parse environment data', err);
+    }
+  }
+
+  // merge local storage data
+  if (typeof window !== 'undefined') {
+    try {
+      const localDefaultState = JSON.parse(
+        localStorage.getItem('@ReduxState') || '',
+      );
+      reduxState = {
+        ...reduxState,
+        ...localDefaultState,
+      };
+    } catch (err) {
+      // do nothing
+    }
+  }
+
+  const reduxStore = createReduxStore(reduxState);
 
   const render = () => {
-    ReactDOM.render(
-      <>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </>,
-      MOUNT_NODE,
+    ReactDom.hydrate(
+      <BrowserRouter>
+        <ReduxProvider store={reduxStore}>
+          <React.Suspense fallback={null}>
+            <ModeSwitcher />
+          </React.Suspense>
+        </ReduxProvider>
+      </BrowserRouter>,
+      document.getElementById('app'),
     );
   };
 
-  // declare const module: any;
-  if (module.hot) {
-    // eslint-disable-next-line no-console
-    console.log('HMR is active');
-    module.hot.accept(['./providers/App'], () => {
-      render();
-    });
+  if (process.env.NODE_ENV === 'development') {
+    render();
   }
 
-  loadableReady(() => {
-    render();
-  });
-
   if (process.env.NODE_ENV !== 'development') {
-    OfflinePlugin.install();
+    loadableReady(() => {
+      render();
+    });
   }
 };
 

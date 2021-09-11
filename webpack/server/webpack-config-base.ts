@@ -5,7 +5,6 @@ const config: Configuration = {
   target: 'node',
   module: {
     rules: [
-
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
@@ -17,6 +16,19 @@ const config: Configuration = {
         use: [
           {
             loader: 'raw-loader',
+          },
+        ],
+      },
+      {
+        test: /favicon\.(ico|png)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'public/images/favicon.[ext]',
+              emitFile: true,
+            },
           },
         ],
       },
@@ -33,6 +45,7 @@ const config: Configuration = {
           },
         ],
       },
+
       {
         test: /\.less$/i,
         use: [
@@ -112,13 +125,23 @@ const config: Configuration = {
     // fetch: 'empty',
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.mjs', '.js', '.json', '.md', '.mdx', '.graphql', '.css', '.scss'],
+    extensions: [
+      '.ts',
+      '.tsx',
+      '.mjs',
+      '.js',
+      '.json',
+      '.md',
+      '.mdx',
+      '.graphql',
+      '.css',
+      '.scss',
+    ],
     mainFields: ['browser', 'jsnext:main', 'main'],
     alias: {
       '~': path.resolve(__dirname, '../../src'),
     },
   },
-
 };
 
 export default config;
