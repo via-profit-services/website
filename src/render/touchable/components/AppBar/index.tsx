@@ -7,8 +7,8 @@ import AppDrawer from '~/render/touchable/components/AppDrawer';
 const AppBarContainer = styled.div`
   position: sticky;
   top: 0;
-  background-color: ${props => props.theme.color.background.card};
-  z-index: ${props => props.theme.zIndex.appBar};
+  background-color: ${props => props.theme.color.background};
+  z-index: ${props => props.theme.zIndex.header};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@ const MenuButton = styled.button`
   background: none;
   color: inherit;
   text-decoration: none;
-  color: ${props => props.theme.color.text.primary};
+  color: ${props => props.theme.color.textPrimary};
 `;
 
 const CenterSide = styled.div`

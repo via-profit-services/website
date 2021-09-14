@@ -9,7 +9,6 @@ type Props = {
   children: React.ReactNode | React.ReactNode[];
 };
 
-
 const Title = styled(H2)`
   justify-content: center;
   display: flex;

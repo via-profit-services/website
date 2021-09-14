@@ -21,9 +21,9 @@ const Container = styled.a<{ direction: Direction }>`
   padding: 10px;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.textPrimary};
   &:hover {
-    color: ${({ theme }) => theme.color.primary};
+    color: ${({ theme }) => theme.color.textSecondary};
   }
 `;
 

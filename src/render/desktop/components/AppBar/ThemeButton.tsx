@@ -10,7 +10,7 @@ const Button = styled.button`
   border: 0;
   width: auto;
   height: auto;
-  color: ${props => props.theme.color.text.primary};
+  color: ${props => props.theme.color.textPrimary};
   background: none;
   padding: 6px;
   font-size: 1em;

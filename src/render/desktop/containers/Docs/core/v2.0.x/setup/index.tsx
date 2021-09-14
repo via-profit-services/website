@@ -2,13 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import ErrorBoundary from '~/render/desktop/components/ErrorBoundary';
-import AppBar from '~/render/desktop/components/AppBar';
-import ContentArea from '~/render/desktop/components/ContentArea';
 import H1 from '~/render/desktop/components/Typography/H1';
-import Footer from '~/render/desktop/components/Footer';
-import LeftSidebar from '~/render/desktop/components/LeftSidebar';
-import { SafeFrameSection } from '~/render/desktop/components/SafeFrame';
 import RenderMarkdown from '~/render/desktop/components/RenderMarkdown';
 
 import content from '~/docs/core/v2.0.x/setup.md';
@@ -33,20 +27,11 @@ const Introduction: React.FC = () => {
           })}
         />
       </Helmet>
-      <AppBar />
 
-      <ContentArea>
-        <ErrorBoundary>
-          <LeftSidebar />
-          <SafeFrameSection>
-            <H1>
-              <FormattedMessage defaultMessage="Introduction of @via-profit-services/core v2.0.x" />
-            </H1>
-            <RenderMarkdown>{content}</RenderMarkdown>
-          </SafeFrameSection>
-        </ErrorBoundary>
-      </ContentArea>
-      <Footer />
+      <H1>
+        <FormattedMessage defaultMessage="Introduction of @via-profit-services/core v2.0.x" />
+      </H1>
+      <RenderMarkdown>{content}</RenderMarkdown>
     </>
   );
 };

@@ -25,7 +25,7 @@ const DrawerContainer = styled.div<{ $visibility: boolean }>`
 `;
 
 const DrawerInner = styled.div`
-  background-color: ${props => props.theme.color.background.default};
+  background-color: ${props => props.theme.color.background};
   height: 100vh;
   width: 90%;
   display: flex;
@@ -40,12 +40,12 @@ const DrawerNav = styled.nav`
 `;
 
 const DrawerFooter = styled.div`
-  border-top: 1px solid ${({ theme }) => theme.color.primary.darkGray};
+  border-top: 1px solid red;
 `;
 
 const DeveloperLink = styled.a`
   display: block;
-  color: ${({ theme }) => theme.color.text.primary};
+  color: ${({ theme }) => theme.color.textPrimary};
   text-decoration: none;
   padding: 20px;
 `;
@@ -56,7 +56,7 @@ const DrawerFallback = styled.div`
 `;
 
 const DrawerHeader = styled.div`
-  background-color: ${props => props.theme.color.background.card};
+  background-color: ${props => props.theme.color.background};
   background-position: center center;
   background-size: cover;
   height: 160px;

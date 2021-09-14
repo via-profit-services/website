@@ -20,6 +20,8 @@ const List = styled.ul<{ withPadding?: boolean }>`
   list-style: none;
   overflow-y: hidden;
   will-change: max-height;
+  position: sticky;
+  top: 120px;
   ${props =>
     props.withPadding &&
     css`
@@ -95,7 +97,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <ul>
+    <List>
       <li>
         Core
         <ul>
@@ -146,7 +148,7 @@ const Sidebar: React.FC = () => {
           </li>
         </ul>
       </li>
-    </ul>
+    </List>
   );
 
   // return (

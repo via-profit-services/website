@@ -5,6 +5,15 @@ import { materialOceanic as syntaxTheme } from 'react-syntax-highlighter/dist/es
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import H1 from '~/render/desktop/components/Typography/H1';
+import H2 from '~/render/desktop/components/Typography/H2';
+import H3 from '~/render/desktop/components/Typography/H3';
+import H4 from '~/render/desktop/components/Typography/H4';
+import H5 from '~/render/desktop/components/Typography/H5';
+import Strong from '~/render/desktop/components/Typography/Strong';
+import Em from '~/render/desktop/components/Typography/Em';
+import Paragraph from '~/render/desktop/components/Typography/Paragraph';
+
 const background = '#292d3e';
 const color = '#c3cee3';
 
@@ -45,11 +54,35 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
   return (
     <ReactMarkdown
       components={{
-        a: ({ href, title, children }) => (
-          <Link title={typeof title === 'string' ? title : undefined} to={href}>
-            {children}
-          </Link>
-        ),
+        h1: H1,
+        h2: H2,
+        h3: H3,
+        h4: H4,
+        h5: H5,
+        b: Strong,
+        em: Em,
+        p: Paragraph,
+        a: ({ href, title, children }) => {
+          if (href.match(/^(http|https):\/\//)) {
+            return (
+              <a
+                target="__blank"
+                rel="noopener noreferrer"
+                title={typeof title === 'string' ? title : undefined}
+                href={href}>
+                {children}
+              </a>
+            );
+          }
+
+          return (
+            <Link
+              title={typeof title === 'string' ? title : undefined}
+              to={href}>
+              {children}
+            </Link>
+          );
+        },
         code: ({ className, children, inline }) => {
           const codeString = String(children).replace(/\n$/, '');
 

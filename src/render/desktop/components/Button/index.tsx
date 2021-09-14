@@ -19,26 +19,26 @@ const StyledButtonContained = styled.button<StyledProps>`
   border: 0;
   outline: none;
   transition: all 160ms ease-out;
-  color: ${props => props.theme.color.primary.white};
-  border: 0.125em solid ${props => props.theme.color.primary.blue};
-  background: ${props => props.theme.color.primary.blue};
+  color: ${props => props.theme.color.textPrimary};
+  border: 0.125em solid ${props => props.theme.color.textPrimary};
+  background: red;
   &:hover {
-    background: ${props => props.theme.color.primary.lightBlue};
-    border-color: ${props => props.theme.color.primary.lightBlue};
+    background: red;
+    border-color: red;
   }
   &:active {
-    background: ${props => props.theme.color.primary.darkBlue};
-    border-color: ${props => props.theme.color.primary.darkBlue};
+    background: red;
+    border-color: red;
   }
   ${props =>
     props.disabled &&
     css`
       cursor: not-allowed;
-      border-color: ${props => props.theme.color.primary.gray};
-      color: ${props => props.theme.color.primary.gray};
+      border-color: red;
+      color: red;
       &:hover {
-        border-color: ${props => props.theme.color.primary.gray};
-        color: ${props => props.theme.color.primary.gray};
+        border-color: red;
+        color: red;
       }
     `}
 `;
@@ -53,26 +53,26 @@ const StyledButtonOutlined = styled.button<StyledProps>`
   outline: none;
   transition: all 160ms ease-out;
   background: none;
-  color: ${props => props.theme.color.primary.white};
-  border: 0.125em solid ${props => props.theme.color.primary.white};
+  color: red;
+  border: 0.125em solid red;
 
   &:hover {
-    border-color: ${props => props.theme.color.primary.lightBlue};
-    color: ${props => props.theme.color.primary.lightBlue};
+    border-color: red;
+    color: red;
   }
   &:active {
-    border-color: ${props => props.theme.color.primary.darkBlue};
-    color: ${props => props.theme.color.primary.darkBlue};
+    border-color: red;
+    color: red;
   }
   ${props =>
     props.disabled &&
     css`
       cursor: not-allowed;
-      background: ${props => props.theme.color.primary.gray};
-      border-color: ${props => props.theme.color.primary.gray};
+      background: red;
+      border-color: red;
       &:hover {
-        background: ${props => props.theme.color.primary.gray};
-        border-color: ${props => props.theme.color.primary.gray};
+        background: red;
+        border-color: red;
       }
     `}
 `;
@@ -91,18 +91,18 @@ const StyledButtonIcon = styled.button<StyledProps>`
   background: none;
 
   &:hover {
-    background: ${props => props.theme.color.hover};
+    background: red;
   }
 
   ${props =>
     props.disabled &&
     css`
       cursor: not-allowed;
-      background: ${props => props.theme.color.primary.gray};
-      color: ${props => props.theme.color.primary.darkGray};
+      background: red;
+      color: red;
       &:hover {
-        background: ${props => props.theme.color.primary.gray};
-        color: ${props => props.theme.color.primary.darkGray};
+        background: red;
+        color: red;
       }
     `}
 `;

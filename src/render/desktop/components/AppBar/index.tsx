@@ -4,14 +4,20 @@ import styled from 'styled-components';
 import AppBarItem from './AppBarItem';
 import ThemeButton from './ThemeButton';
 
-const AppBarContainer = styled.div`
+const AppBarContainer = styled.header`
   position: sticky;
-  top: 0;
-  background: ${props => props.theme.color.background.card};
-  z-index: ${props => props.theme.zIndex.appBar};
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 10px;
+  margin: 0 10px;
+  border-radius: 0 0 10px 10px;
+  background: ${props => props.theme.color.text.primary};
+  z-index: ${props => props.theme.zIndex.header};
+  box-shadow: ${props => props.theme.shadows[0]};
+`;
+
+const AppBarTop = styled.div`
+  padding: 0.5rem 0;
+  border-radius: 10px 10px 0 0;
+  background: red;
 `;
 
 const AppBarInner = styled.div`
@@ -21,7 +27,7 @@ const AppBarInner = styled.div`
   max-width: ${props => props.theme.grid.desktop.safeFrame}px;
 `;
 
-const AppBarPagesbar = styled.div`
+const AppBarPagesbar = styled.nav`
   margin: 0 auto;
   flex: 1;
   display: flex;
@@ -38,6 +44,7 @@ const AppBarToolbar = styled.div`
 
 const AppBar: React.FC = () => (
   <AppBarContainer>
+    <AppBarTop>Lorem ipsum</AppBarTop>
     <AppBarInner>
       <AppBarPagesbar>
         <AppBarItem to="/">Home</AppBarItem>

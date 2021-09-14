@@ -4,9 +4,9 @@ import { Link, LinkProps } from 'react-router-dom';
 
 const ItemContainer = styled(Link)`
   display: inline-flex;
-  padding: 12px 12px;
+  padding: 1rem 0.8rem;
   text-decoration: none;
-  color: ${props => props.theme.color.text.primary};
+  color: ${props => props.theme.color.textPrimary};
 `;
 
 export type AppBarItemProps = LinkProps & {

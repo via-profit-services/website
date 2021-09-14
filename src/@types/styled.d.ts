@@ -1,10 +1,6 @@
-import 'styled-components'
-
+import 'styled-components';
 
 interface GridParams {
-  visible: boolean;
-  column: number;
-  columns: number;
   gutter: number;
   safeFrame: number;
 }
@@ -13,41 +9,35 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     fontSize: number;
     zIndex: {
-      appBar: number;
+      header: number;
       mobileMenu: number;
       modal: number;
-      terms: number;
     };
     grid: {
       desktop: GridParams;
-      tablet: GridParams;
-      mobile: GridParams;
+      touchable: GridParams;
     };
     color: {
+      gradients: [string, string, string, string];
+      grey: Record<'100' | '200' | '300' | '400', string>;
       text: {
         primary: string;
         secondary: string;
+        inverse: string;
       };
-      primary: {
-        darkBlue: string;
-        blue: string;
-        lightBlue: string;
-        black: string;
-        white: string;
-        gray: string;
-        lightGray: string;
-        darkGray: string;
+      black: {
+        primary: string;
+        secondary: string;
       };
-      secondary: {
-        yellow: string;
-        green: string;
-        red: string;
+      accent: {
+        primary: string;
+        secondary: string;
       };
       background: {
-        default: string;
-        card: string;
+        primary: string;
+        secondary: string;
       };
-      hover: string;
     };
+    shadows: [string, string, string, string];
   }
 }
