@@ -1,6 +1,149 @@
 {
+  "+J8xit": {
+    "defaultMessage": "Permissions",
+    "description": "Footer. Package permissions link"
+  },
+  "01ghRs": {
+    "defaultMessage": "Geography",
+    "description": "Footer. Package geography link"
+  },
+  "01tnyG": {
+    "defaultMessage": "Subscriptions",
+    "description": "Footer. Package subscriptions link"
+  },
   "04jeAy": {
     "defaultMessage": "Введение в @via-profit-services/core v1.2.x"
+  },
+  "2qRiOA": {
+    "defaultMessage": "File Storage",
+    "description": "Footer. Package file-storage link"
+  },
+  "2z6QCO": {
+    "defaultMessage": "Core"
+  },
+  "3q5j6q": {
+    "defaultMessage": "Redis",
+    "description": "Footer. Package redis link"
+  },
+  "7atvZ+": {
+    "defaultMessage": "MIT license",
+    "description": "Footer. License string in copiright string"
+  },
+  "C5ASDU": {
+    "defaultMessage": "Messages",
+    "description": "Footer. Package messages link"
+  },
+  "DaZRES": {
+    "defaultMessage": "Knex",
+    "description": "Footer. Package knex link"
+  },
+  "F4wEPb": {
+    "defaultMessage": "Cookie policy"
+  },
+  "Iss0k3": {
+    "defaultMessage": "Website",
+    "description": "Footer. company website link"
+  },
+  "JhrkI7": {
+    "defaultMessage": "Via Profit Services documentation",
+    "description": "Helmet «defaultTitle» param"
+  },
+  "JzKCcn": {
+    "defaultMessage": "Terms",
+    "description": "Footer. Terms link"
+  },
+  "QXNoQe": {
+    "defaultMessage": "GitHub",
+    "description": "Footer. GitHub link"
+  },
+  "R7qNRK": {
+    "defaultMessage": "Open source",
+    "description": "Footer. «Open source project» label («Open source» segment)"
+  },
+  "RR9NSx": {
+    "defaultMessage": "SMS",
+    "description": "Footer. Package sms link"
+  },
+  "Se/iPE": {
+    "defaultMessage": "Privacy Policy",
+    "description": "Footer. Privacy link"
+  },
+  "TUV3q8": {
+    "defaultMessage": "List of all packages"
+  },
+  "U3l+Q9": {
+    "defaultMessage": "Главная страница"
+  },
+  "UhkSyx": {
+    "defaultMessage": "Terms of Use"
+  },
+  "WXNeD2": {
+    "defaultMessage": "Cookie policy",
+    "description": "Footer. Cookie policy link"
+  },
+  "WjfU81": {
+    "defaultMessage": "Accounts",
+    "description": "Footer. Package accounts link"
+  },
+  "XA9oyK": {
+    "defaultMessage": "Packages",
+    "description": "Footer. Title of the «Packages» section"
+  },
+  "XkqqdC": {
+    "defaultMessage": "%s — Via Profit Services documentation",
+    "description": "Helmet «titleTemplate» param"
+  },
+  "YOLRNb": {
+    "defaultMessage": "Dataloader",
+    "description": "Footer. Package dataloader link"
+  },
+  "dwWw1n": {
+    "defaultMessage": "Legal",
+    "description": "Footer. Title of the «Legal» section"
+  },
+  "ejfCfL": {
+    "defaultMessage": "Установка и настройка @via-profit-services/core",
+    "description": "Meta description of installation and setup"
+  },
+  "hdR+lK": {
+    "defaultMessage": "Core",
+    "description": "Footer. package core link"
+  },
+  "jQY7K7": {
+    "defaultMessage": "Redis"
+  },
+  "jeNkjc": {
+    "defaultMessage": "Введение в @via-profit-services/core v2.0.x"
+  },
+  "kZk26D": {
+    "defaultMessage": "Knex"
+  },
+  "lZbWK/": {
+    "defaultMessage": "Copyright {year} Via Profit",
+    "description": "Footer. Copiright string"
+  },
+  "p/QgQD": {
+    "defaultMessage": "project",
+    "description": "Footer. «project» segment of «Open source project» label"
+  },
+  "payrbn": {
+    "defaultMessage": "Company",
+    "description": "Footer. Title of the «Company» section"
+  },
+  "vrbypx": {
+    "defaultMessage": "Via Profit",
+    "description": "Helmet meta «author»"
+  },
+  "vx0nkZ": {
+    "defaultMessage": "Privacy Policy"
+  },
+  "xnJwur": {
+    "defaultMessage": "Установка и настройка",
+    "description": "Meta title of installation and setup"
+  },
+  "yjyG/7": {
+    "defaultMessage": "Settings manager",
+    "description": "Footer. Package settings-manager link"
   },
   "GklOhG": {
     "defaultMessage": "{year} — Все права защищены"
@@ -8,18 +151,8 @@
   "H5vB1u": {
     "defaultMessage": "Разработчик {developer}"
   },
-  "U3l+Q9": {
-    "defaultMessage": "Главная страница"
-  },
   "baPNbY": {
     "defaultMessage": "Via Profit"
-  },
-  "ejfCfL": {
-    "defaultMessage": "Установка и настройка @via-profit-services/core",
-    "description": "Meta description of installation and setup"
-  },
-  "jeNkjc": {
-    "defaultMessage": "Введение в @via-profit-services/core v2.0.x"
   },
   "kiw+og": {
     "defaultMessage": "Via Profit Services",
@@ -28,9 +161,5 @@
   "uSEDuF": {
     "defaultMessage": "%s — Via Profit Services",
     "description": "Helmet «titleTemplate» param"
-  },
-  "xnJwur": {
-    "defaultMessage": "Установка и настройка",
-    "description": "Meta title of installation and setup"
   }
 }

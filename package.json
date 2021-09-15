@@ -9,10 +9,11 @@
     "author": "Via Profit",
     "license": "MIT",
     "scripts": {
+        "i18n:extract": "yarn i18n:extract:en && yarn i18n:extract:ru",
+        "i18n:compile": "yarn formatjs compile-folder ./lang ./src/translations",
         "i18n:extract:en": "yarn formatjs extract 'src/{**,**/**,**/**/**,**/**/**/**,**/**/**/**/**}*.tsx' --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file lang/en.json",
         "i18n:extract:ru": "jq -s '.[0] * .[1]' ./lang/en.json ./lang/ru.json > ./lang/tmp.json && mv ./lang/tmp.json ./lang/ru.json",
-        "i18n:compile": "yarn formatjs compile-folder ./lang ./src/translations",
-        "i18n:extract": "yarn i18n:extract:en && yarn i18n:extract:ru",
+        "i18n": "yarn i18n:extract && yarn i18n:compile",
         "build:client:dev": "yarn webpack --progress --color --config webpack/client/webpack-config-dev.ts",
         "build:client:prod": "yarn webpack --progress --color --config webpack/client/webpack-config-prod.ts",
         "build:server:prod": "yarn webpack --progress --color --config webpack/server/webpack-config-prod.ts",

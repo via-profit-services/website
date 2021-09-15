@@ -14,7 +14,7 @@ import Strong from '~/render/desktop/components/Typography/Strong';
 import Em from '~/render/desktop/components/Typography/Em';
 import Paragraph from '~/render/desktop/components/Typography/Paragraph';
 
-const background = '#292d3e';
+const background = '#32293e';
 const color = '#c3cee3';
 
 /* eslint-disable */
@@ -39,6 +39,12 @@ const style = {
   },
   'class-name': {
     color: '#82aaff',
+  },
+  imports: {
+    color: '#c792ea',
+  },
+  'maybe-class-name': {
+    color: '#c792ea',
   },
 };
 /* eslint-enable */

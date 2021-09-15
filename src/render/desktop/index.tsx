@@ -1,58 +1,48 @@
 import * as React from 'react';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, MissingTranslationError } from 'react-intl';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import { useSelector } from 'react-redux';
-import { Route, useParams } from 'react-router-dom';
 
+import { DEFAULT_LOCALE } from '~/utils/constants';
 import translationEN from '~/translations/en.json';
-import translationRU from '~/translations/ru.json';
 import DesktopRoutes from '~/render/desktop/routes/Routes';
 import GlobalStyles from '~/themes/GlobalStyles';
 import * as themes from '~/themes';
 import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
 import ErrorBoundary from '~/render/desktop/components/ErrorBoundary';
-import { DEFAULT_LOCALE, LOCALE_VARIANTS } from '~/utils/constants';
 
 const messagesList = {
-  ru: translationRU,
   en: translationEN,
 };
 
-const ApplicationInner: React.FC = () => {
-  const params = useParams<{ locale?: string }>();
+const ApplicationDesktop: React.FC = () => {
   const theme = useSelector<ReduxState, ReduxSelectedTheme>(
     state => state.theme,
   );
 
-  const locale =
-    params?.locale && LOCALE_VARIANTS.includes(params.locale)
-      ? params.locale
-      : DEFAULT_LOCALE;
-
   const currentTheme: DefaultTheme = themes[theme] || themes.standardLight;
-  const messages = React.useMemo(
-    () => messagesList[locale] || messagesList[DEFAULT_LOCALE],
-    [locale],
-  );
 
   return (
     <ErrorBoundary>
-      <IntlProvider locale={locale} messages={messages}>
+      <IntlProvider
+        locale={DEFAULT_LOCALE}
+        messages={messagesList[DEFAULT_LOCALE]}
+        onError={err => {
+          if (err instanceof MissingTranslationError) {
+            return false;
+          }
+
+          return err;
+        }}>
         <ThemeProvider theme={currentTheme}>
-          <>
-            <GlobalStyles />
-            <React.Suspense fallback={<LoadingIndicator />}>
-              <DesktopRoutes />
-            </React.Suspense>
-          </>
+          <GlobalStyles />
+          <React.Suspense fallback={<LoadingIndicator />}>
+            <DesktopRoutes />
+          </React.Suspense>
         </ThemeProvider>
       </IntlProvider>
     </ErrorBoundary>
   );
 };
-
-const ApplicationDesktop: React.FC = () => (
-  <Route path={['/:locale', '/']} component={ApplicationInner} />
-);
 
 export default ApplicationDesktop;

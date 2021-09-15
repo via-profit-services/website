@@ -2,11 +2,6 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
 import { Link, useLocation, useParams } from 'react-router-dom';
-import Collapsible from 'react-collapsible';
-import { useSelector } from 'react-redux';
-
-import { useUrlBuilder } from '~/utils/url-builder';
-import { DEFAULT_LOCALE } from '~/utils/constants';
 
 const ChevronIcon = styled(ChevronRightIcon)`
   margin-left: 10px;
@@ -73,14 +68,6 @@ const Sidebar: React.FC = () => {
     new Set(pathname),
   );
 
-  const params = useParams<{ locale?: string }>();
-  // const locale = useSelector<ReduxState, ReduxSelectedLocale>(
-  //   state => state.locale,
-  // );
-  const buildUrl = useUrlBuilder(params?.locale || DEFAULT_LOCALE);
-  // const buildUrl = s => s;
-  // const { urlMap } = useUrlMap();
-
   const toggleExpanded = (url: string) => {
     if (expanded.has(url)) {
       expanded.delete(url);
@@ -105,17 +92,13 @@ const Sidebar: React.FC = () => {
             v1.2.x
             <ul>
               <li>
-                <Link to={buildUrl('/docs/core/v1.2.x')}>
-                  Core v1.2.x introduction
-                </Link>
+                <Link to="/docs/core/v1.2.x">Core v1.2.x introduction</Link>
               </li>
               <li>
-                <Link to={buildUrl('/docs/core/v1.2.x/api')}>
-                  Core v1.2.x api
-                </Link>
+                <Link to="/docs/core/v1.2.x/api">Core v1.2.x api</Link>
               </li>
               <li>
-                <Link to={buildUrl('/docs/core/v1.2.x/middlewares')}>
+                <Link to="/docs/core/v1.2.x/middlewares">
                   Core v1.2.x middlewares
                 </Link>
               </li>
@@ -125,22 +108,16 @@ const Sidebar: React.FC = () => {
             v2.0.x
             <ul>
               <li>
-                <Link to={buildUrl('/docs/core/v2.0.x')}>
-                  Core v2.0.x introduction
-                </Link>
+                <Link to="/docs/core/v2.0.x">Core v2.0.x introduction</Link>
               </li>
               <li>
-                <Link to={buildUrl('/docs/core/v2.0.x/setup')}>
-                  Core v2.0.x setup
-                </Link>
+                <Link to="/docs/core/v2.0.x/setup">Core v2.0.x setup</Link>
               </li>
               <li>
-                <Link to={buildUrl('/docs/core/v2.0.x/api')}>
-                  Core v2.0.x api
-                </Link>
+                <Link to="/docs/core/v2.0.x/api">Core v2.0.x api</Link>
               </li>
               <li>
-                <Link to={buildUrl('/docs/core/v2.0.x/middlewares')}>
+                <Link to="/docs/core/v2.0.x/middlewares">
                   Core v2.0.x middlewares
                 </Link>
               </li>

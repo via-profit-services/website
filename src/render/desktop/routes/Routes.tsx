@@ -1,10 +1,7 @@
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import { useIntl } from 'react-intl';
-import { Switch, Route, useParams } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import loadable from '@loadable/component';
 
-import { DEFAULT_LOCALE } from '~/utils/constants';
 import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
 
 const Home = loadable(() => import('~/render/desktop/containers/Home'), {
@@ -15,6 +12,17 @@ const Docs = loadable(() => import('~/render/desktop/containers/Docs'), {
   fallback: <LoadingIndicator />,
 });
 
+const Legal = loadable(() => import('~/render/desktop/containers/Legal'), {
+  fallback: <LoadingIndicator />,
+});
+
+const Packages = loadable(
+  () => import('~/render/desktop/containers/Packages'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
 const Fallback = loadable(
   () => import('~/render/desktop/containers/Fallback'),
   {
@@ -22,34 +30,14 @@ const Fallback = loadable(
   },
 );
 
-const Routes: React.FC = () => {
-  const intl = useIntl();
-  const { locale } = useParams<{ locale?: string }>();
-
-  return (
-    <>
-      <Helmet
-        defaultTitle={intl.formatMessage({
-          defaultMessage: 'Via Profit Services',
-          description: 'Helmet «defaultTitle» param',
-        })}
-        titleTemplate={intl.formatMessage({
-          defaultMessage: '%s — Via Profit Services',
-          description: 'Helmet «titleTemplate» param',
-        })}>
-        <html lang={locale || DEFAULT_LOCALE} />
-        <meta charSet="utf-8" />
-        <meta name="author" content="Via Profit" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Helmet>
-
-      <Switch>
-        <Route path={['/:locale/docs', '/docs']} component={Docs} />
-        <Route path={['/:locale', '/']} component={Home} />
-        <Route component={Fallback} />
-      </Switch>
-    </>
-  );
-};
+const Routes: React.FC = () => (
+  <Switch>
+    <Route exact path="/" component={Home} />
+    <Route path="/docs" component={Docs} />
+    <Route path="/packages" component={Packages} />
+    <Route path="/legal" component={Legal} />
+    <Route component={Fallback} />
+  </Switch>
+);
 
 export default Routes;

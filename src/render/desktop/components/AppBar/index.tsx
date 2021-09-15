@@ -1,14 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 
 import AppBarItem from './AppBarItem';
 import ThemeButton from './ThemeButton';
 
 const AppBarContainer = styled.header`
   position: sticky;
-  top: 10px;
-  margin: 0 10px;
-  border-radius: 0 0 10px 10px;
+  top: 0;
   background: ${props => props.theme.color.text.primary};
   z-index: ${props => props.theme.zIndex.header};
   box-shadow: ${props => props.theme.shadows[0]};
@@ -16,8 +15,6 @@ const AppBarContainer = styled.header`
 
 const AppBarTop = styled.div`
   padding: 0.5rem 0;
-  border-radius: 10px 10px 0 0;
-  background: red;
 `;
 
 const AppBarInner = styled.div`
@@ -47,10 +44,24 @@ const AppBar: React.FC = () => (
     <AppBarTop>Lorem ipsum</AppBarTop>
     <AppBarInner>
       <AppBarPagesbar>
-        <AppBarItem to="/">Home</AppBarItem>
-        <AppBarItem to="/ru">RU Home</AppBarItem>
-        <AppBarItem to="/docs">Docs</AppBarItem>
-        <AppBarItem to="/ru/docs">RU Docs</AppBarItem>
+        <AppBarItem to="/">
+          <FormattedMessage
+            defaultMessage="Home"
+            description="Appbar. Home link"
+          />
+        </AppBarItem>
+        <AppBarItem to="/docs">
+          <FormattedMessage
+            defaultMessage="Docs"
+            description="Appbar. Documentation link"
+          />
+        </AppBarItem>
+        <AppBarItem to="/packages">
+          <FormattedMessage
+            defaultMessage="Packages"
+            description="Appbar. Packages link"
+          />
+        </AppBarItem>
       </AppBarPagesbar>
       <AppBarToolbar>
         <ThemeButton />

@@ -8,6 +8,7 @@ import AppBar from '~/render/desktop/components/AppBar';
 import ContentArea from '~/render/desktop/components/ContentArea';
 import LeftSidebar from '~/render/desktop/components/LeftSidebar';
 import Footer from '~/render/desktop/components/Footer';
+import Meta from '~/render/desktop/components/Meta';
 
 const Fallback = Loadable(
   () => import('~/render/desktop/containers/Fallback'),
@@ -52,6 +53,7 @@ const Docs: React.FC = () => {
 
   return (
     <>
+      <Meta />
       <AppBar />
       <Layout>
         <ColumnLeft>
