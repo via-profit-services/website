@@ -34,6 +34,7 @@ const standardLight: DefaultTheme = {
       200: '#F0F0F0',
       300: '#E5E5E5',
       400: '#CCCCCC',
+      500: '#B7B7B7',
     },
     black: {
       primary: '#000000',

@@ -19,7 +19,7 @@ declare module 'styled-components' {
     };
     color: {
       gradients: [string, string, string, string];
-      grey: Record<'100' | '200' | '300' | '400', string>;
+      grey: Record<'100' | '200' | '300' | '400' | '500', string>;
       text: {
         primary: string;
         secondary: string;

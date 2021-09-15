@@ -101,11 +101,11 @@ export default createGlobalStyle`
     outline: none;
   }
   ::placeholder {
-    color: red;
+    color: ${props => props.theme.color.grey[300]};
   }
   ::selection {
-    background: red;
-    color: red;
+    background: ${props => props.theme.color.accent.primary};
+    color: ${props => props.theme.color.text.inverse};
   }
   &::-webkit-scrollbar {
     width: 10px;
@@ -115,17 +115,18 @@ export default createGlobalStyle`
     background: none;
   }
   &::-webkit-scrollbar-track {
-    background: red;
+    background: ${props => props.theme.color.grey[200]};
   }
   &::-webkit-scrollbar-thumb {
-    background: red;
+    background: ${props => props.theme.color.grey[500]};
     border-radius: 10px;
   }
   &::-webkit-scrollbar-thumb:hover {
-    background: red;
+    background: ${props => props.theme.color.accent.primary};
   }
   * {
-    scrollbar-color: red red;
+    scrollbar-color: ${props => props.theme.color.grey[500]} ${props =>
+  props.theme.color.grey[200]};
   }
 
   #app {

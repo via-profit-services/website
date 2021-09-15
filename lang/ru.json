@@ -3,6 +3,10 @@
     "defaultMessage": "Permissions",
     "description": "Footer. Package permissions link"
   },
+  "+jqzeW": {
+    "defaultMessage": "Docs",
+    "description": "Appbar. Documentation link"
+  },
   "01ghRs": {
     "defaultMessage": "Geography",
     "description": "Footer. Package geography link"
@@ -25,6 +29,10 @@
     "defaultMessage": "Redis",
     "description": "Footer. Package redis link"
   },
+  "3xqp66": {
+    "defaultMessage": "Via-profit services",
+    "description": "Home main screen. Pretitle"
+  },
   "7atvZ+": {
     "defaultMessage": "MIT license",
     "description": "Footer. License string in copiright string"
@@ -40,6 +48,10 @@
   "F4wEPb": {
     "defaultMessage": "Cookie policy"
   },
+  "H3888Z": {
+    "defaultMessage": "{strong} infrastructure with middlewares collection",
+    "description": "Home main screen. Title (without strong tag"
+  },
   "Iss0k3": {
     "defaultMessage": "Website",
     "description": "Footer. company website link"
@@ -51,6 +63,10 @@
   "JzKCcn": {
     "defaultMessage": "Terms",
     "description": "Footer. Terms link"
+  },
+  "L5AmMp": {
+    "defaultMessage": "Lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
+    "description": "Home main screen. Text"
   },
   "QXNoQe": {
     "defaultMessage": "GitHub",
@@ -71,11 +87,12 @@
   "TUV3q8": {
     "defaultMessage": "List of all packages"
   },
-  "U3l+Q9": {
-    "defaultMessage": "Главная страница"
-  },
   "UhkSyx": {
     "defaultMessage": "Terms of Use"
+  },
+  "VtNakx": {
+    "defaultMessage": "GraphQL HTTP Server",
+    "description": "Home main screen. Strong tag of the title"
   },
   "WXNeD2": {
     "defaultMessage": "Cookie policy",
@@ -130,12 +147,20 @@
     "defaultMessage": "Company",
     "description": "Footer. Title of the «Company» section"
   },
+  "pruhcA": {
+    "defaultMessage": "Home",
+    "description": "Appbar. Home link"
+  },
   "vrbypx": {
     "defaultMessage": "Via Profit",
     "description": "Helmet meta «author»"
   },
   "vx0nkZ": {
     "defaultMessage": "Privacy Policy"
+  },
+  "w4HFhX": {
+    "defaultMessage": "Packages",
+    "description": "Appbar. Packages link"
   },
   "xnJwur": {
     "defaultMessage": "Установка и настройка",
@@ -144,6 +169,9 @@
   "yjyG/7": {
     "defaultMessage": "Settings manager",
     "description": "Footer. Package settings-manager link"
+  },
+  "U3l+Q9": {
+    "defaultMessage": "Главная страница"
   },
   "GklOhG": {
     "defaultMessage": "{year} — Все права защищены"

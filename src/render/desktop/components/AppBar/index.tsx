@@ -1,73 +1,128 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
+import StickyNode from 'react-stickynode';
 
-import AppBarItem from './AppBarItem';
 import ThemeButton from './ThemeButton';
+import Logo from '~/render/desktop/components/Logo/LogoInline';
 
-const AppBarContainer = styled.header`
-  position: sticky;
-  top: 0;
-  background: ${props => props.theme.color.text.primary};
-  z-index: ${props => props.theme.zIndex.header};
-  box-shadow: ${props => props.theme.shadows[0]};
+const Wrapper = styled.div`
+  z-index: ${({ theme }) => theme.zIndex.header};
 `;
 
-const AppBarTop = styled.div`
-  padding: 0.5rem 0;
+const NavLink = styled(Link)`
+  display: inline-flex;
+  padding: 1rem 0.8rem;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+  color: ${props => props.theme.color.text.inverse};
+  transition: color 200ms ease-in;
 `;
 
-const AppBarInner = styled.div`
+const LogoLink = styled(Link)`
+  display: inline-flex;
+`;
+
+const StyledLogo = styled(Logo)`
+  color: ${props => props.theme.color.text.inverse};
+  height: 1.5rem;
+  transition: color 200ms ease-in;
+`;
+
+const Container = styled.header<{ $isFixed: boolean }>`
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  transition: box-shadow 200ms ease-out, background-color 200ms ease-out;
+  ${props =>
+    props.$isFixed &&
+    css`
+      transition: box-shadow 120ms ease-in, background-color 120ms ease-in;
+      background-color: ${({ theme }) => theme.color.background.secondary};
+      box-shadow: ${({ theme }) => theme.shadows[0]};
+
+      ${NavLink} {
+        color: ${({ theme }) => theme.color.text.primary};
+        transition: color 120ms ease-out;
+        &:hover {
+          color: ${({ theme }) => theme.color.accent.primary};
+        }
+      }
+
+      ${StyledLogo} {
+        color: ${({ theme }) => theme.color.text.primary};
+        transition: color 120ms ease-out;
+      }
+    `}
+`;
+
+const Inner = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   max-width: ${props => props.theme.grid.desktop.safeFrame}px;
+  margin: 0 auto;
 `;
 
-const AppBarPagesbar = styled.nav`
-  margin: 0 auto;
+const Navbar = styled.nav`
+  margin-left: 2rem;
   flex: 1;
   display: flex;
   align-items: center;
-  max-width: ${props => props.theme.grid.desktop.safeFrame}px;
 `;
 
-const AppBarToolbar = styled.div`
+const Toolbar = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  max-width: ${props => props.theme.grid.desktop.safeFrame}px;
+  align-self: flex-end;
 `;
 
-const AppBar: React.FC = () => (
-  <AppBarContainer>
-    <AppBarTop>Lorem ipsum</AppBarTop>
-    <AppBarInner>
-      <AppBarPagesbar>
-        <AppBarItem to="/">
-          <FormattedMessage
-            defaultMessage="Home"
-            description="Appbar. Home link"
-          />
-        </AppBarItem>
-        <AppBarItem to="/docs">
-          <FormattedMessage
-            defaultMessage="Docs"
-            description="Appbar. Documentation link"
-          />
-        </AppBarItem>
-        <AppBarItem to="/packages">
-          <FormattedMessage
-            defaultMessage="Packages"
-            description="Appbar. Packages link"
-          />
-        </AppBarItem>
-      </AppBarPagesbar>
-      <AppBarToolbar>
-        <ThemeButton />
-      </AppBarToolbar>
-    </AppBarInner>
-  </AppBarContainer>
-);
+const AppBar: React.FC = () => {
+  const [isFixed, setIsFixed] = React.useState(false);
+
+  return (
+    <Wrapper>
+      <StickyNode
+        onStateChange={({ status }) =>
+          setIsFixed(StickyNode.STATUS_FIXED === status)
+        }>
+        <Container $isFixed={isFixed}>
+          <Inner>
+            <LogoLink to="/">
+              <StyledLogo />
+            </LogoLink>
+            <Navbar>
+              <NavLink to="/">
+                <FormattedMessage
+                  defaultMessage="Home"
+                  description="Appbar. Home link"
+                />
+              </NavLink>
+              <NavLink to="/docs">
+                <FormattedMessage
+                  defaultMessage="Docs"
+                  description="Appbar. Documentation link"
+                />
+              </NavLink>
+              <NavLink to="/packages">
+                <FormattedMessage
+                  defaultMessage="Packages"
+                  description="Appbar. Packages link"
+                />
+              </NavLink>
+            </Navbar>
+            <Toolbar>
+              <ThemeButton />
+            </Toolbar>
+          </Inner>
+        </Container>
+      </StickyNode>
+    </Wrapper>
+  );
+};
 
 export default AppBar;

@@ -8,6 +8,8 @@ module.exports = {
         md: 'always',
         json: 'always',
         woff2: 'always',
+        png: 'always',
+        svg: 'always',
       },
     ],
   },

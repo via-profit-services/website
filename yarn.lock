@@ -3401,6 +3401,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-stickynode@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@types/react-stickynode@npm:3.0.2"
+  dependencies:
+    "@types/react": "*"
+  checksum: 1bc7c46e8ce345ab4c93aed9da45c371966885e53ceee5680e846538fc36e62750900bb8c40c65065b003570e66f683d33218cc7bb8664e1027b50b4a5250c3e
+  languageName: node
+  linkType: hard
+
 "@types/react-swipeable-views@npm:^0.13.1":
   version: 0.13.1
   resolution: "@types/react-swipeable-views@npm:0.13.1"
@@ -3926,6 +3935,7 @@ __metadata:
     "@types/react-router": ^5.1.2
     "@types/react-router-dom": ^5.1.1
     "@types/react-sticky-el": ^1.0.2
+    "@types/react-stickynode": ^3.0.2
     "@types/react-swipeable-views": ^0.13.1
     "@types/react-syntax-highlighter": ^13.5.2
     "@types/react-transition-group": ^4.4.0
@@ -4056,6 +4066,7 @@ __metadata:
     react-router-config: ^5.1.1
     react-router-dom: ^5.2.0
     react-sticky-el: ^2.0.7
+    react-stickynode: ^4.0.0
     react-swipeable-views: ^0.14.0
     react-syntax-highlighter: ^15.4.4
     react-test-renderer: ^17.0.2
@@ -6362,6 +6373,13 @@ __metadata:
     isobject: ^3.0.0
     static-extend: ^0.1.1
   checksum: be108900801e639e50f96a7e4bfa8867c753a7750a7603879f3981f8b0a89cba657497a2d5f40cd4ea557ff15d535a100818bb486baf6e26fe5d7872e75f1078
+  languageName: node
+  linkType: hard
+
+"classnames@npm:^2.0.0":
+  version: 2.3.1
+  resolution: "classnames@npm:2.3.1"
+  checksum: 14db8889d56c267a591f08b0834989fe542d47fac659af5a539e110cc4266694e8de86e4e3bbd271157dbd831361310a8293e0167141e80b0f03a0f175c80960
   languageName: node
   linkType: hard
 
@@ -8733,7 +8751,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eventemitter3@npm:^3.1.0":
+"eventemitter3@npm:^3.0.0, eventemitter3@npm:^3.1.0":
   version: 3.1.2
   resolution: "eventemitter3@npm:3.1.2"
   checksum: 81e4e82b8418f5cfd986d2b4a2fa5397ac4eb8134e09bcb47005545e22fdf8e9e61d5c053d34651112245aae411bdfe6d0ad5511da0400743fef5fc38bfcfbe3
@@ -16756,7 +16774,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"raf@npm:^3.4.0, raf@npm:^3.4.1":
+"raf@npm:^3.0.0, raf@npm:^3.4.0, raf@npm:^3.4.1":
   version: 3.4.1
   resolution: "raf@npm:3.4.1"
   dependencies:
@@ -17142,6 +17160,22 @@ fsevents@~2.3.2:
     react: ">=16.3.0"
     react-dom: ">=16.3.0"
   checksum: 9a43e77a30c0dff6700c905765ca440ec2743c850739d2ccef0401e62e00febe95ef830363f08ab7375c5b4eaa9f6fd00c27ef6e3cc53797cdda0c2575768eeb
+  languageName: node
+  linkType: hard
+
+"react-stickynode@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "react-stickynode@npm:4.0.0"
+  dependencies:
+    classnames: ^2.0.0
+    core-js: ^3.6.5
+    prop-types: ^15.6.0
+    shallowequal: ^1.0.0
+    subscribe-ui-event: ^2.0.6
+  peerDependencies:
+    react: ^0.14.2 || ^15.0.0 || ^16.0.0 || ^17.0.0
+    react-dom: ^0.14.2 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 51c0cb132af5875441bcd2d849cd29f21073ace105eef8eac00e2971c5d11050d516b2c78b515f91846b17b0b6c8022fd935385071da66329d0e11fd698523f5
   languageName: node
   linkType: hard
 
@@ -18479,7 +18513,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"shallowequal@npm:^1.1.0":
+"shallowequal@npm:^1.0.0, shallowequal@npm:^1.1.0":
   version: 1.1.0
   resolution: "shallowequal@npm:1.1.0"
   checksum: f4c1de0837f106d2dbbfd5d0720a5d059d1c66b42b580965c8f06bb1db684be8783538b684092648c981294bf817869f743a066538771dbecb293df78f765e00
@@ -19536,6 +19570,17 @@ resolve@^2.0.0-next.3:
   bin:
     stylelint: bin/stylelint.js
   checksum: daaacb4b52d90f4aa882903889c6fc77a8183368ba839efb663f97c094615dff9546e025b1f4a377efab2e30fa17e206fe2b3be2c62c623779a01366a85b0401
+  languageName: node
+  linkType: hard
+
+"subscribe-ui-event@npm:^2.0.6":
+  version: 2.0.7
+  resolution: "subscribe-ui-event@npm:2.0.7"
+  dependencies:
+    eventemitter3: ^3.0.0
+    lodash: ^4.17.15
+    raf: ^3.0.0
+  checksum: 60c78c1930bedd58cb18fda4b88e271f7181aaf02ee83d6071a414de13a9fdb3941ea1d6222fa92c109d59f16d17d8f7110f88d9afd94609951977fc5c9834b3
   languageName: node
   linkType: hard
 
