@@ -27,7 +27,7 @@ const Loader = styled.div`
   border-radius: 50%;
   width: 1em;
   height: 1em;
-  color: ${props => props.theme.color.primary.blue};
+  color: ${props => props.theme.color.accent.primary};
   font-size: 10px;
   margin: 0 auto;
   position: relative;

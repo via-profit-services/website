@@ -10,7 +10,7 @@ const SectionDescription = styled(Paragraph)`
   margin-top: 2.4em;
   margin-bottom: 1em;
   text-align: center;
-  color: ${({ theme }) => theme.palette.textSecondary};
+  color: ${({ theme }) => theme.color.text.secondary};
 `;
 
 export default SectionDescription;

@@ -19,8 +19,8 @@ const StyledButtonContained = styled.button<StyledProps>`
   border: 0;
   outline: none;
   transition: all 160ms ease-out;
-  color: ${props => props.theme.color.textPrimary};
-  border: 0.125em solid ${props => props.theme.color.textPrimary};
+  color: ${props => props.theme.color.text.primary};
+  border: 0.125em solid ${props => props.theme.color.text.primary};
   background: red;
   &:hover {
     background: red;

@@ -31,7 +31,7 @@ const MenuButton = styled.button`
   background: none;
   color: inherit;
   text-decoration: none;
-  color: ${props => props.theme.color.textPrimary};
+  color: ${props => props.theme.color.text.primary};
 `;
 
 const CenterSide = styled.div`

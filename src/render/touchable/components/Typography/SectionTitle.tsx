@@ -25,7 +25,7 @@ const Inner = styled.span`
     height: 3px;
     width: 40px;
     transform: translate(-50%, 0);
-    background-color: ${({ theme }) => theme.palette.primary.light};
+    background-color: ${({ theme }) => theme.color.background.secondary};
   }
 `;
 

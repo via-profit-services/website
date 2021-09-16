@@ -45,7 +45,7 @@ const DrawerFooter = styled.div`
 
 const DeveloperLink = styled.a`
   display: block;
-  color: ${({ theme }) => theme.color.textPrimary};
+  color: ${({ theme }) => theme.color.text.primary};
   text-decoration: none;
   padding: 20px;
 `;

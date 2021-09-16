@@ -13,7 +13,7 @@ const ItemLink = styled(Link)`
   display: flex;
   text-decoration: none;
   font-weight: 500;
-  color: ${({ theme }) => theme.color.textPrimary};
+  color: ${({ theme }) => theme.color.text.primary};
 `;
 
 const IconWrapper = styled.span`
@@ -22,7 +22,7 @@ const IconWrapper = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${({ theme }) => theme.color.textSecondary};
+  color: ${({ theme }) => theme.color.text.secondary};
   opacity: 0.8;
 `;
 
