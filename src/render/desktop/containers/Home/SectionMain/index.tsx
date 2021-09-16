@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 import imagesrc from '~/../assets/images/section-main-background.png';
 import bearsrc from '~/../assets/images/section-main-bear.svg';
+import sirclessrc from '~/../assets/images/section-main-circles.svg';
 import Strong from '~/render/desktop/components/Typography/Strong';
 
 const Container = styled.div`
@@ -16,6 +17,18 @@ const Container = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: center;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    background-image: url(${sirclessrc});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    right: 100px;
+    width: 100vh;
+    height: 100vh;
+  }
 `;
 
 const Content = styled.div`
