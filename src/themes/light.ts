@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
-const standardLight: DefaultTheme = {
+const light: DefaultTheme = {
   fontSize: 16,
   zIndex: {
     header: 8,
@@ -57,4 +57,4 @@ const standardLight: DefaultTheme = {
   ],
 };
 
-export default standardLight;
+export default light;

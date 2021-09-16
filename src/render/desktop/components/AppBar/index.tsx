@@ -5,6 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import StickyNode from 'react-stickynode';
 
 import ThemeButton from './ThemeButton';
+import GitHubButton from './GitHubButton';
 import Logo from '~/render/desktop/components/Logo/LogoInline';
 
 const Wrapper = styled.div`
@@ -78,7 +79,10 @@ const Toolbar = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  align-self: flex-end;
+`;
+
+const StyledThemeButton = styled(ThemeButton)`
+  margin-left: 1rem;
 `;
 
 const AppBar: React.FC = () => {
@@ -116,7 +120,8 @@ const AppBar: React.FC = () => {
               </NavLink>
             </Navbar>
             <Toolbar>
-              <ThemeButton />
+              <GitHubButton />
+              <StyledThemeButton />
             </Toolbar>
           </Inner>
         </Container>

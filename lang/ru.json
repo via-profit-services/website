@@ -1,130 +1,114 @@
 {
   "+J8xit": {
-    "defaultMessage": "Permissions",
-    "description": "Footer. Package permissions link"
+    "defaultMessage": "Permissions"
   },
   "+jqzeW": {
-    "defaultMessage": "Docs",
-    "description": "Appbar. Documentation link"
+    "defaultMessage": "Документация"
   },
   "01ghRs": {
-    "defaultMessage": "Geography",
-    "description": "Footer. Package geography link"
+    "defaultMessage": "Geography"
   },
   "01tnyG": {
-    "defaultMessage": "Subscriptions",
-    "description": "Footer. Package subscriptions link"
+    "defaultMessage": "Subscriptions"
   },
   "04jeAy": {
     "defaultMessage": "Введение в @via-profit-services/core v1.2.x"
   },
   "2qRiOA": {
-    "defaultMessage": "File Storage",
-    "description": "Footer. Package file-storage link"
+    "defaultMessage": "File Storage"
   },
   "2z6QCO": {
     "defaultMessage": "Core"
   },
   "3q5j6q": {
-    "defaultMessage": "Redis",
-    "description": "Footer. Package redis link"
+    "defaultMessage": "Redis"
   },
   "3xqp66": {
-    "defaultMessage": "Via-profit services",
-    "description": "Home main screen. Pretitle"
+    "defaultMessage": "Via-profit services"
   },
   "7atvZ+": {
-    "defaultMessage": "MIT license",
-    "description": "Footer. License string in copiright string"
+    "defaultMessage": "Лицензия MIT"
   },
   "C5ASDU": {
-    "defaultMessage": "Messages",
-    "description": "Footer. Package messages link"
+    "defaultMessage": "Messages"
   },
   "DaZRES": {
-    "defaultMessage": "Knex",
-    "description": "Footer. Package knex link"
+    "defaultMessage": "Knex"
   },
   "F4wEPb": {
     "defaultMessage": "Cookie policy"
   },
+  "GklOhG": {
+    "defaultMessage": "{year} — Все права защищены"
+  },
   "H3888Z": {
-    "defaultMessage": "{strong} infrastructure with middlewares collection",
-    "description": "Home main screen. Title (without strong tag"
+    "defaultMessage": "{strong} infrastructure with middlewares collection"
+  },
+  "H5vB1u": {
+    "defaultMessage": "Разработчик {developer}"
   },
   "Iss0k3": {
-    "defaultMessage": "Website",
-    "description": "Footer. company website link"
+    "defaultMessage": "Website"
   },
   "JhrkI7": {
-    "defaultMessage": "Via Profit Services documentation",
-    "description": "Helmet «defaultTitle» param"
+    "defaultMessage": "Via Profit Services documentation"
   },
   "JzKCcn": {
-    "defaultMessage": "Terms",
-    "description": "Footer. Terms link"
+    "defaultMessage": "Terms"
   },
   "L5AmMp": {
-    "defaultMessage": "Lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
-    "description": "Home main screen. Text"
+    "defaultMessage": "Lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on"
   },
   "QXNoQe": {
-    "defaultMessage": "GitHub",
-    "description": "Footer. GitHub link"
+    "defaultMessage": "GitHub"
   },
   "R7qNRK": {
-    "defaultMessage": "Open source",
-    "description": "Footer. «Open source project» label («Open source» segment)"
+    "defaultMessage": "Open source"
   },
   "RR9NSx": {
-    "defaultMessage": "SMS",
-    "description": "Footer. Package sms link"
+    "defaultMessage": "SMS"
   },
   "Se/iPE": {
-    "defaultMessage": "Privacy Policy",
-    "description": "Footer. Privacy link"
+    "defaultMessage": "Privacy Policy"
   },
   "TUV3q8": {
     "defaultMessage": "List of all packages"
+  },
+  "U3l+Q9": {
+    "defaultMessage": "Главная страница"
   },
   "UhkSyx": {
     "defaultMessage": "Terms of Use"
   },
   "VtNakx": {
-    "defaultMessage": "GraphQL HTTP Server",
-    "description": "Home main screen. Strong tag of the title"
+    "defaultMessage": "GraphQL HTTP Server"
   },
   "WXNeD2": {
-    "defaultMessage": "Cookie policy",
-    "description": "Footer. Cookie policy link"
+    "defaultMessage": "Cookie policy"
   },
   "WjfU81": {
-    "defaultMessage": "Accounts",
-    "description": "Footer. Package accounts link"
+    "defaultMessage": "Accounts"
   },
   "XA9oyK": {
-    "defaultMessage": "Packages",
-    "description": "Footer. Title of the «Packages» section"
+    "defaultMessage": "Packages"
   },
   "XkqqdC": {
-    "defaultMessage": "%s — Via Profit Services documentation",
-    "description": "Helmet «titleTemplate» param"
+    "defaultMessage": "%s — Via Profit Services documentation"
   },
   "YOLRNb": {
-    "defaultMessage": "Dataloader",
-    "description": "Footer. Package dataloader link"
+    "defaultMessage": "Dataloader"
+  },
+  "baPNbY": {
+    "defaultMessage": "Via Profit"
   },
   "dwWw1n": {
-    "defaultMessage": "Legal",
-    "description": "Footer. Title of the «Legal» section"
+    "defaultMessage": "Legal"
   },
   "ejfCfL": {
-    "defaultMessage": "Установка и настройка @via-profit-services/core",
-    "description": "Meta description of installation and setup"
+    "defaultMessage": "Установка и настройка @via-profit-services/core"
   },
   "hdR+lK": {
-    "defaultMessage": "Core",
-    "description": "Footer. package core link"
+    "defaultMessage": "Core"
   },
   "jQY7K7": {
     "defaultMessage": "Redis"
@@ -135,59 +119,37 @@
   "kZk26D": {
     "defaultMessage": "Knex"
   },
+  "kiw+og": {
+    "defaultMessage": "Via Profit Services"
+  },
   "lZbWK/": {
-    "defaultMessage": "Copyright {year} Via Profit",
-    "description": "Footer. Copiright string"
+    "defaultMessage": "Copyright {year} Via Profit"
   },
   "p/QgQD": {
-    "defaultMessage": "project",
-    "description": "Footer. «project» segment of «Open source project» label"
+    "defaultMessage": "project"
   },
   "payrbn": {
-    "defaultMessage": "Company",
-    "description": "Footer. Title of the «Company» section"
+    "defaultMessage": "Company"
   },
   "pruhcA": {
-    "defaultMessage": "Home",
-    "description": "Appbar. Home link"
+    "defaultMessage": "Home"
+  },
+  "uSEDuF": {
+    "defaultMessage": "%s — Via Profit Services"
   },
   "vrbypx": {
-    "defaultMessage": "Via Profit",
-    "description": "Helmet meta «author»"
+    "defaultMessage": "Via Profit"
   },
   "vx0nkZ": {
     "defaultMessage": "Privacy Policy"
   },
   "w4HFhX": {
-    "defaultMessage": "Packages",
-    "description": "Appbar. Packages link"
+    "defaultMessage": "Packages"
   },
   "xnJwur": {
-    "defaultMessage": "Установка и настройка",
-    "description": "Meta title of installation and setup"
+    "defaultMessage": "Установка и настройка"
   },
   "yjyG/7": {
-    "defaultMessage": "Settings manager",
-    "description": "Footer. Package settings-manager link"
-  },
-  "U3l+Q9": {
-    "defaultMessage": "Главная страница"
-  },
-  "GklOhG": {
-    "defaultMessage": "{year} — Все права защищены"
-  },
-  "H5vB1u": {
-    "defaultMessage": "Разработчик {developer}"
-  },
-  "baPNbY": {
-    "defaultMessage": "Via Profit"
-  },
-  "kiw+og": {
-    "defaultMessage": "Via Profit Services",
-    "description": "Helmet «defaultTitle» param"
-  },
-  "uSEDuF": {
-    "defaultMessage": "%s — Via Profit Services",
-    "description": "Helmet «titleTemplate» param"
+    "defaultMessage": "Settings manager"
   }
 }

@@ -3,7 +3,7 @@ import { Dispatch } from 'redux';
 export {};
 
 declare global {
-  export type ThemeVariants = 'standardLight' | 'standardDark';
+  export type ThemeVariants = 'light' | 'dark';
   export type ModeVariants = 'touchable' | 'desktop';
 
   export type ReduxState = {

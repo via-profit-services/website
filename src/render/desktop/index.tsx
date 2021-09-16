@@ -20,7 +20,7 @@ const ApplicationDesktop: React.FC = () => {
     state => state.theme,
   );
 
-  const currentTheme: DefaultTheme = themes[theme] || themes.standardLight;
+  const currentTheme: DefaultTheme = themes[theme] || themes.light;
 
   return (
     <ErrorBoundary>

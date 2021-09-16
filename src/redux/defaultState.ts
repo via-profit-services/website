@@ -1,5 +1,5 @@
 const defaultState: ReduxState = {
-  theme: 'standardLight',
+  theme: 'light',
   mode: 'desktop',
 };
 
