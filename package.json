@@ -27,7 +27,8 @@
         "start:dev": "yarn build:client:dev && yarn webpack serve --progress --color --config webpack/client/webpack-config-dev.ts",
         "start:prod": "yarn build:all:prod && yarn node ./dist",
         "build:dist": "yarn build:all:prod",
-        "lint": "yarn tsc --noEmit && yarn eslint --fix --config ./.eslintrc.js"
+        "lint": "yarn tsc --noEmit && yarn eslint --fix",
+        "pretty": "yarn prettier --write ./src"
     },
     "dependencies": {
         "@babel/plugin-transform-regenerator": "^7.8.7",

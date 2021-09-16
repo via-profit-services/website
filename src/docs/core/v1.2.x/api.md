@@ -3,7 +3,12 @@
 You can use helpers by exporting them from the module:
 
 ```ts
-import { factory, resolvers, logFormatter, buildQueryFilter } from '@via-profit-services/core';
+import {
+  factory,
+  resolvers,
+  logFormatter,
+  buildQueryFilter,
+} from '@via-profit-services/core';
 ```
 
 ## factory
@@ -31,11 +36,12 @@ server.listen(9000);
 ## resolvers
 
 Resolvers object contains:
- - [Scalars](#scalars) resolvers
- - Root `Query` resolvers
-   - `core` - Returns core version
- - Root `Mutation` resolvers
-   - `echo` - Returns passed string
+
+- [Scalars](#scalars) resolvers
+- Root `Query` resolvers
+  - `core` - Returns core version
+- Root `Mutation` resolvers
+  - `echo` - Returns passed string
 
 ## typeDefs
 
@@ -62,11 +68,12 @@ console.log(ids); // <-- [{id: '1'}, {id: '2'}, {id: '3'}]
 ## collateForDataloader
 
 Collate rows for dataloader response
-*From DataLoader docs:*
+_From DataLoader docs:_
 There are a few constraints this function must uphold:
-  - The Array of values must be the same length as the Array of keys.
-  - Each index in the Array of values must correspond to the same index in the Array of keys.
-For details [here](https://github.com/graphql/dataloader#batch-function)
+
+- The Array of values must be the same length as the Array of keys.
+- Each index in the Array of values must correspond to the same index in the Array of keys.
+  For details [here](https://github.com/graphql/dataloader#batch-function)
 
 ```ts
 const dataloader = new DataLoader(async (ids: string[]) => {
@@ -82,14 +89,13 @@ Returns node IDs array
 
 ```ts
 const ids = extractNodeIds([
-  {id: '1', name: 'Ivan'},
-  {id: '2', name: 'Stepan'},
-  {id: '3', name: 'Petruha'},
+  { id: '1', name: 'Ivan' },
+  { id: '2', name: 'Stepan' },
+  { id: '3', name: 'Petruha' },
 ]);
 
 console.log(ids); // <-- ['1', '2', '3'];
 ```
-
 
 ## extractNodeField
 
@@ -97,15 +103,14 @@ Return array of fields of node
 
 ```ts
 const persons = [
-  {id: '1', name: 'Ivan'},
-  {id: '2', name: 'Stepan'},
-  {id: '3', name: 'Petruha'},
+  { id: '1', name: 'Ivan' },
+  { id: '2', name: 'Stepan' },
+  { id: '3', name: 'Petruha' },
 ];
 
 const names = extractNodeField(persons, 'name');
 console.log(names); // <-- ['Ivan', 'Stepan', 'Petruha']
 ```
-
 
 ## nodeToEdge
 
@@ -116,23 +121,23 @@ const filter = {
   offset: 0,
   limit: 15,
   where: [],
-  orderBy: [{
-    field: 'name',
-    direction: 'desc',
-  }],
-}
+  orderBy: [
+    {
+      field: 'name',
+      direction: 'desc',
+    },
+  ],
+};
 
 // Get persons list
 const persons = await service.getPersons(filter);
 
 // Map all persons to compile the edge for each
-const edges = persons.map((person) => {
-
+const edges = persons.map(person => {
   // You should passed node, cursor name and filter params
   return nodeToEdge(person, 'persons-cursor', filter);
 });
 console.log(edges); // <-- [{ cursor: 'XGHJGds', node: { id: '1', name: 'Ivan' } }]
-
 ```
 
 ## stringToCursor
@@ -164,10 +169,12 @@ const cursor = makeNodeCursor('persons-cursor', {
   offset: 0,
   limit: 15,
   where: [],
-  orderBy: [{
-    field: 'name',
-    direction: 'desc',
-  }],
+  orderBy: [
+    {
+      field: 'name',
+      direction: 'desc',
+    },
+  ],
 });
 console.log(cursor); // <-- eyJvZmZzZXQiOjAsImxpbWl0IjoxNSwid2h...
 ```
@@ -177,7 +184,7 @@ console.log(cursor); // <-- eyJvZmZzZXQiOjAsImxpbWl0IjoxNSwid2h...
 Convert string to cursor base64 string and return payload
 
 ```ts
-const payload = getCursorPayload('eyJvZmZzZXQiOjA...')
+const payload = getCursorPayload('eyJvZmZzZXQiOjA...');
 console.log(payload);
 /**
  * {
@@ -194,15 +201,18 @@ console.log(payload);
 Returns Relay cursor bundle
 
 ```ts
-const cursorBundle = buildCursorConnection({
-  totalCount: 3,
-  offset: 0,
-  limit: 2,
-  nodes: [
-    { id: '1', name: 'Ivan', createdAt: new Date(), updatedAt: new Date() },
-    { id: '2', name: 'Stepan', createdAt: new Date(), updatedAt: new Date() },
-  ]
-}, 'persons-cursor');
+const cursorBundle = buildCursorConnection(
+  {
+    totalCount: 3,
+    offset: 0,
+    limit: 2,
+    nodes: [
+      { id: '1', name: 'Ivan', createdAt: new Date(), updatedAt: new Date() },
+      { id: '2', name: 'Stepan', createdAt: new Date(), updatedAt: new Date() },
+    ],
+  },
+  'persons-cursor',
+);
 
 console.log(cursorBundle);
 /**
@@ -241,8 +251,6 @@ const record = extractKeyAsObject(source, 'bar');
 
 console.log(record); // <-- { bar: 12 }
 ```
-
-
 
 ## LOG_FILENAME_DEBUG
 

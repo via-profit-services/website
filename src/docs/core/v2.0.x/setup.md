@@ -2,12 +2,12 @@
 
 ## Dependencies (peer)
 
- - [Express](https://github.com/expressjs/express) - Node HTTP Server
- - [DataLoader](https://github.com/via-profit/dataloader) - DataLoader (fork of [GraphQL Dataloader](https://github.com/graphql/dataloader))
- - [Moment](https://github.com/moment/moment) - Date library
- - [Moment Timezone](https://github.com/moment/moment-timezone) - Time zone support for Moment
- - [Winston](https://github.com/winstonjs/winston) - Logger
- - [Winston Daily Rotate File](https://github.com/winstonjs/winston-daily-rotate-file) - A transport for winston which logs to a rotating file
+- [Express](https://github.com/expressjs/express) - Node HTTP Server
+- [DataLoader](https://github.com/via-profit/dataloader) - DataLoader (fork of [GraphQL Dataloader](https://github.com/graphql/dataloader))
+- [Moment](https://github.com/moment/moment) - Date library
+- [Moment Timezone](https://github.com/moment/moment-timezone) - Time zone support for Moment
+- [Winston](https://github.com/winstonjs/winston) - Logger
+- [Winston Daily Rotate File](https://github.com/winstonjs/winston-daily-rotate-file) - A transport for winston which logs to a rotating file
 
 ## Installation
 
@@ -26,17 +26,18 @@ winston-daily-rotate-file \
 ```
 
 And that's it. Let's write some code.
+
 ## <a name="getting-started"></a> Getting Started
 
 To build your first project you should do some things:
-##
-  - Make your GraphQL schema
-  - Create an http server
-  - Apply middleware
 
+##
+
+- Make your GraphQL schema
+- Create an http server
+- Apply middleware
 
 Let's make it
-
 
 ```ts
 import express from 'express';
@@ -60,9 +61,7 @@ import schema from './schema';
   server.listen(port, () => {
     console.info(`GraphQL server started at http://localhost:${port}/graphql`);
   });
-
 })();
-
 ```
 
 We strongly recommend using [@graphql-tools](https://github.com/ardatan/graphql-tools) package to build your schemas. This package helps to combine SDL and resolvers into a single executable schema. See `makeExecutableSchema` of `@graphql-tools/schema` module. For more details: [example with graphql-tools](./examples/graphql-tools/README.md)
@@ -86,12 +85,12 @@ import customResolvers from './resolvers';
   // make schema by graphql-tools
   const schema = makeExecutableSchema({
     typeDefs: [
-      customTypeDefs,// <-- Put your custom SDL here
+      customTypeDefs, // <-- Put your custom SDL here
       typeDefs, // <-- Put here the base core type definitions
     ],
     resolvers: [
       customResolvers, // < -- Put your custom resolvers here
-      resolvers,  // <-- put here the base core resolvers
+      resolvers, // <-- put here the base core resolvers
     ],
   });
 
@@ -105,6 +104,5 @@ import customResolvers from './resolvers';
   server.listen(port, () => {
     console.info(`GraphQL server started at http://localhost:${port}/graphql`);
   });
-
 })();
 ```

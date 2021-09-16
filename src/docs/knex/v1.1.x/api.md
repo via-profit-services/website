@@ -1,10 +1,13 @@
-
 # API
 
 You can use helpers by exporting them from the module:
 
 ```ts
-import { factory, convertBetweenToKnex, convertWhereToKnex } from '@via-profit-services/knex';
+import {
+  factory,
+  convertBetweenToKnex,
+  convertWhereToKnex,
+} from '@via-profit-services/knex';
 ```
 
 ## factory
@@ -27,16 +30,14 @@ const knexMiddleware = factory({
 Convert OrderBy array to Knex Order by format
 
 ```ts
-const orderBy = [{
-  field: 'name',
-  direction: 'asc',
-}];
+const orderBy = [
+  {
+    field: 'name',
+    direction: 'asc',
+  },
+];
 
-await knex
-  .select(['*'])
-  .from('books')
-  .orderBy(convertOrderByToKnex(orderBy)); // <-- [{ column: 'name', order: 'asc' }]
-
+await knex.select(['*']).from('books').orderBy(convertOrderByToKnex(orderBy)); // <-- [{ column: 'name', order: 'asc' }]
 ```
 
 ## convertJsonToKnex
@@ -50,7 +51,6 @@ await knex('books').update({
     foo: 'bar',
   }),
 });
-
 ```
 
 ## convertBetweenToKnex
@@ -58,26 +58,23 @@ await knex('books').update({
 Convert `Between` data to knex builder data
 
 ```ts
-
 const between = {
   pages: {
     start: 300,
     end: 800,
-  }
+  },
 };
 
 await knex
   .select(['*'])
   .from('books')
-  .where((builder) => convertBetweenToKnex(builder, between));
-
+  .where(builder => convertBetweenToKnex(builder, between));
 ```
 
 In third argument you can passed options:
 
- - **timezone** `string`. used with operations between dates
- - **aliases** `TableAliases`. See `applyAliases` API.
-
+- **timezone** `string`. used with operations between dates
+- **aliases** `TableAliases`. See `applyAliases` API.
 
 ## convertWhereToKnex
 
@@ -92,8 +89,7 @@ const where = [
 await knex
   .select(['*'])
   .from('books')
-  .where((builder) => convertWhereToKnex(builder, where));
-
+  .where(builder => convertWhereToKnex(builder, where));
 ```
 
 ## convertSearchToKnex
@@ -101,10 +97,12 @@ await knex
 Convert `OutputSearch` to knex builder
 
 ```ts
-const search = [{
-  field: 'title',
-  query: 'kitchen',
-}];
+const search = [
+  {
+    field: 'title',
+    query: 'kitchen',
+  },
+];
 
 // You can use aliases
 const aliases = {
@@ -114,8 +112,7 @@ const aliases = {
 await knex
   .select(['*'])
   .from('books')
-  .where((builder) => convertSearchToKnex(builder, search, aliases));
-
+  .where(builder => convertSearchToKnex(builder, search, aliases));
 ```
 
 ## applyAliases
@@ -132,7 +129,7 @@ const where = [
 const aliases = {
   books: ['year', 'pages'],
   author: ['author'],
-}
+};
 const where = applyAliases();
 ```
 
@@ -157,13 +154,16 @@ const where = applyAliases();
 Extract `totalCount` property from array of Nodes\
 
 Convert this:
+
 ```js
 [
- { id: '1', createdAt: 'XXX', updatedAt: 'XXX', totalCount: 2 },
- { id: '2', createdAt: 'XXX', updatedAt: 'XXX', totalCount: 2 },
-]
+  { id: '1', createdAt: 'XXX', updatedAt: 'XXX', totalCount: 2 },
+  { id: '2', createdAt: 'XXX', updatedAt: 'XXX', totalCount: 2 },
+];
 ```
+
 To:
+
 ```js
 {
   totalCount: 2,
