@@ -2,9 +2,8 @@ import * as React from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import loadable from '@loadable/component';
 
-import AppBar from '~/render/desktop/components/AppBar';
+import Header from '~/render/desktop/components/Header';
 import ContentArea from '~/render/desktop/components/ContentArea';
-import LeftSidebar from '~/render/desktop/components/LeftSidebar';
 import Footer from '~/render/desktop/components/Footer';
 import Meta from '~/render/desktop/components/Meta';
 import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
@@ -43,7 +42,7 @@ const Legal: React.FC = () => {
   return (
     <>
       <Meta />
-      <AppBar />
+      <Header />
       <ContentArea>
         <Switch>
           <Route strict path={`${path}/terms`} component={Terms} />

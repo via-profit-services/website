@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
 import Strong from '~/render/desktop/components/Typography/Strong';
-import SafeFrame from '~/render/desktop/components/SafeFrame';
 import Logo from '~/render/desktop/components/Logo/LogoInline';
 
 const Container = styled.div`
@@ -11,7 +10,10 @@ const Container = styled.div`
   color: ${props => props.theme.color.text.inverse};
 `;
 
-const Inner = styled(SafeFrame)`
+const Inner = styled.div`
+  max-width: ${props => props.theme.grid.desktop.safeFrame}px;
+  padding: 0 ${props => props.theme.grid.desktop.gutter}px;
+  margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;

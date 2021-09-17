@@ -2,8 +2,8 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
+import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 
-import SafeFrame from '~/render/desktop/components/SafeFrame';
 import { LINK_COMPANY, LINK_GITHUB } from '~/utils/constants';
 
 const Container = styled.div`
@@ -11,11 +11,14 @@ const Container = styled.div`
   color: ${props => props.theme.color.text.inverse};
 `;
 
-const Inner = styled(SafeFrame)`
+const Inner = styled.section`
+  max-width: ${props => props.theme.grid.desktop.safeFrame}px;
+  padding: 0 ${props => props.theme.grid.desktop.gutter}px;
+  margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  padding-top: 1.2rem;
+  padding-top: 2.4rem;
   padding-bottom: 1.2rem;
 `;
 
@@ -31,12 +34,25 @@ const Section = styled.div<{ $position: 'left' | 'center' | 'right' }>`
       & ul {
         margin: 0 1rem;
       }
+      & ul:first-child {
+        margin-left: 0;
+      }
+      & ul:last-child {
+        margin-right: 0;
+      }
     `};
 `;
 
 const SectionTitle = styled.div`
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+`;
+
+const ExternalLinkIcon = styled(OpenInNewIcon)`
+  color: currentColor;
+  font-size: 0.9em;
+  margin-left: 0.3em;
 `;
 
 const LinksContainer = styled.div`
@@ -51,8 +67,12 @@ const LinksList = styled.ul`
 
 const linkStyles = css`
   color: inherit;
-  text-decoration: underline;
-  font-size: 0.8125rem;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.4em 0;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const InternalLink = styled(Link)`
@@ -231,6 +251,7 @@ const FooterMiddle: React.FC = () => (
                 defaultMessage="GitHub"
                 description="Footer. GitHub link"
               />
+              <ExternalLinkIcon size="0.8em" />
             </ExternalLink>
           </li>
           <li>
@@ -239,6 +260,7 @@ const FooterMiddle: React.FC = () => (
                 defaultMessage="Website"
                 description="Footer. company website link"
               />
+              <ExternalLinkIcon size="0.8em" />
             </ExternalLink>
           </li>
         </LinksList>

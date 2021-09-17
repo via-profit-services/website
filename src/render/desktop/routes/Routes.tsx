@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import loadable from '@loadable/component';
 
 import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
@@ -30,14 +30,21 @@ const Fallback = loadable(
   },
 );
 
-const Routes: React.FC = () => (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route path="/docs" component={Docs} />
-    <Route path="/packages" component={Packages} />
-    <Route path="/legal" component={Legal} />
-    <Route component={Fallback} />
-  </Switch>
-);
+const Routes: React.FC = () => {
+  const location = useLocation();
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return (
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/docs" component={Docs} />
+      <Route path="/packages" component={Packages} />
+      <Route path="/legal" component={Legal} />
+      <Route component={Fallback} />
+    </Switch>
+  );
+};
 
 export default Routes;

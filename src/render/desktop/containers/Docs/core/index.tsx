@@ -25,7 +25,7 @@ type UrlParams = {
 };
 
 const Core: React.FC = () => {
-  const { path, params, url } = useRouteMatch<UrlParams>();
+  const { path } = useRouteMatch<UrlParams>();
 
   return (
     <Switch>

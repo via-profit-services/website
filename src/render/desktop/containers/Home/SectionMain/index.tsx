@@ -26,8 +26,8 @@ const Container = styled.div`
     background-repeat: no-repeat;
     background-position: top right;
     right: 100px;
-    width: 100vh;
-    height: 100vh;
+    width: 130vh;
+    height: 130vh;
   }
 `;
 

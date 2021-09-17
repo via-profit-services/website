@@ -90,7 +90,7 @@ export default createGlobalStyle`
     font-size: ${props => props.theme.fontSize}px;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: ${props => props.theme.color.text.primary};
-    background-color: ${props => props.theme.color.background.secondary};
+    background-color: ${props => props.theme.color.background.primary};
     overflow-wrap: break-word;
     height: 100%;
   }

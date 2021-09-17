@@ -1,24 +1,43 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import StickyNode from 'react-stickynode';
 
 import ThemeButton from './ThemeButton';
 import GitHubButton from './GitHubButton';
-import Logo from '~/render/desktop/components/Logo/LogoInline';
+import LogoInline from '~/render/desktop/components/Logo/LogoInline';
 
-const Wrapper = styled.div`
+type Props = {
+  variant?: 'home-page' | 'second-page';
+};
+
+type ContainerStyledProps = {
+  $isFixed: boolean;
+  $variant: NonNullable<Props['variant']>;
+};
+
+type LinkStyledProps = {
+  $isActive?: boolean;
+};
+
+const Wrapper = styled.div<ContainerStyledProps>`
   z-index: ${({ theme }) => theme.zIndex.header};
+  position: relative;
+  ${props =>
+    props.$variant === 'second-page' &&
+    css`
+      height: 54px;
+    `};
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(Link)<LinkStyledProps>`
   display: inline-flex;
   padding: 1rem 0.8rem;
   text-decoration: none;
-  font-weight: 400;
   font-size: 1rem;
   color: ${props => props.theme.color.text.inverse};
+  font-weight: ${props => (props.$isActive ? 800 : 400)};
   transition: color 200ms ease-in;
 `;
 
@@ -26,42 +45,40 @@ const LogoLink = styled(Link)`
   display: inline-flex;
 `;
 
-const StyledLogo = styled(Logo)`
+const Logo = styled(LogoInline)`
   color: ${props => props.theme.color.text.inverse};
   height: 1.5rem;
   transition: color 200ms ease-in;
 `;
 
-const Container = styled.header<{ $isFixed: boolean }>`
+const Container = styled.header<ContainerStyledProps>`
   position: absolute;
   width: 100%;
-  background-color: transparent;
-  box-shadow: none;
-  transition: box-shadow 200ms ease-out, background-color 200ms ease-out;
+  color: ${props => props.theme.color.text.inverse};
+  transition: box-shadow 200ms ease-out;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 200ms ease-out;
+    background: ${props => props.theme.color.gradients[0]};
+    opacity: ${props => (props.$variant === 'home-page' ? 0 : 1)};
+  }
   ${props =>
     props.$isFixed &&
     css`
-      transition: box-shadow 120ms ease-in, background-color 120ms ease-in;
-      background-color: ${({ theme }) => theme.color.background.secondary};
-      box-shadow: ${({ theme }) => theme.shadows[0]};
-
-      ${NavLink} {
-        color: ${({ theme }) => theme.color.text.primary};
-        transition: color 120ms ease-out;
-        &:hover {
-          color: ${({ theme }) => theme.color.accent.primary};
-        }
-      }
-
-      ${StyledLogo} {
-        color: ${({ theme }) => theme.color.text.primary};
-        transition: color 120ms ease-out;
+      &:before {
+        opacity: 1;
       }
     `}
 `;
 
 const Inner = styled.div`
   width: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   max-width: ${props => props.theme.grid.desktop.safeFrame}px;
@@ -85,34 +102,39 @@ const StyledThemeButton = styled(ThemeButton)`
   margin-left: 1rem;
 `;
 
-const AppBar: React.FC = () => {
+const Header: React.FC<Props> = props => {
+  const { variant } = props;
+  const currentVariant = variant ?? 'second-page';
   const [isFixed, setIsFixed] = React.useState(false);
+  const { path } = useRouteMatch();
 
   return (
-    <Wrapper>
+    <Wrapper $isFixed={isFixed} $variant={currentVariant}>
       <StickyNode
         onStateChange={({ status }) =>
           setIsFixed(StickyNode.STATUS_FIXED === status)
         }>
-        <Container $isFixed={isFixed}>
+        <Container $isFixed={isFixed} $variant={currentVariant}>
           <Inner>
             <LogoLink to="/">
-              <StyledLogo />
+              <Logo />
             </LogoLink>
             <Navbar>
-              <NavLink to="/">
+              <NavLink to="/" $isActive={path === '/'}>
                 <FormattedMessage
                   defaultMessage="Home"
                   description="Appbar. Home link"
                 />
               </NavLink>
-              <NavLink to="/docs">
+              <NavLink to="/docs" $isActive={path.match(/^\/docs/) !== null}>
                 <FormattedMessage
                   defaultMessage="Docs"
                   description="Appbar. Documentation link"
                 />
               </NavLink>
-              <NavLink to="/packages">
+              <NavLink
+                to="/packages"
+                $isActive={path.match(/^\/packages/) !== null}>
                 <FormattedMessage
                   defaultMessage="Packages"
                   description="Appbar. Packages link"
@@ -130,4 +152,4 @@ const AppBar: React.FC = () => {
   );
 };
 
-export default AppBar;
+export default Header;

@@ -6,6 +6,7 @@ const Container = styled.div`
   margin: 0 auto;
   max-width: ${props => props.theme.grid.desktop.safeFrame}px;
   padding: 0 ${props => props.theme.grid.desktop.gutter / 2}px;
+  width: 100%;
 `;
 
 const ContentArea: React.FC<any> = props => <Container {...props} />;

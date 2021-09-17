@@ -4,7 +4,7 @@ import MenuIcon from 'mdi-react/MenuIcon';
 
 import AppDrawer from '~/render/touchable/components/AppDrawer';
 
-const AppBarContainer = styled.div`
+const HeaderContainer = styled.div`
   position: sticky;
   top: 0;
   background-color: ${props => props.theme.color.background};
@@ -14,7 +14,7 @@ const AppBarContainer = styled.div`
   align-items: center;
 `;
 
-const AppBarToolbar = styled.div`
+const HeaderToolbar = styled.div`
   margin: 0 auto;
   display: flex;
   flex-flow: column;
@@ -38,7 +38,7 @@ const CenterSide = styled.div`
   flex: 1;
 `;
 
-const AppBar: React.FC = () => {
+const Header: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const handleToggleMenu = () => {
     setDrawerOpen(!drawerOpen);
@@ -46,17 +46,17 @@ const AppBar: React.FC = () => {
 
   return (
     <>
-      <AppBarContainer>
-        <AppBarToolbar>
+      <HeaderContainer>
+        <HeaderToolbar>
           <MenuButton onClick={handleToggleMenu}>
             <MenuIcon size="1em" color="currentColor" />
           </MenuButton>
-        </AppBarToolbar>
+        </HeaderToolbar>
         <CenterSide />
-      </AppBarContainer>
+      </HeaderContainer>
       <AppDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </>
   );
 };
 
-export default AppBar;
+export default Header;

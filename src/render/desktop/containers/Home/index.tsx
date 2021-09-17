@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import AppBar from '~/render/desktop/components/AppBar';
+import Header from '~/render/desktop/components/Header';
 import Footer from '~/render/desktop/components/Footer';
 import Meta from '~/render/desktop/components/Meta';
 
@@ -10,9 +10,11 @@ import SectionWhatIsIt from './SectionWhatIsIt';
 const HomePageDesktop: React.FC = () => (
   <>
     <Meta />
-    <AppBar />
-    <SectionMain />
-    <SectionWhatIsIt />
+    <Header variant="home-page" />
+    <main>
+      <SectionMain />
+      <SectionWhatIsIt />
+    </main>
     <Footer />
   </>
 );

@@ -27,7 +27,7 @@ winston-daily-rotate-file \
 
 And that's it. Let's write some code.
 
-## <a name="getting-started"></a> Getting Started
+## Getting Started
 
 To build your first project you should do some things:
 

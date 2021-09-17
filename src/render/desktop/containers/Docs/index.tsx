@@ -4,11 +4,11 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import styled from 'styled-components';
 
 import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
-import AppBar from '~/render/desktop/components/AppBar';
+import Header from '~/render/desktop/components/Header';
 import ContentArea from '~/render/desktop/components/ContentArea';
-import LeftSidebar from '~/render/desktop/components/LeftSidebar';
 import Footer from '~/render/desktop/components/Footer';
 import Meta from '~/render/desktop/components/Meta';
+import Sidebar from '~/render/desktop/containers/Docs/Sidebar';
 
 const Fallback = Loadable(
   () => import('~/render/desktop/containers/Fallback'),
@@ -35,17 +35,17 @@ const Layout = styled(ContentArea)`
   margin-top: 20px;
 `;
 
-const ColumnLeft = styled.div`
+const Aside = styled.aside`
   width: 280px;
-  background-color: ${props => props.theme.color.background};
+  background-color: ${props => props.theme.color.background.secondary};
   padding: 0 ${props => props.theme.grid.desktop.gutter}px;
 `;
 
-const ColumnRight = styled.div`
+const Main = styled.main`
   flex: 1;
   width: calc(100% - 280px);
   padding: 0 ${props => props.theme.grid.desktop.gutter}px;
-  background-color: ${props => props.theme.color.background};
+  background-color: ${props => props.theme.color.background.secondary};
 `;
 
 const Docs: React.FC = () => {
@@ -54,19 +54,21 @@ const Docs: React.FC = () => {
   return (
     <>
       <Meta />
-      <AppBar />
+      <Header />
       <Layout>
-        <ColumnLeft>
-          <LeftSidebar />
-        </ColumnLeft>
-        <ColumnRight>
-          <Switch>
-            <Route strict path={`${path}/core`} component={Core} />
-            <Route strict path={`${path}/knex`} component={Knex} />
-            <Route strict exact path={path} component={Introduction} />
-            <Route component={Fallback} />
-          </Switch>
-        </ColumnRight>
+        <Aside>
+          <Sidebar />
+        </Aside>
+        <Main>
+          <article>
+            <Switch>
+              <Route strict path={`${path}/core`} component={Core} />
+              <Route strict path={`${path}/knex`} component={Knex} />
+              <Route strict exact path={path} component={Introduction} />
+              <Route component={Fallback} />
+            </Switch>
+          </article>
+        </Main>
       </Layout>
       <Footer />
     </>

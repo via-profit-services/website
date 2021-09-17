@@ -1,114 +1,154 @@
 {
   "+J8xit": {
-    "defaultMessage": "Permissions"
+    "defaultMessage": "Permissions",
+    "description": "Footer. Package permissions link"
   },
   "+jqzeW": {
-    "defaultMessage": "Документация"
+    "defaultMessage": "Документация",
+    "description": "Appbar. Documentation link"
   },
   "01ghRs": {
-    "defaultMessage": "Geography"
+    "defaultMessage": "Geography",
+    "description": "Footer. Package geography link"
   },
   "01tnyG": {
-    "defaultMessage": "Subscriptions"
+    "defaultMessage": "Subscriptions",
+    "description": "Footer. Package subscriptions link"
   },
   "04jeAy": {
     "defaultMessage": "Введение в @via-profit-services/core v1.2.x"
   },
   "2qRiOA": {
-    "defaultMessage": "File Storage"
+    "defaultMessage": "File Storage",
+    "description": "Footer. Package file-storage link"
   },
   "2z6QCO": {
     "defaultMessage": "Core"
   },
   "3q5j6q": {
-    "defaultMessage": "Redis"
+    "defaultMessage": "Redis",
+    "description": "Footer. Package redis link"
   },
   "3xqp66": {
-    "defaultMessage": "Via-profit services"
+    "defaultMessage": "Via-profit services",
+    "description": "Home main screen. Pretitle"
+  },
+  "41r53f": {
+    "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
+    "description": "Home second screen. First card content"
+  },
+  "74l7dy": {
+    "defaultMessage": "Header 3",
+    "description": "Home second screen. Second card title"
   },
   "7atvZ+": {
-    "defaultMessage": "Лицензия MIT"
+    "defaultMessage": "Лицензия MIT",
+    "description": "Footer. License string in copiright string"
+  },
+  "BEYDVd": {
+    "defaultMessage": "PostgreSQL",
+    "description": "Home second screen. Third card title"
   },
   "C5ASDU": {
-    "defaultMessage": "Messages"
+    "defaultMessage": "Messages",
+    "description": "Footer. Package messages link"
+  },
+  "CWMogT": {
+    "defaultMessage": "{image}Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
+    "description": "Home second screen. Third card content"
   },
   "DaZRES": {
-    "defaultMessage": "Knex"
+    "defaultMessage": "Knex",
+    "description": "Footer. Package knex link"
   },
   "F4wEPb": {
     "defaultMessage": "Cookie policy"
   },
-  "GklOhG": {
-    "defaultMessage": "{year} — Все права защищены"
-  },
   "H3888Z": {
-    "defaultMessage": "{strong} infrastructure with middlewares collection"
-  },
-  "H5vB1u": {
-    "defaultMessage": "Разработчик {developer}"
+    "defaultMessage": "{strong} infrastructure with middlewares collection",
+    "description": "Home main screen. Title (without strong tag"
   },
   "Iss0k3": {
-    "defaultMessage": "Website"
+    "defaultMessage": "Website",
+    "description": "Footer. company website link"
   },
   "JhrkI7": {
-    "defaultMessage": "Via Profit Services documentation"
+    "defaultMessage": "Via Profit Services documentation",
+    "description": "Helmet «defaultTitle» param"
   },
   "JzKCcn": {
-    "defaultMessage": "Terms"
+    "defaultMessage": "Terms",
+    "description": "Footer. Terms link"
+  },
+  "KFRlL2": {
+    "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
+    "description": "Home second screen. Second card content"
   },
   "L5AmMp": {
-    "defaultMessage": "Lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on"
+    "defaultMessage": "Lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
+    "description": "Home main screen. Text"
   },
   "QXNoQe": {
-    "defaultMessage": "GitHub"
+    "defaultMessage": "GitHub",
+    "description": "Footer. GitHub link"
   },
   "R7qNRK": {
-    "defaultMessage": "Open source"
+    "defaultMessage": "Open source",
+    "description": "Footer. «Open source project» label («Open source» segment)"
   },
   "RR9NSx": {
-    "defaultMessage": "SMS"
+    "defaultMessage": "SMS",
+    "description": "Footer. Package sms link"
   },
   "Se/iPE": {
-    "defaultMessage": "Privacy Policy"
+    "defaultMessage": "Privacy Policy",
+    "description": "Footer. Privacy link"
   },
   "TUV3q8": {
     "defaultMessage": "List of all packages"
-  },
-  "U3l+Q9": {
-    "defaultMessage": "Главная страница"
   },
   "UhkSyx": {
     "defaultMessage": "Terms of Use"
   },
   "VtNakx": {
-    "defaultMessage": "GraphQL HTTP Server"
+    "defaultMessage": "GraphQL HTTP Server",
+    "description": "Home main screen. Strong tag of the title"
   },
   "WXNeD2": {
-    "defaultMessage": "Cookie policy"
+    "defaultMessage": "Cookie policy",
+    "description": "Footer. Cookie policy link"
   },
   "WjfU81": {
-    "defaultMessage": "Accounts"
+    "defaultMessage": "Accounts",
+    "description": "Footer. Package accounts link"
   },
   "XA9oyK": {
-    "defaultMessage": "Packages"
+    "defaultMessage": "Packages",
+    "description": "Footer. Title of the «Packages» section"
   },
   "XkqqdC": {
-    "defaultMessage": "%s — Via Profit Services documentation"
+    "defaultMessage": "%s — Via Profit Services documentation",
+    "description": "Helmet «titleTemplate» param"
   },
   "YOLRNb": {
-    "defaultMessage": "Dataloader"
-  },
-  "baPNbY": {
-    "defaultMessage": "Via Profit"
+    "defaultMessage": "Dataloader",
+    "description": "Footer. Package dataloader link"
   },
   "dwWw1n": {
-    "defaultMessage": "Legal"
+    "defaultMessage": "Legal",
+    "description": "Footer. Title of the «Legal» section"
   },
   "ejfCfL": {
-    "defaultMessage": "Установка и настройка @via-profit-services/core"
+    "defaultMessage": "Установка и настройка @via-profit-services/core",
+    "description": "Meta description of installation and setup"
+  },
+  "fCVoBR": {
+    "defaultMessage": "Header 3",
+    "description": "Home second screen. First card title"
   },
   "hdR+lK": {
-    "defaultMessage": "Core"
+    "defaultMessage": "Core",
+    "description": "Footer. package core link"
   },
   "jQY7K7": {
     "defaultMessage": "Redis"
@@ -119,37 +159,73 @@
   "kZk26D": {
     "defaultMessage": "Knex"
   },
-  "kiw+og": {
-    "defaultMessage": "Via Profit Services"
-  },
   "lZbWK/": {
-    "defaultMessage": "Copyright {year} Via Profit"
+    "defaultMessage": "Copyright {year} Via Profit",
+    "description": "Footer. Copiright string"
+  },
+  "mXx0KW": {
+    "defaultMessage": "PostgreSQL log",
+    "description": "Home second screen. Alt of postgreSQL logo"
   },
   "p/QgQD": {
-    "defaultMessage": "project"
+    "defaultMessage": "project",
+    "description": "Footer. «project» segment of «Open source project» label"
   },
   "payrbn": {
-    "defaultMessage": "Company"
+    "defaultMessage": "Company",
+    "description": "Footer. Title of the «Company» section"
   },
   "pruhcA": {
-    "defaultMessage": "Home"
+    "defaultMessage": "Home",
+    "description": "Appbar. Home link"
   },
-  "uSEDuF": {
-    "defaultMessage": "%s — Via Profit Services"
+  "t3lyVE": {
+    "defaultMessage": "What Is It",
+    "description": "Home second screen. Header"
   },
   "vrbypx": {
-    "defaultMessage": "Via Profit"
+    "defaultMessage": "Via Profit",
+    "description": "Helmet meta «author»"
   },
   "vx0nkZ": {
     "defaultMessage": "Privacy Policy"
   },
   "w4HFhX": {
-    "defaultMessage": "Packages"
+    "defaultMessage": "Packages",
+    "description": "Appbar. Packages link"
   },
   "xnJwur": {
-    "defaultMessage": "Установка и настройка"
+    "defaultMessage": "Установка и настройка",
+    "description": "Meta title of installation and setup"
   },
   "yjyG/7": {
-    "defaultMessage": "Settings manager"
+    "defaultMessage": "Settings manager",
+    "description": "Footer. Package settings-manager link"
+  },
+  "kjCMoA": {
+    "defaultMessage": "Header 3",
+    "description": "Home second screen. Third card title"
+  },
+  "Og3BzC": {
+    "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
+    "description": "Home second screen. Third card content"
+  },
+  "GklOhG": {
+    "defaultMessage": "{year} — Все права защищены"
+  },
+  "H5vB1u": {
+    "defaultMessage": "Разработчик {developer}"
+  },
+  "U3l+Q9": {
+    "defaultMessage": "Главная страница"
+  },
+  "baPNbY": {
+    "defaultMessage": "Via Profit"
+  },
+  "kiw+og": {
+    "defaultMessage": "Via Profit Services"
+  },
+  "uSEDuF": {
+    "defaultMessage": "%s — Via Profit Services"
   }
 }

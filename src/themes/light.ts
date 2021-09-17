@@ -45,7 +45,7 @@ const light: DefaultTheme = {
       secondary: '#C0008A',
     },
     background: {
-      primary: '#E5E5E5',
+      primary: '#FBFBFB',
       secondary: '#FFFFFF',
     },
   },
@@ -54,6 +54,7 @@ const light: DefaultTheme = {
     '0px 11px 19px -6px rgba(0, 0, 0, 0.3)',
     '0px 32px 50px -17px rgba(74, 0, 100, 0.14)',
     '0px 11px 19px -6px rgba(143, 38, 225, 0.65)',
+    '0px 6px 20px 0px rgb(74, 0, 100, 0.44)',
   ],
 };
 

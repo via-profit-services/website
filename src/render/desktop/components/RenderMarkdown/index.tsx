@@ -60,11 +60,11 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
   return (
     <ReactMarkdown
       components={{
-        h1: H1,
-        h2: H2,
-        h3: H3,
-        h4: H4,
-        h5: H5,
+        h1: p => <H1>{p.children}</H1>,
+        h2: p => <H2>{p.children}</H2>,
+        h3: p => <H3>{p.children}</H3>,
+        h4: p => <H4>{p.children}</H4>,
+        h5: p => <H5>{p.children}</H5>,
         b: Strong,
         em: Em,
         p: Paragraph,

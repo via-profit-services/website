@@ -1,5 +1,5 @@
 import path from 'path';
-import { Configuration, ProvidePlugin } from 'webpack';
+import { Configuration } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const config: Configuration = {
@@ -105,6 +105,7 @@ const config: Configuration = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss'],
     alias: {
       '~': path.resolve(__dirname, '../../src'),
+      assets: path.resolve(__dirname, '../../assets'),
     },
   },
   node: {},

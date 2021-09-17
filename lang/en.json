@@ -33,13 +33,29 @@
     "defaultMessage": "Via-profit services",
     "description": "Home main screen. Pretitle"
   },
+  "41r53f": {
+    "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
+    "description": "Home second screen. First card content"
+  },
+  "74l7dy": {
+    "defaultMessage": "Header 3",
+    "description": "Home second screen. Second card title"
+  },
   "7atvZ+": {
     "defaultMessage": "MIT license",
     "description": "Footer. License string in copiright string"
   },
+  "BEYDVd": {
+    "defaultMessage": "PostgreSQL",
+    "description": "Home second screen. Third card title"
+  },
   "C5ASDU": {
     "defaultMessage": "Messages",
     "description": "Footer. Package messages link"
+  },
+  "CWMogT": {
+    "defaultMessage": "{image}Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
+    "description": "Home second screen. Third card content"
   },
   "DaZRES": {
     "defaultMessage": "Knex",
@@ -63,6 +79,10 @@
   "JzKCcn": {
     "defaultMessage": "Terms",
     "description": "Footer. Terms link"
+  },
+  "KFRlL2": {
+    "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
+    "description": "Home second screen. Second card content"
   },
   "L5AmMp": {
     "defaultMessage": "Lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
@@ -122,6 +142,10 @@
     "defaultMessage": "@via-profit-services/core installation and setup",
     "description": "Meta description of installation and setup"
   },
+  "fCVoBR": {
+    "defaultMessage": "Header 3",
+    "description": "Home second screen. First card title"
+  },
   "hdR+lK": {
     "defaultMessage": "Core",
     "description": "Footer. package core link"
@@ -139,6 +163,10 @@
     "defaultMessage": "Copyright {year} Via Profit",
     "description": "Footer. Copiright string"
   },
+  "mXx0KW": {
+    "defaultMessage": "PostgreSQL log",
+    "description": "Home second screen. Alt of postgreSQL logo"
+  },
   "p/QgQD": {
     "defaultMessage": "project",
     "description": "Footer. «project» segment of «Open source project» label"
@@ -150,6 +178,10 @@
   "pruhcA": {
     "defaultMessage": "Home",
     "description": "Appbar. Home link"
+  },
+  "t3lyVE": {
+    "defaultMessage": "What Is It",
+    "description": "Home second screen. Header"
   },
   "vrbypx": {
     "defaultMessage": "Via Profit",

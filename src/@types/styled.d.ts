@@ -38,6 +38,6 @@ declare module 'styled-components' {
         secondary: string;
       };
     };
-    shadows: [string, string, string, string];
+    shadows: [string, string, string, string, string];
   }
 }
