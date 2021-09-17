@@ -124,7 +124,7 @@ const SectionWhatIsIt: React.FC = () => {
                   <PosgreSQLLogo
                     src={postgresqlsrc}
                     alt={intl.formatMessage({
-                      defaultMessage: 'PostgreSQL log',
+                      defaultMessage: 'PostgreSQL logo',
                       description: 'Home second screen. Alt of postgreSQL logo',
                     })}
                   />
