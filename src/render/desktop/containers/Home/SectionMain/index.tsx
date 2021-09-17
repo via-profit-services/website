@@ -86,8 +86,9 @@ const Title = styled.div`
 const Text = styled.div`
   color: ${({ theme }) => theme.color.text.inverse};
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 1rem;
+  opacity: 0.9;
 `;
 
 const SectionMain: React.FC = () => (

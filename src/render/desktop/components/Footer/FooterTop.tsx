@@ -28,7 +28,7 @@ const StyledLogo = styled(Logo)`
 
 const Label = styled.div`
   font-size: 0.875rem;
-  font-weight: 300;
+  font-weight: 400;
   width: 50%;
   text-align: right;
   color: ${props => props.theme.color.text.inverse};
