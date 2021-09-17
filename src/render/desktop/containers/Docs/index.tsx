@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Loadable from '@loadable/component';
+import loadable from '@loadable/component';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -10,23 +10,29 @@ import Footer from '~/render/desktop/components/Footer';
 import Meta from '~/render/desktop/components/Meta';
 import Sidebar from '~/render/desktop/containers/Docs/Sidebar';
 
-const Fallback = Loadable(
-  () => import('~/render/desktop/containers/Fallback'),
+const Fallback = loadable(
+  () => import('~/render/desktop/containers/Fallback/index'),
   { fallback: <LoadingIndicator /> },
 );
 
-const Introduction = Loadable(
-  () => import('~/render/desktop/containers/Docs/introduction'),
+const Introduction = loadable(
+  () => import('~/render/desktop/containers/Docs/introduction/index'),
   { fallback: <LoadingIndicator /> },
 );
 
-const Core = Loadable(() => import('~/render/desktop/containers/Docs/core'), {
-  fallback: <LoadingIndicator />,
-});
+const Core = loadable(
+  () => import('~/render/desktop/containers/Docs/core/index'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
 
-const Knex = Loadable(() => import('~/render/desktop/containers/Docs/knex'), {
-  fallback: <LoadingIndicator />,
-});
+const Knex = loadable(
+  () => import('~/render/desktop/containers/Docs/knex/index'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
 
 const Layout = styled(ContentArea)`
   display: flex;
@@ -64,7 +70,7 @@ const Docs: React.FC = () => {
             <Switch>
               <Route strict path={`${path}/core`} component={Core} />
               <Route strict path={`${path}/knex`} component={Knex} />
-              <Route strict exact path={path} component={Introduction} />
+              <Route strict path={path} component={Introduction} />
               <Route component={Fallback} />
             </Switch>
           </article>

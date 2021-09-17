@@ -4,12 +4,15 @@ import loadable from '@loadable/component';
 
 import LoadingIndicator from '~/render/touchable/components/LoadingIndicator';
 
-const HomePage = loadable(() => import('~/render/touchable/containers/Home'), {
-  fallback: <LoadingIndicator />,
-});
+const HomePage = loadable(
+  () => import('~/render/touchable/containers/Home/index'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
 
 const NotFound = loadable(
-  () => import('~/render/touchable/containers/Fallback'),
+  () => import('~/render/touchable/containers/Fallback/index'),
   {
     fallback: <LoadingIndicator />,
   },

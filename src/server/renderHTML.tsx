@@ -19,8 +19,8 @@ import createReduxStore from '~/redux/store';
 import mainTemplate from '~/../assets/templates/main.mustache';
 import reduxDefaultState from '~/redux/defaultState';
 
-const ApplicationDesktop = loadable(() => import('~/render/desktop'));
-const ApplicationTouchable = loadable(() => import('~/render/touchable'));
+const ApplicationDesktop = loadable(() => import('~/render/desktop/index'));
+const ApplicationTouchable = loadable(() => import('~/render/touchable/index'));
 
 interface Props {
   req: Request;
@@ -133,7 +133,7 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
       linkTags: webExtractor.getLinkTags(),
       styleTags: webExtractor.getStyleTags(),
     },
-    htmlContent: htmlContent.replace(/\n|\t/g, ' ').replace(/\s{1,}/g, ' '),
+    htmlContent,
   });
 
   const payload = { context, html };

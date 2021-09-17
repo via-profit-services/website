@@ -1,31 +1,33 @@
 import React from 'react';
-import Loadable from '@loadable/component';
+import loadable from '@loadable/component';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
 import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
 
-const Fallback = Loadable(
-  () => import('~/render/desktop/containers/Fallback'),
+const Fallback = loadable(
+  () => import('~/render/desktop/containers/Fallback/index'),
   { fallback: <LoadingIndicator /> },
 );
 
-const Setup = Loadable(
-  () => import('~/render/desktop/containers/Docs/core/v2.0.x/setup'),
+const Setup = loadable(
+  () => import('~/render/desktop/containers/Docs/core/v2.0.x/setup/index'),
   { fallback: <LoadingIndicator /> },
 );
 
-const Introduction = Loadable(
-  () => import('~/render/desktop/containers/Docs/core/v2.0.x/introduction'),
+const Introduction = loadable(
+  () =>
+    import('~/render/desktop/containers/Docs/core/v2.0.x/introduction/index'),
   { fallback: <LoadingIndicator /> },
 );
 
-const Api = Loadable(
-  () => import('~/render/desktop/containers/Docs/core/v2.0.x/api'),
+const Api = loadable(
+  () => import('~/render/desktop/containers/Docs/core/v2.0.x/api/index'),
   { fallback: <LoadingIndicator /> },
 );
 
-const Middlewares = Loadable(
-  () => import('~/render/desktop/containers/Docs/core/v2.0.x/middlewares'),
+const Middlewares = loadable(
+  () =>
+    import('~/render/desktop/containers/Docs/core/v2.0.x/middlewares/index'),
   { fallback: <LoadingIndicator /> },
 );
 

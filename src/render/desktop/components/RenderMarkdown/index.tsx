@@ -90,23 +90,26 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
           );
         },
         code: ({ className, children, inline }) => {
-          const codeString = String(children).replace(/\n$/, '');
-
           const language = String(className || '')
             .replace(/^language-/, '')
-            .replace(/^ts$/, 'typescript');
+            .replace(/^ts$/, 'typescript')
+            .replace(/^js$/, 'javascript');
 
           if (inline) {
-            return <code>{codeString}</code>;
+            return (
+              <code data-type="inline">
+                {String(children).replace(/\n$/, '')}
+              </code>
+            );
           }
 
           if (typeof window === 'undefined') {
-            return <CodeSSR>{codeString}</CodeSSR>;
+            return <CodeSSR>{children}</CodeSSR>;
           }
 
           return (
             <SyntaxHighlighter language={language} style={style}>
-              {codeString}
+              {children}
             </SyntaxHighlighter>
           );
         },

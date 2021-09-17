@@ -7,8 +7,8 @@ import { Provider as ReduxProvider, useSelector } from 'react-redux';
 import createReduxStore from '~/redux/store';
 import reduxDefaultState from '~/redux/defaultState';
 
-const ApplicationDesktop = loadable(() => import('~/render/desktop'));
-const ApplicationTouchable = loadable(() => import('~/render/touchable'));
+const ApplicationDesktop = loadable(() => import('~/render/desktop/index'));
+const ApplicationTouchable = loadable(() => import('~/render/touchable/index'));
 
 const ModeSwitcher: React.FC = () => {
   const mode = useSelector<ReduxState, ReduxSelectedMode>(state => state.mode);

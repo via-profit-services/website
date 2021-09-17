@@ -4,27 +4,30 @@ import loadable from '@loadable/component';
 
 import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
 
-const Home = loadable(() => import('~/render/desktop/containers/Home'), {
+const Home = loadable(() => import('~/render/desktop/containers/Home/index'), {
   fallback: <LoadingIndicator />,
 });
 
-const Docs = loadable(() => import('~/render/desktop/containers/Docs'), {
+const Docs = loadable(() => import('~/render/desktop/containers/Docs/index'), {
   fallback: <LoadingIndicator />,
 });
 
-const Legal = loadable(() => import('~/render/desktop/containers/Legal'), {
-  fallback: <LoadingIndicator />,
-});
+const Legal = loadable(
+  () => import('~/render/desktop/containers/Legal/index'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
 
 const Packages = loadable(
-  () => import('~/render/desktop/containers/Packages'),
+  () => import('~/render/desktop/containers/Packages/index'),
   {
     fallback: <LoadingIndicator />,
   },
 );
 
 const Fallback = loadable(
-  () => import('~/render/desktop/containers/Fallback'),
+  () => import('~/render/desktop/containers/Fallback/index'),
   {
     fallback: <LoadingIndicator />,
   },

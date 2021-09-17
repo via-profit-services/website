@@ -37,7 +37,7 @@ const Redis = loadable(
 );
 
 const Fallback = loadable(
-  () => import('~/render/desktop/containers/Fallback'),
+  () => import('~/render/desktop/containers/Fallback/index'),
   {
     fallback: <LoadingIndicator />,
   },

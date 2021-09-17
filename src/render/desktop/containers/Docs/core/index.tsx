@@ -1,22 +1,22 @@
 /* eslint-disable import/extensions */
 import React from 'react';
-import Loadable from '@loadable/component';
+import loadable from '@loadable/component';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
 import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
 
-const Fallback = Loadable(
-  () => import('~/render/desktop/containers/Fallback'),
+const Fallback = loadable(
+  () => import('~/render/desktop/containers/Fallback/index'),
   { fallback: <LoadingIndicator /> },
 );
 
-const CoreVer1dot2 = Loadable(
-  () => import('~/render/desktop/containers/Docs/core/v1.2.x'),
+const CoreVer1dot2 = loadable(
+  () => import('~/render/desktop/containers/Docs/core/v1.2.x/index'),
   { fallback: <LoadingIndicator /> },
 );
 
-const CoreVer2dot0 = Loadable(
-  () => import('~/render/desktop/containers/Docs/core/v2.0.x'),
+const CoreVer2dot0 = loadable(
+  () => import('~/render/desktop/containers/Docs/core/v2.0.x/index'),
   { fallback: <LoadingIndicator /> },
 );
 
