@@ -7,7 +7,6 @@ type Props = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
 const LinkElement = styled.a`
   background: ${({ theme }) => theme.color.black.secondary};
-  color: ${({ theme }) => theme.color.text.inverse};
   outline: none;
   margin: 0;
   padding: 0.4em 0.8em 0.4em 0.6em;
@@ -16,6 +15,13 @@ const LinkElement = styled.a`
   align-items: center;
   border-radius: 1em;
   text-decoration: none;
+  color: ${({ theme }) => theme.color.text.inverse};
+  &:hover {
+    color: currentColor;
+  }
+  &:visited {
+    color: currentColor;
+  }
 `;
 
 const Svg = styled.svg`

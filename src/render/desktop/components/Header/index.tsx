@@ -36,9 +36,15 @@ const NavLink = styled(Link)<LinkStyledProps>`
   padding: 1rem 0.8rem;
   text-decoration: none;
   font-size: 1rem;
-  color: ${props => props.theme.color.text.inverse};
   font-weight: ${props => (props.$isActive ? 800 : 400)};
   transition: color 200ms ease-in;
+  color: ${props => props.theme.color.text.inverse};
+  &:hover {
+    color: currentColor;
+  }
+  &:visited {
+    color: currentColor;
+  }
 `;
 
 const LogoLink = styled(Link)`
@@ -138,6 +144,14 @@ const Header: React.FC<Props> = props => {
                 <FormattedMessage
                   defaultMessage="Packages"
                   description="Appbar. Packages link"
+                />
+              </NavLink>
+              <NavLink
+                to="/examples"
+                $isActive={path.match(/^\/examples/) !== null}>
+                <FormattedMessage
+                  defaultMessage="Examples"
+                  description="Appbar. Examples link"
                 />
               </NavLink>
             </Navbar>

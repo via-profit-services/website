@@ -72,6 +72,10 @@ const linkStyles = css`
   margin: 0.4em 0;
   &:hover {
     text-decoration: underline;
+    color: currentColor;
+  }
+  &:visited {
+    color: currentColor;
   }
 `;
 

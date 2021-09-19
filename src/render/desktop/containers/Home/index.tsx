@@ -6,6 +6,8 @@ import Meta from '~/render/desktop/components/Meta';
 
 import SectionMain from './SectionMain';
 import SectionWhatIsIt from './SectionWhatIsIt';
+import SectionWhy from './SectionWhy';
+import SectionPackages from './SectionPackages';
 
 const HomePageDesktop: React.FC = () => (
   <>
@@ -14,6 +16,8 @@ const HomePageDesktop: React.FC = () => (
     <main>
       <SectionMain />
       <SectionWhatIsIt />
+      <SectionWhy />
+      <SectionPackages />
     </main>
     <Footer />
   </>

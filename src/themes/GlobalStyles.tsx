@@ -35,6 +35,7 @@ export default createGlobalStyle`
     background: none;
   }
   &::-webkit-scrollbar-track {
+    border-radius: 10px;
     background: ${props => props.theme.color.grey[200]};
   }
   &::-webkit-scrollbar-thumb {
@@ -53,5 +54,15 @@ export default createGlobalStyle`
     min-height: 100%;
     display: flex;
     flex-direction: column;
+  }
+
+  a {
+    color: ${props => props.theme.color.accent.primary};
+    &:hover {
+      color: ${props => props.theme.color.accent.secondary};
+    }
+    &:visited {
+      color: ${props => props.theme.color.accent.secondary};
+    }
   }
 `;

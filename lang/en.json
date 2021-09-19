@@ -18,6 +18,10 @@
   "04jeAy": {
     "defaultMessage": "Introduction of @via-profit-services/core v1.2.x"
   },
+  "2A5jIr": {
+    "defaultMessage": "PostgreSQL logo",
+    "description": "Home second screen. Alt of postgreSQL logo"
+  },
   "2qRiOA": {
     "defaultMessage": "File Storage",
     "description": "Footer. Package file-storage link"
@@ -37,6 +41,14 @@
     "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home second screen. First card content"
   },
+  "4d2Kfy": {
+    "defaultMessage": "Redis mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
+    "description": "SectionPackages. Redis. Content paragraph 2"
+  },
+  "6A15KJ": {
+    "defaultMessage": "Subscriptions mollit dolore reprehenderit exercitation.",
+    "description": "SectionPackages. Subscriptions. Content paragraph 2"
+  },
   "74l7dy": {
     "defaultMessage": "Header 3",
     "description": "Home second screen. Second card title"
@@ -45,9 +57,21 @@
     "defaultMessage": "MIT license",
     "description": "Footer. License string in copiright string"
   },
+  "82R6Qe": {
+    "defaultMessage": "File storage mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
+    "description": "SectionPackages. File storage. Content paragraph 2"
+  },
+  "9N/Z1h": {
+    "defaultMessage": "Why",
+    "description": "Why screen. Header"
+  },
   "BEYDVd": {
     "defaultMessage": "PostgreSQL",
     "description": "Home second screen. Third card title"
+  },
+  "BMqK9T": {
+    "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
+    "description": "SectionPackages. Core. Content paragraph 2"
   },
   "C5ASDU": {
     "defaultMessage": "Messages",
@@ -61,8 +85,16 @@
     "defaultMessage": "Knex",
     "description": "Footer. Package knex link"
   },
+  "De8Kxg": {
+    "defaultMessage": "Knex",
+    "description": "SectionPackages. Knex. Header"
+  },
   "F4wEPb": {
     "defaultMessage": "Cookie policy"
+  },
+  "GjQ0IA": {
+    "defaultMessage": "We have prepared several ready-made packages that are easy to install and use",
+    "description": "SectionPackages. Subtitle"
   },
   "H3888Z": {
     "defaultMessage": "{strong} infrastructure with middlewares collection",
@@ -71,6 +103,10 @@
   "Iss0k3": {
     "defaultMessage": "Website",
     "description": "Footer. company website link"
+  },
+  "It6JdJ": {
+    "defaultMessage": "Redis eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
+    "description": "SectionPackages. Redis. Content paragraph 1"
   },
   "JhrkI7": {
     "defaultMessage": "Via Profit Services documentation",
@@ -84,9 +120,29 @@
     "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home second screen. Second card content"
   },
+  "KGpWjm": {
+    "defaultMessage": "Subscriptions",
+    "description": "SectionPackages. Subscriptions. Header"
+  },
+  "Kxep7p": {
+    "defaultMessage": "Knex eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
+    "description": "SectionPackages. Knex. Content paragraph 1"
+  },
   "L5AmMp": {
     "defaultMessage": "Lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home main screen. Text"
+  },
+  "M1ndnO": {
+    "defaultMessage": "Core",
+    "description": "SectionPackages. Core. Header"
+  },
+  "PB00Lv": {
+    "defaultMessage": "Permissions mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
+    "description": "SectionPackages. Permissions. Content paragraph 2"
+  },
+  "QDP0Vw": {
+    "defaultMessage": "Knex mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
+    "description": "SectionPackages. Knex. Content paragraph 2"
   },
   "QXNoQe": {
     "defaultMessage": "GitHub",
@@ -103,6 +159,10 @@
   "Se/iPE": {
     "defaultMessage": "Privacy Policy",
     "description": "Footer. Privacy link"
+  },
+  "SsFzj/": {
+    "defaultMessage": "File storage",
+    "description": "SectionPackages. File storage. Header"
   },
   "TUV3q8": {
     "defaultMessage": "List of all packages"
@@ -130,9 +190,21 @@
     "defaultMessage": "%s — Via Profit Services documentation",
     "description": "Helmet «titleTemplate» param"
   },
+  "XksmYF": {
+    "defaultMessage": "Light",
+    "description": "Header. Theme button in light theme"
+  },
   "YOLRNb": {
     "defaultMessage": "Dataloader",
     "description": "Footer. Package dataloader link"
+  },
+  "aS0EO1": {
+    "defaultMessage": "Packages",
+    "description": "SectionPackages. Header"
+  },
+  "cpMhJI": {
+    "defaultMessage": "Dark",
+    "description": "Header. Theme button in dark theme"
   },
   "dwWw1n": {
     "defaultMessage": "Legal",
@@ -150,8 +222,16 @@
     "defaultMessage": "Core",
     "description": "Footer. package core link"
   },
+  "jBa01K": {
+    "defaultMessage": "Subscriptions eiusmod consequat proident ipsum.",
+    "description": "SectionPackages. Subscriptions. Content paragraph 1"
+  },
   "jQY7K7": {
     "defaultMessage": "Redis"
+  },
+  "jZDn13": {
+    "defaultMessage": "File storage eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
+    "description": "SectionPackages. File storage. Content paragraph 1"
   },
   "jeNkjc": {
     "defaultMessage": "Introduction of @via-profit-services/core v2.0.x"
@@ -159,13 +239,21 @@
   "kZk26D": {
     "defaultMessage": "Knex"
   },
+  "l4kQer": {
+    "defaultMessage": "Learn more",
+    "description": "Package card. Lear more link"
+  },
   "lZbWK/": {
     "defaultMessage": "Copyright {year} Via Profit",
     "description": "Footer. Copiright string"
   },
-  "mXx0KW": {
-    "defaultMessage": "PostgreSQL log",
-    "description": "Home second screen. Alt of postgreSQL logo"
+  "lvUUiy": {
+    "defaultMessage": "Redis",
+    "description": "SectionPackages. Redis. Header"
+  },
+  "mGrCzT": {
+    "defaultMessage": "Permissions",
+    "description": "SectionPackages. Permissions. Header"
   },
   "p/QgQD": {
     "defaultMessage": "project",
@@ -179,9 +267,17 @@
     "defaultMessage": "Home",
     "description": "Appbar. Home link"
   },
+  "qubaLh": {
+    "defaultMessage": "Permissions eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
+    "description": "SectionPackages. Permissions. Content paragraph 1"
+  },
   "t3lyVE": {
     "defaultMessage": "What Is It",
     "description": "Home second screen. Header"
+  },
+  "u3j6c3": {
+    "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
+    "description": "SectionPackages. Core. Content paragraph 1"
   },
   "vrbypx": {
     "defaultMessage": "Via Profit",
@@ -194,9 +290,17 @@
     "defaultMessage": "Packages",
     "description": "Appbar. Packages link"
   },
+  "wfOLU7": {
+    "defaultMessage": "Examples",
+    "description": "Appbar. Examples link"
+  },
   "xnJwur": {
     "defaultMessage": "Installation and setup",
     "description": "Meta title of installation and setup"
+  },
+  "ydd+OI": {
+    "defaultMessage": "See more packages",
+    "description": "SectionPackages. Link to packages page"
   },
   "yjyG/7": {
     "defaultMessage": "Settings manager",

@@ -26,7 +26,7 @@ const light: DefaultTheme = {
     ],
     text: {
       primary: '#212121',
-      secondary: '#6A6A6A',
+      secondary: '#8b8b8b',
       inverse: '#FFFFFF',
     },
     grey: {

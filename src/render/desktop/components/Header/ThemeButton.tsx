@@ -1,6 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
+import WeatherSunnyIcon from 'mdi-react/WeatherSunnyIcon';
+import WeatherNightIcon from 'mdi-react/WeatherNightIcon';
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -25,7 +28,7 @@ const Pointer = styled.span`
   width: 1em;
   height: 1em;
   border-radius: 100%;
-  background: ${({ theme }) => theme.color.text.inverse};
+  color: ${({ theme }) => theme.color.text.inverse};
 `;
 
 const Label = styled.span`
@@ -50,8 +53,28 @@ const ThemeButton: React.ForwardRefRenderFunction<HTMLButtonElement, Props> = (
 
   return (
     <Button type="button" onClick={handleClick} {...props} ref={ref}>
-      <Pointer />
-      <Label>Light</Label>
+      <Pointer>
+        {currentTheme === 'dark' && (
+          <WeatherNightIcon size="1em" color="currentColor" />
+        )}
+        {currentTheme === 'light' && (
+          <WeatherSunnyIcon size="1em" color="currentColor" />
+        )}
+      </Pointer>
+      <Label>
+        {currentTheme === 'dark' && (
+          <FormattedMessage
+            defaultMessage="Dark"
+            description="Header. Theme button in dark theme"
+          />
+        )}
+        {currentTheme === 'light' && (
+          <FormattedMessage
+            defaultMessage="Light"
+            description="Header. Theme button in light theme"
+          />
+        )}
+      </Label>
     </Button>
   );
 };

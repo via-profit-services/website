@@ -34,6 +34,11 @@ const Knex = loadable(
   },
 );
 
+const Wrapper = styled.div`
+  flex: 1;
+  background-color: ${props => props.theme.color.background.secondary};
+`;
+
 const Layout = styled(ContentArea)`
   display: flex;
   flex-flow: row nowrap;
@@ -43,7 +48,6 @@ const Layout = styled(ContentArea)`
 
 const Aside = styled.aside`
   width: 280px;
-  background-color: ${props => props.theme.color.background.secondary};
   padding: 0 ${props => props.theme.grid.desktop.gutter}px;
 `;
 
@@ -51,7 +55,6 @@ const Main = styled.main`
   flex: 1;
   width: calc(100% - 280px);
   padding: 0 ${props => props.theme.grid.desktop.gutter}px;
-  background-color: ${props => props.theme.color.background.secondary};
 `;
 
 const Docs: React.FC = () => {
@@ -61,21 +64,23 @@ const Docs: React.FC = () => {
     <>
       <Meta />
       <Header />
-      <Layout>
-        <Aside>
-          <Sidebar />
-        </Aside>
-        <Main>
-          <article>
-            <Switch>
-              <Route strict path={`${path}/core`} component={Core} />
-              <Route strict path={`${path}/knex`} component={Knex} />
-              <Route strict path={path} component={Introduction} />
-              <Route component={Fallback} />
-            </Switch>
-          </article>
-        </Main>
-      </Layout>
+      <Wrapper>
+        <Layout>
+          <Aside>
+            <Sidebar />
+          </Aside>
+          <Main>
+            <article>
+              <Switch>
+                <Route strict path={`${path}/core`} component={Core} />
+                <Route strict path={`${path}/knex`} component={Knex} />
+                <Route strict path={path} component={Introduction} />
+                <Route component={Fallback} />
+              </Switch>
+            </article>
+          </Main>
+        </Layout>
+      </Wrapper>
       <Footer />
     </>
   );

@@ -10,10 +10,9 @@ import postgresqlsrc from 'assets/images/postgresql-logo.svg';
 
 const Section = styled.section`
   margin: 0 auto;
-  margin-top: 3rem;
   width: 100%;
   max-width: ${props => props.theme.grid.desktop.safeFrame}px;
-  padding: 0 ${props => props.theme.grid.desktop.gutter / 2}px;
+  padding: 1rem ${props => props.theme.grid.desktop.gutter / 2}px;
   position: relative;
   &:before {
     content: '';
