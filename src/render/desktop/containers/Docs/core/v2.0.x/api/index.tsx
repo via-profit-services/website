@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import H1 from '~/render/desktop/components/Typography/H1';
 
-const Middlewares: React.FC = () => (
+const Api: React.FC = () => (
   <>
     <Helmet>
       <title>Core v2.0.x api</title>
@@ -14,4 +14,4 @@ const Middlewares: React.FC = () => (
   </>
 );
 
-export default Middlewares;
+export default Api;

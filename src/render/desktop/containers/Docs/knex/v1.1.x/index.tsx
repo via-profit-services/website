@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import React from 'react';
 import loadable from '@loadable/component';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
@@ -10,21 +9,24 @@ const Fallback = loadable(
   { fallback: <LoadingIndicator /> },
 );
 
-const KnexVer1dot1 = loadable(
-  () => import('~/render/desktop/containers/Docs/knex/v1.1.x/index'),
+const Introduction = loadable(
+  () =>
+    import('~/render/desktop/containers/Docs/knex/v1.1.x/introduction/index'),
   { fallback: <LoadingIndicator /> },
 );
 
-type UrlParams = {
-  version?: string;
-};
+const Api = loadable(
+  () => import('~/render/desktop/containers/Docs/knex/v1.1.x/api/index'),
+  { fallback: <LoadingIndicator /> },
+);
 
 const Knex: React.FC = () => {
-  const { path } = useRouteMatch<UrlParams>();
+  const { path } = useRouteMatch();
 
   return (
     <Switch>
-      <Route strict path={`${path}/v1.1.x`} component={KnexVer1dot1} />
+      <Route strict exact path={path} component={Introduction} />
+      <Route strict path={`${path}/api`} component={Api} />
       <Route component={Fallback} />
     </Switch>
   );

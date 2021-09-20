@@ -31,12 +31,8 @@ const Middlewares = loadable(
   { fallback: <LoadingIndicator /> },
 );
 
-type UrlParams = {
-  version?: string;
-};
-
 const Core: React.FC = () => {
-  const { path } = useRouteMatch<UrlParams>();
+  const { path } = useRouteMatch();
 
   return (
     <Switch>
