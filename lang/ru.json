@@ -29,6 +29,13 @@
   "2z6QCO": {
     "defaultMessage": "Core"
   },
+  "3GLH+d": {
+    "defaultMessage": "Examples"
+  },
+  "3MHwen": {
+    "defaultMessage": "Proident eiusmod anim enim ea exercitation proident. Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
+    "description": "Section Typescript. Paragraph 2"
+  },
   "3q5j6q": {
     "defaultMessage": "Redis",
     "description": "Footer. Package redis link"
@@ -45,9 +52,17 @@
     "defaultMessage": "Redis mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Redis. Content paragraph 2"
   },
+  "53PU3E": {
+    "defaultMessage": "Terms",
+    "description": "Breadcrumbs. Terms of use"
+  },
   "6A15KJ": {
     "defaultMessage": "Subscriptions mollit dolore reprehenderit exercitation.",
     "description": "SectionPackages. Subscriptions. Content paragraph 2"
+  },
+  "6CW9Yg": {
+    "defaultMessage": "MIT",
+    "description": "Home main screen. License label. «MIT» word only"
   },
   "74l7dy": {
     "defaultMessage": "Header 3",
@@ -64,6 +79,10 @@
   "9N/Z1h": {
     "defaultMessage": "Why",
     "description": "Why screen. Header"
+  },
+  "9yr8bV": {
+    "defaultMessage": "Examples",
+    "description": "Breadcrumbs. Examples"
   },
   "BEYDVd": {
     "defaultMessage": "PostgreSQL",
@@ -92,6 +111,10 @@
   "F4wEPb": {
     "defaultMessage": "Cookie policy"
   },
+  "FM8hka": {
+    "defaultMessage": "Cookie policy",
+    "description": "Breadcrumbs. Cookie policy"
+  },
   "GjQ0IA": {
     "defaultMessage": "We have prepared several ready-made packages that are easy to install and use",
     "description": "SectionPackages. Subtitle"
@@ -112,6 +135,10 @@
     "defaultMessage": "Via Profit Services documentation",
     "description": "Helmet «defaultTitle» param"
   },
+  "JtAn0P": {
+    "defaultMessage": "Home",
+    "description": "Breadcrumbs. Home"
+  },
   "JzKCcn": {
     "defaultMessage": "Terms",
     "description": "Footer. Terms link"
@@ -123,6 +150,14 @@
   "KGpWjm": {
     "defaultMessage": "Subscriptions",
     "description": "SectionPackages. Subscriptions. Header"
+  },
+  "KPyP77": {
+    "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit.",
+    "description": "Section Typescript. Paragraph 1"
+  },
+  "KezNm5": {
+    "defaultMessage": "Open Source Project{br}{MIT} License",
+    "description": "Home main screen. License label (without «MIT» word)"
   },
   "Kxep7p": {
     "defaultMessage": "Knex eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
@@ -194,9 +229,17 @@
     "defaultMessage": "Light",
     "description": "Header. Theme button in light theme"
   },
+  "XxLcTv": {
+    "defaultMessage": "Docs",
+    "description": "Breadcrumbs. Docs"
+  },
   "YOLRNb": {
     "defaultMessage": "Dataloader",
     "description": "Footer. Package dataloader link"
+  },
+  "aL2THo": {
+    "defaultMessage": "Packages",
+    "description": "Breadcrumbs. Packages"
   },
   "aS0EO1": {
     "defaultMessage": "Packages",
@@ -218,9 +261,17 @@
     "defaultMessage": "Header 3",
     "description": "Home second screen. First card title"
   },
+  "h02828": {
+    "defaultMessage": "Privacy policy",
+    "description": "Breadcrumbs. Privacy policy"
+  },
   "hdR+lK": {
     "defaultMessage": "Core",
     "description": "Footer. package core link"
+  },
+  "i0A3YO": {
+    "defaultMessage": "MIT License",
+    "description": "Section Open Source. License label"
   },
   "jBa01K": {
     "defaultMessage": "Subscriptions eiusmod consequat proident ipsum.",
@@ -255,6 +306,10 @@
     "defaultMessage": "Permissions",
     "description": "SectionPackages. Permissions. Header"
   },
+  "naM7un": {
+    "defaultMessage": "TypeScript support",
+    "description": "Section Typescript. Header"
+  },
   "p/QgQD": {
     "defaultMessage": "project",
     "description": "Footer. «project» segment of «Open source project» label"
@@ -267,9 +322,21 @@
     "defaultMessage": "Home",
     "description": "Appbar. Home link"
   },
+  "qivfm0": {
+    "defaultMessage": "Open Source",
+    "description": "Section Open Source. Header"
+  },
   "qubaLh": {
     "defaultMessage": "Permissions eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Permissions. Content paragraph 1"
+  },
+  "rEE7Oe": {
+    "defaultMessage": "Setup",
+    "description": "Breadcrumbs. Core v2.0.x setup"
+  },
+  "rUAzFO": {
+    "defaultMessage": "Core v2.0",
+    "description": "Breadcrumbs. Core v2.0.x"
   },
   "t3lyVE": {
     "defaultMessage": "What Is It",
@@ -305,6 +372,10 @@
   "yjyG/7": {
     "defaultMessage": "Settings manager",
     "description": "Footer. Package settings-manager link"
+  },
+  "z0PBbF": {
+    "defaultMessage": "Fugiat laborum nulla fugiat cupidatat veniam pariatur in non. Adipisicing consectetur anim commodo excepteur incididunt.",
+    "description": "Section Open Source. Text"
   },
   "tJEkJp": {
     "defaultMessage": "Subscriptions eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",

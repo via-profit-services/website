@@ -14,6 +14,8 @@ const LogoInline: React.ForwardRefRenderFunction<SVGSVGElement, Props> = (
     <svg
       ref={ref}
       className={className}
+      width="1em"
+      height="1em"
       viewBox="0 0 1245 1245"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">

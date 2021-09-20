@@ -14,12 +14,20 @@ import RedisIcon from '~/render/desktop/components/Icons/Redis';
 import SubscriptionsIcon from '~/render/desktop/components/Icons/Subscriptions';
 import PermissionsIcon from '~/render/desktop/components/Icons/Permissions';
 import FileStorageIcon from '~/render/desktop/components/Icons/FileStorage';
-import dotssrc from 'assets/images/dots.svg';
+import dotssrc from 'assets/images/dots-grey.svg';
 
 const Section = styled.section`
   position: relative;
   padding: 2rem 0;
   margin: 0 auto;
+`;
+
+const Inner = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  max-width: ${props => props.theme.grid.desktop.safeFrame}px;
+  padding: 0 ${props => props.theme.grid.desktop.gutter / 2}px;
   &:before {
     content: '';
     position: absolute;
@@ -31,15 +39,8 @@ const Section = styled.section`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    z-index: -1;
   }
-`;
-
-const Inner = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  max-width: ${props => props.theme.grid.desktop.safeFrame}px;
-  padding: 0 ${props => props.theme.grid.desktop.gutter / 2}px;
 `;
 
 const TitleBox = styled.div`

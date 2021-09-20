@@ -2,22 +2,30 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
-import imagesrc from '~/../assets/images/section-main-background.png';
+import imagesrc from '~/../assets/images/section-main-background.jpg';
 import bearsrc from '~/../assets/images/section-main-bear.svg';
 import sirclessrc from '~/../assets/images/section-main-circles.svg';
 import Strong from '~/render/desktop/components/Typography/Strong';
 
-const Container = styled.div`
+const Container = styled.section`
+  position: relative;
+  height: 740px;
+  display: flex;
+  align-items: center;
+`;
+
+const Background = styled.div`
+  position: absolute;
   background-image: url(${imagesrc});
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: top left;
-  height: 110vh;
-  min-height: 720px;
+  background-position: center center;
+  height: 100%;
+  width: 76%;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  position: relative;
+  border-radius: 0% 100% 65% 35% / 97% 0% 100% 3%;
   &:before {
     content: '';
     position: absolute;
@@ -25,10 +33,35 @@ const Container = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top right;
-    right: 100px;
+    right: -24%;
+    top: 10px;
     width: 130vh;
     height: 130vh;
+    max-width: 1160px;
+    @media (min-width: 1500px) {
+      top: -210px;
+    }
   }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: ${({ theme }) => theme.color.gradients[1]};
+    border-radius: inherit;
+  }
+`;
+
+const LicenseLabel = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+  text-align: right;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: ${({ theme }) => theme.color.text.secondary};
 `;
 
 const Content = styled.div`
@@ -93,7 +126,25 @@ const Text = styled.div`
 
 const SectionMain: React.FC = () => (
   <Container>
+    <Background />
     <Inner>
+      <LicenseLabel>
+        <FormattedMessage
+          defaultMessage="Open Source Project{br}{MIT} License"
+          description="Home main screen. License label (without «MIT» word)"
+          values={{
+            br: <br />,
+            MIT: (
+              <Strong>
+                <FormattedMessage
+                  defaultMessage="MIT"
+                  description="Home main screen. License label. «MIT» word only"
+                />
+              </Strong>
+            ),
+          }}
+        />
+      </LicenseLabel>
       <Content>
         <Pretitle>
           <FormattedMessage

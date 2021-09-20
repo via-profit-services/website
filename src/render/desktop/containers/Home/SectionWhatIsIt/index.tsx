@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import H2 from '~/render/desktop/components/Typography/H2';
 import H3 from '~/render/desktop/components/Typography/H3';
 import Paragraph from '~/render/desktop/components/Typography/Paragraph';
-import dotssrc from 'assets/images/dots.svg';
+import dotssrc from 'assets/images/dots-grey.svg';
 import postgresqlsrc from 'assets/images/postgresql-logo.svg';
 
 const Section = styled.section`

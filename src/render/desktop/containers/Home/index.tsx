@@ -8,6 +8,8 @@ import SectionMain from './SectionMain';
 import SectionWhatIsIt from './SectionWhatIsIt';
 import SectionWhy from './SectionWhy';
 import SectionPackages from './SectionPackages';
+import SectionOpenSource from './SectionOpenSource';
+import SectionTypescript from './SectionTypescript';
 
 const HomePageDesktop: React.FC = () => (
   <>
@@ -18,6 +20,8 @@ const HomePageDesktop: React.FC = () => (
       <SectionWhatIsIt />
       <SectionWhy />
       <SectionPackages />
+      <SectionOpenSource />
+      <SectionTypescript />
     </main>
     <Footer />
   </>

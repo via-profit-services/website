@@ -14,15 +14,15 @@ const List: React.FC = () => (
           position={2}
           label={
             <FormattedMessage
-              defaultMessage="Packages"
-              description="Breadcrumbs. Packages"
+              defaultMessage="Examples"
+              description="Breadcrumbs. Examples"
             />
           }
         />
       </Breadcrumbs>
     </nav>
     <H1>
-      <FormattedMessage defaultMessage="List of all packages" />
+      <FormattedMessage defaultMessage="Examples" />
     </H1>
 
     {[...new Array(15).keys()].map(key => (

@@ -26,6 +26,13 @@ const Packages = loadable(
   },
 );
 
+const Examples = loadable(
+  () => import('~/render/desktop/containers/Examples/index'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
 const Fallback = loadable(
   () => import('~/render/desktop/containers/Fallback/index'),
   {
@@ -45,6 +52,7 @@ const Routes: React.FC = () => {
       <Route path="/docs" component={Docs} />
       <Route path="/packages" component={Packages} />
       <Route path="/legal" component={Legal} />
+      <Route path="/examples" component={Examples} />
       <Route component={Fallback} />
     </Switch>
   );
