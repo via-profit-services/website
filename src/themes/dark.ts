@@ -9,7 +9,7 @@ const dark: DefaultTheme = {
     accent: {
       ...light.color.accent,
       primary: '#70409b',
-      secondary: '#90409b',
+      secondary: '#b730b6',
     },
     gradients: [
       'linear-gradient(90.02deg, #900071 0.77%, #44007B 99.98%)',
@@ -35,7 +35,7 @@ const dark: DefaultTheme = {
     grey: {
       ...light.color.grey,
       100: '#a4a4a5',
-      200: '#484848',
+      200: 'rgb(72 72 72 / 32%)',
       300: '#5d5d73',
       400: '#3a3a65',
       500: '#272730',

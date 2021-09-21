@@ -17,8 +17,7 @@ const HomePageTouchable: React.FC = () => (
     </Helmet>
     <Header />
     <ContentArea>
-      <H1>Header 1</H1>
-      {/* <RenderDraftjs {...content} /> */}
+      <H1>Touchable Header 1</H1>
     </ContentArea>
   </>
 );

@@ -5,7 +5,6 @@ import ChevronDoubleRightIcon from 'mdi-react/ChevronDoubleRightIcon';
 import { FormattedMessage } from 'react-intl';
 
 import H3 from '~/render/desktop/components/Typography/H3';
-import Paragraph from '~/render/desktop/components/Typography/Paragraph';
 
 type Props = {
   icon: React.ReactNode;
@@ -35,7 +34,7 @@ const Line = styled.div`
   background: ${({ theme }) => theme.color.gradients[0]};
 `;
 
-const Content = styled(Paragraph)`
+const Content = styled.div`
   color: ${({ theme }) => theme.color.text.secondary};
 `;
 

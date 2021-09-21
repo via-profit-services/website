@@ -36,14 +36,14 @@ export default createGlobalStyle`
   }
   &::-webkit-scrollbar-track {
     border-radius: 10px;
-    background: ${props => props.theme.color.grey[200]};
+    background: ${props => props.theme.color.grey[300]};
   }
   &::-webkit-scrollbar-thumb {
     background: ${props => props.theme.color.grey[500]};
     border-radius: 10px;
   }
   &::-webkit-scrollbar-thumb:hover {
-    background: ${props => props.theme.color.accent.primary};
+    background: ${props => props.theme.color.accent.secondary};
   }
   * {
     scrollbar-color: ${props => props.theme.color.grey[500]} ${props =>

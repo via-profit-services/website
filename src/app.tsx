@@ -1,25 +1,12 @@
 import * as React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import loadable, { loadableReady } from '@loadable/component';
-import { Provider as ReduxProvider, useSelector } from 'react-redux';
+import { loadableReady } from '@loadable/component';
+import { Provider as ReduxProvider } from 'react-redux';
 
 import createReduxStore from '~/redux/store';
 import reduxDefaultState from '~/redux/defaultState';
-
-const ApplicationDesktop = loadable(() => import('~/render/desktop/index'));
-const ApplicationTouchable = loadable(() => import('~/render/touchable/index'));
-
-const ModeSwitcher: React.FC = () => {
-  const mode = useSelector<ReduxState, ReduxSelectedMode>(state => state.mode);
-
-  return (
-    <>
-      {mode === 'desktop' && <ApplicationDesktop />}
-      {mode === 'touchable' && <ApplicationTouchable />}
-    </>
-  );
-};
+import ApplicationProvider from '~/providers/ApplicationProvider';
 
 const bootstrap = async () => {
   let reduxState = { ...reduxDefaultState };
@@ -66,7 +53,7 @@ const bootstrap = async () => {
       <BrowserRouter>
         <ReduxProvider store={reduxStore}>
           <React.Suspense fallback={null}>
-            <ModeSwitcher />
+            <ApplicationProvider />
           </React.Suspense>
         </ReduxProvider>
       </BrowserRouter>,

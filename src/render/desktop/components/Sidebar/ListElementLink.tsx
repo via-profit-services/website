@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { Link, useRouteMatch } from 'react-router-dom';
 
 export const linkStyles = css<{ $active?: boolean }>`
-  margin: 0;
+  margin: 0.2em 0;
   display: block;
   padding: 0.4em 1em;
   text-decoration: none;
@@ -12,7 +12,7 @@ export const linkStyles = css<{ $active?: boolean }>`
   transition: all 160ms ease-out;
   color: ${props =>
     props.$active
-      ? props.theme.color.accent.primary
+      ? props.theme.color.accent.secondary
       : props.theme.color.text.primary}!important;
   &:hover {
     color: 'red';
@@ -28,7 +28,7 @@ const StyledLink = styled(Link)<{ $active?: boolean }>`
   ${props =>
     props.$active &&
     css`
-      background-color: ${({ theme }) => theme.color.grey[300]};
+      background-color: ${({ theme }) => theme.color.grey[200]};
       color: ${({ theme }) => theme.color.accent.primary};
     `}
 `;

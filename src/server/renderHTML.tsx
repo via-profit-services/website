@@ -2,7 +2,6 @@
 import { Request } from 'express';
 import Mustache from 'mustache';
 import React from 'react';
-import loadable from '@loadable/component';
 import { ChunkExtractor } from '@loadable/server';
 import { renderToString } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
@@ -18,9 +17,7 @@ import { COOKIE_RECORD_THEME } from '~/utils/constants';
 import createReduxStore from '~/redux/store';
 import mainTemplate from '~/../assets/templates/main.mustache';
 import reduxDefaultState from '~/redux/defaultState';
-
-const ApplicationDesktop = loadable(() => import('~/render/desktop/index'));
-const ApplicationTouchable = loadable(() => import('~/render/touchable/index'));
+import ApplicationProvider from '~/providers/ApplicationProvider';
 
 interface Props {
   req: Request;
@@ -101,8 +98,7 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
         <StaticRouter location={url} context={context}>
           <ReduxProvider store={reduxStore}>
             <React.Suspense fallback={null}>
-              {device === 'desktop' && <ApplicationDesktop />}
-              {device === 'touchable' && <ApplicationTouchable />}
+              <ApplicationProvider />
             </React.Suspense>
           </ReduxProvider>
         </StaticRouter>
