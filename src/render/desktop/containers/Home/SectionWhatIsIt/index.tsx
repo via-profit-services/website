@@ -12,7 +12,7 @@ const Section = styled.section`
   margin: 0 auto;
   width: 100%;
   max-width: ${props => props.theme.grid.desktop.safeFrame}px;
-  padding: 1rem ${props => props.theme.grid.desktop.gutter / 2}px;
+  padding: 1rem ${props => props.theme.grid.desktop.gutter}px;
   position: relative;
   &:before {
     content: '';

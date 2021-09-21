@@ -20,7 +20,7 @@ const Inner = styled.div`
   margin: 0 auto;
   width: 100%;
   max-width: ${props => props.theme.grid.desktop.safeFrame}px;
-  padding: 0 ${props => props.theme.grid.desktop.gutter / 2}px;
+  padding: 0 ${props => props.theme.grid.desktop.gutter}px;
   display: flex;
   justify-content: space-between;
 `;

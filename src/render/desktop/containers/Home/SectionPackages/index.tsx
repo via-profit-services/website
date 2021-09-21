@@ -27,7 +27,7 @@ const Inner = styled.div`
   margin: 0 auto;
   position: relative;
   max-width: ${props => props.theme.grid.desktop.safeFrame}px;
-  padding: 0 ${props => props.theme.grid.desktop.gutter / 2}px;
+  padding: 0 ${props => props.theme.grid.desktop.gutter}px;
   &:before {
     content: '';
     position: absolute;

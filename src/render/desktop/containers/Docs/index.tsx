@@ -2,13 +2,14 @@ import * as React from 'react';
 import loadable from '@loadable/component';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import styled from 'styled-components';
+import { useIntl } from 'react-intl';
 
 import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
 import Header from '~/render/desktop/components/Header';
 import ContentArea from '~/render/desktop/components/ContentArea';
 import Footer from '~/render/desktop/components/Footer';
 import Meta from '~/render/desktop/components/Meta';
-import Sidebar from '~/render/desktop/containers/Docs/Sidebar';
+import Sidebar, { SidebarMap } from '~/render/desktop/components/Sidebar';
 
 const Fallback = loadable(
   () => import('~/render/desktop/containers/Fallback/index'),
@@ -43,22 +44,102 @@ const Layout = styled(ContentArea)`
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  margin-top: 20px;
 `;
 
 const Aside = styled.aside`
-  width: 280px;
-  padding: 0 ${props => props.theme.grid.desktop.gutter}px;
+  width: 250px;
+  padding-right: ${props => props.theme.grid.desktop.gutter}px;
+  border-right: 1px solid ${({ theme }) => theme.color.grey[300]};
 `;
 
 const Main = styled.main`
   flex: 1;
-  width: calc(100% - 280px);
+  width: calc(100% - 250px);
   padding: 0 ${props => props.theme.grid.desktop.gutter}px;
 `;
 
 const Docs: React.FC = () => {
   const { path } = useRouteMatch();
+  const intl = useIntl();
+
+  const sidebarMap: SidebarMap = React.useMemo(
+    () => ({
+      sections: [
+        {
+          path: '/docs/core',
+          label: intl.formatMessage({
+            defaultMessage: 'Core',
+            description: 'Docs sidebar. Core',
+          }),
+          child: [
+            {
+              path: '/docs/core/v2.0.x',
+              label: intl.formatMessage({
+                defaultMessage: 'Core v2.0',
+                description: 'Docs sidebar. Core v.2.0',
+              }),
+              child: [
+                {
+                  path: '/docs/core/v2.0.x',
+                  label: intl.formatMessage({
+                    defaultMessage: 'Introduction',
+                    description: 'Docs sidebar. Core v.2.0 introduction',
+                  }),
+                },
+                {
+                  path: '/docs/core/v2.0.x/setup',
+                  label: intl.formatMessage({
+                    defaultMessage: 'Setup guide',
+                    description: 'Docs sidebar. Core v.2.0 setup',
+                  }),
+                },
+                {
+                  path: '/docs/core/v2.0.x/api',
+                  label: intl.formatMessage({
+                    defaultMessage: 'API Reference',
+                    description: 'Docs sidebar. Core v.2.0 API',
+                  }),
+                },
+                {
+                  path: '/docs/core/v2.0.x/middlewares',
+                  label: intl.formatMessage({
+                    defaultMessage: 'Use middlewares',
+                    description: 'Docs sidebar. Core v.2.0 middlewares',
+                  }),
+                },
+              ],
+            },
+          ],
+        },
+        {
+          path: '/docs/knex',
+          label: intl.formatMessage({
+            defaultMessage: 'Knex',
+            description: 'Docs sidebar. Knex',
+          }),
+          child: [
+            {
+              path: '/docs/knex/v1.1.x',
+              label: intl.formatMessage({
+                defaultMessage: 'Knex v1.1',
+                description: 'Docs sidebar. Knex v.1.1 introduction',
+              }),
+              child: [
+                {
+                  path: '/docs/knex/v1.1.x/api',
+                  label: intl.formatMessage({
+                    defaultMessage: 'API Reference',
+                    description: 'Docs sidebar. Knex v.1.1 API',
+                  }),
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }),
+    [intl],
+  );
 
   return (
     <>
@@ -67,7 +148,7 @@ const Docs: React.FC = () => {
       <Wrapper>
         <Layout>
           <Aside>
-            <Sidebar />
+            <Sidebar sidebarMap={sidebarMap} />
           </Aside>
           <Main>
             <article>

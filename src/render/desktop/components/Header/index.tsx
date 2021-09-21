@@ -88,6 +88,7 @@ const Inner = styled.div`
   display: flex;
   align-items: center;
   max-width: ${props => props.theme.grid.desktop.safeFrame}px;
+  padding: 0 ${props => props.theme.grid.desktop.gutter}px;
   margin: 0 auto;
 `;
 

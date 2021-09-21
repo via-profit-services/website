@@ -70,7 +70,7 @@ const Content = styled.div`
 
 const Inner = styled.div`
   max-width: ${({ theme }) => theme.grid.desktop.safeFrame}px;
-  padding: 0 ${({ theme }) => theme.grid.desktop.gutter / 2}px;
+  padding: 0 ${({ theme }) => theme.grid.desktop.gutter}px;
   position: relative;
   width: 100%;
   margin: 0 auto;

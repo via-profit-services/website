@@ -22,6 +22,10 @@
     "defaultMessage": "PostgreSQL logo",
     "description": "Home second screen. Alt of postgreSQL logo"
   },
+  "2Rcy/e": {
+    "defaultMessage": "Core v2.0",
+    "description": "Docs sidebar. Core v.2.0"
+  },
   "2qRiOA": {
     "defaultMessage": "File Storage",
     "description": "Footer. Package file-storage link"
@@ -48,6 +52,10 @@
     "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home second screen. First card content"
   },
+  "4MIGfe": {
+    "defaultMessage": "Knex",
+    "description": "Docs sidebar. Knex"
+  },
   "4d2Kfy": {
     "defaultMessage": "Redis mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Redis. Content paragraph 2"
@@ -71,6 +79,10 @@
   "7atvZ+": {
     "defaultMessage": "Лицензия MIT",
     "description": "Footer. License string in copiright string"
+  },
+  "7fK4Wo": {
+    "defaultMessage": "Use middlewares",
+    "description": "Docs sidebar. Core v.2.0 middlewares"
   },
   "82R6Qe": {
     "defaultMessage": "File storage mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -171,6 +183,10 @@
     "defaultMessage": "Core",
     "description": "SectionPackages. Core. Header"
   },
+  "OXpB32": {
+    "defaultMessage": "Knex v1.1",
+    "description": "Docs sidebar. Knex v.1.1 introduction"
+  },
   "PB00Lv": {
     "defaultMessage": "Permissions mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Permissions. Content paragraph 2"
@@ -183,9 +199,17 @@
     "defaultMessage": "GitHub",
     "description": "Footer. GitHub link"
   },
+  "Ql6F+2": {
+    "defaultMessage": "API Reference",
+    "description": "Docs sidebar. Core v.2.0 API"
+  },
   "R7qNRK": {
     "defaultMessage": "Open source",
     "description": "Footer. «Open source project» label («Open source» segment)"
+  },
+  "RKyAJM": {
+    "defaultMessage": "Setup guide",
+    "description": "Docs sidebar. Core v.2.0 setup"
   },
   "RR9NSx": {
     "defaultMessage": "SMS",
@@ -201,6 +225,10 @@
   },
   "TUV3q8": {
     "defaultMessage": "List of all packages"
+  },
+  "UBBBi2": {
+    "defaultMessage": "Knex",
+    "description": "Breadcrumbs. Knex"
   },
   "UhkSyx": {
     "defaultMessage": "Terms of Use"
@@ -237,6 +265,10 @@
     "defaultMessage": "Dataloader",
     "description": "Footer. Package dataloader link"
   },
+  "a8ApCl": {
+    "defaultMessage": "API Reference",
+    "description": "Docs sidebar. Knex v.1.1 API"
+  },
   "aL2THo": {
     "defaultMessage": "Packages",
     "description": "Breadcrumbs. Packages"
@@ -252,6 +284,10 @@
   "dwWw1n": {
     "defaultMessage": "Legal",
     "description": "Footer. Title of the «Legal» section"
+  },
+  "eCqVia": {
+    "defaultMessage": "Core",
+    "description": "Docs sidebar. Core"
   },
   "ejfCfL": {
     "defaultMessage": "Установка и настройка @via-profit-services/core",
@@ -287,6 +323,10 @@
   "jeNkjc": {
     "defaultMessage": "Введение в @via-profit-services/core v2.0.x"
   },
+  "kQJFNC": {
+    "defaultMessage": "Knex v1.1",
+    "description": "Breadcrumbs. Knex v1.1.x"
+  },
   "kZk26D": {
     "defaultMessage": "Knex"
   },
@@ -302,6 +342,10 @@
     "defaultMessage": "Redis",
     "description": "SectionPackages. Redis. Header"
   },
+  "m+cURs": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Core v.2.0 introduction"
+  },
   "mGrCzT": {
     "defaultMessage": "Permissions",
     "description": "SectionPackages. Permissions. Header"
@@ -309,6 +353,10 @@
   "naM7un": {
     "defaultMessage": "TypeScript support",
     "description": "Section Typescript. Header"
+  },
+  "ncLub+": {
+    "defaultMessage": "Navigation",
+    "description": "Docs sidebar title"
   },
   "p/QgQD": {
     "defaultMessage": "project",
@@ -364,6 +412,9 @@
   "xnJwur": {
     "defaultMessage": "Установка и настройка",
     "description": "Meta title of installation and setup"
+  },
+  "y+vST4": {
+    "defaultMessage": "Introduction of @via-profit-services/jknex v1.1.x"
   },
   "ydd+OI": {
     "defaultMessage": "See more packages",

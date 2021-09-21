@@ -9,11 +9,11 @@ const light: DefaultTheme = {
   },
   grid: {
     desktop: {
-      gutter: 24,
+      gutter: 12,
       safeFrame: 1200,
     },
     touchable: {
-      gutter: 24,
+      gutter: 5,
       safeFrame: 280,
     },
   },
