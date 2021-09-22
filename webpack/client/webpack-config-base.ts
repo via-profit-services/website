@@ -75,11 +75,14 @@ const config: Configuration = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
-              limit: 0, // For server side render
+              limit: 0,
               name: 'public/images/[contenthash].[ext]',
             },
+          },
+          {
+            loader: 'image-webpack-loader',
           },
         ],
       },

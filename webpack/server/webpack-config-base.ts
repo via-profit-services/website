@@ -43,6 +43,9 @@ const config: Configuration = {
               emitFile: false,
             },
           },
+          {
+            loader: 'image-webpack-loader',
+          },
         ],
       },
 

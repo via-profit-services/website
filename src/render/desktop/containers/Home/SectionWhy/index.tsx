@@ -35,7 +35,6 @@ const ImageBlock = styled.div`
 `;
 
 const SchemaImage = styled.img`
-  width: 360px;
   height: 360px;
 `;
 

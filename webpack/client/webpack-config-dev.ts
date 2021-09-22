@@ -72,7 +72,6 @@ const devConfig = merge(baseConfig, {
       verbose: true,
       disableDotRule: true,
     },
-    hot: true,
     compress: true,
     port: Number(process.env.WEBPACK_DEV_SERVER_PORT),
     host: process.env.SERVER_HOSTNAME,
