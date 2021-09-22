@@ -7,11 +7,12 @@ import AppDrawer from '~/render/touchable/components/AppDrawer';
 const HeaderContainer = styled.div`
   position: sticky;
   top: 0;
-  background-color: ${props => props.theme.color.background};
+  background-color: ${props => props.theme.color.background.secondary};
   z-index: ${props => props.theme.zIndex.header};
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: ${props => props.theme.shadows[0]};
 `;
 
 const HeaderToolbar = styled.div`
@@ -23,7 +24,7 @@ const HeaderToolbar = styled.div`
 `;
 
 const MenuButton = styled.button`
-  padding: 12px;
+  padding: 1em;
   width: auto;
   height: auto;
   outline: none;

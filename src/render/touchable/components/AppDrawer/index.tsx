@@ -25,7 +25,7 @@ const DrawerContainer = styled.div<{ $visibility: boolean }>`
 `;
 
 const DrawerInner = styled.div`
-  background-color: ${props => props.theme.color.background};
+  background-color: ${props => props.theme.color.background.secondary};
   height: 100vh;
   width: 90%;
   display: flex;
@@ -40,7 +40,7 @@ const DrawerNav = styled.nav`
 `;
 
 const DrawerFooter = styled.div`
-  border-top: 1px solid red;
+  border-top: 1px solid currentColor;
 `;
 
 const DeveloperLink = styled.a`
@@ -56,7 +56,8 @@ const DrawerFallback = styled.div`
 `;
 
 const DrawerHeader = styled.div`
-  background-color: ${props => props.theme.color.background};
+  background-color: ${props => props.theme.color.background.primary};
+  border-bottom: 1px solid currentColor;
   background-position: center center;
   background-size: cover;
   height: 160px;
@@ -102,7 +103,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
 
           <DrawerFooter>
             <DeveloperLink href="https://via-profit.ru" target="__blank">
-              <DeveloperLinear />
+              <DeveloperLinear height="2rem" />
             </DeveloperLink>
           </DrawerFooter>
         </DrawerInner>
