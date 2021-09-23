@@ -7,6 +7,7 @@ interface GridParams {
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    mode: 'dark' | 'light';
     fontSize: number;
     zIndex: {
       header: number;

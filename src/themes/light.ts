@@ -1,6 +1,7 @@
 import { DefaultTheme } from 'styled-components';
 
 const light: DefaultTheme = {
+  mode: 'light',
   fontSize: 16,
   zIndex: {
     header: 8,

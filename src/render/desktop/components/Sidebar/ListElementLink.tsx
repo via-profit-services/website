@@ -15,11 +15,7 @@ export const linkStyles = css<{ $active?: boolean }>`
       ? props.theme.color.accent.secondary
       : props.theme.color.text.primary}!important;
   &:hover {
-    color: 'red';
     background-color: ${({ theme }) => theme.color.grey[200]};
-  }
-  &:visited {
-    color: 'orange';
   }
 `;
 

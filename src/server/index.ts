@@ -57,7 +57,7 @@ const bootstrap = async () => {
           scriptSrc:
             "'self' 'unsafe-inline' https://www.youtube.com https://mc.yandex.ru https://yandex.ru https://yastatic.net https://www.google-analytics.com",
           imgSrc:
-            "'self' https://mc.yandex.ru https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://github.com https://camo.githubusercontent.com https://img.shields.io",
+            "'self' 'unsafe-inline' https://mc.yandex.ru https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://github.com https://camo.githubusercontent.com https://img.shields.io",
           connectSrc:
             "'self' https://mc.yandex.com https://mc.webvisor.org https://mc.yandex.ru https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net",
           frameSrc:

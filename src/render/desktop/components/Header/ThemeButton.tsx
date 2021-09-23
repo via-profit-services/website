@@ -12,8 +12,9 @@ const Button = styled.button`
   border: 0;
   width: auto;
   height: auto;
-  color: ${props => props.theme.color.text.inverse};
-  background-color: ${props => props.theme.color.accent.secondary};
+  background-color: ${({ theme }) => theme.color.accent.secondary};
+  color: ${({ theme }) =>
+    theme.mode === 'light' ? theme.color.text.inverse : theme.color.grey[500]};
   padding: 0.3em 0.7em 0.3em 0.4em;
   line-height: 1;
   border-radius: 1.5em;
@@ -28,7 +29,7 @@ const Pointer = styled.span`
   width: 1em;
   height: 1em;
   border-radius: 100%;
-  color: ${({ theme }) => theme.color.text.inverse};
+  color: inherit;
 `;
 
 const Label = styled.span`

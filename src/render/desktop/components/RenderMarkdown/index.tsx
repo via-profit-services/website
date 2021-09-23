@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactMarkdown, { ReactMarkdownOptions } from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { materialOceanic as syntaxTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import darkSchema from 'react-syntax-highlighter/dist/esm/styles/prism/material-oceanic';
+import lightSchema from 'react-syntax-highlighter/dist/esm/styles/prism/material-light';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
 import H1 from '~/render/desktop/components/Typography/H1';
 import H2 from '~/render/desktop/components/Typography/H2';
@@ -14,48 +16,71 @@ import Strong from '~/render/desktop/components/Typography/Strong';
 import Em from '~/render/desktop/components/Typography/Em';
 import Paragraph from '~/render/desktop/components/Typography/Paragraph';
 
-const background = '#32293e';
-const color = '#c3cee3';
-
 /* eslint-disable */
 const style = {
-  ...syntaxTheme,
-  'code[class*="language-"]': {
-    ...syntaxTheme['code[class*="language-"]'],
-    background,
-    color,
+  light: {
+    ...lightSchema,
+    'code[class*="language-"]': {
+      ...lightSchema['code[class*="language-"]'],
+      background: '#fafafa',
+      color: '#db12ff',
+    },
+    'pre[class*="language-"]': {
+      ...lightSchema['pre[class*="language-"]'],
+      background: '#fafafa',
+      color: '#db12ff',
+      boxShadow: '0 0 0 1px #eae8e8',
+      borderRadius: '8px',
+    },
+    imports: {
+      color: '#c220de',
+    },
+    'maybe-class-name': {
+      color: '#c220de',
+    },
   },
-  'pre[class*="language-"]': {
-    ...syntaxTheme['pre[class*="language-"]'],
-    background,
-    color,
-    borderRadius: '8px',
-  },
-  comment: {
-    color: '#697098',
-  },
-  function: {
-    color: '#82aaff',
-  },
-  'class-name': {
-    color: '#82aaff',
-  },
-  imports: {
-    color: '#c792ea',
-  },
-  'maybe-class-name': {
-    color: '#c792ea',
+  dark: {
+    ...darkSchema,
+    'code[class*="language-"]': {
+      ...darkSchema['code[class*="language-"]'],
+      background: '#32293e',
+      color: '#c3cee3',
+    },
+    'pre[class*="language-"]': {
+      ...darkSchema['pre[class*="language-"]'],
+      background: '#32293e',
+      color: '#c3cee3',
+      borderRadius: '8px',
+    },
+    comment: {
+      color: '#cad61c',
+    },
+    function: {
+      color: '#82aaff',
+    },
+    'class-name': {
+      color: '#82aaff',
+    },
+    imports: {
+      color: '#c792ea',
+    },
+    'maybe-class-name': {
+      color: '#c792ea',
+    },
   },
 };
 /* eslint-enable */
 
-const CodeSSR = styled.code({
-  ...style['pre[class*="language-"]'],
-  display: 'block',
-});
+const CodeSSR = styled.code<{ $style: Record<string, any> }>`
+  ${style};
+  display: block;
+`;
 
 const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
   const { children, components, ...otherProps } = props;
+  const theme = useSelector<ReduxState, ReduxSelectedTheme>(
+    state => state.theme,
+  );
 
   return (
     <ReactMarkdown
@@ -104,11 +129,11 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
           }
 
           if (typeof window === 'undefined') {
-            return <CodeSSR>{children}</CodeSSR>;
+            return <CodeSSR $style={style[theme]}>{children}</CodeSSR>;
           }
 
           return (
-            <SyntaxHighlighter language={language} style={style}>
+            <SyntaxHighlighter language={language} style={style[theme]}>
               {children}
             </SyntaxHighlighter>
           );

@@ -4,12 +4,13 @@ import light from './light';
 
 const dark: DefaultTheme = {
   ...light,
+  mode: 'dark',
   color: {
     ...light.color,
     accent: {
       ...light.color.accent,
-      primary: '#70409b',
-      secondary: '#b730b6',
+      primary: '#ca90ff',
+      secondary: '#f07cef',
     },
     gradients: [
       'linear-gradient(90.02deg, #900071 0.77%, #44007B 99.98%)',
@@ -20,7 +21,7 @@ const dark: DefaultTheme = {
     background: {
       ...light.color.background,
       primary: '#1e1e2e',
-      secondary: '#262739',
+      secondary: '#1a1b27',
     },
     black: {
       primary: '#171825',
