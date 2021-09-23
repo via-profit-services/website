@@ -81,6 +81,9 @@ module.exports = merge(baseConfig, {
         __dirname,
         '../../dist/server/templates/main.mustache',
       ),
+      minify: {
+        caseSensitive: true,
+      },
     }),
   ],
 });
