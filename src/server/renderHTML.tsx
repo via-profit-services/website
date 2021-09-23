@@ -59,7 +59,7 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
   const data = htmlCache.get<RenderHTMLPayload>(cacheKey);
 
   if (data) {
-    // return data;
+    return data;
   }
 
   const context: StaticContext = {
