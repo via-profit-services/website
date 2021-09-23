@@ -50,14 +50,17 @@ const Inner = styled.div`
 `;
 
 const LeftSide = styled.div`
-  width: 40%;
+  flex: 1;
 `;
 
 const RightSide = styled.div`
-  flex: 1;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 680px) {
+    display: none;
+  }
 `;
 
 const TypescriptLogo = styled.div`

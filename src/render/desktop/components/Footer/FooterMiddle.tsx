@@ -20,6 +20,11 @@ const Inner = styled.div`
   justify-content: space-between;
   padding-top: 2.4rem;
   padding-bottom: 1.2rem;
+  @media (max-width: 500px) {
+    & > div:nth-child(2) {
+      display: none;
+    }
+  }
 `;
 
 const Section = styled.div<{ $position: 'left' | 'center' | 'right' }>`
@@ -39,6 +44,9 @@ const Section = styled.div<{ $position: 'left' | 'center' | 'right' }>`
       }
       & ul:last-child {
         margin-right: 0;
+        @media (max-width: 680px) {
+          display: none;
+        }
       }
     `};
 `;

@@ -101,8 +101,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-responsive", "npm:8.0.3"],
             ["@types/react-router", "npm:5.1.16"],
             ["@types/react-router-dom", "npm:5.1.8"],
-            ["@types/react-sticky-el", "npm:1.0.3"],
-            ["@types/react-stickynode", "npm:3.0.2"],
             ["@types/react-swipeable-views", "npm:0.13.1"],
             ["@types/react-syntax-highlighter", "npm:13.5.2"],
             ["@types/react-transition-group", "npm:4.4.2"],
@@ -229,8 +227,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.2.1"],
             ["react-router-config", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.1.1"],
             ["react-router-dom", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.3.0"],
-            ["react-sticky-el", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.0.9"],
-            ["react-stickynode", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:4.0.0"],
             ["react-swipeable-views", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:0.14.0"],
             ["react-syntax-highlighter", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:15.4.4"],
             ["react-test-renderer", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:17.0.2"],
@@ -6347,26 +6343,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@types/react-sticky-el", [
-        ["npm:1.0.3", {
-          "packageLocation": "./.yarn/cache/@types-react-sticky-el-npm-1.0.3-59b312b605-73adce6d0e.zip/node_modules/@types/react-sticky-el/",
-          "packageDependencies": [
-            ["@types/react-sticky-el", "npm:1.0.3"],
-            ["@types/react", "npm:17.0.20"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@types/react-stickynode", [
-        ["npm:3.0.2", {
-          "packageLocation": "./.yarn/cache/@types-react-stickynode-npm-3.0.2-3185d6b466-1bc7c46e8c.zip/node_modules/@types/react-stickynode/",
-          "packageDependencies": [
-            ["@types/react-stickynode", "npm:3.0.2"],
-            ["@types/react", "npm:17.0.20"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["@types/react-swipeable-views", [
         ["npm:0.13.1", {
           "packageLocation": "./.yarn/cache/@types-react-swipeable-views-npm-0.13.1-f1cff0f73b-47908514a5.zip/node_modules/@types/react-swipeable-views/",
@@ -7038,8 +7014,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-responsive", "npm:8.0.3"],
             ["@types/react-router", "npm:5.1.16"],
             ["@types/react-router-dom", "npm:5.1.8"],
-            ["@types/react-sticky-el", "npm:1.0.3"],
-            ["@types/react-stickynode", "npm:3.0.2"],
             ["@types/react-swipeable-views", "npm:0.13.1"],
             ["@types/react-syntax-highlighter", "npm:13.5.2"],
             ["@types/react-transition-group", "npm:4.4.2"],
@@ -7166,8 +7140,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.2.1"],
             ["react-router-config", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.1.1"],
             ["react-router-dom", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.3.0"],
-            ["react-sticky-el", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.0.9"],
-            ["react-stickynode", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:4.0.0"],
             ["react-swipeable-views", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:0.14.0"],
             ["react-syntax-highlighter", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:15.4.4"],
             ["react-test-renderer", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:17.0.2"],
@@ -9923,15 +9895,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["define-property", "npm:0.2.5"],
             ["isobject", "npm:3.0.1"],
             ["static-extend", "npm:0.1.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["classnames", [
-        ["npm:2.3.1", {
-          "packageLocation": "./.yarn/cache/classnames-npm-2.3.1-f2ae0a8d3c-14db8889d5.zip/node_modules/classnames/",
-          "packageDependencies": [
-            ["classnames", "npm:2.3.1"]
           ],
           "linkType": "HARD",
         }]
@@ -22661,63 +22624,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["react-sticky-el", [
-        ["npm:2.0.9", {
-          "packageLocation": "./.yarn/cache/react-sticky-el-npm-2.0.9-035f2965f6-9a43e77a30.zip/node_modules/react-sticky-el/",
-          "packageDependencies": [
-            ["react-sticky-el", "npm:2.0.9"]
-          ],
-          "linkType": "SOFT",
-        }],
-        ["virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.0.9", {
-          "packageLocation": "./.yarn/__virtual__/react-sticky-el-virtual-6337cbc2e2/0/cache/react-sticky-el-npm-2.0.9-035f2965f6-9a43e77a30.zip/node_modules/react-sticky-el/",
-          "packageDependencies": [
-            ["react-sticky-el", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.0.9"],
-            ["@types/react", "npm:17.0.20"],
-            ["@types/react-dom", "npm:16.9.14"],
-            ["react", "npm:18.0.0-alpha-cb8a50619-20210909"],
-            ["react-dom", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:18.0.0-alpha-cb8a50619-20210909"]
-          ],
-          "packagePeers": [
-            "@types/react-dom",
-            "@types/react",
-            "react-dom",
-            "react"
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["react-stickynode", [
-        ["npm:4.0.0", {
-          "packageLocation": "./.yarn/cache/react-stickynode-npm-4.0.0-da19839541-51c0cb132a.zip/node_modules/react-stickynode/",
-          "packageDependencies": [
-            ["react-stickynode", "npm:4.0.0"]
-          ],
-          "linkType": "SOFT",
-        }],
-        ["virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:4.0.0", {
-          "packageLocation": "./.yarn/__virtual__/react-stickynode-virtual-c82d8998f5/0/cache/react-stickynode-npm-4.0.0-da19839541-51c0cb132a.zip/node_modules/react-stickynode/",
-          "packageDependencies": [
-            ["react-stickynode", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:4.0.0"],
-            ["@types/react", "npm:17.0.20"],
-            ["@types/react-dom", "npm:16.9.14"],
-            ["classnames", "npm:2.3.1"],
-            ["core-js", "npm:3.17.2"],
-            ["prop-types", "npm:15.7.2"],
-            ["react", "npm:18.0.0-alpha-cb8a50619-20210909"],
-            ["react-dom", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:18.0.0-alpha-cb8a50619-20210909"],
-            ["shallowequal", "npm:1.1.0"],
-            ["subscribe-ui-event", "npm:2.0.7"]
-          ],
-          "packagePeers": [
-            "@types/react-dom",
-            "@types/react",
-            "react-dom",
-            "react"
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["react-swipeable-views", [
         ["npm:0.14.0", {
           "packageLocation": "./.yarn/cache/react-swipeable-views-npm-0.14.0-e4e9366681-477bcf2d6b.zip/node_modules/react-swipeable-views/",
@@ -25319,18 +25225,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/traverse", "npm:7.15.4"],
             ["micromatch", "npm:4.0.4"],
             ["postcss", "npm:7.0.36"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["subscribe-ui-event", [
-        ["npm:2.0.7", {
-          "packageLocation": "./.yarn/cache/subscribe-ui-event-npm-2.0.7-e78aa13f09-60c78c1930.zip/node_modules/subscribe-ui-event/",
-          "packageDependencies": [
-            ["subscribe-ui-event", "npm:2.0.7"],
-            ["eventemitter3", "npm:3.1.2"],
-            ["lodash", "npm:4.17.21"],
-            ["raf", "npm:3.4.1"]
           ],
           "linkType": "HARD",
         }]

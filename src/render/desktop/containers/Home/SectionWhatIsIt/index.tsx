@@ -45,12 +45,19 @@ const Card = styled.div<{ $isFirst?: boolean }>`
       box-shadow: none;
       background-color: transparent;
     `}
+  @media (max-width: 800px) {
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
 `;
 const Cards = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 1rem 0 3rem 0;
   position: relative;
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const PosgreSQLLogo = styled.img`

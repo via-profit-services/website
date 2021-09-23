@@ -60,6 +60,14 @@ const Cards = styled.div`
   & > div {
     flex-basis: 33%;
     display: flex;
+
+    @media (max-width: 960px) {
+      flex-basis: 50%;
+    }
+
+    @media (max-width: 580px) {
+      flex-basis: 100%;
+    }
   }
   & p {
     color: ${({ theme }) => theme.color.text.secondary};

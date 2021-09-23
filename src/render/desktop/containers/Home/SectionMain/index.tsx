@@ -12,6 +12,7 @@ const Container = styled.section`
   height: 740px;
   display: flex;
   align-items: center;
+  margin-top: -51px;
 `;
 
 const Background = styled.div`
@@ -26,6 +27,12 @@ const Background = styled.div`
   flex-flow: column;
   justify-content: center;
   border-radius: 0% 100% 65% 35% / 97% 0% 100% 3%;
+  @media (max-width: 1100px) {
+    width: 90%;
+  }
+  @media (max-width: 680px) {
+    width: 100%;
+  }
   &:before {
     content: '';
     position: absolute;
@@ -40,6 +47,9 @@ const Background = styled.div`
     max-width: 1160px;
     @media (min-width: 1500px) {
       top: -210px;
+    }
+    @media (max-width: 1100px) {
+      right: 0;
     }
   }
   &:after {
@@ -56,16 +66,19 @@ const Background = styled.div`
 
 const LicenseLabel = styled.div`
   position: absolute;
-  right: 0;
-  bottom: -80px;
+  bottom: -60px;
   text-align: right;
   font-size: 1rem;
   font-weight: 400;
   color: ${({ theme }) => theme.color.text.secondary};
+  right: ${({ theme }) => theme.grid.desktop.gutter}px;
 `;
 
 const Content = styled.div`
   width: 60%;
+  @media (max-width: 680px) {
+    width: 80%;
+  }
 `;
 
 const Inner = styled.div`
@@ -83,8 +96,15 @@ const BearBox = styled.div`
   height: 340px;
   border-radius: 100%;
   position: absolute;
-  right: 0;
+  right: ${({ theme }) => theme.grid.desktop.gutter}px;
   top: 0;
+  @media (max-width: 1200px) {
+    width: 240px;
+    height: 240px;
+  }
+  @media (max-width: 680px) {
+    display: none;
+  }
   &:before {
     content: '';
     position: absolute;
@@ -113,6 +133,10 @@ const Title = styled.h1`
 
   ${Strong} {
     font-weight: 800;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 2rem;
   }
 `;
 

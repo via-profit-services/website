@@ -29,7 +29,7 @@ const dark: DefaultTheme = {
     text: {
       ...light.color.text,
       primary: '#cac4d3',
-      secondary: '#8d8d8d',
+      secondary: '#918c9e',
       inverse: '#e7e0ff',
     },
     grey: {

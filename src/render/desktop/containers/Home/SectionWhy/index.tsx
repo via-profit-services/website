@@ -32,6 +32,9 @@ const ImageBlock = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-right: 50px;
+  @media (max-width: 780px) {
+    display: none;
+  }
 `;
 
 const SchemaImage = styled.img`
@@ -42,6 +45,9 @@ const ContentBlock = styled.div`
   flex-basis: 50%;
   flex-shrink: 0.5;
   flex-grow: 0.5;
+  @media (max-width: 780px) {
+    flex: 1;
+  }
 `;
 
 const Text = styled.div`
