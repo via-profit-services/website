@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { Link, useRouteMatch } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import StickyNode from 'react-stickynode';
 
 import ThemeButton from './ThemeButton';
@@ -21,7 +21,7 @@ type LinkStyledProps = {
   $isActive?: boolean;
 };
 
-const Wrapper = styled.div<ContainerStyledProps>`
+const Wrapper = styled.header<ContainerStyledProps>`
   z-index: ${({ theme }) => theme.zIndex.header};
   position: relative;
   ${props =>
@@ -57,7 +57,7 @@ const Logo = styled(LogoInline)`
   transition: color 200ms ease-in;
 `;
 
-const Container = styled.header<ContainerStyledProps>`
+const Container = styled.div<ContainerStyledProps>`
   position: absolute;
   width: 100%;
   color: ${props => props.theme.color.text.inverse};
@@ -114,6 +114,7 @@ const Header: React.FC<Props> = props => {
   const currentVariant = variant ?? 'second-page';
   const [isFixed, setIsFixed] = React.useState(false);
   const { path } = useRouteMatch();
+  const intl = useIntl();
 
   return (
     <Wrapper $isFixed={isFixed} $variant={currentVariant}>
@@ -123,8 +124,19 @@ const Header: React.FC<Props> = props => {
         }>
         <Container $isFixed={isFixed} $variant={currentVariant}>
           <Inner>
-            <LogoLink to="/">
-              <Logo />
+            <LogoLink
+              to="/"
+              aria-label={intl.formatMessage({
+                defaultMessage: 'Home page link',
+                description: 'Header. «aria-label» attribute of home page link',
+              })}>
+              <Logo
+                aria-label={intl.formatMessage({
+                  defaultMessage: 'Via Profit company logo',
+                  description:
+                    'Header. «aria-label» attribute of Via Profit company logo',
+                })}
+              />
             </LogoLink>
             <Navbar>
               <NavLink to="/" $isActive={path === '/'}>

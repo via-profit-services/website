@@ -1,14 +1,22 @@
 import path from 'path';
+import fs from 'fs';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import LoadablePlugin from '@loadable/webpack-plugin';
 import { merge } from 'webpack-merge';
 import { DefinePlugin } from 'webpack';
-// import OfflinePlugin from 'offline-plugin';
-// import { GenerateSW } from 'workbox-webpack-plugin';
+import CompressionPlugin from 'compression-webpack-plugin';
+import { InjectManifest } from 'workbox-webpack-plugin';
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 import baseConfig from './webpack-config-base';
+
+const templateContent = fs.readFileSync(
+  path.resolve(__dirname, '../../assets/templates/main.mustache'),
+  { encoding: 'utf8' },
+);
 
 module.exports = merge(baseConfig, {
   target: 'web',
@@ -19,16 +27,13 @@ module.exports = merge(baseConfig, {
   output: {
     publicPath: '/',
     path: path.join(__dirname, '../../dist'),
-    filename: 'public/js/[name].bundle.js',
-    chunkFilename: 'public/js/[name].[chunkhash].bundle.js',
-  },
-  optimization: {
-    minimize: false,
+    filename: 'public/js/[name].js',
+    chunkFilename: 'public/js/chunk.[name].[chunkhash].js',
   },
   devtool: false,
   plugins: [
     new LoadablePlugin({
-      filename: '/stats.json',
+      filename: '/public/loadable-stats.json',
     }),
     new CleanWebpackPlugin({
       verbose: true,
@@ -44,26 +49,38 @@ module.exports = merge(baseConfig, {
       filename: 'public/css/[name].css',
       chunkFilename: 'public/css/[name].css',
     }),
-    // new GenerateSW({
-    //   mode: 'production',
-    //   swDest: 'public/js/sw.js',
-    // }),
-    // new OfflinePlugin({
-    //   autoUpdate: true,
-    //   safeToUseOptionalCaches: true,
-    //   responseStrategy: 'network-first',
-    //   caches: 'all',
-    //   appShell: '/',
-    //   externals: ['/'],
-    //   // publicPath: '/public',
-    //   ServiceWorker: {
-    //     events: true,
-    //     publicPath: '/sw.js',
-    //     output: './js/sw.js',
-    //   },
-    //   AppCache: {
-    //     events: true,
-    //   },
-    // }),
+    new CompressionPlugin({
+      exclude: [/loadable-stats\.json$/, /\.mustache$/],
+    }),
+    new InjectManifest({
+      swDest: path.resolve(__dirname, '../../dist/public/js/service-worker.js'),
+      swSrc: path.resolve(__dirname, '../../src/service-worker.ts'),
+    }),
+    new FaviconsWebpackPlugin({
+      mode: 'webapp',
+      logo: path.resolve(__dirname, '../../assets/images/favicon.png'),
+      manifest: path.resolve(__dirname, '../../assets/manifest.json'),
+      prefix: './public/assets/',
+      favicons: {
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: false,
+          coast: true,
+          favicons: true,
+          firefox: true,
+          windows: true,
+          yandex: true,
+        },
+      },
+    }),
+    new HtmlWebpackPlugin({
+      templateContent,
+      excludeChunks: ['main'],
+      filename: path.resolve(
+        __dirname,
+        '../../dist/server/templates/main.mustache',
+      ),
+    }),
   ],
 });

@@ -1,0 +1,13 @@
+{
+  "name": "Via Profit GraphQL Services documentation",
+  "short_name": "Via Profit services Docs",
+  "description": "Via Profit Services documentation",
+  "dir": "auto",
+  "lang": "en-US",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#FFFFFF",
+  "theme_color": "#6D0093"
+}

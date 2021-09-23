@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 import Strong from '~/render/desktop/components/Typography/Strong';
 import Logo from '~/render/desktop/components/Logo/LogoInline';
@@ -38,24 +38,33 @@ const LabelBold = styled(Strong)`
   font-weight: 800;
 `;
 
-const FooterTop: React.FC = () => (
-  <Container>
-    <Inner>
-      <StyledLogo />
-      <Label>
-        <LabelBold>
-          <FormattedMessage
-            defaultMessage="Open source"
-            description="Footer. «Open source project» label («Open source» segment)"
-          />
-        </LabelBold>{' '}
-        <FormattedMessage
-          defaultMessage="project"
-          description="Footer. «project» segment of «Open source project» label"
+const FooterTop: React.FC = () => {
+  const intl = useIntl();
+
+  return (
+    <Container>
+      <Inner>
+        <StyledLogo
+          aria-label={intl.formatMessage({
+            defaultMessage: 'Via Profit company logo',
+            description: 'Footer. «aria-label» attribute of company logo',
+          })}
         />
-      </Label>
-    </Inner>
-  </Container>
-);
+        <Label>
+          <LabelBold>
+            <FormattedMessage
+              defaultMessage="Open source"
+              description="Footer. «Open source project» label («Open source» segment)"
+            />
+          </LabelBold>{' '}
+          <FormattedMessage
+            defaultMessage="project"
+            description="Footer. «project» segment of «Open source project» label"
+          />
+        </Label>
+      </Inner>
+    </Container>
+  );
+};
 
 export default FooterTop;

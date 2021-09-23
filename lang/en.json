@@ -72,6 +72,10 @@
     "defaultMessage": "MIT",
     "description": "Home main screen. License label. «MIT» word only"
   },
+  "6cIx/L": {
+    "defaultMessage": "Via Profit company logo",
+    "description": "Header. «aria-label» attribute of Via Profit company logo"
+  },
   "74l7dy": {
     "defaultMessage": "Header 3",
     "description": "Home second screen. Second card title"
@@ -84,6 +88,10 @@
     "defaultMessage": "Use middlewares",
     "description": "Docs sidebar. Core v.2.0 middlewares"
   },
+  "8+2rFU": {
+    "defaultMessage": "Home page link",
+    "description": "Header. «aria-label» attribute of home page link"
+  },
   "82R6Qe": {
     "defaultMessage": "File storage mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. File storage. Content paragraph 2"
@@ -91,6 +99,10 @@
   "9N/Z1h": {
     "defaultMessage": "Why",
     "description": "Why screen. Header"
+  },
+  "9l//MD": {
+    "defaultMessage": "Core",
+    "description": "packages sidebar. Core"
   },
   "9yr8bV": {
     "defaultMessage": "Examples",
@@ -131,6 +143,10 @@
     "defaultMessage": "We have prepared several ready-made packages that are easy to install and use",
     "description": "SectionPackages. Subtitle"
   },
+  "GkHHuv": {
+    "defaultMessage": "Knex",
+    "description": "packages sidebar. Knex"
+  },
   "H3888Z": {
     "defaultMessage": "{strong} infrastructure with middlewares collection",
     "description": "Home main screen. Title (without strong tag"
@@ -142,10 +158,6 @@
   "It6JdJ": {
     "defaultMessage": "Redis eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Redis. Content paragraph 1"
-  },
-  "JhrkI7": {
-    "defaultMessage": "Via Profit Services documentation",
-    "description": "Helmet «defaultTitle» param"
   },
   "JtAn0P": {
     "defaultMessage": "Home",
@@ -249,10 +261,6 @@
     "defaultMessage": "Packages",
     "description": "Footer. Title of the «Packages» section"
   },
-  "XkqqdC": {
-    "defaultMessage": "%s — Via Profit Services documentation",
-    "description": "Helmet «titleTemplate» param"
-  },
   "XksmYF": {
     "defaultMessage": "Light",
     "description": "Header. Theme button in light theme"
@@ -260,6 +268,10 @@
   "XxLcTv": {
     "defaultMessage": "Docs",
     "description": "Breadcrumbs. Docs"
+  },
+  "Y5UZPR": {
+    "defaultMessage": "Graphql schema with via profit services packages",
+    "description": "Why screen. Alt of schema image"
   },
   "YOLRNb": {
     "defaultMessage": "Dataloader",
@@ -281,6 +293,10 @@
     "defaultMessage": "Dark",
     "description": "Header. Theme button in dark theme"
   },
+  "dGNWK3": {
+    "defaultMessage": "Via Profit company logo",
+    "description": "Footer. «aria-label» attribute of company logo"
+  },
   "dwWw1n": {
     "defaultMessage": "Legal",
     "description": "Footer. Title of the «Legal» section"
@@ -292,6 +308,14 @@
   "ejfCfL": {
     "defaultMessage": "@via-profit-services/core installation and setup",
     "description": "Meta description of installation and setup"
+  },
+  "eooGP7": {
+    "defaultMessage": "Package overview",
+    "description": "Package card. Lear more link"
+  },
+  "f+kWMH": {
+    "defaultMessage": "Github logo link",
+    "description": "Footer. «aria-label» attribute of Github logo link"
   },
   "fCVoBR": {
     "defaultMessage": "Header 3",
@@ -330,9 +354,9 @@
   "kZk26D": {
     "defaultMessage": "Knex"
   },
-  "l4kQer": {
-    "defaultMessage": "Learn more",
-    "description": "Package card. Lear more link"
+  "kiw+og": {
+    "defaultMessage": "Via Profit Services",
+    "description": "Helmet «defaultTitle» param"
   },
   "lZbWK/": {
     "defaultMessage": "Copyright {year} Via Profit",
@@ -350,6 +374,10 @@
     "defaultMessage": "Permissions",
     "description": "SectionPackages. Permissions. Header"
   },
+  "mo3fYx": {
+    "defaultMessage": "Project license type",
+    "description": "Home main screen. «aria-label» attribute of project license type label"
+  },
   "naM7un": {
     "defaultMessage": "TypeScript support",
     "description": "Section Typescript. Header"
@@ -357,6 +385,10 @@
   "ncLub+": {
     "defaultMessage": "Navigation",
     "description": "Docs sidebar title"
+  },
+  "oIvfpm": {
+    "defaultMessage": "Redis",
+    "description": "packages sidebar. Redis"
   },
   "p/QgQD": {
     "defaultMessage": "project",
@@ -393,6 +425,14 @@
   "u3j6c3": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Core. Content paragraph 1"
+  },
+  "uSEDuF": {
+    "defaultMessage": "%s — Via Profit Services",
+    "description": "Helmet «titleTemplate» param"
+  },
+  "uc2HgJ": {
+    "defaultMessage": "Documentation of packages @via-profit-services with examples",
+    "description": "Home page. Meta description"
   },
   "vrbypx": {
     "defaultMessage": "Via Profit",

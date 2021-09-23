@@ -10,12 +10,12 @@ import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import UAParser from 'ua-parser-js';
 import NodeCache from 'node-cache';
 import path from 'path';
+import fs from 'fs';
 import dotenv from 'dotenv';
 import { Provider as ReduxProvider } from 'react-redux';
 
 import { COOKIE_RECORD_THEME } from '~/utils/constants';
 import createReduxStore from '~/redux/store';
-import mainTemplate from '~/../assets/templates/main.mustache';
 import reduxDefaultState from '~/redux/defaultState';
 import ApplicationProvider from '~/providers/ApplicationProvider';
 
@@ -89,7 +89,7 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
   const reduxStore = createReduxStore(reduxPreloadedStore);
 
   const webExtractor = new ChunkExtractor({
-    statsFile: path.resolve(__dirname, './stats.json'),
+    statsFile: path.resolve(__dirname, './public/loadable-stats.json'),
   });
   const sheet = new ServerStyleSheet();
   const htmlContent = renderToString(
@@ -110,7 +110,15 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
 
   sheet.seal();
 
-  const html = Mustache.render(mainTemplate, {
+  const templateFilename = path.resolve(
+    __dirname,
+    './server/templates/main.mustache',
+  );
+  const templateContent = fs.readFileSync(templateFilename, {
+    encoding: 'utf8',
+  });
+
+  const html = Mustache.render(templateContent, {
     helmet: {
       title: helmet.title.toString(),
       base: helmet.base.toString(),

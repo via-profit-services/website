@@ -65,6 +65,13 @@ const bootstrap = async () => {
   }
 
   if (process.env.NODE_ENV !== 'development') {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(err => {
+          console.error('Service worker registration error', err);
+        });
+      });
+    }
     loadableReady(() => {
       render();
     });

@@ -34,10 +34,6 @@ const Line = styled.div`
   background: ${({ theme }) => theme.color.gradients[0]};
 `;
 
-const Content = styled.div`
-  color: ${({ theme }) => theme.color.text.secondary};
-`;
-
 const Icon = styled.div`
   color: ${({ theme }) => theme.color.accent.primary};
   font-size: 1.8rem;
@@ -65,12 +61,12 @@ const PackageCard: React.FC<Props> = props => {
         <CardInner>
           <Icon>{icon}</Icon>
           <H3>{header}</H3>
-          <Content>{content}</Content>
+          <div>{content}</div>
         </CardInner>
         <CardLink to={link}>
           <ChevronDoubleRightIcon size="1em" color="currentColor" />
           <FormattedMessage
-            defaultMessage="Learn more"
+            defaultMessage="Package overview"
             description="Package card. Lear more link"
           />
         </CardLink>

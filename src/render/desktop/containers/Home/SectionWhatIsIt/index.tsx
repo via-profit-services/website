@@ -62,8 +62,6 @@ const PosgreSQLLogo = styled.img`
 
 const Text = styled(Paragraph)`
   color: ${({ theme }) => theme.color.text.secondary};
-  font-weight: 400;
-  line-height: 1.3;
 `;
 
 const SectionWhatIsIt: React.FC = () => {

@@ -9,15 +9,18 @@ const Meta: React.FC = () => {
 
   return (
     <Helmet
+      htmlAttributes={{
+        lang: DEFAULT_LOCALE,
+        xmlns: 'http://www.w3.org/1999/xhtml',
+      }}
       defaultTitle={intl.formatMessage({
-        defaultMessage: 'Via Profit Services documentation',
+        defaultMessage: 'Via Profit Services',
         description: 'Helmet «defaultTitle» param',
       })}
       titleTemplate={intl.formatMessage({
-        defaultMessage: '%s — Via Profit Services documentation',
+        defaultMessage: '%s — Via Profit Services',
         description: 'Helmet «titleTemplate» param',
       })}>
-      <html lang={DEFAULT_LOCALE} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta

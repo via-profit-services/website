@@ -11,7 +11,7 @@ const Container = styled.div`
   color: ${props => props.theme.color.text.inverse};
 `;
 
-const Inner = styled.section`
+const Inner = styled.div`
   max-width: ${props => props.theme.grid.desktop.safeFrame}px;
   padding: 0 ${props => props.theme.grid.desktop.gutter}px;
   margin: 0 auto;
@@ -259,7 +259,10 @@ const FooterMiddle: React.FC = () => (
             </ExternalLink>
           </li>
           <li>
-            <ExternalLink href={LINK_COMPANY} target="_blank">
+            <ExternalLink
+              href={LINK_COMPANY}
+              rel="noopener noreferrer"
+              target="_blank">
               <FormattedMessage
                 defaultMessage="Website"
                 description="Footer. company website link"

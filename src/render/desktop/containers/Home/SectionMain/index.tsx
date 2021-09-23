@@ -59,8 +59,8 @@ const LicenseLabel = styled.div`
   right: 0;
   bottom: -80px;
   text-align: right;
-  font-size: 0.875rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 400;
   color: ${({ theme }) => theme.color.text.secondary};
 `;
 
@@ -106,7 +106,7 @@ const Pretitle = styled.div`
   font-weight: 400;
 `;
 
-const Title = styled.div`
+const Title = styled.h1`
   color: ${({ theme }) => theme.color.text.inverse};
   font-size: 3rem;
   font-weight: 400;

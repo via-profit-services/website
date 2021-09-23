@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
+import { useIntl, FormattedMessage } from 'react-intl';
 import CheckIcon from 'mdi-react/CheckIcon';
 
 import H2 from '~/render/desktop/components/Typography/H2';
@@ -35,7 +35,7 @@ const ImageBlock = styled.div`
 `;
 
 const SchemaImage = styled.img`
-  height: 360px;
+  object-fit: contain;
 `;
 
 const ContentBlock = styled.div`
@@ -79,53 +79,67 @@ const Li = styled.li`
   }
 `;
 
-const SectionWhy: React.FC = () => (
-  <Section>
-    <Inner>
-      <ImageBlock>
-        <SchemaImage src={schemasrc} />
-      </ImageBlock>
-      <ContentBlock>
-        <H2>
-          <FormattedMessage
-            defaultMessage="Why"
-            description="Why screen. Header"
-          />
-        </H2>
-        <Text>
-          <Paragraph>
-            Proident eiusmod consequat proident ipsum. Non labore ullamco tempor
-            mollit mollit dolore ipsum exercitation occaecat reprehenderit.
-          </Paragraph>
-          <Paragraph>
-            Proident eiusmod anim enim ea exercitation proident. Mollit mollit
-            dolore
-          </Paragraph>
-        </Text>
+const SectionWhy: React.FC = () => {
+  const intl = useIntl();
 
-        <List>
-          <Li>
-            <i>
-              <CheckIcon size="1em" color="currentColor" />
-            </i>
-            Eprehenderit qui laborum dolor cillum
-          </Li>
-          <Li>
-            <i>
-              <CheckIcon size="1em" color="currentColor" />
-            </i>
-            Ad ullamco culpa aute sit
-          </Li>
-          <Li>
-            <i>
-              <CheckIcon size="1em" color="currentColor" />
-            </i>
-            Fugiat laborum nulla fugiat
-          </Li>
-        </List>
-      </ContentBlock>
-    </Inner>
-  </Section>
-);
+  return (
+    <Section>
+      <Inner>
+        <ImageBlock>
+          <SchemaImage
+            width="340"
+            height="500"
+            src={schemasrc}
+            alt={intl.formatMessage({
+              defaultMessage:
+                'Graphql schema with via profit services packages',
+              description: 'Why screen. Alt of schema image',
+            })}
+          />
+        </ImageBlock>
+        <ContentBlock>
+          <H2>
+            <FormattedMessage
+              defaultMessage="Why"
+              description="Why screen. Header"
+            />
+          </H2>
+          <Text>
+            <Paragraph>
+              Proident eiusmod consequat proident ipsum. Non labore ullamco
+              tempor mollit mollit dolore ipsum exercitation occaecat
+              reprehenderit.
+            </Paragraph>
+            <Paragraph>
+              Proident eiusmod anim enim ea exercitation proident. Mollit mollit
+              dolore
+            </Paragraph>
+          </Text>
+
+          <List>
+            <Li>
+              <i>
+                <CheckIcon size="1em" color="currentColor" />
+              </i>
+              Eprehenderit qui laborum dolor cillum
+            </Li>
+            <Li>
+              <i>
+                <CheckIcon size="1em" color="currentColor" />
+              </i>
+              Ad ullamco culpa aute sit
+            </Li>
+            <Li>
+              <i>
+                <CheckIcon size="1em" color="currentColor" />
+              </i>
+              Fugiat laborum nulla fugiat
+            </Li>
+          </List>
+        </ContentBlock>
+      </Inner>
+    </Section>
+  );
+};
 
 export default SectionWhy;
