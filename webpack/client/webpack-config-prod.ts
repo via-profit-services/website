@@ -83,6 +83,13 @@ module.exports = merge(baseConfig, {
       ),
       minify: {
         caseSensitive: true,
+        collapseWhitespace: true,
+        keepClosingSlash: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
       },
     }),
   ],
