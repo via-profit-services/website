@@ -16,8 +16,11 @@ import SyntaxHighlighter, {
   styles,
 } from '~/render/desktop/components/SyntaxHighlighter';
 
-const CodeSSR = styled.code<{ $style: Record<string, any> }>`
-  ${props => props.$style};
+const CodeSSR = styled.code<{ $styles: Record<string, any> }>`
+  margin: 0.5em 0px;
+  padding: 1.25em 1em;
+  box-shadow: rgb(234 232 232) 0px 0px 0px 1px;
+  border-radius: 8px;
   display: block;
 `;
 
@@ -74,12 +77,12 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
           }
 
           if (typeof window === 'undefined') {
-            return <CodeSSR $style={styles[theme]}>{children}</CodeSSR>;
+            return <CodeSSR $styles={styles[theme]}>{children}</CodeSSR>;
           }
 
           return (
             <SyntaxHighlighter language={language}>
-              {children}
+              {String(children)}
             </SyntaxHighlighter>
           );
         },

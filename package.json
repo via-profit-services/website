@@ -50,7 +50,6 @@
         "localforage": "^1.9.0",
         "mdi-react": "^7.5.0",
         "mustache": "^4.2.0",
-        "node-cache": "^5.1.2",
         "nodemailer": "^6.5.0",
         "postcss": "^8.3.6",
         "postcss-syntax": "^0.36.2",

@@ -8,7 +8,6 @@ import { Helmet } from 'react-helmet';
 import { StaticRouter, StaticContext } from 'react-router';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import UAParser from 'ua-parser-js';
-import NodeCache from 'node-cache';
 import path from 'path';
 import fs from 'fs';
 import dotenv from 'dotenv';
@@ -29,7 +28,6 @@ type RenderHTMLPayload = {
 };
 
 dotenv.config();
-const htmlCache = new NodeCache({ stdTTL: 60 * 60 * 24 });
 
 const resolveDevice = (
   parser: UAParser.UAParserInstance,
@@ -55,12 +53,6 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
   const { url, headers, cookies } = req;
   const parser = new UAParser(headers['user-agent']);
   const device = resolveDevice(parser);
-  const cacheKey = `${device}:${url}`;
-  const data = htmlCache.get<RenderHTMLPayload>(cacheKey);
-
-  if (data) {
-    return data;
-  }
 
   const context: StaticContext = {
     statusCode: 200,
@@ -141,8 +133,6 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
   });
 
   const payload = { context, html };
-
-  htmlCache.set<RenderHTMLPayload>(cacheKey, payload);
 
   return payload;
 };

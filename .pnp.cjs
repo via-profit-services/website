@@ -177,7 +177,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mdi-react", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:7.5.0"],
             ["mini-css-extract-plugin", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:1.6.2"],
             ["mustache", "npm:4.2.0"],
-            ["node-cache", "npm:5.1.2"],
             ["node-fetch", "npm:2.6.2"],
             ["node-plop", "npm:0.26.2"],
             ["nodemailer", "npm:6.6.3"],
@@ -7001,7 +7000,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mdi-react", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:7.5.0"],
             ["mini-css-extract-plugin", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:1.6.2"],
             ["mustache", "npm:4.2.0"],
-            ["node-cache", "npm:5.1.2"],
             ["node-fetch", "npm:2.6.2"],
             ["node-plop", "npm:0.26.2"],
             ["nodemailer", "npm:6.6.3"],
@@ -18860,16 +18858,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["node-addon-api", "npm:3.2.1"],
             ["node-gyp", "npm:8.2.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["node-cache", [
-        ["npm:5.1.2", {
-          "packageLocation": "./.yarn/cache/node-cache-npm-5.1.2-f65482660d-b0bdd81a6f.zip/node_modules/node-cache/",
-          "packageDependencies": [
-            ["node-cache", "npm:5.1.2"],
-            ["clone", "npm:2.1.2"]
           ],
           "linkType": "HARD",
         }]

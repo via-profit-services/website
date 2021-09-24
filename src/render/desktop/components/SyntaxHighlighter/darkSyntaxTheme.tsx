@@ -1,207 +1,117 @@
 const syntaxTheme = {
-  'code[class*="language-"]': {
-    textAlign: 'left',
-    whiteSpace: 'pre',
-    wordSpacing: 'normal',
-    wordBreak: 'normal',
-    wordWrap: 'normal',
-    background: '#32293e',
+  hljs: {
+    display: 'block',
+    overflowX: 'auto',
+    padding: '1em',
     color: '#c3cee3',
-    fontFamily: 'Roboto Mono, monospace',
-    fontSize: '1em',
-    lineHeight: '1.5em',
-    MozTabSize: '4',
-    OTabSize: '4',
-    tabSize: '4',
-    WebkitHyphens: 'none',
-    MozHyphens: 'none',
-    msHyphens: 'none',
-    hyphens: 'none',
-  },
-  'pre[class*="language-"]': {
-    textAlign: 'left',
-    whiteSpace: 'pre',
-    wordSpacing: 'normal',
-    wordBreak: 'normal',
-    wordWrap: 'normal',
-    background: '#32293e',
-    color: '#c3cee3',
+    background: '#282a36',
     borderRadius: '8px',
-    fontFamily: 'Roboto Mono, monospace',
-    fontSize: '1em',
-    lineHeight: '1.5em',
-    MozTabSize: '4',
-    OTabSize: '4',
-    tabSize: '4',
-    WebkitHyphens: 'none',
-    MozHyphens: 'none',
-    msHyphens: 'none',
-    hyphens: 'none',
-    overflow: 'auto',
-    position: 'relative',
-    margin: '0.5em 0',
-    padding: '1.25em 1em',
+    margin: '1rem, 0',
   },
-  'code[class*="language-"]::-moz-selection': {
-    background: '#363636',
-  },
-  'pre[class*="language-"]::-moz-selection': {
-    background: '#363636',
-  },
-  'code[class*="language-"] ::-moz-selection': {
-    background: '#363636',
-  },
-  'pre[class*="language-"] ::-moz-selection': {
-    background: '#363636',
-  },
-  'code[class*="language-"]::selection': {
-    background: '#363636',
-  },
-  'pre[class*="language-"]::selection': {
-    background: '#363636',
-  },
-  'code[class*="language-"] ::selection': {
-    background: '#363636',
-  },
-  'pre[class*="language-"] ::selection': {
-    background: '#363636',
-  },
-  ':not(pre) > code[class*="language-"]': {
-    whiteSpace: 'normal',
-    borderRadius: '0.2em',
-    padding: '0.1em',
-  },
-  '.language-css > code': {
-    color: '#fd9170',
-  },
-  '.language-sass > code': {
-    color: '#fd9170',
-  },
-  '.language-scss > code': {
-    color: '#fd9170',
-  },
-  '[class*="language-"] .namespace': {
-    Opacity: '0.7',
-  },
-  atrule: {
-    color: '#c792ea',
-  },
-  'attr-name': {
-    color: '#ffcb6b',
-  },
-  'attr-value': {
-    color: '#c3e88d',
-  },
-  attribute: {
-    color: '#c3e88d',
-  },
-  boolean: {
-    color: '#c792ea',
-  },
-  builtin: {
-    color: '#ffcb6b',
-  },
-  cdata: {
-    color: '#80cbc4',
-  },
-  char: {
-    color: '#80cbc4',
-  },
-  class: {
-    color: '#ffcb6b',
-  },
-  color: {
-    color: '#f2ff00',
-  },
-  constant: {
-    color: '#c792ea',
-  },
-  deleted: {
-    color: '#f07178',
-  },
-  doctype: {
-    color: '#546e7a',
-  },
-  entity: {
-    color: '#f07178',
-  },
-  hexcode: {
-    color: '#f2ff00',
-  },
-  id: {
-    color: '#c792ea',
-    fontWeight: 'bold',
-  },
-  important: {
-    color: '#c792ea',
-    fontWeight: 'bold',
-  },
-  inserted: {
-    color: '#80cbc4',
-  },
-  keyword: {
-    color: '#c792ea',
+  'hljs-comment': {
+    color: '#93b7f9',
     fontStyle: 'italic',
   },
-  number: {
-    color: '#fd9170',
+  'hljs-quote': {
+    color: '#93b7f9',
+    fontStyle: 'italic',
   },
-  operator: {
-    color: '#89ddff',
+  'hljs-doctag': {
+    color: '#c678dd',
   },
-  prolog: {
-    color: '#546e7a',
+  'hljs-keyword': {
+    color: '#c678dd',
   },
-  property: {
-    color: '#80cbc4',
+  'hljs-formula': {
+    color: '#c678dd',
   },
-  'pseudo-class': {
-    color: '#c3e88d',
+  'hljs-section': {
+    color: '#f3a1a7',
   },
-  'pseudo-element': {
-    color: '#c3e88d',
+  'hljs-name': {
+    color: '#f3a1a7',
   },
-  punctuation: {
-    color: '#89ddff',
+  'hljs-selector-tag': {
+    color: '#f3a1a7',
   },
-  regex: {
-    color: '#f2ff00',
+  'hljs-deletion': {
+    color: '#f3a1a7',
   },
-  selector: {
-    color: '#f07178',
+  'hljs-subst': {
+    color: '#f3a1a7',
   },
-  string: {
-    color: '#c3e88d',
+  'hljs-literal': {
+    color: '#56b6c2',
   },
-  symbol: {
-    color: '#c792ea',
+  'hljs-string': {
+    color: '#98c379',
   },
-  tag: {
-    color: '#f07178',
+  'hljs-regexp': {
+    color: '#98c379',
   },
-  unit: {
-    color: '#f07178',
+  'hljs-addition': {
+    color: '#98c379',
   },
-  url: {
-    color: '#fd9170',
+  'hljs-attribute': {
+    color: '#98c379',
   },
-  variable: {
-    color: '#f07178',
+  'hljs-meta-string': {
+    color: '#98c379',
   },
-  comment: {
-    color: '#cad61c',
+  'hljs-built_in': {
+    color: '#e6c07b',
   },
-  function: {
-    color: '#82aaff',
+  'hljs-class .hljs-title': {
+    color: '#e6c07b',
   },
-  'class-name': {
-    color: '#82aaff',
+  'hljs-attr': {
+    color: '#f1a769',
   },
-  imports: {
-    color: '#c792ea',
+  'hljs-variable': {
+    color: '#f1a769',
   },
-  'maybe-class-name': {
-    color: '#c792ea',
+  'hljs-template-variable': {
+    color: '#f1a769',
+  },
+  'hljs-type': {
+    color: '#f1a769',
+  },
+  'hljs-selector-class': {
+    color: '#f1a769',
+  },
+  'hljs-selector-attr': {
+    color: '#f1a769',
+  },
+  'hljs-selector-pseudo': {
+    color: '#f1a769',
+  },
+  'hljs-number': {
+    color: '#f1a769',
+  },
+  'hljs-symbol': {
+    color: '#61aeee',
+  },
+  'hljs-bullet': {
+    color: '#61aeee',
+  },
+  'hljs-link': {
+    color: '#61aeee',
+    textDecoration: 'underline',
+  },
+  'hljs-meta': {
+    color: '#61aeee',
+  },
+  'hljs-selector-id': {
+    color: '#61aeee',
+  },
+  'hljs-title': {
+    color: '#61aeee',
+  },
+  'hljs-emphasis': {
+    fontStyle: 'italic',
+  },
+  'hljs-strong': {
+    fontWeight: 'bold',
   },
 };
 

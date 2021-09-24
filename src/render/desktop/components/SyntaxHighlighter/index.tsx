@@ -1,5 +1,5 @@
 import React from 'react';
-import { Prism } from 'react-syntax-highlighter';
+import ReactSyntaxHighlighter from 'react-syntax-highlighter';
 import { useSelector } from 'react-redux';
 
 import lightSyntaxTheme from './lightSyntaxTheme';
@@ -7,7 +7,7 @@ import darkSyntaxTheme from './darkSyntaxTheme';
 
 type Props = {
   language: string;
-  children: React.ReactNode | React.ReactNode[];
+  children: string;
 };
 
 export const styles = {
@@ -22,9 +22,11 @@ const SyntaxHighlighter: React.FC<Props> = props => {
   );
 
   return (
-    <Prism language={language} style={styles[theme]}>
+    <ReactSyntaxHighlighter
+      language={language}
+      style={styles?.[theme] || styles.light}>
       {children}
-    </Prism>
+    </ReactSyntaxHighlighter>
   );
 };
 
