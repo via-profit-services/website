@@ -25,7 +25,7 @@ module.exports = merge(baseConfig, {
     main: path.resolve(__dirname, '../../src/app.tsx'),
   },
   optimization: {
-    minimize: false,
+    minimize: true,
   },
   output: {
     publicPath: '/',
