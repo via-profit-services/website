@@ -1,25 +1,44 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
+import { useIntl } from 'react-intl';
 
 import Header from '~/render/touchable/components/Header';
-import ContentArea from '~/render/touchable/components/ContentArea';
-import H1 from '~/render/touchable/components/Typography/H1';
+// import Footer from '~/render/touchable/components/Footer';
+import Meta from '~/render/desktop/components/Meta';
 
-const HomePageTouchable: React.FC = () => (
-  <>
-    <Helmet>
-      <html lang="ru" />
-      <meta charSet="utf-8" />
-      <title>Meta title</title>
-      <meta name="description" content="Meta description" />
-      <meta name="author" content="Via Profit" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Helmet>
-    <Header />
-    <ContentArea>
-      <H1>Touchable Header 1</H1>
-    </ContentArea>
-  </>
-);
+import SectionWhatIsIt from '~/render/desktop/containers/Home/SectionWhatIsIt';
+import SectionWhy from '~/render/desktop/containers/Home/SectionWhy';
+import SectionPackages from '~/render/desktop/containers/Home/SectionPackages';
+import SectionOpenSource from '~/render/desktop/containers/Home/SectionOpenSource';
+import SectionTypescript from '~/render/desktop/containers/Home/SectionTypescript';
 
-export default HomePageTouchable;
+const HomePageDesktop: React.FC = () => {
+  const intl = useIntl();
+
+  return (
+    <>
+      <Meta />
+      <Helmet>
+        <meta
+          name="description"
+          content={intl.formatMessage({
+            defaultMessage:
+              'Documentation of packages @via-profit-services with examples',
+            description: 'Home page. Meta description',
+          })}
+        />
+      </Helmet>
+      <Header />
+      <main>
+        <SectionWhatIsIt />
+        <SectionWhy />
+        <SectionPackages />
+        <SectionOpenSource />
+        <SectionTypescript />
+      </main>
+      {/* <Footer /> */}
+    </>
+  );
+};
+
+export default HomePageDesktop;

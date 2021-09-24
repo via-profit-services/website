@@ -56,8 +56,7 @@ const DrawerFallback = styled.div`
 `;
 
 const DrawerHeader = styled.div`
-  background-color: ${props => props.theme.color.background.primary};
-  border-bottom: 1px solid currentColor;
+  background-color: ${props => props.theme.color.accent.primary};
   background-position: center center;
   background-size: cover;
   height: 160px;

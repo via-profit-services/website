@@ -7,7 +7,7 @@ import AppDrawer from '~/render/touchable/components/AppDrawer';
 const HeaderContainer = styled.div`
   position: sticky;
   top: 0;
-  background-color: ${props => props.theme.color.background.secondary};
+  background: ${props => props.theme.color.gradients[0]};
   z-index: ${props => props.theme.zIndex.header};
   display: flex;
   justify-content: space-between;
@@ -24,7 +24,8 @@ const HeaderToolbar = styled.div`
 `;
 
 const MenuButton = styled.button`
-  padding: 1em;
+  padding: 1rem;
+  font-size: 1rem;
   width: auto;
   height: auto;
   outline: none;
@@ -32,7 +33,7 @@ const MenuButton = styled.button`
   background: none;
   color: inherit;
   text-decoration: none;
-  color: ${props => props.theme.color.text.primary};
+  color: ${props => props.theme.color.text.inverse};
 `;
 
 const CenterSide = styled.div`
@@ -50,7 +51,7 @@ const Header: React.FC = () => {
       <HeaderContainer>
         <HeaderToolbar>
           <MenuButton onClick={handleToggleMenu}>
-            <MenuIcon size="1em" color="currentColor" />
+            <MenuIcon size="1.5em" color="currentColor" />
           </MenuButton>
         </HeaderToolbar>
         <CenterSide />
