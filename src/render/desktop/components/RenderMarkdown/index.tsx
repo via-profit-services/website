@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactMarkdown, { ReactMarkdownOptions } from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import darkSchema from 'react-syntax-highlighter/dist/esm/styles/prism/material-oceanic';
-import lightSchema from 'react-syntax-highlighter/dist/esm/styles/prism/material-light';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
@@ -15,64 +12,12 @@ import H5 from '~/render/desktop/components/Typography/H5';
 import Strong from '~/render/desktop/components/Typography/Strong';
 import Em from '~/render/desktop/components/Typography/Em';
 import Paragraph from '~/render/desktop/components/Typography/Paragraph';
-
-/* eslint-disable */
-const style = {
-  light: {
-    ...lightSchema,
-    'code[class*="language-"]': {
-      ...lightSchema['code[class*="language-"]'],
-      background: '#fafafa',
-      color: '#db12ff',
-    },
-    'pre[class*="language-"]': {
-      ...lightSchema['pre[class*="language-"]'],
-      background: '#fafafa',
-      color: '#db12ff',
-      boxShadow: '0 0 0 1px #eae8e8',
-      borderRadius: '8px',
-    },
-    imports: {
-      color: '#c220de',
-    },
-    'maybe-class-name': {
-      color: '#c220de',
-    },
-  },
-  dark: {
-    ...darkSchema,
-    'code[class*="language-"]': {
-      ...darkSchema['code[class*="language-"]'],
-      background: '#32293e',
-      color: '#c3cee3',
-    },
-    'pre[class*="language-"]': {
-      ...darkSchema['pre[class*="language-"]'],
-      background: '#32293e',
-      color: '#c3cee3',
-      borderRadius: '8px',
-    },
-    comment: {
-      color: '#cad61c',
-    },
-    function: {
-      color: '#82aaff',
-    },
-    'class-name': {
-      color: '#82aaff',
-    },
-    imports: {
-      color: '#c792ea',
-    },
-    'maybe-class-name': {
-      color: '#c792ea',
-    },
-  },
-};
-/* eslint-enable */
+import SyntaxHighlighter, {
+  styles,
+} from '~/render/desktop/components/SyntaxHighlighter';
 
 const CodeSSR = styled.code<{ $style: Record<string, any> }>`
-  ${style};
+  ${props => props.$style};
   display: block;
 `;
 
@@ -129,11 +74,11 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
           }
 
           if (typeof window === 'undefined') {
-            return <CodeSSR $style={style[theme]}>{children}</CodeSSR>;
+            return <CodeSSR $style={styles[theme]}>{children}</CodeSSR>;
           }
 
           return (
-            <SyntaxHighlighter language={language} style={style[theme]}>
+            <SyntaxHighlighter language={language}>
               {children}
             </SyntaxHighlighter>
           );
