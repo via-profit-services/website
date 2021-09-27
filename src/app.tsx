@@ -30,21 +30,6 @@ const bootstrap = async () => {
     }
   }
 
-  // merge local storage data
-  if (typeof window !== 'undefined') {
-    try {
-      const localDefaultState = JSON.parse(
-        localStorage.getItem('@ReduxState') || '',
-      );
-      reduxState = {
-        ...reduxState,
-        ...localDefaultState,
-      };
-    } catch (err) {
-      // do nothing
-    }
-  }
-
   const reduxStore = createReduxStore(reduxState);
 
   const render = () => {

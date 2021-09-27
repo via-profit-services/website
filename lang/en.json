@@ -108,6 +108,10 @@
     "defaultMessage": "Examples",
     "description": "Breadcrumbs. Examples"
   },
+  "A2Ek6v": {
+    "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
+    "description": "SectionPackages touchable. Core. Content paragraph"
+  },
   "BEYDVd": {
     "defaultMessage": "PostgreSQL",
     "description": "Home second screen. Third card title"
@@ -374,10 +378,6 @@
     "defaultMessage": "Permissions",
     "description": "SectionPackages. Permissions. Header"
   },
-  "mo3fYx": {
-    "defaultMessage": "Project license type",
-    "description": "Home main screen. «aria-label» attribute of project license type label"
-  },
   "naM7un": {
     "defaultMessage": "TypeScript support",
     "description": "Section Typescript. Header"
@@ -401,6 +401,10 @@
   "pruhcA": {
     "defaultMessage": "Home",
     "description": "Appbar. Home link"
+  },
+  "q6GZrq": {
+    "defaultMessage": "List of all packages",
+    "description": "Touchable packages. Header"
   },
   "qivfm0": {
     "defaultMessage": "Open Source",

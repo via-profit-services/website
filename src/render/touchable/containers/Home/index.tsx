@@ -3,14 +3,9 @@ import { Helmet } from 'react-helmet';
 import { useIntl } from 'react-intl';
 
 import Header from '~/render/touchable/components/Header';
-// import Footer from '~/render/touchable/components/Footer';
 import Meta from '~/render/desktop/components/Meta';
-
-import SectionWhatIsIt from '~/render/desktop/containers/Home/SectionWhatIsIt';
-import SectionWhy from '~/render/desktop/containers/Home/SectionWhy';
-import SectionPackages from '~/render/desktop/containers/Home/SectionPackages';
-import SectionOpenSource from '~/render/desktop/containers/Home/SectionOpenSource';
-import SectionTypescript from '~/render/desktop/containers/Home/SectionTypescript';
+import SectionPackages from './SectionPackages';
+import SectionMain from './SectionMain';
 
 const HomePageDesktop: React.FC = () => {
   const intl = useIntl();
@@ -30,13 +25,9 @@ const HomePageDesktop: React.FC = () => {
       </Helmet>
       <Header />
       <main>
-        <SectionWhatIsIt />
-        <SectionWhy />
+        <SectionMain />
         <SectionPackages />
-        <SectionOpenSource />
-        <SectionTypescript />
       </main>
-      {/* <Footer /> */}
     </>
   );
 };

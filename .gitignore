@@ -14,8 +14,6 @@
 /.keys
 /source-code*
 
-# localstorage for server
-*.localdb.json
 
 # react-intl extracted
 /extracted-messages

@@ -12,14 +12,22 @@ import path from 'path';
 import fs from 'fs';
 import dotenv from 'dotenv';
 import { Provider as ReduxProvider } from 'react-redux';
+import 'cookie-parser';
 
-import { COOKIE_RECORD_THEME } from '~/utils/constants';
+import { COOKIE_RECORD_THEME, COOKIE_RECORD_MODE } from '~/utils/constants';
 import createReduxStore from '~/redux/store';
 import reduxDefaultState from '~/redux/defaultState';
 import ApplicationProvider from '~/providers/ApplicationProvider';
 
+interface Req extends Request {
+  cookies: {
+    [COOKIE_RECORD_THEME]?: ReduxState['theme'];
+    [COOKIE_RECORD_MODE]?: ReduxState['mode'];
+  };
+}
+
 interface Props {
-  req: Request;
+  req: Req;
 }
 
 type RenderHTMLPayload = {
@@ -44,10 +52,6 @@ const resolveDevice = (
   }
 };
 
-type CookieRecords = {
-  [COOKIE_RECORD_THEME]?: ReduxState['theme'];
-};
-
 const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
   const { req } = props;
   const { url, headers, cookies } = req;
@@ -61,18 +65,12 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
   // combine redux state with default state, detected mode and the user cookies
   const reduxPreloadedStore: ReduxState = {
     ...reduxDefaultState,
-    theme:
-      (cookies as CookieRecords)?.[COOKIE_RECORD_THEME] ||
-      reduxDefaultState.theme,
-    mode: device,
+    theme: cookies?.[COOKIE_RECORD_THEME] || reduxDefaultState.theme,
+    mode: cookies?.[COOKIE_RECORD_MODE] || device,
   };
 
   const preloadedStates: ServerToClientTransfer = {
     REDUX: reduxPreloadedStore,
-    ENVIRONMENT: {
-      GRAPHQL_ENDPOINT: process.env.GRAPHQL_ENDPOINT,
-      SUBSCRIPTION_ENDPOINT: process.env.GRAPHQL_SUBSCRIPTIONS,
-    },
   };
   const preloadedStatesBase64 = Buffer.from(
     JSON.stringify(preloadedStates),
