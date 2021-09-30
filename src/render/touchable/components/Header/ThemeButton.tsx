@@ -4,16 +4,20 @@ import { useSelector, useDispatch } from 'react-redux';
 import WeatherSunnyIcon from 'mdi-react/WeatherSunnyIcon';
 import WeatherNightIcon from 'mdi-react/WeatherNightIcon';
 
+import ButtonBase from '~/render/touchable/components/ButtonBase';
+
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = styled.button`
+const Button = styled(ButtonBase)`
   outline: none;
   border: 0;
-  width: auto;
+  padding: 0;
+  width: 2.6em;
+  height: 2.6em;
+  border-radius: 100%;
+  display: inline-block;
   background: none;
-  height: auto;
   color: ${({ theme }) => theme.color.text.inverse};
-  padding: 1rem;
   margin-right: ${props => props.theme.grid.touchable.gutter}px;
   line-height: 1;
   font-size: 1em;

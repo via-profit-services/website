@@ -56,7 +56,7 @@ const pages: PagesMap = {
       options,
     ),
     Docs: loadable(
-      () => import('~/render/desktop/containers/Docs/index'),
+      () => import('~/render/touchable/containers/Docs/index'),
       options,
     ),
     Legal: loadable(

@@ -1,13 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import SwipableViews from 'react-swipeable-views';
-import HomeIcon from 'mdi-react/HomeOutlineIcon';
-import AboutIcon from 'mdi-react/BlurIcon';
 
-import DeveloperLinear from '~/render/touchable/components/Developer/DeveloperLinear';
-import DrawerItem from './DrawerItem';
+import useSidebar from '~/routes/useSidebar';
+import Sidebar from './Sidebar';
 
-export type AppDrawerProps = {
+export type NavbarDrawerProps = {
   open: boolean;
   onClose: () => void;
 };
@@ -39,31 +37,14 @@ const DrawerNav = styled.nav`
   overflow-y: auto;
 `;
 
-const DrawerFooter = styled.div`
-  border-top: 1px solid currentColor;
-`;
-
-const DeveloperLink = styled.a`
-  display: block;
-  color: ${({ theme }) => theme.color.text.primary};
-  text-decoration: none;
-  padding: 20px;
-`;
-
 const DrawerFallback = styled.div`
   height: 100%;
   width: 100%;
 `;
 
-const DrawerHeader = styled.div`
-  background-color: ${props => props.theme.color.accent.primary};
-  background-position: center center;
-  background-size: cover;
-  height: 160px;
-`;
-
-const AppDrawer: React.FC<AppDrawerProps> = props => {
+const NavbarDrawer: React.FC<NavbarDrawerProps> = props => {
   const { open, onClose } = props;
+  const sidebarMap = useSidebar();
   const [visibility, setVisibility] = React.useState(open);
   const [activeIndex, setActiveIndex] = React.useState(open ? 0 : 1);
 
@@ -83,28 +64,9 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
           }
         }}>
         <DrawerInner>
-          <DrawerHeader />
-
           <DrawerNav>
-            <DrawerItem
-              to="/"
-              icon={<HomeIcon size="1em" color="currentColor" />}
-              label="Home"
-              onDrawerClose={onClose}
-            />
-            <DrawerItem
-              to="/docs"
-              icon={<AboutIcon size="1em" color="currentColor" />}
-              label="Docs"
-              onDrawerClose={onClose}
-            />
+            <Sidebar sidebarMap={sidebarMap} onDrawerClose={onClose} />
           </DrawerNav>
-
-          <DrawerFooter>
-            <DeveloperLink href="https://via-profit.ru" target="__blank">
-              <DeveloperLinear height="2rem" />
-            </DeveloperLink>
-          </DrawerFooter>
         </DrawerInner>
         <DrawerFallback />
       </SwipableViews>
@@ -112,4 +74,4 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
   );
 };
 
-export default AppDrawer;
+export default NavbarDrawer;

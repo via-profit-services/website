@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
+import SwipeableViews from 'react-swipeable-views';
 // import { Link } from 'react-router-dom';
 
 import H2 from '~/render/touchable/components/Typography/H2';
@@ -10,8 +11,7 @@ import Card from './PackageCard';
 import CoreIcon from '~/render/desktop/components/Icons/Core';
 
 const Section = styled.section`
-  display: flex;
-  flex-flow: column;
+  background-color: ${({ theme }) => theme.color.background.secondary};
 `;
 
 const Inner = styled.div`

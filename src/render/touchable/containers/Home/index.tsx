@@ -4,7 +4,6 @@ import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 
 import Header from '~/render/touchable/components/Header';
-import BottomTabsBar from '~/render/touchable/components/BottomTabsBar';
 import Footer from '~/render/touchable/components/Footer';
 import Meta from '~/render/desktop/components/Meta';
 import SectionWhatsIsIt from './SectionWhatsIsIt';
@@ -13,9 +12,10 @@ import SectionMain from './SectionMain';
 import SectionWhy from './SectionWhy';
 
 const Main = styled.main`
-  margin-top: -8rem;
+  margin-top: -3.4rem;
   padding-bottom: 1rem;
   position: relative;
+  flex: 1;
 `;
 
 const HomePageDesktop: React.FC = () => {
@@ -36,7 +36,6 @@ const HomePageDesktop: React.FC = () => {
       </Helmet>
       <Header variant="home-page" />
       <Main>
-        <BottomTabsBar />
         <SectionMain />
         <SectionWhatsIsIt />
         <SectionWhy />

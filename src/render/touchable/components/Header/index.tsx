@@ -3,6 +3,7 @@ import MenuIcon from 'mdi-react/MenuIcon';
 import styled, { css } from 'styled-components';
 
 import AppDrawer from '~/render/touchable/components/AppDrawer';
+import ButtonBase from '~/render/touchable/components/ButtonBase';
 import GitHubButton from './GitHubButton';
 import ThemeButton from './ThemeButton';
 
@@ -42,6 +43,7 @@ const HeaderContainer = styled.header<ContainerStyledProps>`
 
 const HeaderToolbar = styled.div`
   width: 100%;
+  min-height: 51px;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -50,13 +52,14 @@ const HeaderToolbar = styled.div`
   padding: 0 ${props => props.theme.grid.touchable.gutter}px;
 `;
 
-const MenuButton = styled.button`
-  padding: 1rem;
+const MenuButton = styled(ButtonBase)`
+  padding: 0;
   font-size: 1rem;
-  width: auto;
-  height: auto;
+  width: 2.6em;
+  height: 2.6em;
   outline: none;
   border: 0;
+  border-radius: 100%;
   background: none;
   color: inherit;
   text-decoration: none;
