@@ -1,11 +1,22 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { useIntl } from 'react-intl';
+import styled from 'styled-components';
 
 import Header from '~/render/touchable/components/Header';
+import BottomTabsBar from '~/render/touchable/components/BottomTabsBar';
+import Footer from '~/render/touchable/components/Footer';
 import Meta from '~/render/desktop/components/Meta';
-import SectionPackages from './SectionPackages';
+import SectionWhatsIsIt from './SectionWhatsIsIt';
+// import SectionPackages from './SectionPackages';
 import SectionMain from './SectionMain';
+import SectionWhy from './SectionWhy';
+
+const Main = styled.main`
+  margin-top: -8rem;
+  padding-bottom: 1rem;
+  position: relative;
+`;
 
 const HomePageDesktop: React.FC = () => {
   const intl = useIntl();
@@ -23,11 +34,16 @@ const HomePageDesktop: React.FC = () => {
           })}
         />
       </Helmet>
-      <Header />
-      <main>
+      <Header variant="home-page" />
+      <Main>
+        <BottomTabsBar />
         <SectionMain />
-        <SectionPackages />
-      </main>
+        <SectionWhatsIsIt />
+        <SectionWhy />
+        {/* <SectionPackages /> */}
+      </Main>
+
+      <Footer />
     </>
   );
 };

@@ -88,7 +88,7 @@ const SectionWhatIsIt: React.FC = () => {
           <H3>
             <FormattedMessage
               defaultMessage="Header 3"
-              description="Home second screen. First card title"
+              description="Desktop. Home second screen. First card title"
             />
           </H3>
           <Text>

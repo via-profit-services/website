@@ -9,8 +9,8 @@ const dark: DefaultTheme = {
     ...light.color,
     accent: {
       ...light.color.accent,
-      primary: '#ca90ff',
-      secondary: '#f07cef',
+      primary: '#7f0073',
+      secondary: '#ee31ec',
     },
     gradients: [
       'linear-gradient(90.02deg, #900071 0.77%, #44007B 99.98%)',
@@ -26,6 +26,11 @@ const dark: DefaultTheme = {
     black: {
       primary: '#171825',
       secondary: '#292929',
+    },
+    link: {
+      primary: '#e55ae4',
+      hover: '#ffbaff',
+      visited: '#e55ae4',
     },
     text: {
       ...light.color.text,

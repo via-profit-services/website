@@ -1,26 +1,53 @@
 import * as React from 'react';
-import styled from 'styled-components';
 import MenuIcon from 'mdi-react/MenuIcon';
+import styled, { css } from 'styled-components';
 
 import AppDrawer from '~/render/touchable/components/AppDrawer';
+import GitHubButton from './GitHubButton';
+import ThemeButton from './ThemeButton';
 
-const HeaderContainer = styled.div`
+type Props = {
+  variant?: 'home-page' | 'second-page';
+};
+
+type ContainerStyledProps = {
+  $isSticky: boolean;
+  $variant: NonNullable<Props['variant']>;
+};
+
+const HeaderContainer = styled.header<ContainerStyledProps>`
   position: sticky;
-  top: 0;
-  background: ${props => props.theme.color.gradients[0]};
+  top: -${props => (props.$variant === 'home-page' ? 1 : 0)}px;
   z-index: ${props => props.theme.zIndex.header};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: ${props => props.theme.shadows[0]};
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 200ms ease-out;
+    background: ${props => props.theme.color.gradients[0]};
+    opacity: ${props => (props.$variant === 'home-page' ? 0 : 1)};
+    ${props =>
+      props.$isSticky &&
+      css`
+        opacity: 1;
+      `};
+  }
 `;
 
 const HeaderToolbar = styled.div`
+  width: 100%;
   margin: 0 auto;
+  position: relative;
   display: flex;
-  flex-flow: column;
-  justify-content: center;
-  max-width: ${props => props.theme.grid.desktop.safeFrame}px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 ${props => props.theme.grid.touchable.gutter}px;
 `;
 
 const MenuButton = styled.button`
@@ -34,27 +61,62 @@ const MenuButton = styled.button`
   color: inherit;
   text-decoration: none;
   color: ${props => props.theme.color.text.inverse};
+  margin-left: -${props => props.theme.grid.touchable.gutter}px;
 `;
 
 const CenterSide = styled.div`
   flex: 1;
 `;
 
-const Header: React.FC = () => {
+const Header: React.FC<Props> = props => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const { variant } = props;
+  const currentVariant = variant ?? 'second-page';
+  const [isSticky, setIsSticky] = React.useState(false);
+  const headerRef = React.useRef<HTMLDivElement | null>(null);
+
+  React.useEffect(() => {
+    const cachedRef = headerRef.current;
+    const observer = new IntersectionObserver(
+      ([e]) => {
+        if (variant === 'home-page') {
+          setIsSticky(e.intersectionRatio < 1);
+        }
+      },
+      {
+        threshold: [1],
+      },
+    );
+
+    if (cachedRef) {
+      observer.observe(cachedRef);
+    }
+
+    return () => {
+      if (cachedRef) {
+        observer.unobserve(cachedRef);
+      }
+    };
+  }, [variant]);
+
   const handleToggleMenu = () => {
     setDrawerOpen(!drawerOpen);
   };
 
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer
+        ref={headerRef}
+        $isSticky={isSticky}
+        $variant={currentVariant}>
         <HeaderToolbar>
           <MenuButton onClick={handleToggleMenu}>
             <MenuIcon size="1.5em" color="currentColor" />
           </MenuButton>
+          <CenterSide />
+          <ThemeButton />
+          <GitHubButton />
         </HeaderToolbar>
-        <CenterSide />
       </HeaderContainer>
       <AppDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </>

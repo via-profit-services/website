@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
-import imagesrc from '~/../assets/images/section-main-background.jpg';
+import imagesrc from '~/../assets/images/desktop-section-main-background.jpg';
 import bearsrc from '~/../assets/images/section-main-bear.svg';
 import sirclessrc from '~/../assets/images/section-main-circles.svg';
 import Strong from '~/render/desktop/components/Typography/Strong';
@@ -12,7 +12,6 @@ const Container = styled.section`
   height: 740px;
   display: flex;
   align-items: center;
-  margin-top: -51px;
 `;
 
 const Background = styled.div`

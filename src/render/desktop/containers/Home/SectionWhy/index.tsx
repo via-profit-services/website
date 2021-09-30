@@ -112,13 +112,16 @@ const SectionWhy: React.FC = () => {
           </H2>
           <Text>
             <Paragraph>
-              Proident eiusmod consequat proident ipsum. Non labore ullamco
-              tempor mollit mollit dolore ipsum exercitation occaecat
-              reprehenderit.
+              <FormattedMessage
+                defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit."
+                description="Why screen. First paragraph"
+              />
             </Paragraph>
             <Paragraph>
-              Proident eiusmod anim enim ea exercitation proident. Mollit mollit
-              dolore
+              <FormattedMessage
+                defaultMessage="Proident eiusmod anim enim ea exercitation proident. Mollit mollit dolore."
+                description="Why screen. Second paragraph"
+              />
             </Paragraph>
           </Text>
 
@@ -127,19 +130,28 @@ const SectionWhy: React.FC = () => {
               <i>
                 <CheckIcon size="1em" color="currentColor" />
               </i>
-              Eprehenderit qui laborum dolor cillum
+              <FormattedMessage
+                defaultMessage="Eprehenderit qui laborum dolor cillum"
+                description="Why screen. First advantage"
+              />
             </Li>
             <Li>
               <i>
                 <CheckIcon size="1em" color="currentColor" />
               </i>
-              Ad ullamco culpa aute sit
+              <FormattedMessage
+                defaultMessage="Ad ullamco culpa aute sit"
+                description="Why screen. Second advantage"
+              />
             </Li>
             <Li>
               <i>
                 <CheckIcon size="1em" color="currentColor" />
               </i>
-              Fugiat laborum nulla fugiat
+              <FormattedMessage
+                defaultMessage="Fugiat laborum nulla fugiat"
+                description="Why screen. Third advantage"
+              />
             </Li>
           </List>
         </ContentBlock>

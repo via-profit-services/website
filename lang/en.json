@@ -7,6 +7,10 @@
     "defaultMessage": "Docs",
     "description": "Appbar. Documentation link"
   },
+  "/kFHHa": {
+    "defaultMessage": "Flexible",
+    "description": "Section main touchable. List element two"
+  },
   "01ghRs": {
     "defaultMessage": "Geography",
     "description": "Footer. Package geography link"
@@ -26,6 +30,10 @@
     "defaultMessage": "Core v2.0",
     "description": "Docs sidebar. Core v.2.0"
   },
+  "2d3/Tu": {
+    "defaultMessage": "Ad ullamco culpa aute sit",
+    "description": "Why screen. Second advantage"
+  },
   "2qRiOA": {
     "defaultMessage": "File Storage",
     "description": "Footer. Package file-storage link"
@@ -43,6 +51,10 @@
   "3q5j6q": {
     "defaultMessage": "Redis",
     "description": "Footer. Package redis link"
+  },
+  "3qXW0v": {
+    "defaultMessage": "Lightweight",
+    "description": "Section main touchable. List element one"
   },
   "3xqp66": {
     "defaultMessage": "Via-profit services",
@@ -63,6 +75,10 @@
   "53PU3E": {
     "defaultMessage": "Terms",
     "description": "Breadcrumbs. Terms of use"
+  },
+  "5xunvI": {
+    "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit.",
+    "description": "Why screen. First paragraph"
   },
   "6A15KJ": {
     "defaultMessage": "Subscriptions mollit dolore reprehenderit exercitation.",
@@ -112,6 +128,10 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Core. Content paragraph"
   },
+  "B+T4IS": {
+    "defaultMessage": "Middlewares",
+    "description": "Section main touchable. List element four"
+  },
   "BEYDVd": {
     "defaultMessage": "PostgreSQL",
     "description": "Home second screen. Third card title"
@@ -124,9 +144,17 @@
     "defaultMessage": "Messages",
     "description": "Footer. Package messages link"
   },
+  "C91d3Y": {
+    "defaultMessage": "Core",
+    "description": "SectionPackages touchable. Core. Header"
+  },
   "CWMogT": {
     "defaultMessage": "{image}Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home second screen. Third card content"
+  },
+  "CnKfpl": {
+    "defaultMessage": "standalone",
+    "description": "Section main touchable. List element three"
   },
   "DaZRES": {
     "defaultMessage": "Knex",
@@ -199,6 +227,14 @@
     "defaultMessage": "Core",
     "description": "SectionPackages. Core. Header"
   },
+  "MrFDof": {
+    "defaultMessage": "Subscriptions Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
+    "description": "SectionPackages touchable. Subscriptions. Content paragraph"
+  },
+  "NnsvFA": {
+    "defaultMessage": "Eprehenderit qui laborum dolor cillum",
+    "description": "Why screen. First advantage"
+  },
   "OXpB32": {
     "defaultMessage": "Knex v1.1",
     "description": "Docs sidebar. Knex v.1.1 introduction"
@@ -206,6 +242,10 @@
   "PB00Lv": {
     "defaultMessage": "Permissions mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Permissions. Content paragraph 2"
+  },
+  "QBwZKx": {
+    "defaultMessage": "Knex",
+    "description": "SectionPackages touchable. Knex. Header"
   },
   "QDP0Vw": {
     "defaultMessage": "Knex mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -218,6 +258,10 @@
   "Ql6F+2": {
     "defaultMessage": "API Reference",
     "description": "Docs sidebar. Core v.2.0 API"
+  },
+  "Qv6qRG": {
+    "defaultMessage": "Subscriptions",
+    "description": "SectionPackages touchable. Subscriptions. Header"
   },
   "R7qNRK": {
     "defaultMessage": "Open source",
@@ -281,6 +325,10 @@
     "defaultMessage": "Dataloader",
     "description": "Footer. Package dataloader link"
   },
+  "ZkhZUA": {
+    "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
+    "description": "SectionPackages touchable. Knex. Content paragraph"
+  },
   "a8ApCl": {
     "defaultMessage": "API Reference",
     "description": "Docs sidebar. Knex v.1.1 API"
@@ -320,10 +368,6 @@
   "f+kWMH": {
     "defaultMessage": "Github logo link",
     "description": "Footer. «aria-label» attribute of Github logo link"
-  },
-  "fCVoBR": {
-    "defaultMessage": "Header 3",
-    "description": "Home second screen. First card title"
   },
   "h02828": {
     "defaultMessage": "Privacy policy",
@@ -398,6 +442,10 @@
     "defaultMessage": "Company",
     "description": "Footer. Title of the «Company» section"
   },
+  "pdTX0P": {
+    "defaultMessage": "Proident eiusmod anim enim ea exercitation proident. Mollit mollit dolore.",
+    "description": "Why screen. Second paragraph"
+  },
   "pruhcA": {
     "defaultMessage": "Home",
     "description": "Appbar. Home link"
@@ -438,6 +486,10 @@
     "defaultMessage": "Documentation of packages @via-profit-services with examples",
     "description": "Home page. Meta description"
   },
+  "vNMwrW": {
+    "defaultMessage": "Fugiat laborum nulla fugiat",
+    "description": "Why screen. Third advantage"
+  },
   "vrbypx": {
     "defaultMessage": "Via Profit",
     "description": "Helmet meta «author»"
@@ -460,6 +512,10 @@
   "y+vST4": {
     "defaultMessage": "Introduction of @via-profit-services/jknex v1.1.x"
   },
+  "yDwRTu": {
+    "defaultMessage": "GraphQL Server",
+    "description": "Section main touchable. Header"
+  },
   "ydd+OI": {
     "defaultMessage": "See more packages",
     "description": "SectionPackages. Link to packages page"
@@ -471,5 +527,9 @@
   "z0PBbF": {
     "defaultMessage": "Fugiat laborum nulla fugiat cupidatat veniam pariatur in non. Adipisicing consectetur anim commodo excepteur incididunt.",
     "description": "Section Open Source. Text"
+  },
+  "zYP+rl": {
+    "defaultMessage": "Header 3",
+    "description": "Desktop. Home second screen. First card title"
   }
 }

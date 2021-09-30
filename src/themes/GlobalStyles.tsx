@@ -57,12 +57,12 @@ export default createGlobalStyle`
   }
 
   a {
-    color: ${props => props.theme.color.accent.primary};
+    color: ${props => props.theme.color.link.primary};
     &:hover {
-      color: ${props => props.theme.color.accent.secondary};
+      color: ${props => props.theme.color.link.hover};
     }
     &:visited {
-      color: ${props => props.theme.color.accent.secondary};
+      color: ${props => props.theme.color.link.visited};
     }
   }
 `;

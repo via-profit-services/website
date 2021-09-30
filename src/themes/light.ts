@@ -14,8 +14,7 @@ const light: DefaultTheme = {
       safeFrame: 1200,
     },
     touchable: {
-      gutter: 5,
-      safeFrame: 280,
+      gutter: 20,
     },
   },
   color: {
@@ -29,6 +28,11 @@ const light: DefaultTheme = {
       primary: '#212121',
       secondary: '#4a4a4a',
       inverse: '#FFFFFF',
+    },
+    link: {
+      primary: '#6D0093',
+      hover: '#8b13b5',
+      visited: '#6D0093',
     },
     grey: {
       100: '#FAFAFA',

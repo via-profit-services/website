@@ -1,10 +1,5 @@
 import 'styled-components';
 
-interface GridParams {
-  gutter: number;
-  safeFrame: number;
-}
-
 declare module 'styled-components' {
   export interface DefaultTheme {
     mode: 'dark' | 'light';
@@ -15,8 +10,13 @@ declare module 'styled-components' {
       modal: number;
     };
     grid: {
-      desktop: GridParams;
-      touchable: GridParams;
+      desktop: {
+        gutter: number;
+        safeFrame: number;
+      };
+      touchable: {
+        gutter: number;
+      };
     };
     color: {
       gradients: [string, string, string, string];
@@ -29,6 +29,11 @@ declare module 'styled-components' {
       black: {
         primary: string;
         secondary: string;
+      };
+      link: {
+        primary: string;
+        hover: string;
+        visited: string;
       };
       accent: {
         primary: string;

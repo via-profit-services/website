@@ -1,9 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import ChevronDoubleRightIcon from 'mdi-react/ChevronDoubleRightIcon';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
-import { FormattedMessage } from 'react-intl';
 
 import H3 from '~/render/desktop/components/Typography/H3';
 
@@ -99,7 +96,7 @@ const PackageCard: React.FC<Props> = props => {
           <Content>{content}</Content>
         </CardContent>
         <IconRight>
-          <ChevronRightIcon font-size="1em" color="currentColor" />
+          <ChevronRightIcon fontSize="1em" color="currentColor" />
         </IconRight>
       </CardInner>
     </Card>
