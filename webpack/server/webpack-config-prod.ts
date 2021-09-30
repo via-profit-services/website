@@ -1,6 +1,7 @@
 import path from 'path';
 import { ProgressPlugin } from 'webpack';
 import { merge } from 'webpack-merge';
+import CopyPlugin from 'copy-webpack-plugin';
 
 import baseConfig from './webpack-config-base';
 
@@ -21,7 +22,17 @@ const config = merge(baseConfig, {
     minimize: false,
   },
   devtool: false,
-  plugins: [new ProgressPlugin()],
+  plugins: [
+    new ProgressPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, '../src/restart.sh'),
+          to: path.resolve(__dirname, '../dist/restart.sh'),
+        },
+      ],
+    }) as any,
+  ],
 });
 
 export default config;
