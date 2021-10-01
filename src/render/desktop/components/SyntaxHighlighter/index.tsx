@@ -1,9 +1,15 @@
 import React from 'react';
-import ReactSyntaxHighlighter from 'react-syntax-highlighter';
+import { Light as ReactSyntaxHighlighter } from 'react-syntax-highlighter';
+import typescriptLng from 'react-syntax-highlighter/dist/esm/languages/hljs/typescript';
+import shellLng from 'react-syntax-highlighter/dist/esm/languages/hljs/shell';
 import { useSelector } from 'react-redux';
 
 import lightSyntaxTheme from './lightSyntaxTheme';
 import darkSyntaxTheme from './darkSyntaxTheme';
+
+ReactSyntaxHighlighter.registerLanguage('typescript', typescriptLng);
+ReactSyntaxHighlighter.registerLanguage('bash', shellLng);
+ReactSyntaxHighlighter.registerLanguage('shell', shellLng);
 
 type Props = {
   language: string;

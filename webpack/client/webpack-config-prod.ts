@@ -26,6 +26,27 @@ module.exports = merge(baseConfig, {
   },
   optimization: {
     minimize: true,
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        highlight: {
+          test: /[\\/]node_modules[\\/](highlight\.js|react-syntax-highlighter)[\\/]/,
+          name: 'vendors.syntax-highlight',
+        },
+        react: {
+          test: /[\\/]node_modules[\\/](react|react-router|react-router-dom|react-dom)[\\/]/,
+          name: 'vendors.react',
+        },
+        intl: {
+          test: /[\\/]node_modules[\\/]@formatjs[\\/]/,
+          name: 'vendors.formatjs',
+        },
+        icons: {
+          test: /[\\/]node_modules[\\/]mdi-react$/,
+          name: 'vendors.mdi-react',
+        },
+      },
+    },
   },
   output: {
     publicPath: '/',

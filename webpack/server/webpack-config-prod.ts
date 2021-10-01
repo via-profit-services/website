@@ -1,5 +1,4 @@
 import path from 'path';
-import { ProgressPlugin } from 'webpack';
 import { merge } from 'webpack-merge';
 import CopyPlugin from 'copy-webpack-plugin';
 
@@ -23,12 +22,11 @@ const config = merge(baseConfig, {
   },
   devtool: false,
   plugins: [
-    new ProgressPlugin(),
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, '../src/restart.sh'),
-          to: path.resolve(__dirname, '../dist/restart.sh'),
+          from: path.resolve(__dirname, '../../scripts/restart.sh'),
+          to: path.resolve(__dirname, '../../dist/restart.sh'),
         },
       ],
     }) as any,
