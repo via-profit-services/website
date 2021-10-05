@@ -1,48 +1,39 @@
-# Installation and setup
+# Getting Started
 
 ## Dependencies (peer)
 
 - [Express](https://github.com/expressjs/express) - Node HTTP Server
-- [DataLoader](https://github.com/via-profit/dataloader) - DataLoader (fork of [GraphQL Dataloader](https://github.com/graphql/dataloader))
-- [Moment](https://github.com/moment/moment) - Date library
-- [Moment Timezone](https://github.com/moment/moment-timezone) - Time zone support for Moment
-- [Winston](https://github.com/winstonjs/winston) - Logger
-- [Winston Daily Rotate File](https://github.com/winstonjs/winston-daily-rotate-file) - A transport for winston which logs to a rotating file
+- [GraphQL](https://github.com/graphql/graphql-js) - The JavaScript reference implementation for GraphQL
 
 ## Installation
 
 First of all you should install some peer dependencies by running:
 
 ```bash
-$ yarn add \
-express \
-graphql \
-moment \
-moment-timezone \
-winston \
-winston-daily-rotate-file \
-@via-profit/dataloader \
-@via-profit-services/core
+$ yarn add express graphql @via-profit-services/core
 ```
 
-And that's it. Let's write some code.
-
-## Getting Started
 
 To build your first project you should do some things:
 
-##
-
 - Make your GraphQL schema
 - Create an http server
-- Apply middleware
 
-Let's make it
+Let's make it:
 
+__./schema.ts__
+
+```graphql
+type Query {
+  version: String!
+}
+```
+
+__./index.ts__
 ```ts
 import express from 'express';
 import http from 'http';
-import { factory } from '@via-profit-services/core';
+import * as core from '@via-profit-services/core';
 
 import schema from './schema';
 
@@ -51,7 +42,7 @@ import schema from './schema';
   const app = express();
   const server = http.createServer(app);
 
-  const { graphQLExpress } = await factory({
+  const { graphQLExpress } = await corefactory({
     server,
     schema,
   });
@@ -63,6 +54,8 @@ import schema from './schema';
   });
 })();
 ```
+
+[![Edit @via-profit-services-core-node-basic](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-core-node-basic-xii7w?fontsize=14&hidenavigation=1&theme=dark&view=editor)
 
 We strongly recommend using [@graphql-tools](https://github.com/ardatan/graphql-tools) package to build your schemas. This package helps to combine SDL and resolvers into a single executable schema. See `makeExecutableSchema` of `@graphql-tools/schema` module. For more details: [example with graphql-tools](./examples/graphql-tools/README.md)
 

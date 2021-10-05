@@ -19,10 +19,10 @@ const LinkElement = styled.a`
   color: ${({ theme }) => theme.color.text.inverse};
   border: 1px solid ${({ theme }) => theme.color.text.inverse};
   &:hover {
-    color: currentColor;
+    color: ${({ theme }) => theme.color.text.inverse};
   }
   &:visited {
-    color: currentColor;
+    color: ${({ theme }) => theme.color.text.inverse};
   }
 `;
 

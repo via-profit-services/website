@@ -4,7 +4,7 @@ import { useIntl, FormattedMessage } from 'react-intl';
 
 import RenderMarkdown from '~/render/desktop/components/RenderMarkdown';
 import Breadcrumbs, { Crumb } from '~/render/desktop/components/Breadcrumbs';
-import content from '~/docs/core/v2.0.x/api.md';
+import content from '~/docs/core/v2.0.x/getting-started.md';
 
 const Introduction: React.FC = () => {
   const intl = useIntl();
@@ -14,15 +14,15 @@ const Introduction: React.FC = () => {
       <Helmet>
         <title>
           {intl.formatMessage({
-            defaultMessage: 'API',
-            description: 'Meta title of core.v2.0 API',
+            defaultMessage: 'Getting started',
+            description: 'Meta title of core.v2.0 getting started',
           })}
         </title>
         <meta
           name="description"
           content={intl.formatMessage({
-            defaultMessage: 'Core v2 API',
-            description: 'Meta description of core.v2.0 API',
+            defaultMessage: 'Core v2 getting started',
+            description: 'Meta description of core.v2.0 getting started',
           })}
         />
       </Helmet>
@@ -53,8 +53,8 @@ const Introduction: React.FC = () => {
             position={4}
             label={
               <FormattedMessage
-                defaultMessage="Api"
-                description="Breadcrumbs. Core v2.0.x API"
+                defaultMessage="Getting started"
+                description="Breadcrumbs. Core v2.0.x getting started"
               />
             }
           />

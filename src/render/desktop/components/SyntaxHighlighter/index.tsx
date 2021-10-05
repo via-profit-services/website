@@ -1,15 +1,19 @@
 import React from 'react';
-import { Light as ReactSyntaxHighlighter } from 'react-syntax-highlighter';
-import typescriptLng from 'react-syntax-highlighter/dist/esm/languages/hljs/typescript';
-import shellLng from 'react-syntax-highlighter/dist/esm/languages/hljs/shell';
+import { PrismAsyncLight as ReactSyntaxHighlighter } from 'react-syntax-highlighter';
+import typescriptLng from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
+import shellLng from 'react-syntax-highlighter/dist/esm/languages/prism/bash';
+import graphqlLng from 'react-syntax-highlighter/dist/esm/languages/prism/graphql';
+import lightSyntaxTheme from 'react-syntax-highlighter/dist/cjs/styles/prism/material-light';
+import darkSyntaxTheme from 'react-syntax-highlighter/dist/cjs/styles/prism/material-dark';
 import { useSelector } from 'react-redux';
 
-import lightSyntaxTheme from './lightSyntaxTheme';
-import darkSyntaxTheme from './darkSyntaxTheme';
+// import lightSyntaxTheme from './lightSyntaxTheme';
+// import darkSyntaxTheme from './darkSyntaxTheme';
 
 ReactSyntaxHighlighter.registerLanguage('typescript', typescriptLng);
 ReactSyntaxHighlighter.registerLanguage('bash', shellLng);
 ReactSyntaxHighlighter.registerLanguage('shell', shellLng);
+ReactSyntaxHighlighter.registerLanguage('graphql', graphqlLng);
 
 type Props = {
   language: string;

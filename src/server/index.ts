@@ -59,9 +59,9 @@ const bootstrap = async () => {
           imgSrc:
             "'self' 'unsafe-inline' data: https://mc.yandex.ru https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://github.com https://camo.githubusercontent.com https://img.shields.io",
           connectSrc:
-            "'self' https://mc.yandex.com https://mc.webvisor.org https://mc.yandex.ru https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net",
+            "'self' https://mc.yandex.com https://mc.webvisor.org https://mc.yandex.ru https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://github.com https://camo.githubusercontent.com https://img.shields.io https://codesandbox.io",
           frameSrc:
-            'https://youtube.com https://www.youtube.com blob: https://mc.yandex.ru https://mc.yandex.md https://mc.yandex.net',
+            'https://youtube.com https://www.youtube.com blob: https://mc.yandex.ru https://mc.yandex.md https://mc.yandex.net https://codesandbox.io',
           childSrc: 'blob: https://mc.yandex.ru',
         },
       },

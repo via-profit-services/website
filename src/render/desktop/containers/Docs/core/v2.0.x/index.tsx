@@ -9,8 +9,11 @@ const Fallback = loadable(
   { fallback: <LoadingIndicator /> },
 );
 
-const Setup = loadable(
-  () => import('~/render/desktop/containers/Docs/core/v2.0.x/setup/index'),
+const GettingStarted = loadable(
+  () =>
+    import(
+      '~/render/desktop/containers/Docs/core/v2.0.x/getting-started/index'
+    ),
   { fallback: <LoadingIndicator /> },
 );
 
@@ -31,15 +34,25 @@ const Middlewares = loadable(
   { fallback: <LoadingIndicator /> },
 );
 
+const Recipes = loadable(
+  () => import('~/render/desktop/containers/Docs/core/v2.0.x/recipes/index'),
+  { fallback: <LoadingIndicator /> },
+);
+
 const Core: React.FC = () => {
   const { path } = useRouteMatch();
 
   return (
     <Switch>
       <Route strict exact path={path} component={Introduction} />
-      <Route strict path={`${path}/setup`} component={Setup} />
+      <Route
+        strict
+        path={`${path}/getting-started`}
+        component={GettingStarted}
+      />
       <Route strict path={`${path}/api`} component={Api} />
       <Route strict path={`${path}/middlewares`} component={Middlewares} />
+      <Route strict path={`${path}/recipes`} component={Recipes} />
       <Route component={Fallback} />
     </Switch>
   );

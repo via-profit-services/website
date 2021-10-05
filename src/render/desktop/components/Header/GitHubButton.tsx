@@ -18,10 +18,10 @@ const LinkElement = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.color.text.inverse};
   &:hover {
-    color: currentColor;
+    color: ${({ theme }) => theme.color.text.inverse};
   }
   &:visited {
-    color: currentColor;
+    color: ${({ theme }) => theme.color.text.inverse};
   }
 `;
 

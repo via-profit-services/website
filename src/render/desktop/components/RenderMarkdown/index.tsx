@@ -24,6 +24,15 @@ const CodeSSR = styled.code<{ $styles: Record<string, any> }>`
   display: block;
 `;
 
+const Img = styled.img`
+  max-width: 100%;
+`;
+
+const BlockQuote = styled.blockquote`
+  font-style: italic;
+  color: ${props => props.theme.color.text.secondary};
+`;
+
 const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
   const { children, components, ...otherProps } = props;
   const theme = useSelector<ReduxState, ReduxSelectedTheme>(
@@ -38,6 +47,8 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
         h3: p => <H3>{p.children}</H3>,
         h4: p => <H4>{p.children}</H4>,
         h5: p => <H5>{p.children}</H5>,
+        img: Img,
+        blockquote: BlockQuote,
         b: Strong,
         em: Em,
         p: Paragraph,

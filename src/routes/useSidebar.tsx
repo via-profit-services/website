@@ -30,10 +30,10 @@ const useSidebar = () => {
                   }),
                 },
                 {
-                  path: '/docs/core/v2.0.x/setup',
+                  path: '/docs/core/v2.0.x/getting-started',
                   label: intl.formatMessage({
-                    defaultMessage: 'Setup guide',
-                    description: 'Docs sidebar. Core v.2.0 setup',
+                    defaultMessage: 'Getting started',
+                    description: 'Docs sidebar. Core v.2.0 getting started',
                   }),
                 },
                 {
@@ -48,6 +48,13 @@ const useSidebar = () => {
                   label: intl.formatMessage({
                     defaultMessage: 'Use middlewares',
                     description: 'Docs sidebar. Core v.2.0 middlewares',
+                  }),
+                },
+                {
+                  path: '/docs/core/v2.0.x/recipes',
+                  label: intl.formatMessage({
+                    defaultMessage: 'Recipes',
+                    description: 'Docs sidebar. Core v.2.0 recipes',
                   }),
                 },
               ],
