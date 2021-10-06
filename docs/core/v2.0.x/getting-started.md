@@ -92,7 +92,7 @@ const schema = require("./schema");
 
 We strongly recommend using [@graphql-tools](https://github.com/ardatan/graphql-tools) package to build your schemas. This package helps to combine SDL and resolvers into a single executable schema. See `makeExecutableSchema` of `@graphql-tools/schema` module.
 
-Core module also exports its own typeDefs and resolvers. Those definitions would declare Query and Mutation root types. See [API](./api.md) for more details
+Core module also exports its own typeDefs and resolvers. Those definitions would declare Query and Mutation root types. See [API](./api.md) and [Type defs](./type-defs.md) for more details.
 
 ```js
 const http = require("http");

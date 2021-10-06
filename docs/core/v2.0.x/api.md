@@ -76,7 +76,77 @@ Resolvers object contains:
 
 ### buildQueryFilter
 
-Convert input filter (partial from GraphQL request) into persist filter
+Convert input filter (partial from GraphQL request) into persist filter.
+
+Этот метод принимает объект типа `InputFilter` с необязательными ключами и возвращает объект типа `OutputFilter` в котором будут присутствовать все ключи. Важно заметить, что некоторые ключи будут трансформировани или заменены. Так например, ключ `filter`, который является объектом, будет заменен на массив массивов с именем `where`. Это сделано в первую очередь для удобства использования. 
+
+_InputFilter and OutputFilter types (Typescript definition)_
+
+```ts
+interface InputFilter {
+  first?: number;
+  offset?: number;
+  last?: number;
+  after?: string;
+  before?: string;
+  orderBy?: OrderBy;
+  search?: InputSearch;
+  between?: Between;
+  filter?: {
+      [key: string]: InputFilterValue | readonly string[] | readonly number[];
+  };
+}
+
+interface OutputFilter {
+  limit: number;
+  offset: number;
+  orderBy: OrderBy;
+  where: Where;
+  revert: boolean;
+  search: OutputSearch | false;
+  between: Between;
+}
+```
+
+_Example of SDL. Arguments of list field will be passed to `buildQueryFilter` method._
+
+```graphql
+type Query {
+  list(
+    first: Int
+    last: Int
+    after: String
+    before: String
+    orderBy: [UserOrderBy!]
+    between: UsersListBetween
+    search: [UserFilterSearch!]
+    filter: UserListFilter
+  ): UserListConnection!
+}
+```
+_Full example of this SDL see [here](./connections.md)_
+
+
+```js
+const { buildQueryFilter, buildCursorConnection } = require("@via-profit-services/core");
+
+const resolvers = {
+  Query: {
+    list: async (_parent, args, context) => {
+      // convert input arguments to persist filter (See return value of this method)
+      // Will be return `OutputFilter` type with normalized props
+      // You can use this filter in your Model class
+      const filter = buildQueryFilter(args);
+      
+      // Now you can use filter fo data fetching
+
+    },
+  },
+};
+```
+
+
+
 
 ### arrayOfIdsToArrayOfObjectIds
 
