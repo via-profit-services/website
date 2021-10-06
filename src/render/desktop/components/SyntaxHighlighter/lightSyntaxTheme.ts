@@ -1,116 +1,118 @@
 const syntaxTheme = {
-  hljs: {
+  'code[class*="language-"]': {
     display: 'block',
     overflowX: 'auto',
-    padding: '1em',
+  },
+  'pre[class*="language-"]': {
+    margin: '1rem 0 0 0',
+    padding: '1em 1em 0 1em',
+    background: '#f3f3f3',
     color: '#1e1e22',
-    background: '#fafafa',
     borderRadius: '8px',
-    margin: '1rem, 0',
   },
-  'hljs-comment': {
+  comment: {
     color: '#295c02',
     fontStyle: 'italic',
   },
-  'hljs-quote': {
+  quote: {
     color: '#295c02',
     fontStyle: 'italic',
   },
-  'hljs-doctag': {
+  doctag: {
     color: '#8f128d',
   },
-  'hljs-keyword': {
+  keyword: {
     color: '#8f128d',
   },
-  'hljs-formula': {
+  formula: {
     color: '#8f128d',
   },
-  'hljs-section': {
+  section: {
     color: '#8b0833',
   },
-  'hljs-name': {
+  name: {
     color: '#8b0833',
   },
-  'hljs-selector-tag': {
+  'selector-tag': {
     color: '#8b0833',
   },
-  'hljs-deletion': {
+  deletion: {
     color: '#8b0833',
   },
-  'hljs-subst': {
+  subst: {
     color: '#8b0833',
   },
-  'hljs-literal': {
+  literal: {
     color: '#0184bb',
   },
-  'hljs-string': {
+  string: {
     color: '#1f508b',
   },
-  'hljs-regexp': {
+  regexp: {
     color: '#1f508b',
   },
-  'hljs-addition': {
+  addition: {
     color: '#1f508b',
   },
-  'hljs-attribute': {
+  attribute: {
     color: '#1f508b',
   },
-  'hljs-meta-string': {
+  'meta-string': {
     color: '#1f508b',
   },
-  'hljs-built_in': {
+  built_in: {
     color: '#9f0000',
   },
-  'hljs-class .hljs-title': {
+  'class .title': {
     color: '#9f0000',
   },
-  'hljs-attr': {
+  attr: {
     color: '#135c00',
   },
-  'hljs-variable': {
+  variable: {
     color: '#135c00',
   },
-  'hljs-template-variable': {
+  'template-variable': {
     color: '#135c00',
   },
-  'hljs-type': {
+  type: {
     color: '#135c00',
   },
-  'hljs-selector-class': {
+  'selector-class': {
     color: '#135c00',
   },
-  'hljs-selector-attr': {
+  'selector-attr': {
     color: '#135c00',
   },
-  'hljs-selector-pseudo': {
+  'selector-pseudo': {
     color: '#135c00',
   },
-  'hljs-number': {
+  number: {
     color: '#135c00',
   },
-  'hljs-symbol': {
+  symbol: {
     color: '#4078f2',
   },
-  'hljs-bullet': {
+  bullet: {
     color: '#4078f2',
   },
-  'hljs-link': {
+  link: {
     color: '#4078f2',
     textDecoration: 'underline',
   },
-  'hljs-meta': {
+  meta: {
     color: '#4078f2',
   },
-  'hljs-selector-id': {
+  'selector-id': {
     color: '#4078f2',
   },
-  'hljs-title': {
+  title: {
     color: '#4078f2',
   },
-  'hljs-emphasis': {
+  emphasis: {
     fontStyle: 'italic',
   },
-  'hljs-strong': {
+  strong: {
     fontWeight: 'bold',
   },
 };

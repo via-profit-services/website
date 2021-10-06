@@ -53,6 +53,11 @@ const light: DefaultTheme = {
       primary: '#FBFBFB',
       secondary: '#FFFFFF',
     },
+    scrollbar: {
+      track: '#5d5d73',
+      thumb: '#272730',
+      hover: '#ee31ec',
+    },
   },
   shadows: [
     '0px 4px 13px -4px rgba(0, 0, 0, 0.23)',

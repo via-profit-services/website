@@ -3,10 +3,32 @@
 You can use helpers by exporting them from the module:
 
 ```js
-import { factory, resolvers, logFormatter, buildQueryFilter } from '@via-profit-services/core';
+import { factory, resolvers, buildQueryFilter } from '@via-profit-services/core';
 ```
 
+## Table of contents
+
+ - [factory](#factory)
+ - [resolvers](#resolvers)
+ - [typeDefs](#typedefs)
+ - [defaultOutputFilter](#defaultoutputfilter)
+ - [buildQueryFilter](#buildqueryfilter)
+ - [arrayOfIdsToArrayOfObjectIds](#arrayofidstoarrayofobjectids)
+ - [collateForDataloader](#collatefordataloader)
+ - [extractNodeIds](#extractnodeids)
+ - [extractNodeField](#extractnodefield)
+ - [nodeToEdge](#nodetoedge)
+ - [stringToCursor](#stringtocursor)
+ - [cursorToString](#cursortostring)
+ - [makeNodeCursor](#makenodecursor)
+ - [getCursorPayload](#getcursorpayload)
+ - [buildCursorConnection](#buildcursorconnection)
+ - [extractKeyAsObject](#extractkeyasobject)
+ - [fieldsWrapper](#fieldswrapper)
+
+
 ### factory
+
 
 Function returns object contains `graphQLExpress` - express middleware.
 

@@ -33,6 +33,8 @@ const BlockQuote = styled.blockquote`
   color: ${props => props.theme.color.text.secondary};
 `;
 
+const Anchor = styled.a``;
+
 const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
   const { children, components, ...otherProps } = props;
   const theme = useSelector<ReduxState, ReduxSelectedTheme>(
@@ -42,11 +44,56 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
   return (
     <ReactMarkdown
       components={{
-        h1: p => <H1>{p.children}</H1>,
-        h2: p => <H2>{p.children}</H2>,
-        h3: p => <H3>{p.children}</H3>,
-        h4: p => <H4>{p.children}</H4>,
-        h5: p => <H5>{p.children}</H5>,
+        h1: p => (
+          <H1>
+            <Anchor
+              aria-hidden="true"
+              tabIndex={-1}
+              id={String(p.children).toLowerCase()}
+            />
+            {p.children}
+          </H1>
+        ),
+        h2: p => (
+          <H2>
+            <Anchor
+              aria-hidden="true"
+              tabIndex={-1}
+              id={String(p.children).toLowerCase()}
+            />
+            {p.children}
+          </H2>
+        ),
+        h3: p => (
+          <H3>
+            <Anchor
+              aria-hidden="true"
+              tabIndex={-1}
+              id={String(p.children).toLowerCase()}
+            />
+            {p.children}
+          </H3>
+        ),
+        h4: p => (
+          <H4>
+            <Anchor
+              aria-hidden="true"
+              tabIndex={-1}
+              id={String(p.children).toLowerCase()}
+            />
+            {p.children}
+          </H4>
+        ),
+        h5: p => (
+          <H5>
+            <Anchor
+              aria-hidden="true"
+              tabIndex={-1}
+              id={String(p.children).toLowerCase()}
+            />
+            {p.children}
+          </H5>
+        ),
         img: Img,
         blockquote: BlockQuote,
         b: Strong,

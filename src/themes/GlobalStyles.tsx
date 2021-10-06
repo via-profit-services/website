@@ -36,18 +36,18 @@ export default createGlobalStyle`
   }
   &::-webkit-scrollbar-track {
     border-radius: 10px;
-    background: ${props => props.theme.color.grey[300]};
+    background: ${props => props.theme.color.scrollbar.track};
   }
   &::-webkit-scrollbar-thumb {
-    background: ${props => props.theme.color.grey[500]};
+    background: ${props => props.theme.color.scrollbar.thumb};
     border-radius: 10px;
   }
   &::-webkit-scrollbar-thumb:hover {
-    background: ${props => props.theme.color.accent.secondary};
+    background: ${props => props.theme.color.scrollbar.hover};
   }
   * {
-    scrollbar-color: ${props => props.theme.color.grey[500]} ${props =>
-  props.theme.color.grey[200]};
+    scrollbar-color: ${props => props.theme.color.scrollbar.thumb} ${props =>
+  props.theme.color.scrollbar.track};
   }
 
   #app {

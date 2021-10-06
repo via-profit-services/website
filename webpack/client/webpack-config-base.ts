@@ -109,6 +109,7 @@ const config: Configuration = {
     alias: {
       '~': path.resolve(__dirname, '../../src'),
       assets: path.resolve(__dirname, '../../assets'),
+      docs: path.resolve(__dirname, '../../docs'),
     },
   },
   node: {},

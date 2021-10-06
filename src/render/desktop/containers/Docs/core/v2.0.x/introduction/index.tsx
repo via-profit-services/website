@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 import RenderMarkdown from '~/render/desktop/components/RenderMarkdown';
 import Breadcrumbs, { Crumb } from '~/render/desktop/components/Breadcrumbs';
-import content from '~/docs/core/v2.0.x/introduction.md';
+import content from 'docs/core/v2.0.x/introduction.md';
 
 const Introduction: React.FC = () => (
   <>

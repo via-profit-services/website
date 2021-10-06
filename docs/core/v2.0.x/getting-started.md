@@ -21,16 +21,18 @@ To build your first project you should do some things:
 
 Let's make it:
 
-__./schema.ts__
+__./schema.js__
 
-```graphql
-type Query {
-  version: String!
-}
+```js
+const schema = /* GraphQL */ `
+  type Query {
+    version: String!
+  }
+`;
 ```
 
-__./index.ts__
-```ts
+__./index.js__
+```js
 import express from 'express';
 import http from 'http';
 import * as core from '@via-profit-services/core';

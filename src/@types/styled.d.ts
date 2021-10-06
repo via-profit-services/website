@@ -19,6 +19,11 @@ declare module 'styled-components' {
       };
     };
     color: {
+      scrollbar: {
+        track: string;
+        thumb: string;
+        hover: string;
+      };
       gradients: [string, string, string, string];
       grey: Record<'100' | '200' | '300' | '400' | '500', string>;
       text: {

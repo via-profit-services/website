@@ -46,6 +46,11 @@ const dark: DefaultTheme = {
       400: '#3a3a65',
       500: '#272730',
     },
+    scrollbar: {
+      track: '#5d5d73',
+      thumb: '#980997',
+      hover: '#ee31ec',
+    },
   },
 };
 
