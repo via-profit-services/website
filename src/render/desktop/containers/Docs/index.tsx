@@ -9,6 +9,7 @@ import ContentArea from '~/render/desktop/components/ContentArea';
 import Footer from '~/render/desktop/components/Footer';
 import Meta from '~/render/desktop/components/Meta';
 import Sidebar from '~/render/desktop/components/Sidebar';
+import ScrollTopButton from '~/render/desktop/components/ScrollTopButton';
 import useSidebar from '~/routes/useSidebar';
 
 const Fallback = loadable(
@@ -84,6 +85,7 @@ const Docs: React.FC = () => {
         </Layout>
       </Wrapper>
       <Footer />
+      <ScrollTopButton />
     </>
   );
 };

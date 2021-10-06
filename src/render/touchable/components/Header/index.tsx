@@ -3,7 +3,6 @@ import MenuIcon from 'mdi-react/MenuIcon';
 import styled, { css } from 'styled-components';
 
 import AppDrawer from '~/render/touchable/components/AppDrawer';
-import ButtonBase from '~/render/touchable/components/ButtonBase';
 import GitHubButton from './GitHubButton';
 import ThemeButton from './ThemeButton';
 
@@ -52,7 +51,7 @@ const HeaderToolbar = styled.div`
   padding: 0 ${props => props.theme.grid.touchable.gutter}px;
 `;
 
-const MenuButton = styled(ButtonBase)`
+const MenuButton = styled.button`
   padding: 0;
   font-size: 1rem;
   width: 2.6em;

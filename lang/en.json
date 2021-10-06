@@ -7,6 +7,10 @@
     "defaultMessage": "Docs",
     "description": "Appbar. Documentation link"
   },
+  "+laOpO": {
+    "defaultMessage": "Examples",
+    "description": "Docs sidebar. Core v.2.0 examples"
+  },
   "/kFHHa": {
     "defaultMessage": "Flexible",
     "description": "Section main touchable. List element two"
@@ -88,9 +92,17 @@
     "defaultMessage": "MIT",
     "description": "Home main screen. License label. «MIT» word only"
   },
+  "6EMkJn": {
+    "defaultMessage": "Getting started",
+    "description": "Breadcrumbs. Core v2.0.x getting started"
+  },
   "6cIx/L": {
     "defaultMessage": "Via Profit company logo",
     "description": "Header. «aria-label» attribute of Via Profit company logo"
+  },
+  "6oMTE0": {
+    "defaultMessage": "Core v2 API",
+    "description": "Meta description of core.v2.0 API"
   },
   "74l7dy": {
     "defaultMessage": "Header 3",
@@ -127,6 +139,10 @@
   "A2Ek6v": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Core. Content paragraph"
+  },
+  "AK8McR": {
+    "defaultMessage": "Core v2 getting started",
+    "description": "Meta description of core.v2.0 getting started"
   },
   "B+T4IS": {
     "defaultMessage": "Middlewares",
@@ -183,6 +199,10 @@
     "defaultMessage": "{strong} infrastructure with middlewares collection",
     "description": "Home main screen. Title (without strong tag"
   },
+  "HfbTSW": {
+    "defaultMessage": "Examples",
+    "description": "Breadcrumbs. Core v2.0.x examples"
+  },
   "Iss0k3": {
     "defaultMessage": "Website",
     "description": "Footer. company website link"
@@ -206,6 +226,10 @@
   "KGpWjm": {
     "defaultMessage": "Subscriptions",
     "description": "SectionPackages. Subscriptions. Header"
+  },
+  "KOme+T": {
+    "defaultMessage": "API",
+    "description": "Meta title of core.v2.0 API"
   },
   "KPyP77": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit.",
@@ -259,6 +283,10 @@
     "defaultMessage": "API Reference",
     "description": "Docs sidebar. Core v.2.0 API"
   },
+  "QlRmtA": {
+    "defaultMessage": "Core v2 introduction",
+    "description": "Meta description of core.v2.0 introduction"
+  },
   "Qv6qRG": {
     "defaultMessage": "Subscriptions",
     "description": "SectionPackages touchable. Subscriptions. Header"
@@ -266,10 +294,6 @@
   "R7qNRK": {
     "defaultMessage": "Open source",
     "description": "Footer. «Open source project» label («Open source» segment)"
-  },
-  "RKyAJM": {
-    "defaultMessage": "Setup guide",
-    "description": "Docs sidebar. Core v.2.0 setup"
   },
   "RR9NSx": {
     "defaultMessage": "SMS",
@@ -283,6 +307,10 @@
     "defaultMessage": "File storage",
     "description": "SectionPackages. File storage. Header"
   },
+  "T/dR8M": {
+    "defaultMessage": "Scroll to top",
+    "description": "«aria-label» attribute of Scroll to top button"
+  },
   "TUV3q8": {
     "defaultMessage": "List of all packages"
   },
@@ -293,9 +321,17 @@
   "UhkSyx": {
     "defaultMessage": "Terms of Use"
   },
+  "VImI2V": {
+    "defaultMessage": "Getting started",
+    "description": "Meta title of core.v2.0 getting started"
+  },
   "VtNakx": {
     "defaultMessage": "GraphQL HTTP Server",
     "description": "Home main screen. Strong tag of the title"
+  },
+  "WK1Tj4": {
+    "defaultMessage": "Introduction",
+    "description": "Meta title of core.v2.0 introduction"
   },
   "WXNeD2": {
     "defaultMessage": "Cookie policy",
@@ -308,6 +344,10 @@
   "XA9oyK": {
     "defaultMessage": "Packages",
     "description": "Footer. Title of the «Packages» section"
+  },
+  "XH/FVD": {
+    "defaultMessage": "Examples",
+    "description": "Meta title of core.v2.0 examples"
   },
   "XksmYF": {
     "defaultMessage": "Light",
@@ -341,6 +381,10 @@
     "defaultMessage": "Packages",
     "description": "SectionPackages. Header"
   },
+  "aV/kZI": {
+    "defaultMessage": "Api",
+    "description": "Breadcrumbs. Core v2.0.x API"
+  },
   "cpMhJI": {
     "defaultMessage": "Dark",
     "description": "Header. Theme button in dark theme"
@@ -356,10 +400,6 @@
   "eCqVia": {
     "defaultMessage": "Core",
     "description": "Docs sidebar. Core"
-  },
-  "ejfCfL": {
-    "defaultMessage": "@via-profit-services/core installation and setup",
-    "description": "Meta description of installation and setup"
   },
   "eooGP7": {
     "defaultMessage": "Package overview",
@@ -391,9 +431,6 @@
   "jZDn13": {
     "defaultMessage": "File storage eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. File storage. Content paragraph 1"
-  },
-  "jeNkjc": {
-    "defaultMessage": "Introduction of @via-profit-services/core v2.0.x"
   },
   "kQJFNC": {
     "defaultMessage": "Knex v1.1",
@@ -430,6 +467,10 @@
     "defaultMessage": "Navigation",
     "description": "Docs sidebar title"
   },
+  "ndDiZV": {
+    "defaultMessage": "Getting started",
+    "description": "Docs sidebar. Core v.2.0 getting started"
+  },
   "oIvfpm": {
     "defaultMessage": "Redis",
     "description": "packages sidebar. Redis"
@@ -462,10 +503,6 @@
     "defaultMessage": "Permissions eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Permissions. Content paragraph 1"
   },
-  "rEE7Oe": {
-    "defaultMessage": "Setup",
-    "description": "Breadcrumbs. Core v2.0.x setup"
-  },
   "rUAzFO": {
     "defaultMessage": "Core v2.0",
     "description": "Breadcrumbs. Core v2.0.x"
@@ -486,6 +523,10 @@
     "defaultMessage": "Documentation of packages @via-profit-services with examples",
     "description": "Home page. Meta description"
   },
+  "usIcUE": {
+    "defaultMessage": "Core v2 examples",
+    "description": "Meta description of core.v2.0 examples"
+  },
   "vNMwrW": {
     "defaultMessage": "Fugiat laborum nulla fugiat",
     "description": "Why screen. Third advantage"
@@ -504,10 +545,6 @@
   "wfOLU7": {
     "defaultMessage": "Examples",
     "description": "Appbar. Examples link"
-  },
-  "xnJwur": {
-    "defaultMessage": "Installation and setup",
-    "description": "Meta title of installation and setup"
   },
   "y+vST4": {
     "defaultMessage": "Introduction of @via-profit-services/jknex v1.1.x"

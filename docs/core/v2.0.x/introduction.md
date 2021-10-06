@@ -9,7 +9,6 @@ Lightweight, flexible, standalone implementation of a [GraphQL HTTP (express mid
 You can discover a list of extentions in our organisation repository [via-profit-services](https://github.com/via-profit-services)
 
 We always use those package in our commercial projects like CRM systems, websites and so on. Any help with development, testing and docs would be highly appreciated.
-Our contacts:
 
 ## License
 

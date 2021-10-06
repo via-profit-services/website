@@ -8,8 +8,6 @@ import WeatherNightIcon from 'mdi-react/WeatherNightIcon';
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = styled.button`
-  outline: none;
-  border: 0;
   width: auto;
   height: auto;
   background-color: ${({ theme }) => theme.color.accent.secondary};

@@ -4,7 +4,7 @@ import { useIntl, FormattedMessage } from 'react-intl';
 
 import RenderMarkdown from '~/render/desktop/components/RenderMarkdown';
 import Breadcrumbs, { Crumb } from '~/render/desktop/components/Breadcrumbs';
-import content from 'docs/core/v2.0.x/recipes.md';
+import content from 'docs/core/v2.0.x/examples.md';
 
 const Introduction: React.FC = () => {
   const intl = useIntl();
@@ -14,15 +14,15 @@ const Introduction: React.FC = () => {
       <Helmet>
         <title>
           {intl.formatMessage({
-            defaultMessage: 'Recipes',
-            description: 'Meta title of core.v2.0 recipes',
+            defaultMessage: 'Examples',
+            description: 'Meta title of core.v2.0 examples',
           })}
         </title>
         <meta
           name="description"
           content={intl.formatMessage({
-            defaultMessage: 'Core v2 recipes',
-            description: 'Meta description of core.v2.0 recipes',
+            defaultMessage: 'Core v2 examples',
+            description: 'Meta description of core.v2.0 examples',
           })}
         />
       </Helmet>
@@ -53,8 +53,8 @@ const Introduction: React.FC = () => {
             position={4}
             label={
               <FormattedMessage
-                defaultMessage="Recipes"
-                description="Breadcrumbs. Core v2.0.x recipes"
+                defaultMessage="Examples"
+                description="Breadcrumbs. Core v2.0.x examples"
               />
             }
           />

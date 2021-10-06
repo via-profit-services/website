@@ -1,11 +1,9 @@
 import * as React from 'react';
-
 import styled from 'styled-components';
 
-import ButtonBase from '~/render/touchable/components/ButtonBase';
 import NavbarDrawer from './index';
 
-const Button = styled(ButtonBase)`
+const Button = styled.button`
   position: fixed;
   bottom: 2rem;
   right: ${({ theme }) => theme.grid.touchable.gutter}px;

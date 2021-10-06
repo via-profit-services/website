@@ -56,6 +56,17 @@ export default createGlobalStyle`
     flex-direction: column;
   }
 
+  button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+
+  li {
+    margin: 0.2em 0;
+  }
+
   a {
     color: ${props => props.theme.color.link.primary};
     &:hover {

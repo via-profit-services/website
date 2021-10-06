@@ -51,10 +51,10 @@ const useSidebar = () => {
                   }),
                 },
                 {
-                  path: '/docs/core/v2.0.x/recipes',
+                  path: '/docs/core/v2.0.x/examples',
                   label: intl.formatMessage({
-                    defaultMessage: 'Recipes',
-                    description: 'Docs sidebar. Core v.2.0 recipes',
+                    defaultMessage: 'Examples',
+                    description: 'Docs sidebar. Core v.2.0 examples',
                   }),
                 },
               ],

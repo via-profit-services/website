@@ -4,11 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import WeatherSunnyIcon from 'mdi-react/WeatherSunnyIcon';
 import WeatherNightIcon from 'mdi-react/WeatherNightIcon';
 
-import ButtonBase from '~/render/touchable/components/ButtonBase';
-
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = styled(ButtonBase)`
+const Button = styled.button`
   outline: none;
   border: 0;
   padding: 0;

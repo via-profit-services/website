@@ -34,8 +34,8 @@ const Middlewares = loadable(
   { fallback: <LoadingIndicator /> },
 );
 
-const Recipes = loadable(
-  () => import('~/render/desktop/containers/Docs/core/v2.0.x/recipes/index'),
+const Examples = loadable(
+  () => import('~/render/desktop/containers/Docs/core/v2.0.x/examples/index'),
   { fallback: <LoadingIndicator /> },
 );
 
@@ -52,7 +52,7 @@ const Core: React.FC = () => {
       />
       <Route strict path={`${path}/api`} component={Api} />
       <Route strict path={`${path}/middlewares`} component={Middlewares} />
-      <Route strict path={`${path}/recipes`} component={Recipes} />
+      <Route strict path={`${path}/examples`} component={Examples} />
       <Route component={Fallback} />
     </Switch>
   );

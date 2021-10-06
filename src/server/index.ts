@@ -57,9 +57,9 @@ const bootstrap = async () => {
           scriptSrc:
             "'self' 'unsafe-inline' https://www.youtube.com https://mc.yandex.ru https://yandex.ru https://yastatic.net https://www.google-analytics.com",
           imgSrc:
-            "'self' 'unsafe-inline' data: https://mc.yandex.ru https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://github.com https://camo.githubusercontent.com https://img.shields.io",
+            "'self' 'unsafe-inline' data: https://mc.yandex.ru https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://github.com https://camo.githubusercontent.com https://img.shields.io https://raw.githubusercontent.com https://codesandbox.io",
           connectSrc:
-            "'self' https://mc.yandex.com https://mc.webvisor.org https://mc.yandex.ru https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://github.com https://camo.githubusercontent.com https://img.shields.io https://codesandbox.io",
+            "'self' https://mc.yandex.com https://mc.webvisor.org https://mc.yandex.ru https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://github.com https://camo.githubusercontent.com https://img.shields.io https://codesandbox.io https://raw.githubusercontent.com",
           frameSrc:
             'https://youtube.com https://www.youtube.com blob: https://mc.yandex.ru https://mc.yandex.md https://mc.yandex.net https://codesandbox.io',
           childSrc: 'blob: https://mc.yandex.ru',
