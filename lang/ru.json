@@ -4,7 +4,7 @@
     "description": "Footer. Package permissions link"
   },
   "+jqzeW": {
-    "defaultMessage": "Документация",
+    "defaultMessage": "Docs",
     "description": "Appbar. Documentation link"
   },
   "+laOpO": {
@@ -24,7 +24,7 @@
     "description": "Footer. Package subscriptions link"
   },
   "04jeAy": {
-    "defaultMessage": "Введение в @via-profit-services/core v1.2.x"
+    "defaultMessage": "Introduction of @via-profit-services/core v1.2.x"
   },
   "2A5jIr": {
     "defaultMessage": "PostgreSQL logo",
@@ -44,6 +44,10 @@
   },
   "2z6QCO": {
     "defaultMessage": "Core"
+  },
+  "3EAwoY": {
+    "defaultMessage": "Context",
+    "description": "Docs sidebar. Core v.2.0 context"
   },
   "3GLH+d": {
     "defaultMessage": "Examples"
@@ -71,6 +75,10 @@
   "4MIGfe": {
     "defaultMessage": "Knex",
     "description": "Docs sidebar. Knex"
+  },
+  "4Ok+rH": {
+    "defaultMessage": "Context",
+    "description": "Meta title of core.v2.0 Context"
   },
   "4d2Kfy": {
     "defaultMessage": "Redis mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -109,7 +117,7 @@
     "description": "Home second screen. Second card title"
   },
   "7atvZ+": {
-    "defaultMessage": "Лицензия MIT",
+    "defaultMessage": "MIT license",
     "description": "Footer. License string in copiright string"
   },
   "7fK4Wo": {
@@ -123,6 +131,14 @@
   "82R6Qe": {
     "defaultMessage": "File storage mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. File storage. Content paragraph 2"
+  },
+  "8RQ8cv": {
+    "defaultMessage": "Connections",
+    "description": "Breadcrumbs. Core v2.0.x connections"
+  },
+  "8glbuq": {
+    "defaultMessage": "Core v2 Context",
+    "description": "Meta description of core.v2.0 Context"
   },
   "9N/Z1h": {
     "defaultMessage": "Why",
@@ -155,6 +171,10 @@
   "BMqK9T": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Core. Content paragraph 2"
+  },
+  "BnRdzg": {
+    "defaultMessage": "Type definitions",
+    "description": "Docs sidebar. Core v.2.0 type defs"
   },
   "C5ASDU": {
     "defaultMessage": "Messages",
@@ -325,6 +345,10 @@
     "defaultMessage": "Getting started",
     "description": "Meta title of core.v2.0 getting started"
   },
+  "VQELCq": {
+    "defaultMessage": "Core v2 scalars",
+    "description": "Meta description of core.v2.0 scalars"
+  },
   "VtNakx": {
     "defaultMessage": "GraphQL HTTP Server",
     "description": "Home main screen. Strong tag of the title"
@@ -385,6 +409,10 @@
     "defaultMessage": "Api",
     "description": "Breadcrumbs. Core v2.0.x API"
   },
+  "bJEJr7": {
+    "defaultMessage": "Scalars",
+    "description": "Docs sidebar. Core v.2.0 scalars"
+  },
   "cpMhJI": {
     "defaultMessage": "Dark",
     "description": "Header. Theme button in dark theme"
@@ -413,6 +441,10 @@
     "defaultMessage": "Privacy policy",
     "description": "Breadcrumbs. Privacy policy"
   },
+  "h0AU2O": {
+    "defaultMessage": "Typedefs",
+    "description": "Meta title of core.v2.0 typedefs"
+  },
   "hdR+lK": {
     "defaultMessage": "Core",
     "description": "Footer. package core link"
@@ -427,6 +459,10 @@
   },
   "jQY7K7": {
     "defaultMessage": "Redis"
+  },
+  "jYpE7v": {
+    "defaultMessage": "Connections and pagination",
+    "description": "Docs sidebar. Core v.2.0 connections"
   },
   "jZDn13": {
     "defaultMessage": "File storage eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
@@ -455,9 +491,21 @@
     "defaultMessage": "Introduction",
     "description": "Docs sidebar. Core v.2.0 introduction"
   },
+  "m2/PMN": {
+    "defaultMessage": "Context",
+    "description": "Breadcrumbs. Core v2.0.x Context"
+  },
   "mGrCzT": {
     "defaultMessage": "Permissions",
     "description": "SectionPackages. Permissions. Header"
+  },
+  "mjJi/I": {
+    "defaultMessage": "Scalars",
+    "description": "Breadcrumbs. Core v2.0.x scalars"
+  },
+  "nIywAj": {
+    "defaultMessage": "Scalars",
+    "description": "Meta title of core.v2.0 scalars"
   },
   "naM7un": {
     "defaultMessage": "TypeScript support",
@@ -491,6 +539,10 @@
     "defaultMessage": "Home",
     "description": "Appbar. Home link"
   },
+  "pvsozs": {
+    "defaultMessage": "Core v2 typedefs",
+    "description": "Meta description of core.v2.0 typedefs"
+  },
   "q6GZrq": {
     "defaultMessage": "List of all packages",
     "description": "Touchable packages. Header"
@@ -506,6 +558,10 @@
   "rUAzFO": {
     "defaultMessage": "Core v2.0",
     "description": "Breadcrumbs. Core v2.0.x"
+  },
+  "rY3VNI": {
+    "defaultMessage": "Core v2 connections",
+    "description": "Meta description of core.v2.0 connections"
   },
   "t3lyVE": {
     "defaultMessage": "What Is It",
@@ -546,8 +602,16 @@
     "defaultMessage": "Examples",
     "description": "Appbar. Examples link"
   },
+  "xiGym8": {
+    "defaultMessage": "Typedefs",
+    "description": "Breadcrumbs. Core v2.0.x typedefs"
+  },
   "y+vST4": {
     "defaultMessage": "Introduction of @via-profit-services/jknex v1.1.x"
+  },
+  "y1j/tV": {
+    "defaultMessage": "Connections",
+    "description": "Meta title of core.v2.0 connections"
   },
   "yDwRTu": {
     "defaultMessage": "GraphQL Server",
@@ -568,76 +632,5 @@
   "zYP+rl": {
     "defaultMessage": "Header 3",
     "description": "Desktop. Home second screen. First card title"
-  },
-  "RKyAJM": {
-    "defaultMessage": "Setup guide",
-    "description": "Docs sidebar. Core v.2.0 setup"
-  },
-  "ejfCfL": {
-    "defaultMessage": "Установка и настройка @via-profit-services/core",
-    "description": "Meta description of installation and setup"
-  },
-  "jeNkjc": {
-    "defaultMessage": "Введение в @via-profit-services/core v2.0.x"
-  },
-  "rEE7Oe": {
-    "defaultMessage": "Setup",
-    "description": "Breadcrumbs. Core v2.0.x setup"
-  },
-  "xnJwur": {
-    "defaultMessage": "Установка и настройка",
-    "description": "Meta title of installation and setup"
-  },
-  "fCVoBR": {
-    "defaultMessage": "Header 3",
-    "description": "Home second screen. First card title"
-  },
-  "mo3fYx": {
-    "defaultMessage": "Project license type",
-    "description": "Home main screen. «aria-label» attribute of project license type label"
-  },
-  "JhrkI7": {
-    "defaultMessage": "Via Profit Services documentation",
-    "description": "Helmet «defaultTitle» param"
-  },
-  "XkqqdC": {
-    "defaultMessage": "%s — Via Profit Services documentation",
-    "description": "Helmet «titleTemplate» param"
-  },
-  "l4kQer": {
-    "defaultMessage": "Learn more",
-    "description": "Package card. Lear more link"
-  },
-  "tJEkJp": {
-    "defaultMessage": "Subscriptions eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
-    "description": "SectionPackages. Subscriptions. Content paragraph 1"
-  },
-  "x3LBCM": {
-    "defaultMessage": "Subscriptions mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
-    "description": "SectionPackages. Subscriptions. Content paragraph 2"
-  },
-  "mXx0KW": {
-    "defaultMessage": "PostgreSQL log",
-    "description": "Home second screen. Alt of postgreSQL logo"
-  },
-  "kjCMoA": {
-    "defaultMessage": "Header 3",
-    "description": "Home second screen. Third card title"
-  },
-  "Og3BzC": {
-    "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
-    "description": "Home second screen. Third card content"
-  },
-  "GklOhG": {
-    "defaultMessage": "{year} — Все права защищены"
-  },
-  "H5vB1u": {
-    "defaultMessage": "Разработчик {developer}"
-  },
-  "U3l+Q9": {
-    "defaultMessage": "Главная страница"
-  },
-  "baPNbY": {
-    "defaultMessage": "Via Profit"
   }
 }

@@ -5,6 +5,7 @@
  - [Installation](#installation)
  - [Basic GraphQL server](#basic-graphql-server)
  - [GraphQL server with @graphql-tools](#graphql-server-with-graphql-tools)
+ - [More examples](#more-examples)
 
 ## Installation
 
@@ -63,15 +64,15 @@ module.exports = schema;
 
 _./index.js_
 ```js
-const http = require("http");
-const express = require("express");
-const { factory } = require("@via-profit-services/core");
-const schema = require("./schema");
+import { createServer } from "http";
+import express from "express";
+import { factory } from "@via-profit-services/core";
+import schema from "./schema";
 
 (async () => {
   const port = 8080;
   const app = express();
-  const server = http.createServer(app);
+  const server = createServer(app);
 
   const { graphQLExpress } = await factory({
     server,
@@ -92,17 +93,19 @@ const schema = require("./schema");
 
 We strongly recommend using [@graphql-tools](https://github.com/ardatan/graphql-tools) package to build your schemas. This package helps to combine SDL and resolvers into a single executable schema. See `makeExecutableSchema` of `@graphql-tools/schema` module.
 
-Core module also exports its own typeDefs and resolvers. Those definitions would declare Query and Mutation root types. See [API](./api.md) and [Type defs](./type-defs.md) for more details.
+Core module also exports its own typeDefs and resolvers. Those definitions would declare Query and Mutation root types. See [API](./api.md) and [Type defs](./typedefs.md) for more details.
 
 ```js
-const http = require("http");
-const express = require("express");
-const core = require("@via-profit-services/core");
-const { makeExecutableSchema } = require("@graphql-tools/schema");
+import { createServer } from "http";
+import express from "express";
+import * as core from "@via-profit-services/core";
+import { makeExecutableSchema } from "@graphql-tools/schema";
 
 const typeDefs = /* GraphQL */ `
   extend type Query {
-    """ DateTime type is a scalar type added from Core typeDefs """
+    """
+    DateTime type is a scalar type added from Core typeDefs
+    """
     currentDate: DateTime!
   }
 `;
@@ -116,7 +119,7 @@ const resolvers = {
 (async () => {
   const port = 8080;
   const app = express();
-  const server = http.createServer(app);
+  const server = createServer(app);
 
   const schema = makeExecutableSchema({
     typeDefs: [
@@ -144,3 +147,8 @@ const resolvers = {
 
 [![Edit @via-profit-services-core-node-graphql-tools](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-core-node-graphql-tools-04s8s?fontsize=14&hidenavigation=1&theme=dark)
 
+
+
+## More examples
+
+We have collected all examples in one place. [Here](./examples.md).

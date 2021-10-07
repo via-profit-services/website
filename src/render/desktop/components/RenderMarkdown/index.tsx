@@ -2,6 +2,7 @@ import React from 'react';
 import ReactMarkdown, { ReactMarkdownOptions } from 'react-markdown';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 
 import H1 from '~/render/desktop/components/Typography/H1';
 import H2 from '~/render/desktop/components/Typography/H2';
@@ -20,18 +21,46 @@ const Img = styled.img`
 
 const Anchor = styled.a``;
 
+const ExternalLink = styled.a``;
+
+const ExternalLinkIcon = styled(OpenInNewIcon)`
+  color: currentColor;
+  font-size: 0.9em;
+  margin-left: 0.1em;
+`;
+
+const MarkdownEm = styled(Em)`
+  color: ${({ theme }) => theme.color.text.secondary};
+`;
+
+const CodeInline = styled.code`
+  background: ${({ theme }) => theme.color.grey[200]};
+  color: ${({ theme }) => theme.color.accent.secondary};
+  padding: 0em 0.4em;
+  border-radius: 4px;
+`;
+
 const relativeToAbsolute = (base: string, rel: string): string => {
-  const st = base.split('/');
-  const arr = rel.split('/');
-  st.pop(); // ignore the current file name (or no string)
-  // (ignore if "base" is the current folder without having slash in trail)
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === '.') continue;
-    if (arr[i] === '..') st.pop();
-    else st.push(arr[i]);
+  const resultArray = base.split('/');
+
+  if (!base.match(/\/$/)) {
+    resultArray.pop();
   }
 
-  return st.join('/');
+  rel.split('/').forEach(item => {
+    if (item === '..') {
+      resultArray.pop();
+
+      return;
+    }
+    if (item === '.') {
+      return;
+    }
+
+    resultArray.push(item);
+  });
+
+  return resultArray.join('/');
 };
 
 const titleToAnchor = (headername: string | React.ReactNode): string => {
@@ -104,18 +133,21 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
         img: Img,
         blockquote: Blockquote,
         b: Strong,
-        em: Em,
+        em: MarkdownEm,
         p: Paragraph,
         a: ({ href, title, children }) => {
           if (href.match(/^(http|https):\/\//)) {
             return (
-              <a
+              <ExternalLink
                 target="__blank"
                 rel="noopener noreferrer"
                 title={typeof title === 'string' ? title : undefined}
                 href={href}>
                 {children}
-              </a>
+                {!href.match(/^https:\/\/codesandbox\.io\/s\//) && (
+                  <ExternalLinkIcon size="0.8em" />
+                )}
+              </ExternalLink>
             );
           }
 
@@ -174,9 +206,7 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
 
           if (inline) {
             return (
-              <code data-type="inline">
-                {String(children).replace(/\n$/, '')}
-              </code>
+              <CodeInline>{String(children).replace(/\n$/, '')}</CodeInline>
             );
           }
 

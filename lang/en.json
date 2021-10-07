@@ -45,6 +45,10 @@
   "2z6QCO": {
     "defaultMessage": "Core"
   },
+  "3EAwoY": {
+    "defaultMessage": "Context",
+    "description": "Docs sidebar. Core v.2.0 context"
+  },
   "3GLH+d": {
     "defaultMessage": "Examples"
   },
@@ -71,6 +75,10 @@
   "4MIGfe": {
     "defaultMessage": "Knex",
     "description": "Docs sidebar. Knex"
+  },
+  "4Ok+rH": {
+    "defaultMessage": "Context",
+    "description": "Meta title of core.v2.0 Context"
   },
   "4d2Kfy": {
     "defaultMessage": "Redis mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -124,6 +132,14 @@
     "defaultMessage": "File storage mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. File storage. Content paragraph 2"
   },
+  "8RQ8cv": {
+    "defaultMessage": "Connections",
+    "description": "Breadcrumbs. Core v2.0.x connections"
+  },
+  "8glbuq": {
+    "defaultMessage": "Core v2 Context",
+    "description": "Meta description of core.v2.0 Context"
+  },
   "9N/Z1h": {
     "defaultMessage": "Why",
     "description": "Why screen. Header"
@@ -155,6 +171,10 @@
   "BMqK9T": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Core. Content paragraph 2"
+  },
+  "BnRdzg": {
+    "defaultMessage": "Type definitions",
+    "description": "Docs sidebar. Core v.2.0 type defs"
   },
   "C5ASDU": {
     "defaultMessage": "Messages",
@@ -325,6 +345,10 @@
     "defaultMessage": "Getting started",
     "description": "Meta title of core.v2.0 getting started"
   },
+  "VQELCq": {
+    "defaultMessage": "Core v2 scalars",
+    "description": "Meta description of core.v2.0 scalars"
+  },
   "VtNakx": {
     "defaultMessage": "GraphQL HTTP Server",
     "description": "Home main screen. Strong tag of the title"
@@ -385,6 +409,10 @@
     "defaultMessage": "Api",
     "description": "Breadcrumbs. Core v2.0.x API"
   },
+  "bJEJr7": {
+    "defaultMessage": "Scalars",
+    "description": "Docs sidebar. Core v.2.0 scalars"
+  },
   "cpMhJI": {
     "defaultMessage": "Dark",
     "description": "Header. Theme button in dark theme"
@@ -413,6 +441,10 @@
     "defaultMessage": "Privacy policy",
     "description": "Breadcrumbs. Privacy policy"
   },
+  "h0AU2O": {
+    "defaultMessage": "Typedefs",
+    "description": "Meta title of core.v2.0 typedefs"
+  },
   "hdR+lK": {
     "defaultMessage": "Core",
     "description": "Footer. package core link"
@@ -427,6 +459,10 @@
   },
   "jQY7K7": {
     "defaultMessage": "Redis"
+  },
+  "jYpE7v": {
+    "defaultMessage": "Connections and pagination",
+    "description": "Docs sidebar. Core v.2.0 connections"
   },
   "jZDn13": {
     "defaultMessage": "File storage eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
@@ -455,9 +491,21 @@
     "defaultMessage": "Introduction",
     "description": "Docs sidebar. Core v.2.0 introduction"
   },
+  "m2/PMN": {
+    "defaultMessage": "Context",
+    "description": "Breadcrumbs. Core v2.0.x Context"
+  },
   "mGrCzT": {
     "defaultMessage": "Permissions",
     "description": "SectionPackages. Permissions. Header"
+  },
+  "mjJi/I": {
+    "defaultMessage": "Scalars",
+    "description": "Breadcrumbs. Core v2.0.x scalars"
+  },
+  "nIywAj": {
+    "defaultMessage": "Scalars",
+    "description": "Meta title of core.v2.0 scalars"
   },
   "naM7un": {
     "defaultMessage": "TypeScript support",
@@ -491,6 +539,10 @@
     "defaultMessage": "Home",
     "description": "Appbar. Home link"
   },
+  "pvsozs": {
+    "defaultMessage": "Core v2 typedefs",
+    "description": "Meta description of core.v2.0 typedefs"
+  },
   "q6GZrq": {
     "defaultMessage": "List of all packages",
     "description": "Touchable packages. Header"
@@ -506,6 +558,10 @@
   "rUAzFO": {
     "defaultMessage": "Core v2.0",
     "description": "Breadcrumbs. Core v2.0.x"
+  },
+  "rY3VNI": {
+    "defaultMessage": "Core v2 connections",
+    "description": "Meta description of core.v2.0 connections"
   },
   "t3lyVE": {
     "defaultMessage": "What Is It",
@@ -546,8 +602,16 @@
     "defaultMessage": "Examples",
     "description": "Appbar. Examples link"
   },
+  "xiGym8": {
+    "defaultMessage": "Typedefs",
+    "description": "Breadcrumbs. Core v2.0.x typedefs"
+  },
   "y+vST4": {
     "defaultMessage": "Introduction of @via-profit-services/jknex v1.1.x"
+  },
+  "y1j/tV": {
+    "defaultMessage": "Connections",
+    "description": "Meta title of core.v2.0 connections"
   },
   "yDwRTu": {
     "defaultMessage": "GraphQL Server",

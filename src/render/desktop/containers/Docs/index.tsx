@@ -18,7 +18,7 @@ const Fallback = loadable(
 );
 
 const Introduction = loadable(
-  () => import('~/render/desktop/containers/Docs/introduction/index'),
+  () => import('~/render/desktop/containers/Docs/introduction'),
   { fallback: <LoadingIndicator /> },
 );
 

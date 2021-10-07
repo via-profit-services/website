@@ -66,7 +66,7 @@ const devConfig = merge(baseConfig, {
       },
     }),
   ],
-  devtool: 'eval-nosources-cheap-module-source-map',
+  devtool: 'inline-source-map',
   devServer: {
     historyApiFallback: {
       verbose: true,

@@ -23,7 +23,7 @@ const useSidebar = () => {
               }),
               child: [
                 {
-                  path: '/docs/core/v2.0.x',
+                  path: '/docs/core/v2.0.x/introduction',
                   label: intl.formatMessage({
                     defaultMessage: 'Introduction',
                     description: 'Docs sidebar. Core v.2.0 introduction',
@@ -48,6 +48,27 @@ const useSidebar = () => {
                   label: intl.formatMessage({
                     defaultMessage: 'Use middlewares',
                     description: 'Docs sidebar. Core v.2.0 middlewares',
+                  }),
+                },
+                {
+                  path: '/docs/core/v2.0.x/connections',
+                  label: intl.formatMessage({
+                    defaultMessage: 'Connections and pagination',
+                    description: 'Docs sidebar. Core v.2.0 connections',
+                  }),
+                },
+                {
+                  path: '/docs/core/v2.0.x/context',
+                  label: intl.formatMessage({
+                    defaultMessage: 'Context',
+                    description: 'Docs sidebar. Core v.2.0 context',
+                  }),
+                },
+                {
+                  path: '/docs/core/v2.0.x/typedefs',
+                  label: intl.formatMessage({
+                    defaultMessage: 'Type definitions and scalars',
+                    description: 'Docs sidebar. Core v.2.0 type defs',
                   }),
                 },
                 {

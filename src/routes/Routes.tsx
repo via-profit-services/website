@@ -80,10 +80,39 @@ const pages: PagesMap = {
 
 const Routes: React.FC = () => {
   const mode = useSelector<ReduxState, ReduxSelectedMode>(state => state.mode);
-  const location = useLocation();
+  const { pathname, hash } = useLocation();
+  const locationPathnameRef = React.useRef<string>('');
+
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+    // nothing to do if pathname not be changed
+    // maybe it hash only changed
+    if (locationPathnameRef.current === pathname) {
+      return;
+    }
+
+    locationPathnameRef.current = pathname;
+
+    // scroll to top (without animation)
+    if (!hash) {
+      window?.scrollTo(0, 0);
+
+      return;
+    }
+
+    // if hash exist in url then scroll to hash (without animation)
+    if (hash) {
+      const element = document?.querySelector(
+        `a[id="${hash.replace(/^#/, '')}"]`,
+      );
+      if (element) {
+        const yOffset = -61; // app header height
+        const y =
+          element?.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window?.scrollTo({ top: y, behavior: 'auto' });
+      }
+    }
+  }, [hash, pathname]);
 
   return (
     <Switch>

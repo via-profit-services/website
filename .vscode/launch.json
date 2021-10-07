@@ -7,13 +7,27 @@
       "type": "pwa-chrome",
       "url": "http://localhost:9000",
       "webRoot": "${workspaceFolder}",
+      "trace": true,
+      "sourceMaps": true,
+      "localRoot": "${workspaceRoot}/src/app.ts",
+      "remoteRoot": "${workspaceRoot}/build/index.js",
+      "sourceMapPathOverrides": {
+        "webpack://@via-profit-services/website/./*": "${workspaceRoot}/*"
+      },
     },
     {
       "name": "Attach to Chrome",
       "port": 9222,
       "request": "attach",
       "type": "pwa-chrome",
-      "webRoot": "${workspaceFolder}"
+      "webRoot": "${workspaceFolder}",
+      "trace": true,
+      "sourceMaps": true,
+      "localRoot": "${workspaceRoot}/src/app.ts",
+      "remoteRoot": "${workspaceRoot}/build/index.js",
+      "sourceMapPathOverrides": {
+        "webpack://@via-profit-services/website/./*": "${workspaceRoot}/*"
+      },
     },
   ]
 }  

@@ -1,16 +1,12 @@
-# Connections
+# Connections and cursor pagination
 
-The core contains a set of types, methods and resolvers that will facilitate the creation and handling of connections as described in the [specification](https://relay.dev/graphql/connections.htm).
+The core contains a set of types, methods and resolvers that will facilitate the creation and handling of connections as described in the [specification](https://relay.dev/graphql/connections.htm). Contains helpers for implementing cursor pagination and legacy pagination by offset/limit.
+
+**Note: you can use our approach or come up with your own. Everything described below is only a recommendation. You have the right to act at your discretion.**
 
 In order to create a connection, you must first declare a schema:
 
-
-
-Модуль позволяет использовать пагинацию на курсорах и класический подход одновременно
-
-
-
-_Note: GraphQL types OrderDirection, Connection, PageInfo, Edge, Node and etc. already declared in Core typedefs (see: [TypeDefs](./type-defs.md))_
+_Note: GraphQL types OrderDirection, Connection, PageInfo, Edge, Node and etc. already declared in Core typedefs (see: [TypeDefs](./typedefs.md))_
 
 ```graphql
 type Query {
@@ -30,7 +26,7 @@ type Query {
 """
 Example of User type
 """
-type User {
+type  implements Node {
   id: ID!
   name: String!
   login: String!
@@ -133,7 +129,7 @@ We use exactly this structure of arguments. The core module contains several use
 Now you can create a resolvers for this schema:
 
 ```js
-const { buildQueryFilter, buildCursorConnection } = require("@via-profit-services/core");
+import { buildQueryFilter, buildCursorConnection } from '@via-profit-services/core';
 
 const resolvers = {
   Query: {
@@ -141,7 +137,7 @@ const resolvers = {
       // convert input arguments to persist filter (See return value of this method)
       // Will be return `OutputFilter` type with normalized props
       // You can use this filter in your Model class
-      const filter = buildQueryFilter(args);
+      const { limit, offset, offset, where, revert, orderBy } = buildQueryFilter(args);
 
       // Your model should return the data for the connection
       // You must provide totalCount and nodes yourself
@@ -149,7 +145,12 @@ const resolvers = {
       // in the same form as received from the buildQueryFilter method
       // to simplify the selection from the database using filters, you
       // can use the package https://github.com/via-profit-services/knex
-      const { totalCount, nodes, limit, offset, offset, where, revert } = MyModelClass.getUsers(filter);
+      const { totalCount, nodes } = MyModelClass.getUsers({
+        where,
+        limit,
+        offset,
+        orderBy,
+      });
 
       // Now you can build the conection object like this:
       // method buildCursorConnection combine and return edges,
@@ -159,11 +160,21 @@ const resolvers = {
         nodes,
         limit,
         offset,
-        offset,
         where,
         revert,
+        orderBy,
       });
 
+      // connection const will be like this: {
+      //   totalCount: 20,
+      //   edges: [{ id: '1', name: 'Leo' }, {id: '2', name: 'Raph'}],
+      //   pageInfo: {
+      //     startCursor: '=JHKJ',
+      //     endCursor: '==JHKdJ',
+      //     hasPreviousPage: false,
+      //     hasNextPage: true,
+      //   },
+      // }
       return connection;
     },
   },
