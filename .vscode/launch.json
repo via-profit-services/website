@@ -9,8 +9,6 @@
       "webRoot": "${workspaceFolder}",
       "trace": true,
       "sourceMaps": true,
-      "localRoot": "${workspaceRoot}/src/app.ts",
-      "remoteRoot": "${workspaceRoot}/build/index.js",
       "sourceMapPathOverrides": {
         "webpack://@via-profit-services/website/./*": "${workspaceRoot}/*"
       },
@@ -23,8 +21,6 @@
       "webRoot": "${workspaceFolder}",
       "trace": true,
       "sourceMaps": true,
-      "localRoot": "${workspaceRoot}/src/app.ts",
-      "remoteRoot": "${workspaceRoot}/build/index.js",
       "sourceMapPathOverrides": {
         "webpack://@via-profit-services/website/./*": "${workspaceRoot}/*"
       },

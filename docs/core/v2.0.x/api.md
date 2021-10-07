@@ -175,6 +175,20 @@ const dataloader = new DataLoader(async ids => {
 });
 ```
 
+`collateForDataloader` takes 2 or 3 arguments. The third argument is the name of the key, which should be considered an identifier. Default - `id`:
+
+```js
+const dataloader = new DataLoader(async ids => {
+  const bananas = await context.services.fruits.getBananas(ids);
+
+  // bananas = [{ record: '1' }, { record: '2' }]
+
+  return collateForDataloader(ids, bananas, 'record');
+});
+```
+
+
+
 ### extractNodeIds
 
 Returns node IDs array
