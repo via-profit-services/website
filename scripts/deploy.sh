@@ -35,7 +35,7 @@ REMOTE_LOCATION="${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}";
 echo -e "${COLOR_YELLOW}Uploading to «${REMOTE_LOCATION}»${COLOR_NORMAL}";
 
 # Copy files
-rsync -r --progress ./dist/* "${REMOTE_LOCATION}";
+rsync -r ./dist/* "${REMOTE_LOCATION}";
 
 # Restart
 ssh -T "${DEPLOY_USER}@${DEPLOY_HOST}" << EOSSH
