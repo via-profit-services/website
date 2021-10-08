@@ -96,6 +96,7 @@ Output will be:
 **Warning! Do not use spread operator while combining old current context and new context value. See example below:**
 
 _Warning! This code is not valid_
+
 ```js
 // !!! This code is not valid
 const { graphQLExpress } = await factory({
