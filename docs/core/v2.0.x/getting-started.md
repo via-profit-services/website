@@ -23,16 +23,14 @@ $ yarn add express graphql @via-profit-services/core
 
 The Core factory takes the following parameters:
 
-| Name                  | Required | Default value | Description                                                                                                                                                                                                                                                     |
-| --------------------- | :------: | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `server`              | **Yes**  | -             | HTTP server instance                                                                                                                                                                                                                                            |
-| `schema`              | **Yes**  | -             | raphQL Schema Definition. See [graphql.org](https://graphql.org) for more information                                                                                                                                                                           |
-| `timezone`            |    No    | `UTC`         | `String` Server timezone                                                                                                                                                                                                                                        |
-| `debug`               |    No    | `false`       | `Boolean` Debug mode                                                                                                                                                                                                                                            |
-| `rootValue`           |    No    | `undefined`   | `Object` GraphQL Root resolver                                                                                                                                                                                                                                  |
-| `persistedQueriesMap` |    No    | `undefined`   | `Object` Persisted Queries map (Object contains key: value pairs). If persisted queries map is passed, the server will ignore the query directive in body request and read the map [Relay persisted-queries](https://relay.dev/docs/en/persisted-queries.html). |
-| `persistedQueryKey`   |    No    | `documentId`  | `String` Used only together with the `persistedQueriesMap` option. The name of the parameter that will be passed the ID of the query in the Persisted Queries map.                                                                                              |
-| `middleware`          |    No    | `undefined`   | `Middleware                                                                                                                                                                                                                                                     | Middleware[]` Middlewares. See (middleware documentation)[./middlewares.md] for more details. |
+ - `server` **required** **http.Server** - HTTP server instance.
+ - `schema` **required** **GraphQLSchema** - GraphQL Schema Definition. See [graphql.org](https://graphql.org) for more information.
+ - `timezone` **String** - Server timezone. Default: `UTC`.
+ - `debug` **Boolean** - Debug mode. Default: `false`.
+ - `rootValue` **Object** - GraphQL Root resolver.
+ - `persistedQueriesMap` **Object** - Persisted Queries map (Object contains key: value pairs). If persisted queries map is passed, the server will ignore the query directive in body request and read the map [Relay persisted-queries](https://relay.dev/docs/en/persisted-queries.html).
+ - `persistedQueryKey` **String** - Used only together with the `persistedQueriesMap` option. The name of the parameter that will be passed the ID of the query in the Persisted Queries map. Default: `documentId`.
+ - `middleware` **Middleware | Middleware[]** - Middlewares. See [middleware documentation](./middlewares.md) for more details.
 
 
 ## Basic GraphQL server

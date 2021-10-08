@@ -25,6 +25,7 @@ import { factory, resolvers, buildQueryFilter } from '@via-profit-services/core'
  - [buildCursorConnection](#buildcursorconnection)
  - [extractKeyAsObject](#extractkeyasobject)
  - [fieldsWrapper](#fieldswrapper)
+ - [fieldBuilder](#fieldbuilder)
 
 
 ### factory
@@ -376,4 +377,62 @@ const { graphQLExpress } = await factory({
     }),
   ],
 });
+```
+
+### fieldBuilder
+
+Build GraphQL field resolver. This function takes as its first argument an array of keys of the Type that needs to be resolved. The second argument is the function to which the key name will be passed. The function should return a value of the type for this key.
+
+This is useful when you need to modify  the resolver response.
+
+Suppose you need to modify name of the user before response, but you can'n do this in `Query->user` resolver for some reason:
+
+Schema:
+
+```graphql
+type Query {
+  user(id: ID!): User
+}
+
+type User {
+  id: ID!
+  firstname: String!
+  firstname: String!
+  email: String!
+}
+```
+
+Then In this case, the resolver will look like this (not usage `fieldBuilder`):
+
+```js
+const resolvers = {
+  Query: {
+    user: async (_, args) => UserModel.getUser(args.id),
+  },
+  user: {
+    id: ({ id }) => id,
+    email: ({ email }) => email,
+    firstname: ({ id, firstname }) => id === 'e16329cd' ? firstname.toUpperCase() : firstname,
+    lastname: ({ id, lastname }) => id === 'e16329cd' ? lastname.toUpperCase() : lastname,
+  },
+};
+```
+If you use `fieldBuilder`:
+
+```js
+const resolvers = {
+  Query: {
+    user: async (_, args) => UserModel.getUser(args.id),
+  },
+  user: fieldBuilder(
+    ['id', 'firstname', 'lastname', 'email'],
+    field => (parent, args, context) => {
+      if (parent.id === 'e16329cd' && ['firstname', 'lastname'].includes(field)) {
+        return parent[field].toUpperCase();
+      }
+
+      return parent[field];
+    },
+  ),
+};
 ```
