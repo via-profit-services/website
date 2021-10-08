@@ -129,7 +129,7 @@ We use exactly this structure of arguments. The core module contains several use
 Now you can create a resolvers for this schema:
 
 ```js
-import { buildQueryFilter, buildCursorConnection } from '@via-profit-services/core';
+const { buildQueryFilter, buildCursorConnection } = require('@via-profit-services/core');
 
 const resolvers = {
   Query: {
