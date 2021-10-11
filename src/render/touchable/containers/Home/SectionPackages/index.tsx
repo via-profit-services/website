@@ -1,14 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
-import SwipeableViews from 'react-swipeable-views';
-// import { Link } from 'react-router-dom';
 
 import H2 from '~/render/touchable/components/Typography/H2';
 import Subtitle from '~/render/touchable/components/Typography/Subtitle';
-import Paragraph from '~/render/touchable/components/Typography/Paragraph';
-import Card from './PackageCard';
-import CoreIcon from '~/render/desktop/components/Icons/Core';
+import PackagesCarousel from './PackagesCarousel';
 
 const Section = styled.section`
   background-color: ${({ theme }) => theme.color.background.secondary};
@@ -35,68 +31,7 @@ const SectionPackages: React.FC = () => (
       </Subtitle>
     </Inner>
 
-    <div>
-      <Card
-        link="/packages/core"
-        icon={<CoreIcon />}
-        header={
-          <FormattedMessage
-            defaultMessage="Core"
-            description="SectionPackages touchable. Core. Header"
-          />
-        }
-        content={
-          <>
-            <Paragraph>
-              <FormattedMessage
-                defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit "
-                description="SectionPackages touchable. Core. Content paragraph"
-              />
-            </Paragraph>
-          </>
-        }
-      />
-      <Card
-        link="/packages/subscriptions"
-        icon={<CoreIcon />}
-        header={
-          <FormattedMessage
-            defaultMessage="Subscriptions"
-            description="SectionPackages touchable. Subscriptions. Header"
-          />
-        }
-        content={
-          <>
-            <Paragraph>
-              <FormattedMessage
-                defaultMessage="Subscriptions Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit "
-                description="SectionPackages touchable. Subscriptions. Content paragraph"
-              />
-            </Paragraph>
-          </>
-        }
-      />
-      <Card
-        link="/packages/knex"
-        icon={<CoreIcon />}
-        header={
-          <FormattedMessage
-            defaultMessage="Knex"
-            description="SectionPackages touchable. Knex. Header"
-          />
-        }
-        content={
-          <>
-            <Paragraph>
-              <FormattedMessage
-                defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit "
-                description="SectionPackages touchable. Knex. Content paragraph"
-              />
-            </Paragraph>
-          </>
-        }
-      />
-    </div>
+    <PackagesCarousel />
   </Section>
 );
 

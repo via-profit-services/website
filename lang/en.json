@@ -11,6 +11,10 @@
     "defaultMessage": "Examples",
     "description": "Docs sidebar. Core v.2.0 examples"
   },
+  "/BUSR7": {
+    "defaultMessage": "Core v2 middlewares",
+    "description": "Meta description of core.v2.0 middlewares"
+  },
   "/kFHHa": {
     "defaultMessage": "Flexible",
     "description": "Section main touchable. List element two"
@@ -79,6 +83,10 @@
   "4Ok+rH": {
     "defaultMessage": "Context",
     "description": "Meta title of core.v2.0 Context"
+  },
+  "4TWUD9": {
+    "defaultMessage": "Middlewares",
+    "description": "Meta title of core.v2.0 middlewares"
   },
   "4d2Kfy": {
     "defaultMessage": "Redis mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -184,6 +192,10 @@
     "defaultMessage": "{image}Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home second screen. Third card content"
   },
+  "Cm9cIv": {
+    "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
+    "description": "SectionPackages touchable. Subscriptions. Content paragraph"
+  },
   "CnKfpl": {
     "defaultMessage": "standalone",
     "description": "Section main touchable. List element three"
@@ -239,6 +251,10 @@
     "defaultMessage": "Terms",
     "description": "Footer. Terms link"
   },
+  "KCqJu9": {
+    "defaultMessage": "Middlewares",
+    "description": "Breadcrumbs. Core v2.0.x middlewares"
+  },
   "KFRlL2": {
     "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home second screen. Second card content"
@@ -270,10 +286,6 @@
   "M1ndnO": {
     "defaultMessage": "Core",
     "description": "SectionPackages. Core. Header"
-  },
-  "MrFDof": {
-    "defaultMessage": "Subscriptions Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
-    "description": "SectionPackages touchable. Subscriptions. Content paragraph"
   },
   "NnsvFA": {
     "defaultMessage": "Eprehenderit qui laborum dolor cillum",
@@ -506,6 +518,10 @@
   "oIvfpm": {
     "defaultMessage": "Redis",
     "description": "packages sidebar. Redis"
+  },
+  "oinviI": {
+    "defaultMessage": "Package overview",
+    "description": "Touchable package card. Link"
   },
   "p/QgQD": {
     "defaultMessage": "project",

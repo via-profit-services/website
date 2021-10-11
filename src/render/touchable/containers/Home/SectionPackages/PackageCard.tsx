@@ -1,10 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
+import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
+import LinkIcon from 'mdi-react/ChevronRightIcon';
 
 import H3 from '~/render/desktop/components/Typography/H3';
 
-type Props = {
+export type CardProps = {
   icon: React.ReactNode;
   header: React.ReactNode;
   content: React.ReactNode;
@@ -12,92 +14,99 @@ type Props = {
 };
 
 const Card = styled.div`
-  margin-bottom: 2rem;
   display: flex;
   position: relative;
+  padding: ${({ theme }) => theme.grid.touchable.gutter}px;
 `;
 
 const CardInner = styled.div`
-  padding-left: 4.4em;
-  padding-right: 3em;
-  margin-left: 3rem;
-  margin-right: 2rem;
   flex: 1;
   background-color: ${({ theme }) => theme.color.background.secondary};
   box-shadow: ${({ theme }) => theme.shadows[0]};
-  border-radius: 20px;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
+  border-radius: 22px;
   position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3.5rem;
-    border-radius: inherit;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    background: ${({ theme }) => theme.color.accent.secondary};
-  }
+  display: flex;
+  flex-flow: column;
 `;
 
-const Icon = styled.div`
+const CardHeader = styled.div`
+  color: ${({ theme }) => theme.color.text.inverse};
+  background: ${({ theme }) => theme.color.gradients[0]};
+  border-radius: 20px 20px 0 0;
+  padding: 1.2em 2em 1.2em 4em;
+  position: relative;
+  & > h3 {
+    margin: 0;
+  }
+`;
+const CardContent = styled.div`
+  padding: 1em 3em 0 2em;
+`;
+
+const Icon = styled.span`
+  display: inline-flex;
+  border-radius: 100%;
+  background-color: ${({ theme }) => theme.color.background.secondary};
+  box-shadow: ${({ theme }) => theme.shadows[1]};
+  padding: 0.2em;
+  position: absolute;
+  left: -1rem;
+  top: -1rem;
+  font-size: 3em;
   color: ${({ theme }) => theme.color.accent.primary};
-  font-size: 3rem;
+`;
+
+const CardLink = styled(Link)`
+  position: relative;
+  margin: 1em 0.5em 0.5em 0;
+  font-size: 0.9em;
   display: inline-flex;
-  border-radius: 100%;
-  background-color: ${({ theme }) => theme.color.background.secondary};
-  box-shadow: ${({ theme }) => theme.shadows[1]};
-  padding: 0.3em;
-  position: absolute;
-  left: -2rem;
+  align-self: flex-end;
+  border-radius: 60px;
+  text-decoration: none;
+  background: ${({ theme }) => theme.color.gradients[1]};
+  width: auto;
   & > svg {
-    width: 1em;
-    height: 1em;
+    margin-left: 0.5em;
   }
 `;
 
-const IconRight = styled.div`
-  display: inline-flex;
-  border-radius: 100%;
-  background-color: ${({ theme }) => theme.color.background.secondary};
-  box-shadow: ${({ theme }) => theme.shadows[1]};
-  padding: 0.5em;
-  position: absolute;
-  right: -1rem;
+const LinkInner = styled.span`
+  flex: 1;
+  background: ${({ theme }) => theme.color.text.inverse};
+  margin: 0.2em;
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
 `;
-
-const CardContent = styled.div``;
-// const CardLink = styled(Link)`
-//   display: block;
-//   padding: 1.6em;
-//   font-size: 0.9em;
-//   & > svg {
-//     color: ${({ theme }) => theme.color.grey[500]};
-//   }
-// `;
 
 const Content = styled.div`
   color: ${({ theme }) => theme.color.text.secondary};
 `;
 
-const PackageCard: React.FC<Props> = props => {
+const PackageCard: React.FC<CardProps> = props => {
   const { header, content, icon, link } = props;
 
   return (
     <Card>
       <CardInner>
-        <Icon>{icon}</Icon>
-        <CardContent>
+        <CardHeader>
+          <Icon>{icon}</Icon>
           <H3>{header}</H3>
+        </CardHeader>
+        <CardContent>
           <Content>{content}</Content>
         </CardContent>
-        <IconRight>
-          <ChevronRightIcon fontSize="1em" color="currentColor" />
-        </IconRight>
+        <CardLink to={link}>
+          <LinkInner>
+            <FormattedMessage
+              defaultMessage="Package overview"
+              description="Touchable package card. Link"
+            />
+            <LinkIcon size="1em" />
+          </LinkInner>
+        </CardLink>
       </CardInner>
     </Card>
   );

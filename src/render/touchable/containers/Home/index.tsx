@@ -7,7 +7,7 @@ import Header from '~/render/touchable/components/Header';
 import Footer from '~/render/touchable/components/Footer';
 import Meta from '~/render/desktop/components/Meta';
 import SectionWhatsIsIt from './SectionWhatsIsIt';
-// import SectionPackages from './SectionPackages';
+import SectionPackages from './SectionPackages';
 import SectionMain from './SectionMain';
 import SectionWhy from './SectionWhy';
 
@@ -39,7 +39,7 @@ const HomePageDesktop: React.FC = () => {
         <SectionMain />
         <SectionWhatsIsIt />
         <SectionWhy />
-        {/* <SectionPackages /> */}
+        <SectionPackages />
       </Main>
 
       <Footer />
