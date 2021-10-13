@@ -4,7 +4,6 @@ import SwipableViews from 'react-swipeable-views';
 import HomeIcon from 'mdi-react/HomeOutlineIcon';
 import AboutIcon from 'mdi-react/BlurIcon';
 
-import DeveloperLinear from '~/render/touchable/components/Developer/DeveloperLinear';
 import DrawerItem from './DrawerItem';
 
 export type AppDrawerProps = {
@@ -37,17 +36,6 @@ const DrawerNav = styled.nav`
   display: flex;
   flex-flow: column;
   overflow-y: auto;
-`;
-
-const DrawerFooter = styled.div`
-  border-top: 1px solid currentColor;
-`;
-
-const DeveloperLink = styled.a`
-  display: block;
-  color: ${({ theme }) => theme.color.text.primary};
-  text-decoration: none;
-  padding: 20px;
 `;
 
 const DrawerFallback = styled.div`
@@ -100,12 +88,6 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
               onDrawerClose={onClose}
             />
           </DrawerNav>
-
-          <DrawerFooter>
-            <DeveloperLink href="https://via-profit.ru" target="__blank">
-              <DeveloperLinear height="2rem" />
-            </DeveloperLink>
-          </DrawerFooter>
         </DrawerInner>
         <DrawerFallback />
       </SwipableViews>

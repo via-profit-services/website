@@ -114,15 +114,15 @@ type UsersEdge implements Edge {
 
 **Note:** As you can see, the field `list` has the following set of arguments:
 
- - first - pagination argument as per GraphQl specification
- - last - pagination argument as per GraphQl specification
- - after - pagination argument as per GraphQl specification
- - before - pagination argument as per GraphQl specification
- - offset - pagination argument. Offset value to be passed to PostgreSQL query (`select * from users offset 3 limit 100`)
- - orderBy - an argument that is analogous to the ORDER BY statement in SQL
- - between - an argument that is analogous to the BETWEEN statement in SQL
- - search - the argument contains the search terms
- - filter - an argument that is analogous to the WHERE statement in SQL
+ - **first** - pagination argument as per GraphQl specification
+ - **last** - pagination argument as per GraphQl specification
+ - **after** - pagination argument as per GraphQl specification
+ - **before** - pagination argument as per GraphQl specification
+ - **offset** - pagination argument. Offset value to be passed to PostgreSQL query (`select * from users offset 3 limit 100`)
+ - **orderBy** - an argument that is analogous to the ORDER BY statement in SQL
+ - **between** - an argument that is analogous to the BETWEEN statement in SQL
+ - **search** - the argument contains the search terms
+ - **filter** - an argument that is analogous to the WHERE statement in SQL
 
 We use exactly this structure of arguments. The core module contains several useful methods for processing incoming parameters.
 
