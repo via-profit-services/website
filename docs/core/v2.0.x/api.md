@@ -33,6 +33,20 @@ import { factory, resolvers, buildQueryFilter } from '@via-profit-services/core'
 
 Function returns object contains `graphQLExpress` - express middleware.
 
+Arguments:
+ - config - An object containing:
+   - `server` **required** - HTTP server instance.
+   - `schema` **required** - GraphQL Schema Definition. See[https://graphql.org](https://graphql.org) for more details.
+   - `persistedQueriesMap` - Persisted Queries map (Object contains key: value pairs). If persisted queries map is passed, the server will ignore the query directive in body request and read the map. See [Relay docs](https://relay.dev/docs/en/persisted-queries.html) for more details.
+    - `persistedQueryKey` - Used only together with the `persistedQueriesMap` option. The name of the parameter that will be passed the ID of the query in the Persisted Queries map. Default: `documentId`
+    - `timezone` - Server timezone. Default: `UTC`
+    - `debug` - Debug mode. Default: `false`
+    - `rootValue` - GraphQL root value.
+    * `middleware` - Middleware function or array of middlewares. See [middlewares](./middlewares) for more details.
+
+Returns:
+  ExpressJs middleware
+
 _Example of usage:_
 
 ```js
@@ -79,35 +93,125 @@ Resolvers object contains:
 
 Convert input filter (partial from GraphQL request) into persist filter.
 
-Этот метод принимает объект типа `InputFilter` с необязательными ключами и возвращает объект типа `OutputFilter` в котором будут присутствовать все ключи. Важно заметить, что некоторые ключи будут трансформировани или заменены. Так например, ключ `filter`, который является объектом, будет заменен на массив массивов с именем `where`. Это сделано в первую очередь для удобства использования. 
+This method takes an object of type `InputFilter` with optional keys and returns an object of type` OutputFilter` in which all keys will be present. It is important to note that some keys will be transformed or replaced. So for example, the key `filter`, which is an object, will be replaced with an array of arrays named` where`. This is done primarily for ease of use.
 
-_InputFilter and OutputFilter types (Typescript definition)_
+Arguments:
+  - InputFilter - An object containing:
+    - `first` - Number of items requested per result page. `Number`.
+    - `last` - Number of end-of-line items requested on the results page. `Number`.
+    - `offset` - Number of elements to skip before fetching page. `Number`.
+    - `before` - ds `String`.
+    - `after` - Cursor, from which the selection of results will be performed using pagination on cursors `String`.
+    - `before` - Cursor, starting from which the selection of results will be performed in the opposite direction using pagination on cursors. `String`.
+    `orderBy` - Array of objects for sorting:
+      - `field` **required** - Field name
+      - `direction` **required** - One of values: `ASC` or `DESC`.
+    `search` - Array of objects for search:
+      - `field` **required** - Field name
+      - `query` **required** - Search query string.
+    `between` - An object containing the query parameters `between`:
+       - `start` **required** - string or number or date.
+       - `end` **required** - string or number or date.
+    `filter` - Object with custom filter values
 
-```ts
-interface InputFilter {
-  first?: number;
-  offset?: number;
-  last?: number;
-  after?: string;
-  before?: string;
-  orderBy?: OrderBy;
-  search?: InputSearch;
-  between?: Between;
-  filter?: {
-      [key: string]: InputFilterValue | readonly string[] | readonly number[];
-  };
-}
+The `search` key can accept not only an array of objects, but also the following data:
 
-interface OutputFilter {
-  limit: number;
-  offset: number;
-  orderBy: OrderBy;
-  where: Where;
-  revert: boolean;
-  search: OutputSearch | false;
-  between: Between;
-}
+```js
+
+// Variant 1. Search accept object
+const filter = buildQueryFilter({
+  search: {
+    field: 'name',
+    query: 'Leo',
+  },
+});
+
+// Variant 2. Search accept array of objects
+const filter = buildQueryFilter({
+  search: [
+    {
+      field: 'name',
+      direction: 'Leo',
+    },
+    {
+      field: 'lastname',
+      direction: 'Ninja',
+    },
+  ],
+});
+
+// Variant 3. Search accept object
+const filter = buildQueryFilter({
+  search: {
+    fields: ['name', 'lastname'],
+    direction: 'Leo',
+  },
+});
+
+// Variant 4. Search accept array of objects
+const filter = buildQueryFilter({
+  search: [
+    {
+      fields: ['name', 'lastname'],
+      direction: 'Leo',
+    },
+    {
+      fields: ['email', 'domain'],
+      direction: 'exampe.com',
+    },
+  ],
+});
 ```
+
+
+_Note: You can use `first` with `after` or `last` with `before`. And you can use `first` with `offset` or `last` with `offset`._
+
+Returns:
+  - OutputFilter - An object containing:
+    - `limit` **permanent** - Limit of the results needed
+    - `offset` **permanent** - Start offset of the results needed
+    - `revert` **permanent** - Will be `true` if Input filter contain `last` or `before` parameters and will be `false` otherwise.
+    - `where` **permanent** - Array of tuples. Each tuple contains: field name; logical operator; value. See example below.
+    - `search` **permanent** - false or Array of objects:
+      - `field` **permanent** - Search field name
+      - `query` **permanent** - Search query string
+    - `between` **permanent** - An object containing the query parameters `between`:
+      - `start` **permanent** - string or number or date.
+      - `end` **permanent** - string or number or date.
+
+Example 1 of `where` key:
+
+```js
+const { where } = buildQueryFilter({
+  filter: {
+    status: 'accepted',
+  },
+});
+
+console.log(where);
+/**
+ * [['status', '=', 'accetped']]
+ * /
+```
+Example 2 of `where` key:
+
+```js
+const { where } = buildQueryFilter({
+  filter: {
+    status: ['accepted', 'aborted'],
+    category: 21,
+  },
+});
+
+console.log(where);
+/**
+ * [
+ *   ['status', 'in', ['accetped', 'aborted']],
+ *   ['category', '=', 21]
+ * ]
+ * /
+```
+
 
 _Example of SDL. Arguments of list field will be passed to `buildQueryFilter` method._
 
@@ -153,6 +257,12 @@ const resolvers = {
 
 Format array of IDs into object with id key
 
+Arguments:
+ - `ids` **required** - Array of ids
+
+Returns:
+ - Array of objects. Each object contain single key `id`.
+
 ```js
 const ids = arrayOfIdsToArrayOfObjectIds(['1', '2', '3']);
 
@@ -167,6 +277,11 @@ There are a few constraints this function must uphold:
   - The Array of values must be the same length as the Array of keys.
   - Each index in the Array of values must correspond to the same index in the Array of keys.
 For details [here](https://github.com/graphql/dataloader#batch-function)
+
+Arguments:
+ - `ids` **required** - array of ids.
+ - `nodes` **required** - array of objects.
+ - `keyName` - the name of the key, which should be considered an identifier. Default - `id`.
 
 ```js
 const dataloader = new DataLoader(async ids => {
@@ -194,6 +309,12 @@ const dataloader = new DataLoader(async ids => {
 
 Returns node IDs array
 
+Arguments:
+ - `nodes` **required** - Array of  objects containing at least the `id` key.
+
+Returns:
+ - Array of ids
+
 ```js
 const ids = extractNodeIds([
   {id: '1', name: 'Leo'},
@@ -208,6 +329,14 @@ console.log(ids); // <-- ['1', '2', '3'];
 ### extractNodeField
 
 Return array of fields of node
+
+
+Arguments:
+ - `nodes` **required** - array of objects.
+ - `keyName` **required** - name of the extracted key.
+
+Returns:
+ - Array of values
 
 ```js
 const persons = [
@@ -224,6 +353,16 @@ console.log(names); // <-- ['Leo', 'Raph', 'Mikey']
 ### nodeToEdge
 
 Wrap node to cursor object
+
+Arguments:
+ - `node` - An object containing at least the `id` key.
+ - `cursorName` - Name of the cursor
+ - `cursorPayload` - Payload of the cursor
+
+Returns:
+ - Object containing:
+   `cursor` - cursor string
+   `node` - the value passed as the first argument
 
 ```js
 const filter = {
@@ -254,6 +393,13 @@ console.log(edges); // <-- [{ cursor: 'XGHJGds', node: { id: '1', name: 'Leo' } 
 Just encode base64 string
 _Internal function. Used for GraphQL connection building_
 
+Arguments:
+  - `cursorPayload` - stringified cursor payload
+
+Returns:
+  - `cursor` - Cursor string
+
+
 ```js
 const cursor = stringToCursor(JSON.stringify({ foo: 'bar' }));
 console.log(cursor); // <-- eyJmb28iOiJiYXIifQ==
@@ -264,6 +410,12 @@ console.log(cursor); // <-- eyJmb28iOiJiYXIifQ==
 Just decode base64 string
 _Internal function. Used for GraphQL connection building_
 
+Arguments:
+  - `cursor` - Cursor string
+
+Returns:
+ - `cursorPayload` - stringified cursor payload
+
 ```js
 const data = cursorToString('eyJmb28iOiJiYXIifQ==');
 console.log(data); // <-- '{"foo":"bar"}'
@@ -272,6 +424,13 @@ console.log(data); // <-- '{"foo":"bar"}'
 ### makeNodeCursor
 
 Returns cursor base64 cursor string by name and cursor payload
+
+Arguments:
+ - `cursorName` - Name of the cursor
+ - `cursorPayload` - Cursor payload object
+
+Returns:
+ - `cursor` - Cursor string
 
 ```js
 const cursor = makeNodeCursor('persons-cursor', {
@@ -290,6 +449,12 @@ console.log(cursor); // <-- eyJvZmZzZXQiOjAsImxpbWl0IjoxNSwid2hlcmUiOltdLCJvcmRl
 
 Convert string to cursor base64 string and return payload
 
+Arguments:
+  - `cursor` - Cursor string
+
+Returns:
+  - `cursorPayload` - Cursor payload object
+
 ```js
 const payload = getCursorPayload('eyJvZmZzZXQiOjAsImxpbWl0IjoxNSwid2hlcmUiOltdLCJvcmRlckJ5IjpbeyJmaWVsZCI6Im5hbWUiLCJkaXJlY3Rpb24iOiJkZXNjIn1dfS0tLXBlcnNvbnMtY3Vyc29y')
 console.log(payload);
@@ -306,6 +471,30 @@ console.log(payload);
 ### buildCursorConnection
 
 Returns Relay cursor bundle
+
+Arguments:
+ - connectionParams - Object with connection parameters:
+   - `totalCount` **required** - The total number of records matching the query
+   - `limit` **required** - Limit of the results per page
+   - `nodes` **required** - Rows. Array of nodes
+   - `offset` - Query start offset
+   - `orderBy` - Array of objects for sorting:
+        - `field` **required** - Field name
+        - `direction` **required** - One of values: `ASC` or `DESC`.
+   - `where` - Array of tuples. Tuple is an array containing: field name; logical operator; value
+ - `cursorName` - Name of the cursor.
+
+Returns:
+ - cursorConnection - Object containing:
+    `totalCount` - The total number of records matching the query
+    `pageInfo` - Object containing:
+        - `startCursor` - Start cursot
+        - `endCursor` - End cursor
+        - `hasPreviousPage` - Will be true if request have previous results page or false otherwise
+        - `hasNextPage` - Will be true if request have next results page or false otherwise
+    `edges` - Array of objects containing:
+       `node` - Node object.
+       `cursor` - Cursor string.
 
 ```js
 const cursorBundle = buildCursorConnection({
@@ -346,6 +535,13 @@ console.log(cursorBundle);
 
 Creates an object which contains a specific key
 
+Arguments:
+  - `source` - Object containing any data
+  - `keyName` - The key by which the value will be extracted
+
+Results:
+ - Object containing only key with `keyName`.
+
 ```js
 const source = {
   foo: 'Foo',
@@ -361,6 +557,21 @@ console.log(record); // <-- { bar: 12 }
 Wrap types resolvers in schema. You can wrap types without resolvers - will be created noop-resolver to wrap the field.
 
 **Note:** The resolver function should return all the received parameters.
+
+Arguments:
+  - `schema` **required** - GraphQL schema
+  - `wrapper` **required** - A function to be called with the argument containing:
+    - `resolver` - Original GraphQL field resolver
+    - `source` - Parent object
+    - `args` - GraphQL resolver arguments if passed
+    - `context` - [Context](./context) object
+    - `info` - GraphQL info object
+  - `options` - Options object containing:
+    - `wrapWithoutResolvers` - boolean value. If true, the original resolvers will not be returned.
+
+Returns:
+ - GraphQL schema
+
 
 ```js
 const { graphQLExpress } = await factory({
@@ -386,6 +597,15 @@ Build GraphQL field resolver. This function takes as its first argument an array
 This is useful when you need to modify  the resolver response.
 
 Suppose you need to modify name of the user before response, but you can'n do this in `Query->user` resolver for some reason:
+
+Arguments:
+ - `keys` **required** - An array of keys of the Type that needs to be resolved
+ - `provider` **required** - A function to be called with the argument containing:
+   - `field` - Resolver field name. The function should return a value of the type for this key
+
+Returns:
+ - An object where each key is a graphql resolver
+ 
 
 Schema:
 

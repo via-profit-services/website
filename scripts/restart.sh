@@ -64,5 +64,5 @@ fi;
 
 
 echo -e "${COLOR_YELLOW}Start application at ${COLOR_BOLD}${SERVER_HOSTNAME}:${SERVER_PORT}${COLOR_NORMAL}";
-node . > /dev/null &
+node index.js > /dev/null &
 echo -e "${COLOR_GREEN}Done${COLOR_NORMAL}";
