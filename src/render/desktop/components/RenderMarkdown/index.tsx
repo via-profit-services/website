@@ -12,6 +12,7 @@ import H5 from '~/render/desktop/components/Typography/H5';
 import Strong from '~/render/desktop/components/Typography/Strong';
 import Em from '~/render/desktop/components/Typography/Em';
 import Paragraph from '~/render/desktop/components/Typography/Paragraph';
+import { Ul, Ol } from '~/render/desktop/components/Typography/List';
 import Blockquote from '~/render/desktop/components/Typography/Blockquote';
 import SyntaxHighlighter from '~/render/desktop/components/SyntaxHighlighter';
 
@@ -135,6 +136,8 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
         b: Strong,
         em: MarkdownEm,
         p: Paragraph,
+        ul: Ul,
+        ol: Ol,
         a: ({ href, title, children }) => {
           if (href.match(/^(http|https):\/\//)) {
             return (
