@@ -18,7 +18,7 @@ const H2Elem = styled.h2`
     position: absolute;
     bottom: -0.18em;
     left: 0;
-    width: 110%;
+    width: 100%;
     height: 1px;
     background-color: ${({ theme }) => theme.color.accent.secondary};
   }
