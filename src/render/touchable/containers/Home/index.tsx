@@ -10,6 +10,8 @@ import SectionWhatsIsIt from './SectionWhatsIsIt';
 import SectionPackages from './SectionPackages';
 import SectionMain from './SectionMain';
 import SectionWhy from './SectionWhy';
+import SectionOpenSource from './SectionOpenSource';
+import SectionTypescript from './SectionTypescript';
 
 const Main = styled.main`
   margin-top: -3.4rem;
@@ -40,6 +42,8 @@ const HomePageDesktop: React.FC = () => {
         <SectionWhatsIsIt />
         <SectionWhy />
         <SectionPackages />
+        <SectionOpenSource />
+        <SectionTypescript />
       </Main>
 
       <Footer />

@@ -8,6 +8,7 @@ import PackagesCarousel from './PackagesCarousel';
 
 const Section = styled.section`
   background-color: ${({ theme }) => theme.color.background.secondary};
+  padding-bottom: 1em;
 `;
 
 const Inner = styled.div`

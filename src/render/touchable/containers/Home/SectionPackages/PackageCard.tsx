@@ -73,7 +73,7 @@ const CardLink = styled(Link)`
 
 const LinkInner = styled.span`
   flex: 1;
-  background: ${({ theme }) => theme.color.text.inverse};
+  background: ${({ theme }) => theme.color.background.secondary};
   margin: 0.2em;
   padding: 1em;
   align-items: center;

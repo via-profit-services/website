@@ -457,6 +457,10 @@
     "defaultMessage": "MIT License",
     "description": "Section Open Source. License label"
   },
+  "iTBOgA": {
+    "defaultMessage": "Close docs menu",
+    "description": "Docs menu. «aria-label» attribute"
+  },
   "jBa01K": {
     "defaultMessage": "Subscriptions eiusmod consequat proident ipsum.",
     "description": "SectionPackages. Subscriptions. Content paragraph 1"
@@ -562,6 +566,10 @@
   "rY3VNI": {
     "defaultMessage": "Core v2 connections",
     "description": "Meta description of core.v2.0 connections"
+  },
+  "rz6+vZ": {
+    "defaultMessage": "Close main menu",
+    "description": "Main menu. «aria-label» attribute"
   },
   "t3lyVE": {
     "defaultMessage": "What Is It",

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 export default createGlobalStyle`
 
@@ -27,27 +27,31 @@ export default createGlobalStyle`
     background: ${props => props.theme.color.accent.primary};
     color: ${props => props.theme.color.text.inverse};
   }
-  &::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  &::-webkit-scrollbar-corner {
-    background: none;
-  }
-  &::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: ${props => props.theme.color.scrollbar.track};
-  }
-  &::-webkit-scrollbar-thumb {
-    background: ${props => props.theme.color.scrollbar.thumb};
-    border-radius: 10px;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: ${props => props.theme.color.scrollbar.hover};
-  }
-  * {
-    scrollbar-color: ${props => props.theme.color.scrollbar.thumb} ${props =>
+  
+
+  @media screen and (min-width: 600px) {
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    &::-webkit-scrollbar-corner {
+      background: none;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background: ${props => props.theme.color.scrollbar.track};
+    }
+    &::-webkit-scrollbar-thumb {
+      background: ${props => props.theme.color.scrollbar.thumb};
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: ${props => props.theme.color.scrollbar.hover};
+    }
+    * {
+      scrollbar-color: ${props => props.theme.color.scrollbar.thumb} ${props =>
   props.theme.color.scrollbar.track};
+    }
   }
 
   #app {

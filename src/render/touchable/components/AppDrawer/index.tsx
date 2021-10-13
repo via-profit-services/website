@@ -27,7 +27,7 @@ const DrawerContainer = styled.div<{ $visibility: boolean }>`
 const DrawerInner = styled.div`
   background-color: ${props => props.theme.color.background.secondary};
   height: 100vh;
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-flow: column;
 `;
@@ -70,6 +70,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
   React.useEffect(() => {
     setVisibility(open);
     setActiveIndex(open ? 0 : 1);
+    window.document.body.style.overflow = open ? 'hidden' : 'visible';
   }, [open]);
 
   return (

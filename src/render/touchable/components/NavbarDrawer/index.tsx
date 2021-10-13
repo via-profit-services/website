@@ -25,16 +25,9 @@ const DrawerContainer = styled.div<{ $visibility: boolean }>`
 const DrawerInner = styled.div`
   background-color: ${props => props.theme.color.background.secondary};
   height: 100vh;
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-flow: column;
-`;
-
-const DrawerNav = styled.nav`
-  flex: 1;
-  display: flex;
-  flex-flow: column;
-  overflow-y: auto;
 `;
 
 const DrawerFallback = styled.div`
@@ -51,6 +44,7 @@ const NavbarDrawer: React.FC<NavbarDrawerProps> = props => {
   React.useEffect(() => {
     setVisibility(open);
     setActiveIndex(open ? 0 : 1);
+    window.document.body.style.overflow = open ? 'hidden' : 'visible';
   }, [open]);
 
   return (
@@ -64,9 +58,7 @@ const NavbarDrawer: React.FC<NavbarDrawerProps> = props => {
           }
         }}>
         <DrawerInner>
-          <DrawerNav>
-            <Sidebar sidebarMap={sidebarMap} onDrawerClose={onClose} />
-          </DrawerNav>
+          <Sidebar sidebarMap={sidebarMap} onDrawerClose={onClose} />
         </DrawerInner>
         <DrawerFallback />
       </SwipableViews>

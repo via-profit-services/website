@@ -12,18 +12,6 @@
       "sourceMapPathOverrides": {
         "webpack://@via-profit-services/website/./*": "${workspaceRoot}/*"
       },
-    },
-    {
-      "name": "Attach to Chrome",
-      "port": 9222,
-      "request": "attach",
-      "type": "pwa-chrome",
-      "webRoot": "${workspaceFolder}",
-      "trace": true,
-      "sourceMaps": true,
-      "sourceMapPathOverrides": {
-        "webpack://@via-profit-services/website/./*": "${workspaceRoot}/*"
-      },
-    },
+    }
   ]
 }  
