@@ -15,6 +15,10 @@
     "defaultMessage": "Core v2 middlewares",
     "description": "Meta description of core.v2.0 middlewares"
   },
+  "/UlHCJ": {
+    "defaultMessage": "Main menu",
+    "description": "Main sidebar title"
+  },
   "/kFHHa": {
     "defaultMessage": "Flexible",
     "description": "Section main touchable. List element two"
@@ -29,6 +33,10 @@
   },
   "04jeAy": {
     "defaultMessage": "Introduction of @via-profit-services/core v1.2.x"
+  },
+  "0kWvZ+": {
+    "defaultMessage": "Close docs menu",
+    "description": "Main menu. «aria-label» attribute of close button"
   },
   "2A5jIr": {
     "defaultMessage": "PostgreSQL logo",
@@ -164,6 +172,10 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Core. Content paragraph"
   },
+  "ADh33g": {
+    "defaultMessage": "Home",
+    "description": "Main menu. Home link"
+  },
   "AK8McR": {
     "defaultMessage": "Core v2 getting started",
     "description": "Meta description of core.v2.0 getting started"
@@ -235,6 +247,14 @@
     "defaultMessage": "Examples",
     "description": "Breadcrumbs. Core v2.0.x examples"
   },
+  "I/sDAp": {
+    "defaultMessage": "Documentation",
+    "description": "Main menu. Docs link"
+  },
+  "IRCSj0": {
+    "defaultMessage": "Terms",
+    "description": "Main menu. Package Terms link"
+  },
   "Iss0k3": {
     "defaultMessage": "Website",
     "description": "Footer. company website link"
@@ -286,6 +306,10 @@
   "M1ndnO": {
     "defaultMessage": "Core",
     "description": "SectionPackages. Core. Header"
+  },
+  "MrKKgE": {
+    "defaultMessage": "Cookie policy",
+    "description": "Main menu. Package Cookie policy link"
   },
   "NnsvFA": {
     "defaultMessage": "Eprehenderit qui laborum dolor cillum",
@@ -425,6 +449,10 @@
     "defaultMessage": "Via Profit company logo",
     "description": "Footer. «aria-label» attribute of company logo"
   },
+  "dWSyIK": {
+    "defaultMessage": "Legal",
+    "description": "Main sidebar. Legal title"
+  },
   "dwWw1n": {
     "defaultMessage": "Legal",
     "description": "Footer. Title of the «Legal» section"
@@ -441,6 +469,10 @@
     "defaultMessage": "Github logo link",
     "description": "Footer. «aria-label» attribute of Github logo link"
   },
+  "g0plOz": {
+    "defaultMessage": "Subscriptions",
+    "description": "Main menu. Package subscriptions link"
+  },
   "h02828": {
     "defaultMessage": "Privacy policy",
     "description": "Breadcrumbs. Privacy policy"
@@ -448,6 +480,10 @@
   "h0AU2O": {
     "defaultMessage": "Typedefs",
     "description": "Meta title of core.v2.0 typedefs"
+  },
+  "hRaDyG": {
+    "defaultMessage": "Core",
+    "description": "Main menu. Package core link"
   },
   "hdR+lK": {
     "defaultMessage": "Core",
@@ -567,9 +603,17 @@
     "defaultMessage": "Core v2 connections",
     "description": "Meta description of core.v2.0 connections"
   },
+  "rszBdP": {
+    "defaultMessage": "Packages",
+    "description": "Main sidebar. Packages title"
+  },
   "rz6+vZ": {
     "defaultMessage": "Close main menu",
     "description": "Main menu. «aria-label» attribute"
+  },
+  "sNWK4L": {
+    "defaultMessage": "Knex",
+    "description": "Main menu. Package knex link"
   },
   "t3lyVE": {
     "defaultMessage": "What Is It",
@@ -601,6 +645,10 @@
   },
   "vx0nkZ": {
     "defaultMessage": "Privacy Policy"
+  },
+  "w4BA8Y": {
+    "defaultMessage": "Privacy Policy",
+    "description": "Main menu. Package Privacy Policy link"
   },
   "w4HFhX": {
     "defaultMessage": "Packages",
@@ -640,5 +688,9 @@
   "zYP+rl": {
     "defaultMessage": "Header 3",
     "description": "Desktop. Home second screen. First card title"
+  },
+  "zxtoZJ": {
+    "defaultMessage": "Examples",
+    "description": "Main menu. Examples link"
   }
 }
