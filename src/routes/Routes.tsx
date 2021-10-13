@@ -60,11 +60,11 @@ const pages: PagesMap = {
       options,
     ),
     Legal: loadable(
-      () => import('~/render/desktop/containers/Legal/index'),
+      () => import('~/render/touchable/containers/Legal/index'),
       options,
     ),
     Packages: loadable(
-      () => import('~/render/desktop/containers/Packages/index'),
+      () => import('~/render/touchable/containers/Packages/index'),
       options,
     ),
     Examples: loadable(

@@ -13,6 +13,13 @@ export const linkStyles = css<{ $active?: boolean }>`
     props.$active
       ? props.theme.color.accent.secondary
       : props.theme.color.text.primary}!important;
+  &:hover,
+  &:visited {
+    color: ${props =>
+      props.$active
+        ? props.theme.color.accent.secondary
+        : props.theme.color.text.primary}!important;
+  }
 `;
 
 const StyledLink = styled(Link)<{ $active?: boolean }>`
@@ -21,6 +28,10 @@ const StyledLink = styled(Link)<{ $active?: boolean }>`
     props.$active &&
     css`
       color: ${({ theme }) => theme.color.accent.primary};
+      &:hover,
+      &:visited {
+        color: currentColor;
+      }
     `}
 `;
 

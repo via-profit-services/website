@@ -1,9 +1,6 @@
 import * as React from 'react';
-import loadable from '@loadable/component';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import styled from 'styled-components';
 
-import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
 import Header from '~/render/desktop/components/Header';
 import ContentArea from '~/render/desktop/components/ContentArea';
 import Footer from '~/render/desktop/components/Footer';
@@ -11,30 +8,7 @@ import Meta from '~/render/desktop/components/Meta';
 import Sidebar from '~/render/desktop/components/Sidebar';
 import ScrollTopButton from '~/render/desktop/components/ScrollTopButton';
 import useSidebar from '~/routes/useSidebar';
-
-const Fallback = loadable(
-  () => import('~/render/desktop/containers/Fallback/index'),
-  { fallback: <LoadingIndicator /> },
-);
-
-const Introduction = loadable(
-  () => import('~/render/desktop/containers/Docs/introduction'),
-  { fallback: <LoadingIndicator /> },
-);
-
-const Core = loadable(
-  () => import('~/render/desktop/containers/Docs/core/index'),
-  {
-    fallback: <LoadingIndicator />,
-  },
-);
-
-const Knex = loadable(
-  () => import('~/render/desktop/containers/Docs/knex/index'),
-  {
-    fallback: <LoadingIndicator />,
-  },
-);
+import Routes from './Routes';
 
 const Wrapper = styled.div`
   flex: 1;
@@ -60,7 +34,6 @@ const Main = styled.main`
 `;
 
 const Docs: React.FC = () => {
-  const { path } = useRouteMatch();
   const sidebarMap = useSidebar();
 
   return (
@@ -74,12 +47,7 @@ const Docs: React.FC = () => {
           </Aside>
           <Main>
             <article>
-              <Switch>
-                <Route strict path={`${path}/core`} component={Core} />
-                <Route strict path={`${path}/knex`} component={Knex} />
-                <Route strict path={path} component={Introduction} />
-                <Route component={Fallback} />
-              </Switch>
+              <Routes />
             </article>
           </Main>
         </Layout>

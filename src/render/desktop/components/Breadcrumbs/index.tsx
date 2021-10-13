@@ -14,6 +14,10 @@ const Container = styled.ol`
   display: flex;
   align-items: center;
   font-size: 0.8em;
+  @media screen and (max-width: 600px) {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
 `;
 
 const Breadcrumbs: React.ForwardRefRenderFunction<HTMLOListElement, Props> = (

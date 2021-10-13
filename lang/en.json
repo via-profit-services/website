@@ -38,6 +38,10 @@
     "defaultMessage": "Close docs menu",
     "description": "Main menu. «aria-label» attribute of close button"
   },
+  "0x1oeU": {
+    "defaultMessage": "Packages list",
+    "description": "Meta description of packages page"
+  },
   "2A5jIr": {
     "defaultMessage": "PostgreSQL logo",
     "description": "Home second screen. Alt of postgreSQL logo"
@@ -53,9 +57,6 @@
   "2qRiOA": {
     "defaultMessage": "File Storage",
     "description": "Footer. Package file-storage link"
-  },
-  "2z6QCO": {
-    "defaultMessage": "Core"
   },
   "3EAwoY": {
     "defaultMessage": "Context",
@@ -95,6 +96,10 @@
   "4TWUD9": {
     "defaultMessage": "Middlewares",
     "description": "Meta title of core.v2.0 middlewares"
+  },
+  "4a1Qaz": {
+    "defaultMessage": "Packages",
+    "description": "Meta title of packages page"
   },
   "4d2Kfy": {
     "defaultMessage": "Redis mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -180,6 +185,18 @@
     "defaultMessage": "Core v2 getting started",
     "description": "Meta description of core.v2.0 getting started"
   },
+  "APtMwc": {
+    "defaultMessage": "Core package",
+    "description": "Meta description of core package"
+  },
+  "ATdnSo": {
+    "defaultMessage": "Redis package",
+    "description": "Meta description of redis package"
+  },
+  "AfZjBc": {
+    "defaultMessage": "Redis package",
+    "description": "Meta title of Redis package"
+  },
   "B+T4IS": {
     "defaultMessage": "Middlewares",
     "description": "Section main touchable. List element four"
@@ -227,6 +244,10 @@
     "defaultMessage": "Cookie policy",
     "description": "Breadcrumbs. Cookie policy"
   },
+  "FNZ4qe": {
+    "defaultMessage": "Core package",
+    "description": "Packages. Core package title"
+  },
   "GjQ0IA": {
     "defaultMessage": "We have prepared several ready-made packages that are easy to install and use",
     "description": "SectionPackages. Subtitle"
@@ -255,6 +276,10 @@
     "defaultMessage": "Terms",
     "description": "Main menu. Package Terms link"
   },
+  "IrDNBE": {
+    "defaultMessage": "Redis",
+    "description": "Breadcrumbs. Redis package"
+  },
   "Iss0k3": {
     "defaultMessage": "Website",
     "description": "Footer. company website link"
@@ -262,6 +287,10 @@
   "It6JdJ": {
     "defaultMessage": "Redis eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Redis. Content paragraph 1"
+  },
+  "JZHAzi": {
+    "defaultMessage": "Knex",
+    "description": "Breadcrumbs. Knex package"
   },
   "JtAn0P": {
     "defaultMessage": "Home",
@@ -355,6 +384,10 @@
     "defaultMessage": "SMS",
     "description": "Footer. Package sms link"
   },
+  "SLbbHp": {
+    "defaultMessage": "Core package",
+    "description": "Meta title of Core package"
+  },
   "Se/iPE": {
     "defaultMessage": "Privacy Policy",
     "description": "Footer. Privacy link"
@@ -370,12 +403,24 @@
   "TUV3q8": {
     "defaultMessage": "List of all packages"
   },
+  "TWFV+5": {
+    "defaultMessage": "Redis package",
+    "description": "Packages. Redis package title"
+  },
   "UBBBi2": {
     "defaultMessage": "Knex",
     "description": "Breadcrumbs. Knex"
   },
+  "UTDA0s": {
+    "defaultMessage": "Knex package",
+    "description": "Meta title of Knex package"
+  },
   "UhkSyx": {
     "defaultMessage": "Terms of Use"
+  },
+  "VGUT2g": {
+    "defaultMessage": "Knex package",
+    "description": "Packages. Knex package title"
   },
   "VImI2V": {
     "defaultMessage": "Getting started",
@@ -420,6 +465,10 @@
   "YOLRNb": {
     "defaultMessage": "Dataloader",
     "description": "Footer. Package dataloader link"
+  },
+  "YTg7wn": {
+    "defaultMessage": "Core",
+    "description": "Breadcrumbs. Core package"
   },
   "ZkhZUA": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
@@ -497,12 +546,13 @@
     "defaultMessage": "Close docs menu",
     "description": "Docs menu. «aria-label» attribute"
   },
+  "ikH+Uj": {
+    "defaultMessage": "Knex package",
+    "description": "Meta description of knex package"
+  },
   "jBa01K": {
     "defaultMessage": "Subscriptions eiusmod consequat proident ipsum.",
     "description": "SectionPackages. Subscriptions. Content paragraph 1"
-  },
-  "jQY7K7": {
-    "defaultMessage": "Redis"
   },
   "jYpE7v": {
     "defaultMessage": "Connections and pagination",
@@ -515,9 +565,6 @@
   "kQJFNC": {
     "defaultMessage": "Knex v1.1",
     "description": "Breadcrumbs. Knex v1.1.x"
-  },
-  "kZk26D": {
-    "defaultMessage": "Knex"
   },
   "kiw+og": {
     "defaultMessage": "Via Profit Services",

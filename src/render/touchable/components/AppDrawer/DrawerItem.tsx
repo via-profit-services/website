@@ -1,19 +1,33 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link, LinkProps, useHistory } from 'react-router-dom';
 
 export type DrawerItemProps = LinkProps & {
   label: React.ReactNode;
   icon?: React.ReactNode;
+  active?: boolean;
   onDrawerClose: () => void;
 };
 
-const ItemLink = styled(Link)`
+const ItemLink = styled(Link)<{ $active?: boolean }>`
   padding: 0.7em 1em;
   display: flex;
   text-decoration: none;
   font-weight: 500;
-  color: ${({ theme }) => theme.color.text.primary};
+  color: ${props => props.theme.color.text.primary};
+  &:visited,
+  &:hover {
+    color: currentColor;
+  }
+  ${props =>
+    props.$active &&
+    css`
+      color: ${props => props.theme.color.accent.primary}!important;
+      &:visited,
+      &:hover {
+        color: currentColor;
+      }
+    `}
 `;
 
 const IconWrapper = styled.span`
@@ -27,7 +41,7 @@ const IconWrapper = styled.span`
 `;
 
 const DrawerItem: React.FC<DrawerItemProps> = props => {
-  const { label, icon, onDrawerClose, ...linkProps } = props;
+  const { active, label, icon, onDrawerClose, ...linkProps } = props;
   const history = useHistory();
 
   const handleClick: React.MouseEventHandler<HTMLAnchorElement> = e => {
@@ -38,7 +52,7 @@ const DrawerItem: React.FC<DrawerItemProps> = props => {
   };
 
   return (
-    <ItemLink onClick={handleClick} {...linkProps}>
+    <ItemLink onClick={handleClick} $active={active} {...linkProps}>
       {icon && <IconWrapper>{icon}</IconWrapper>}
       {label}
     </ItemLink>

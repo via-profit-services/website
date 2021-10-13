@@ -3,9 +3,8 @@ import styled from 'styled-components';
 
 import Header from '~/render/touchable/components/Header';
 import Footer from '~/render/touchable/components/Footer';
-import NavbarButton from '~/render/touchable/components/NavbarDrawer/NavbarButton';
 import Meta from '~/render/desktop/components/Meta';
-import Routes from '~/render/desktop/containers/Docs/Routes';
+import Routes from '~/render/desktop/containers/Legal/Routes';
 
 const Main = styled.main`
   padding: 0 ${props => props.theme.grid.touchable.gutter}px;
@@ -16,11 +15,10 @@ const Main = styled.main`
 
 const Article = styled.article``;
 
-const Docs: React.FC = () => (
+const Legal: React.FC = () => (
   <>
     <Meta />
     <Header />
-    <NavbarButton />
     <Main>
       <Article>
         <Routes />
@@ -30,4 +28,4 @@ const Docs: React.FC = () => (
   </>
 );
 
-export default Docs;
+export default Legal;

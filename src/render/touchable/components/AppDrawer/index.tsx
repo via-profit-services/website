@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import SwipableViews from 'react-swipeable-views';
 import CloseIcon from 'mdi-react/CloseIcon';
 import { useIntl, FormattedMessage } from 'react-intl';
+import { useLocation } from 'react-router-dom';
 
 import DrawerItem from './DrawerItem';
 
@@ -82,6 +83,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
   const { open, onClose } = props;
   const [visibility, setVisibility] = React.useState(open);
   const [activeIndex, setActiveIndex] = React.useState(open ? 0 : 1);
+  const { pathname } = useLocation();
 
   React.useEffect(() => {
     setVisibility(open);
@@ -118,10 +120,10 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
               <CloseIcon size="1em" color="currentColor" />
             </CloseButton>
           </Header>
-
           <DrawerNav>
             <DrawerItem
               to="/"
+              active={pathname === '/'}
               onDrawerClose={onClose}
               label={intl.formatMessage({
                 defaultMessage: 'Home',
@@ -130,6 +132,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
             />
             <DrawerItem
               to="/docs"
+              active={pathname.match(/^\/docs/) !== null}
               onDrawerClose={onClose}
               label={intl.formatMessage({
                 defaultMessage: 'Documentation',
@@ -138,6 +141,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
             />
             <DrawerItem
               to="/examples"
+              active={pathname.match(/^\/examples/) !== null}
               onDrawerClose={onClose}
               label={intl.formatMessage({
                 defaultMessage: 'Examples',
@@ -152,6 +156,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
             </SeparatorTitle>
             <DrawerItem
               to="/packages/core"
+              active={pathname === '/packages/core'}
               onDrawerClose={onClose}
               label={intl.formatMessage({
                 defaultMessage: 'Core',
@@ -160,6 +165,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
             />
             <DrawerItem
               to="/packages/knex"
+              active={pathname === '/packages/knex'}
               onDrawerClose={onClose}
               label={intl.formatMessage({
                 defaultMessage: 'Knex',
@@ -168,6 +174,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
             />
             <DrawerItem
               to="/packages/subscriptions"
+              active={pathname === '/packages/subscriptions'}
               onDrawerClose={onClose}
               label={intl.formatMessage({
                 defaultMessage: 'Subscriptions',
@@ -183,6 +190,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
             </SeparatorTitle>
             <DrawerItem
               to="/legal/privacy"
+              active={pathname === '/legal/privacy'}
               onDrawerClose={onClose}
               label={intl.formatMessage({
                 defaultMessage: 'Privacy Policy',
@@ -191,6 +199,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
             />
             <DrawerItem
               to="/legal/terms"
+              active={pathname === '/legal/terms'}
               onDrawerClose={onClose}
               label={intl.formatMessage({
                 defaultMessage: 'Terms',
@@ -199,6 +208,7 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
             />
             <DrawerItem
               to="/legal/cookie"
+              active={pathname === '/legal/cookie'}
               onDrawerClose={onClose}
               label={intl.formatMessage({
                 defaultMessage: 'Cookie policy',
