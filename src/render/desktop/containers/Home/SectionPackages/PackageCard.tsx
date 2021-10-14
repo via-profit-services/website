@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl';
 
 import H3 from '~/render/desktop/components/Typography/H3';
 
-type Props = {
+export type CardProps = {
   icon: React.ReactNode;
   header: React.ReactNode;
   content: React.ReactNode;
@@ -51,7 +51,7 @@ const CardLink = styled(Link)`
   }
 `;
 
-const PackageCard: React.FC<Props> = props => {
+const PackageCard: React.FC<CardProps> = props => {
   const { header, content, icon, link } = props;
 
   return (

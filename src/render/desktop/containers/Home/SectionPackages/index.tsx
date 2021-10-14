@@ -1,19 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import ChevronDoubleRightIcon from 'mdi-react/ChevronDoubleRightIcon';
 
 import Paragraph from '~/render/desktop/components/Typography/Paragraph';
 import H2 from '~/render/desktop/components/Typography/H2';
 import Subtitle from '~/render/desktop/components/Typography/Subtitle';
-import Card from './PackageCard';
+import Card, { CardProps } from './PackageCard';
 import CoreIcon from '~/render/desktop/components/Icons/Core';
-import KnexIcon from '~/render/desktop/components/Icons/Knex';
-import RedisIcon from '~/render/desktop/components/Icons/Redis';
-import SubscriptionsIcon from '~/render/desktop/components/Icons/Subscriptions';
-import PermissionsIcon from '~/render/desktop/components/Icons/Permissions';
-import FileStorageIcon from '~/render/desktop/components/Icons/FileStorage';
 import dotssrc from 'assets/images/dots-grey.svg';
 
 const Section = styled.section`
@@ -98,193 +93,194 @@ const MoreLink = styled(Link)`
   }
 `;
 
-const SectionPackages: React.FC = () => (
-  <Section>
-    <Inner>
-      <TitleBox>
-        <H2>
-          <FormattedMessage
-            defaultMessage="Packages"
-            description="SectionPackages. Header"
-          />
-        </H2>
-        <Subtitle>
-          <FormattedMessage
-            defaultMessage="We have prepared several ready-made packages that are easy to install and use"
-            description="SectionPackages. Subtitle"
-          />
-        </Subtitle>
-      </TitleBox>
+const SectionPackages: React.FC = () => {
+  const intl = useIntl();
+  const cards: CardProps[] = React.useMemo(
+    () => [
+      {
+        link: '/packages/core',
+        icon: <CoreIcon />,
+        header: intl.formatMessage({
+          defaultMessage: 'Core',
+          description: 'SectionPackages. Core. Header',
+        }),
+        content: (
+          <>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
+                description="SectionPackages. Core. Content paragraph 1"
+              />
+            </Paragraph>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
+                description="SectionPackages. Core. Content paragraph 2"
+              />
+            </Paragraph>
+          </>
+        ),
+      },
+      {
+        link: '/packages/knex',
+        icon: <CoreIcon />,
+        header: intl.formatMessage({
+          defaultMessage: 'Knex',
+          description: 'SectionPackages. knex. Header',
+        }),
+        content: (
+          <>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
+                description="SectionPackages. Knex. Content paragraph 1"
+              />
+            </Paragraph>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
+                description="SectionPackages. Knex. Content paragraph 2"
+              />
+            </Paragraph>
+          </>
+        ),
+      },
+      {
+        link: '/packages/subscriptions',
+        icon: <CoreIcon />,
+        header: intl.formatMessage({
+          defaultMessage: 'Subscriptions',
+          description: 'SectionPackages. Subscriptions. Header',
+        }),
+        content: (
+          <>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
+                description="SectionPackages. Subscriptions. Content paragraph 1"
+              />
+            </Paragraph>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
+                description="SectionPackages. Subscriptions. Content paragraph 2"
+              />
+            </Paragraph>
+          </>
+        ),
+      },
+      {
+        link: '/packages/files',
+        icon: <CoreIcon />,
+        header: intl.formatMessage({
+          defaultMessage: 'Files',
+          description: 'SectionPackages. Files. Header',
+        }),
+        content: (
+          <>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
+                description="SectionPackages. Files. Content paragraph 1"
+              />
+            </Paragraph>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
+                description="SectionPackages. Files. Content paragraph 2"
+              />
+            </Paragraph>
+          </>
+        ),
+      },
+      {
+        link: '/packages/redis',
+        icon: <CoreIcon />,
+        header: intl.formatMessage({
+          defaultMessage: 'Redis',
+          description: 'SectionPackages. Redis. Header',
+        }),
+        content: (
+          <>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
+                description="SectionPackages. Redis. Content paragraph 1"
+              />
+            </Paragraph>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
+                description="SectionPackages. Redis. Content paragraph 2"
+              />
+            </Paragraph>
+          </>
+        ),
+      },
 
-      <Cards>
-        <Card
-          link="/packages/core"
-          icon={<CoreIcon />}
-          header={
+      {
+        link: '/packages/dataloader',
+        icon: <CoreIcon />,
+        header: intl.formatMessage({
+          defaultMessage: 'Dataloader',
+          description: 'SectionPackages. Dataloader. Header',
+        }),
+        content: (
+          <>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
+                description="SectionPackages. Dataloader. Content paragraph 1"
+              />
+            </Paragraph>
+            <Paragraph>
+              <FormattedMessage
+                defaultMessage="Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
+                description="SectionPackages. Dataloader. Content paragraph 2"
+              />
+            </Paragraph>
+          </>
+        ),
+      },
+    ],
+    [intl],
+  );
+
+  return (
+    <Section>
+      <Inner>
+        <TitleBox>
+          <H2>
             <FormattedMessage
-              defaultMessage="Core"
-              description="SectionPackages. Core. Header"
+              defaultMessage="Packages"
+              description="SectionPackages. Header"
             />
-          }
-          content={
-            <>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
-                  description="SectionPackages. Core. Content paragraph 1"
-                />
-              </Paragraph>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
-                  description="SectionPackages. Core. Content paragraph 2"
-                />
-              </Paragraph>
-            </>
-          }
-        />
-        <Card
-          link="packages/subscriptions"
-          icon={<SubscriptionsIcon />}
-          header={
+          </H2>
+          <Subtitle>
             <FormattedMessage
-              defaultMessage="Subscriptions"
-              description="SectionPackages. Subscriptions. Header"
+              defaultMessage="We have prepared several ready-made packages that are easy to install and use"
+              description="SectionPackages. Subtitle"
             />
-          }
-          content={
-            <>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="Subscriptions eiusmod consequat proident ipsum."
-                  description="SectionPackages. Subscriptions. Content paragraph 1"
-                />
-              </Paragraph>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="Subscriptions mollit dolore reprehenderit exercitation."
-                  description="SectionPackages. Subscriptions. Content paragraph 2"
-                />
-              </Paragraph>
-            </>
-          }
-        />
-        <Card
-          link="/packages/knex"
-          icon={<KnexIcon />}
-          header={
+          </Subtitle>
+        </TitleBox>
+
+        <Cards>
+          {cards.map((card, index) => (
+            <Card key={index.toString()} {...card} />
+          ))}
+        </Cards>
+        <MoreLinkContainer>
+          <MoreLink to="/packages">
             <FormattedMessage
-              defaultMessage="Knex"
-              description="SectionPackages. Knex. Header"
+              defaultMessage="See more packages"
+              description="SectionPackages. Link to packages page"
             />
-          }
-          content={
-            <>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="Knex eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
-                  description="SectionPackages. Knex. Content paragraph 1"
-                />
-              </Paragraph>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="Knex mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
-                  description="SectionPackages. Knex. Content paragraph 2"
-                />
-              </Paragraph>
-            </>
-          }
-        />
-        <Card
-          link="/packages/redis"
-          icon={<RedisIcon />}
-          header={
-            <FormattedMessage
-              defaultMessage="Redis"
-              description="SectionPackages. Redis. Header"
-            />
-          }
-          content={
-            <>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="Redis eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
-                  description="SectionPackages. Redis. Content paragraph 1"
-                />
-              </Paragraph>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="Redis mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
-                  description="SectionPackages. Redis. Content paragraph 2"
-                />
-              </Paragraph>
-            </>
-          }
-        />
-        <Card
-          link="/packages/permissions"
-          icon={<PermissionsIcon />}
-          header={
-            <FormattedMessage
-              defaultMessage="Permissions"
-              description="SectionPackages. Permissions. Header"
-            />
-          }
-          content={
-            <>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="Permissions eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
-                  description="SectionPackages. Permissions. Content paragraph 1"
-                />
-              </Paragraph>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="Permissions mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
-                  description="SectionPackages. Permissions. Content paragraph 2"
-                />
-              </Paragraph>
-            </>
-          }
-        />
-        <Card
-          link="/packages/file-storage"
-          icon={<FileStorageIcon />}
-          header={
-            <FormattedMessage
-              defaultMessage="File storage"
-              description="SectionPackages. File storage. Header"
-            />
-          }
-          content={
-            <>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="File storage eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident."
-                  description="SectionPackages. File storage. Content paragraph 1"
-                />
-              </Paragraph>
-              <Paragraph>
-                <FormattedMessage
-                  defaultMessage="File storage mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua."
-                  description="SectionPackages. File storage. Content paragraph 2"
-                />
-              </Paragraph>
-            </>
-          }
-        />
-      </Cards>
-      <MoreLinkContainer>
-        <MoreLink to="/packages">
-          <FormattedMessage
-            defaultMessage="See more packages"
-            description="SectionPackages. Link to packages page"
-          />
-          <ChevronDoubleRightIcon size="1em" color="currentColor" />
-        </MoreLink>
-      </MoreLinkContainer>
-    </Inner>
-  </Section>
-);
+            <ChevronDoubleRightIcon size="1em" color="currentColor" />
+          </MoreLink>
+        </MoreLinkContainer>
+      </Inner>
+    </Section>
+  );
+};
 
 export default SectionPackages;

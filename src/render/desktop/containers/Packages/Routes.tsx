@@ -32,6 +32,66 @@ const Redis = loadable(
   },
 );
 
+const Phones = loadable(
+  () => import('~/render/desktop/containers/Packages/Phones'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
+const Dataloader = loadable(
+  () => import('~/render/desktop/containers/Packages/Dataloader'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
+const Files = loadable(
+  () => import('~/render/desktop/containers/Packages/Files'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
+const Permissions = loadable(
+  () => import('~/render/desktop/containers/Packages/Permissions'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
+const Settings = loadable(
+  () => import('~/render/desktop/containers/Packages/Settings'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
+const Geography = loadable(
+  () => import('~/render/desktop/containers/Packages/Geography'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
+const Messages = loadable(
+  () => import('~/render/desktop/containers/Packages/Messages'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
+const Subscriptions = loadable(
+  () => import('~/render/desktop/containers/Packages/Subscriptions'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
+const Sms = loadable(() => import('~/render/desktop/containers/Packages/Sms'), {
+  fallback: <LoadingIndicator />,
+});
+
 const Fallback = loadable(
   () => import('~/render/desktop/containers/Fallback/index'),
   {
@@ -48,6 +108,15 @@ const PackagesRoutes: React.FC = () => {
       <Route strict path={`${path}/core`} component={Core} />
       <Route strict path={`${path}/knex`} component={knex} />
       <Route strict path={`${path}/redis`} component={Redis} />
+      <Route strict path={`${path}/phones`} component={Phones} />
+      <Route strict path={`${path}/dataloader`} component={Dataloader} />
+      <Route strict path={`${path}/files`} component={Files} />
+      <Route strict path={`${path}/permissions`} component={Permissions} />
+      <Route strict path={`${path}/settings`} component={Settings} />
+      <Route strict path={`${path}/geography`} component={Geography} />
+      <Route strict path={`${path}/messages`} component={Messages} />
+      <Route strict path={`${path}/subscriptions`} component={Subscriptions} />
+      <Route strict path={`${path}/sms`} component={Sms} />
       <Route component={Fallback} />
     </Switch>
   );

@@ -59,6 +59,76 @@ const Packages: React.FC = () => {
             description: 'packages sidebar. Redis',
           }),
         },
+        {
+          path: '/packages/dataloader',
+          label: intl.formatMessage({
+            defaultMessage: 'Dataloader',
+            description: 'packages sidebar. Dataloader',
+          }),
+        },
+        {
+          path: '/packages/files',
+          label: intl.formatMessage({
+            defaultMessage: 'Files',
+            description: 'packages sidebar. Files',
+          }),
+        },
+        {
+          path: '/packages/phones',
+          label: intl.formatMessage({
+            defaultMessage: 'Phones',
+            description: 'packages sidebar. Phones',
+          }),
+        },
+        {
+          path: '/packages/geography',
+          label: intl.formatMessage({
+            defaultMessage: 'Geography',
+            description: 'packages sidebar. Geography',
+          }),
+        },
+        {
+          path: '/packages/permissions',
+          label: intl.formatMessage({
+            defaultMessage: 'Permissions',
+            description: 'packages sidebar. Permissions',
+          }),
+        },
+        {
+          path: '/packages/messages',
+          label: intl.formatMessage({
+            defaultMessage: 'Messages',
+            description: 'packages sidebar. Messages',
+          }),
+        },
+        {
+          path: '/packages/settings',
+          label: intl.formatMessage({
+            defaultMessage: 'Settings',
+            description: 'packages sidebar. Settings',
+          }),
+        },
+        {
+          path: '/packages/sms',
+          label: intl.formatMessage({
+            defaultMessage: 'Sms',
+            description: 'packages sidebar. Sms',
+          }),
+        },
+        {
+          path: '/packages/subscriptions',
+          label: intl.formatMessage({
+            defaultMessage: 'Subscriptions',
+            description: 'packages sidebar. Subscriptions',
+          }),
+        },
+        {
+          path: '/packages/accounts',
+          label: intl.formatMessage({
+            defaultMessage: 'Accounts',
+            description: 'packages sidebar. Accounts',
+          }),
+        },
       ],
     }),
     [intl],

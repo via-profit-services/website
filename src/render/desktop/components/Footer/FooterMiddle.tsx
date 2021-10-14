@@ -212,7 +212,7 @@ const FooterMiddle: React.FC = () => (
 
           <LinksList>
             <li>
-              <InternalLink to="/packages/file-storage">
+              <InternalLink to="/packages/files">
                 <FormattedMessage
                   defaultMessage="File Storage"
                   description="Footer. Package file-storage link"
@@ -220,7 +220,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/settings-manager">
+              <InternalLink to="/packages/settings">
                 <FormattedMessage
                   defaultMessage="Settings manager"
                   description="Footer. Package settings-manager link"

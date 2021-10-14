@@ -10,19 +10,17 @@ const Fallback = loadable(
 );
 
 const Introduction = loadable(
-  () =>
-    import('~/render/desktop/containers/Docs/core/v1.2.x/introduction/index'),
+  () => import('~/render/desktop/containers/Docs/core/v1.2.x/introduction'),
   { fallback: <LoadingIndicator /> },
 );
 
 const Api = loadable(
-  () => import('~/render/desktop/containers/Docs/core/v1.2.x/api/index'),
+  () => import('~/render/desktop/containers/Docs/core/v1.2.x/api'),
   { fallback: <LoadingIndicator /> },
 );
 
 const Middlewares = loadable(
-  () =>
-    import('~/render/desktop/containers/Docs/core/v1.2.x/middlewares/index'),
+  () => import('~/render/desktop/containers/Docs/core/v1.2.x/middlewares'),
   { fallback: <LoadingIndicator /> },
 );
 
@@ -35,7 +33,7 @@ const Core: React.FC = () => {
 
   return (
     <Switch>
-      <Route strict exact path={path} component={Introduction} />
+      <Route strict path={`${path}/introduction`} component={Introduction} />
       <Route strict path={`${path}/api`} component={Api} />
       <Route strict path={`${path}/middlewares`} component={Middlewares} />
       <Route component={Fallback} />

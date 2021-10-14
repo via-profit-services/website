@@ -16,67 +16,90 @@ const useSidebar = () => {
           }),
           child: [
             {
-              path: '/docs/core/v2.0.x',
+              path: '/docs/core/introduction',
               label: intl.formatMessage({
-                defaultMessage: 'Core v2.0',
-                description: 'Docs sidebar. Core v.2.0',
+                defaultMessage: 'Introduction',
+                description: 'Docs sidebar. Core v.2.0 introduction',
+              }),
+            },
+            {
+              path: '/docs/core/getting-started',
+              label: intl.formatMessage({
+                defaultMessage: 'Getting started',
+                description: 'Docs sidebar. Core v.2.0 getting started',
+              }),
+            },
+            {
+              path: '/docs/core/api',
+              label: intl.formatMessage({
+                defaultMessage: 'API Reference',
+                description: 'Docs sidebar. Core v.2.0 API',
+              }),
+            },
+            {
+              path: '/docs/core/middlewares',
+              label: intl.formatMessage({
+                defaultMessage: 'Use middlewares',
+                description: 'Docs sidebar. Core v.2.0 middlewares',
+              }),
+            },
+            {
+              path: '/docs/core/connections',
+              label: intl.formatMessage({
+                defaultMessage: 'Connections and pagination',
+                description: 'Docs sidebar. Core v.2.0 connections',
+              }),
+            },
+            {
+              path: '/docs/core/context',
+              label: intl.formatMessage({
+                defaultMessage: 'Context',
+                description: 'Docs sidebar. Core v.2.0 context',
+              }),
+            },
+            {
+              path: '/docs/core/typedefs',
+              label: intl.formatMessage({
+                defaultMessage: 'Type definitions and scalars',
+                description: 'Docs sidebar. Core v.2.0 type defs',
+              }),
+            },
+            {
+              path: '/docs/core/examples',
+              label: intl.formatMessage({
+                defaultMessage: 'Examples',
+                description: 'Docs sidebar. Core v.2.0 examples',
+              }),
+            },
+            {
+              path: '/docs/core/versions',
+              label: intl.formatMessage({
+                defaultMessage: 'Versions',
+                description: 'Docs sidebar. Core versions',
               }),
               child: [
                 {
-                  path: '/docs/core/v2.0.x/introduction',
+                  path: '/docs/core/v1.2.x',
                   label: intl.formatMessage({
-                    defaultMessage: 'Introduction',
-                    description: 'Docs sidebar. Core v.2.0 introduction',
+                    defaultMessage: 'Core v1.2',
+                    description: 'Docs sidebar. Core v.1.2',
                   }),
-                },
-                {
-                  path: '/docs/core/v2.0.x/getting-started',
-                  label: intl.formatMessage({
-                    defaultMessage: 'Getting started',
-                    description: 'Docs sidebar. Core v.2.0 getting started',
-                  }),
-                },
-                {
-                  path: '/docs/core/v2.0.x/api',
-                  label: intl.formatMessage({
-                    defaultMessage: 'API Reference',
-                    description: 'Docs sidebar. Core v.2.0 API',
-                  }),
-                },
-                {
-                  path: '/docs/core/v2.0.x/middlewares',
-                  label: intl.formatMessage({
-                    defaultMessage: 'Use middlewares',
-                    description: 'Docs sidebar. Core v.2.0 middlewares',
-                  }),
-                },
-                {
-                  path: '/docs/core/v2.0.x/connections',
-                  label: intl.formatMessage({
-                    defaultMessage: 'Connections and pagination',
-                    description: 'Docs sidebar. Core v.2.0 connections',
-                  }),
-                },
-                {
-                  path: '/docs/core/v2.0.x/context',
-                  label: intl.formatMessage({
-                    defaultMessage: 'Context',
-                    description: 'Docs sidebar. Core v.2.0 context',
-                  }),
-                },
-                {
-                  path: '/docs/core/v2.0.x/typedefs',
-                  label: intl.formatMessage({
-                    defaultMessage: 'Type definitions and scalars',
-                    description: 'Docs sidebar. Core v.2.0 type defs',
-                  }),
-                },
-                {
-                  path: '/docs/core/v2.0.x/examples',
-                  label: intl.formatMessage({
-                    defaultMessage: 'Examples',
-                    description: 'Docs sidebar. Core v.2.0 examples',
-                  }),
+                  child: [
+                    {
+                      path: '/docs/core/v1.2.x/introduction',
+                      label: intl.formatMessage({
+                        defaultMessage: 'v.1.2.x',
+                        description: 'Docs sidebar. Core v.1.2',
+                      }),
+                    },
+                    {
+                      path: '/docs/core/v1.2.x/api',
+                      label: intl.formatMessage({
+                        defaultMessage: 'v.1.2.x API',
+                        description: 'Docs sidebar. Core v.1.2 API',
+                      }),
+                    },
+                  ],
                 },
               ],
             },

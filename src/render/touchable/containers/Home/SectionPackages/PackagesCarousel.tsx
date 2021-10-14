@@ -88,6 +88,70 @@ const PackagesCarousel: React.FC = () => {
         </Paragraph>
       ),
     },
+    {
+      link: '/packages/dataloader',
+      icon: <CoreIcon />,
+      header: intl.formatMessage({
+        defaultMessage: 'Dataloader',
+        description: 'SectionPackages touchable. Dataloader. Header',
+      }),
+      content: (
+        <Paragraph>
+          <FormattedMessage
+            defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit "
+            description="SectionPackages touchable. Dataloader. Content paragraph"
+          />
+        </Paragraph>
+      ),
+    },
+    {
+      link: '/packages/files',
+      icon: <CoreIcon />,
+      header: intl.formatMessage({
+        defaultMessage: 'Files',
+        description: 'SectionPackages touchable. Files. Header',
+      }),
+      content: (
+        <Paragraph>
+          <FormattedMessage
+            defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit "
+            description="SectionPackages touchable. Files. Content paragraph"
+          />
+        </Paragraph>
+      ),
+    },
+    {
+      link: '/packages/permissions',
+      icon: <CoreIcon />,
+      header: intl.formatMessage({
+        defaultMessage: 'Permissions',
+        description: 'SectionPackages touchable. Permissions. Header',
+      }),
+      content: (
+        <Paragraph>
+          <FormattedMessage
+            defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit "
+            description="SectionPackages touchable. Permissions. Content paragraph"
+          />
+        </Paragraph>
+      ),
+    },
+    {
+      link: '/packages/settings',
+      icon: <CoreIcon />,
+      header: intl.formatMessage({
+        defaultMessage: 'Settings',
+        description: 'SectionPackages touchable. Settings. Header',
+      }),
+      content: (
+        <Paragraph>
+          <FormattedMessage
+            defaultMessage="Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit "
+            description="SectionPackages touchable. Settings. Content paragraph"
+          />
+        </Paragraph>
+      ),
+    },
   ];
 
   return (
