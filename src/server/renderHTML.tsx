@@ -13,11 +13,13 @@ import fs from 'fs';
 import dotenv from 'dotenv';
 import { Provider as ReduxProvider } from 'react-redux';
 import 'cookie-parser';
+import crypto from 'crypto';
 
 import { COOKIE_RECORD_THEME, COOKIE_RECORD_MODE } from '~/utils/constants';
 import createReduxStore from '~/redux/store';
 import reduxDefaultState from '~/redux/defaultState';
 import ApplicationProvider from '~/providers/ApplicationProvider';
+import Cache from '~/server/Cache';
 
 interface Req extends Request {
   cookies: {
@@ -52,11 +54,28 @@ const resolveDevice = (
   }
 };
 
+const cache = new Cache();
+
 const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
   const { req } = props;
   const { url, headers, cookies } = req;
   const parser = new UAParser(headers['user-agent']);
   const device = resolveDevice(parser);
+
+  const cacheKey = crypto
+    .createHash('md5')
+    .update(
+      JSON.stringify({
+        device,
+        url,
+        cookies,
+      }),
+    )
+    .digest('hex');
+
+  if (cache.has(cacheKey)) {
+    return cache.get<RenderHTMLPayload>(cacheKey);
+  }
 
   const context: StaticContext = {
     statusCode: 200,
@@ -131,6 +150,8 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
   });
 
   const payload = { context, html };
+
+  cache.set<RenderHTMLPayload>(cacheKey, payload, '24hours');
 
   return payload;
 };

@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 import H2 from '~/components/touchable/Typography/H2';
 import Paragraph from '~/components/touchable/Typography/Paragraph';
-import backgroundsrc from 'assets/images/touchable-section-open-source.jpg';
+import backgroundsrc from '~assets/images/touchable-section-open-source.jpg';
 
 const Section = styled.section`
   background-image: url(${backgroundsrc});

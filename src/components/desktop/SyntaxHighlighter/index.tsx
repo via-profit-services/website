@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PrismAsyncLight as ReactSyntaxHighlighter } from 'react-syntax-highlighter';
+import ReactSyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism-async-light';
 import typescriptLng from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
 import javascriptLng from 'react-syntax-highlighter/dist/esm/languages/prism/javascript';
 import shellLng from 'react-syntax-highlighter/dist/esm/languages/prism/bash';

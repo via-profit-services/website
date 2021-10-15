@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import Paragraph from '~/components/touchable/Typography/Paragraph';
 import H2 from '~/components/touchable/Typography/H2';
 import H3 from '~/components/touchable/Typography/H3';
-import postgresqlsrc from 'assets/images/postgresql-logo.svg';
+import postgresqlsrc from '~assets/images/postgresql-logo.svg';
 
 const Container = styled.section`
   background: ${({ theme }) => theme.color.background.secondary};

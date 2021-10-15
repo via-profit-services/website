@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 import H2 from '~/components/desktop/Typography/H2';
 import Paragraph from '~/components/desktop/Typography/Paragraph';
-import backgroundsrc from 'assets/images/desktop-section-open-source.jpg';
+import backgroundsrc from '~assets/images/desktop-section-open-source.jpg';
 
 const Section = styled.section`
   background-image: url(${backgroundsrc});

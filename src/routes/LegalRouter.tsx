@@ -10,14 +10,14 @@ const options: OptionsWithoutResolver<any> = {
 
 const pages = {
   PrivacyPolicy: loadable(
-    () => import('~/pages/Legal/pages/PrivacyPolicy'),
+    () => import('~/pages/Legal/children/PrivacyPolicy'),
     options,
   ),
   CookiePolicy: loadable(
-    () => import('~/pages/Legal/pages/CookiePolicy'),
+    () => import('~/pages/Legal/children/CookiePolicy'),
     options,
   ),
-  Terms: loadable(() => import('~/pages/Legal/pages/Terms'), options),
+  Terms: loadable(() => import('~/pages/Legal/children/Terms'), options),
   Fallback: loadable(() => import('~/pages/Fallback/index'), options),
 };
 

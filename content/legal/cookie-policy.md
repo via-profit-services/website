@@ -1,0 +1,3 @@
+# Cookie policy
+
+Lorem ipsum

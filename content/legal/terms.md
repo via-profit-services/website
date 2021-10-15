@@ -1,0 +1,3 @@
+# Terms
+
+Lorem ipsum

@@ -5,8 +5,8 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import H2 from '~/components/desktop/Typography/H2';
 import H3 from '~/components/desktop/Typography/H3';
 import Paragraph from '~/components/desktop/Typography/Paragraph';
-import dotssrc from 'assets/images/dots-grey.svg';
-import postgresqlsrc from 'assets/images/postgresql-logo.svg';
+import dotssrc from '~assets/images/dots-grey.svg';
+import postgresqlsrc from '~assets/images/postgresql-logo.svg';
 
 const Section = styled.section`
   margin: 0 auto;

@@ -143,8 +143,8 @@ const config: Configuration = {
     mainFields: ['browser', 'jsnext:main', 'main'],
     alias: {
       '~': path.resolve(__dirname, '../../src'),
-      assets: path.resolve(__dirname, '../../assets'),
-      docs: path.resolve(__dirname, '../../docs'),
+      '~assets': path.resolve(__dirname, '../../assets'),
+      '~content': path.resolve(__dirname, '../../content'),
     },
   },
 };

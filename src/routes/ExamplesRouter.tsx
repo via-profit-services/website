@@ -9,7 +9,10 @@ const options: OptionsWithoutResolver<any> = {
 };
 
 const pages = {
-  List: loadable(() => import('~/pages/Examples/pages/List'), options),
+  List: loadable(
+    () => import('~/pages/Examples/children/Introduction'),
+    options,
+  ),
   Fallback: loadable(() => import('~/pages/Fallback/index'), options),
 };
 

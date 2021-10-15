@@ -1,15 +1,14 @@
-import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
+import dotenv from 'dotenv';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
-import { HotModuleReplacementPlugin, DefinePlugin } from 'webpack';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import { HotModuleReplacementPlugin } from 'webpack';
 import LoadablePlugin from '@loadable/webpack-plugin';
 import { merge } from 'webpack-merge';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
-import Mustache from 'mustache';
 import 'webpack-dev-server';
+import Mustache from 'mustache';
 
 import baseConfig from './webpack-config-base';
 
@@ -19,18 +18,6 @@ const templateContent = fs.readFileSync(
   { encoding: 'utf8' },
 );
 
-const preloadedStates = {
-  REDUX: {},
-  ENVIRONMENT: {
-    GRAPHQL_ENDPOINT: process.env.GRAPHQL_ENDPOINT,
-    SUBSCRIPTION_ENDPOINT: process.env.GRAPHQL_SUBSCRIPTIONS,
-  },
-};
-
-const preloadedStatesBase64 = Buffer.from(
-  JSON.stringify(preloadedStates),
-).toString('base64');
-
 const devConfig = merge(baseConfig, {
   mode: 'development',
   entry: {
@@ -39,24 +26,24 @@ const devConfig = merge(baseConfig, {
   output: {
     publicPath: '/',
     path: path.join(__dirname, '../../build'),
+    filename: 'public/js/[name].js',
+    chunkFilename: 'public/js/chunk.[name].[chunkhash].js',
   },
   optimization: {
     minimize: false,
   },
   plugins: [
-    new LoadablePlugin() as any,
-    new DefinePlugin({
-      'process.env.REACT_APP_SC_DISABLE_SPEEDY': true,
-      'process.env.SC_DISABLE_SPEEDY': true,
-      SC_DISABLE_SPEEDY: true,
+    new LoadablePlugin({
+      filename: '/public/loadable-stats.json',
     }),
     new HTMLWebpackPlugin({
-      templateContent: Mustache.render(templateContent, {
-        preloadedStatesBase64,
-      }),
-    }),
-    new CleanWebpackPlugin({
-      verbose: true,
+      templateContent: Mustache.render(templateContent, {}),
+      // templateContent,
+      // filename: path.resolve(
+      //   __dirname,
+      //   '../../build/server/templates/main.mustache',
+      // ),
+      minify: false,
     }),
     new HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin() as any,

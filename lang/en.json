@@ -54,6 +54,10 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Permissions. Content paragraph"
   },
+  "1CMduV": {
+    "defaultMessage": "Getting started",
+    "description": "Breadcrumbs. Core getting started"
+  },
   "2A5jIr": {
     "defaultMessage": "PostgreSQL logo",
     "description": "Home second screen. Alt of postgreSQL logo"
@@ -80,10 +84,6 @@
   "3MHwen": {
     "defaultMessage": "Proident eiusmod anim enim ea exercitation proident. Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "Section Typescript. Paragraph 2"
-  },
-  "3SLMnY": {
-    "defaultMessage": "Dataloader package",
-    "description": "Packages. Dataloader package title"
   },
   "3q5j6q": {
     "defaultMessage": "Redis",
@@ -121,6 +121,10 @@
     "defaultMessage": "Terms",
     "description": "Breadcrumbs. Terms of use"
   },
+  "5Nz9LN": {
+    "defaultMessage": "Examples",
+    "description": "Breadcrumbs. Core examples"
+  },
   "5ZcWj8": {
     "defaultMessage": "Files",
     "description": "SectionPackages touchable. Files. Header"
@@ -145,10 +149,6 @@
     "defaultMessage": "MIT",
     "description": "Home main screen. License label. «MIT» word only"
   },
-  "6EMkJn": {
-    "defaultMessage": "Getting started",
-    "description": "Breadcrumbs. Core v2.0.x getting started"
-  },
   "6cIx/L": {
     "defaultMessage": "Via Profit company logo",
     "description": "Header. «aria-label» attribute of Via Profit company logo"
@@ -172,10 +172,6 @@
   "8+2rFU": {
     "defaultMessage": "Home page link",
     "description": "Header. «aria-label» attribute of home page link"
-  },
-  "8RQ8cv": {
-    "defaultMessage": "Connections",
-    "description": "Breadcrumbs. Core v2.0.x connections"
   },
   "8glbuq": {
     "defaultMessage": "Core v2 Context",
@@ -285,20 +281,13 @@
     "defaultMessage": "Permissions",
     "description": "Breadcrumbs. Permissions package"
   },
-  "F4wEPb": {
-    "defaultMessage": "Cookie policy"
+  "F9gAgA": {
+    "defaultMessage": "Api",
+    "description": "Breadcrumbs. Core API"
   },
   "FM8hka": {
     "defaultMessage": "Cookie policy",
     "description": "Breadcrumbs. Cookie policy"
-  },
-  "FNZ4qe": {
-    "defaultMessage": "Core package",
-    "description": "Packages. Core package title"
-  },
-  "FXVpG4": {
-    "defaultMessage": "File Storage package",
-    "description": "Packages. File Storage package title"
   },
   "GjQ0IA": {
     "defaultMessage": "We have prepared several ready-made packages that are easy to install and use",
@@ -316,9 +305,9 @@
     "defaultMessage": "{strong} infrastructure with middlewares collection",
     "description": "Home main screen. Title (without strong tag"
   },
-  "HfbTSW": {
-    "defaultMessage": "Examples",
-    "description": "Breadcrumbs. Core v2.0.x examples"
+  "HfEl6c": {
+    "defaultMessage": "Page not found",
+    "description": "404 page title"
   },
   "I/sDAp": {
     "defaultMessage": "Documentation",
@@ -351,10 +340,6 @@
   "JzKCcn": {
     "defaultMessage": "Terms",
     "description": "Footer. Terms link"
-  },
-  "KCqJu9": {
-    "defaultMessage": "Middlewares",
-    "description": "Breadcrumbs. Core v2.0.x middlewares"
   },
   "KFRlL2": {
     "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
@@ -416,10 +401,6 @@
     "defaultMessage": "API Reference",
     "description": "Docs sidebar. Core v.2.0 API"
   },
-  "QlRmtA": {
-    "defaultMessage": "Core v2 introduction",
-    "description": "Meta description of core.v2.0 introduction"
-  },
   "Qv6qRG": {
     "defaultMessage": "Subscriptions",
     "description": "SectionPackages touchable. Subscriptions. Header"
@@ -456,13 +437,6 @@
     "defaultMessage": "Scroll to top",
     "description": "«aria-label» attribute of Scroll to top button"
   },
-  "TUV3q8": {
-    "defaultMessage": "List of all packages"
-  },
-  "TWFV+5": {
-    "defaultMessage": "Redis package",
-    "description": "Packages. Redis package title"
-  },
   "UBBBi2": {
     "defaultMessage": "Knex",
     "description": "Breadcrumbs. Knex"
@@ -470,17 +444,6 @@
   "UTDA0s": {
     "defaultMessage": "Knex package",
     "description": "Meta title of Knex package"
-  },
-  "UhkSyx": {
-    "defaultMessage": "Terms of Use"
-  },
-  "UlZkz4": {
-    "defaultMessage": "Permissions package",
-    "description": "Packages. Permissions package title"
-  },
-  "VGUT2g": {
-    "defaultMessage": "Knex package",
-    "description": "Packages. Knex package title"
   },
   "VImI2V": {
     "defaultMessage": "Getting started",
@@ -494,9 +457,9 @@
     "defaultMessage": "GraphQL HTTP Server",
     "description": "Home main screen. Strong tag of the title"
   },
-  "WK1Tj4": {
-    "defaultMessage": "Introduction",
-    "description": "Meta title of core.v2.0 introduction"
+  "W3cpJn": {
+    "defaultMessage": "Context",
+    "description": "Breadcrumbs. Core Context"
   },
   "WM+SBU": {
     "defaultMessage": "Accounts",
@@ -542,6 +505,10 @@
     "defaultMessage": "Messages",
     "description": "packages sidebar. Messages"
   },
+  "Z2F6Dz": {
+    "defaultMessage": "Connections",
+    "description": "Breadcrumbs. Core connections"
+  },
   "Z3UJ9q": {
     "defaultMessage": "Subscriptions package",
     "description": "Meta title of Subscriptions package"
@@ -569,14 +536,6 @@
   "aS0EO1": {
     "defaultMessage": "Packages",
     "description": "SectionPackages. Header"
-  },
-  "aV/kZI": {
-    "defaultMessage": "Api",
-    "description": "Breadcrumbs. Core v2.0.x API"
-  },
-  "aVQ51n": {
-    "defaultMessage": "Accounts package",
-    "description": "Packages. Accounts package title"
   },
   "aedimj": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
@@ -710,10 +669,6 @@
     "defaultMessage": "v.1.2.x API",
     "description": "Docs sidebar. Core v.1.2 API"
   },
-  "kN/We+": {
-    "defaultMessage": "Messages package",
-    "description": "Packages. Messages package title"
-  },
   "kQJFNC": {
     "defaultMessage": "Knex v1.1",
     "description": "Breadcrumbs. Knex v1.1.x"
@@ -721,6 +676,10 @@
   "kiw+og": {
     "defaultMessage": "Via Profit Services",
     "description": "Helmet «defaultTitle» param"
+  },
+  "l8IWT5": {
+    "defaultMessage": "Middlewares",
+    "description": "Breadcrumbs. Core middlewares"
   },
   "lYVCON": {
     "defaultMessage": "Subscriptions",
@@ -737,14 +696,6 @@
   "lvUUiy": {
     "defaultMessage": "Redis",
     "description": "SectionPackages. Redis. Header"
-  },
-  "m+cURs": {
-    "defaultMessage": "Introduction",
-    "description": "Docs sidebar. Core v.2.0 introduction"
-  },
-  "m2/PMN": {
-    "defaultMessage": "Context",
-    "description": "Breadcrumbs. Core v2.0.x Context"
   },
   "nVqWuW": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
@@ -814,10 +765,6 @@
     "defaultMessage": "Core v2 typedefs",
     "description": "Meta description of core.v2.0 typedefs"
   },
-  "pzDOk7": {
-    "defaultMessage": "Phones package",
-    "description": "Packages. Phones package title"
-  },
   "q6GZrq": {
     "defaultMessage": "List of all packages",
     "description": "Touchable packages. Header"
@@ -826,6 +773,10 @@
     "defaultMessage": "Open Source",
     "description": "Section Open Source. Header"
   },
+  "rBrEfj": {
+    "defaultMessage": "Core",
+    "description": "Breadcrumbs. Docs core"
+  },
   "rJJG8g": {
     "defaultMessage": "Permissions package",
     "description": "Meta description of Permissions package"
@@ -833,10 +784,6 @@
   "rSKp/5": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Dataloader. Content paragraph"
-  },
-  "rUAzFO": {
-    "defaultMessage": "Core v2.0",
-    "description": "Breadcrumbs. Core v2.0.x"
   },
   "rY3VNI": {
     "defaultMessage": "Core v2 connections",
@@ -878,6 +825,10 @@
     "defaultMessage": "Phones",
     "description": "Breadcrumbs. Phones package"
   },
+  "uJCeYd": {
+    "defaultMessage": "Typedefs",
+    "description": "Breadcrumbs. Core typedefs"
+  },
   "uLCR0p": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Knex. Content paragraph 1"
@@ -906,9 +857,6 @@
     "defaultMessage": "Via Profit",
     "description": "Helmet meta «author»"
   },
-  "vx0nkZ": {
-    "defaultMessage": "Privacy Policy"
-  },
   "w1EyIs": {
     "defaultMessage": "Dataloader",
     "description": "Breadcrumbs. Dataloader package"
@@ -929,13 +877,9 @@
     "defaultMessage": "Examples",
     "description": "Appbar. Examples link"
   },
-  "xG4/qt": {
-    "defaultMessage": "Geography package",
-    "description": "Packages. Geography package title"
-  },
-  "xiGym8": {
-    "defaultMessage": "Typedefs",
-    "description": "Breadcrumbs. Core v2.0.x typedefs"
+  "xN9EFO": {
+    "defaultMessage": "The page may not exist or an error has occurred",
+    "description": "404 page text"
   },
   "xu7EiG": {
     "defaultMessage": "Sms",

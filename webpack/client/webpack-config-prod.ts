@@ -2,7 +2,6 @@ import path from 'path';
 import fs from 'fs';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import LoadablePlugin from '@loadable/webpack-plugin';
 import { merge } from 'webpack-merge';
 import { DefinePlugin } from 'webpack';
@@ -23,6 +22,12 @@ module.exports = merge(baseConfig, {
   mode: 'production',
   entry: {
     main: path.resolve(__dirname, '../../src/app.tsx'),
+  },
+  output: {
+    publicPath: '/',
+    path: path.join(__dirname, '../../dist'),
+    filename: 'public/js/[name].js',
+    chunkFilename: 'public/js/chunk.[name].[chunkhash].js',
   },
   optimization: {
     minimize: true,
@@ -48,19 +53,10 @@ module.exports = merge(baseConfig, {
       },
     },
   },
-  output: {
-    publicPath: '/',
-    path: path.join(__dirname, '../../dist'),
-    filename: 'public/js/[name].js',
-    chunkFilename: 'public/js/chunk.[name].[chunkhash].js',
-  },
   devtool: false,
   plugins: [
     new LoadablePlugin({
       filename: '/public/loadable-stats.json',
-    }),
-    new CleanWebpackPlugin({
-      verbose: true,
     }),
     new DefinePlugin({
       SC_DISABLE_SPEEDY: false, // Set as true to disable CSSOM for Yandex Webvisor

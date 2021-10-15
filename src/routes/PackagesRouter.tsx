@@ -9,31 +9,44 @@ const options: OptionsWithoutResolver<any> = {
 };
 
 const pages = {
-  List: loadable(() => import('~/pages/Packages/pages/List'), options),
-  Core: loadable(() => import('~/pages/Packages/pages/Core'), options),
-  knex: loadable(() => import('~/pages/Packages/pages/Knex'), options),
-  Redis: loadable(() => import('~/pages/Packages/pages/Redis'), options),
-  Phones: loadable(() => import('~/pages/Packages/pages/Phones'), options),
+  Introduction: loadable(
+    () => import('~/pages/Packages/children/Introduction'),
+    options,
+  ),
+  Accounts: loadable(
+    () => import('~/pages/Packages/children/Accounts'),
+    options,
+  ),
+  Core: loadable(() => import('~/pages/Packages/children/Core'), options),
+  knex: loadable(() => import('~/pages/Packages/children/Knex'), options),
+  Redis: loadable(() => import('~/pages/Packages/children/Redis'), options),
+  Phones: loadable(() => import('~/pages/Packages/children/Phones'), options),
   Dataloader: loadable(
-    () => import('~/pages/Packages/pages/Dataloader'),
+    () => import('~/pages/Packages/children/Dataloader'),
     options,
   ),
-  Files: loadable(() => import('~/pages/Packages/pages/Files'), options),
+  Files: loadable(() => import('~/pages/Packages/children/Files'), options),
   Permissions: loadable(
-    () => import('~/pages/Packages/pages/Permissions'),
+    () => import('~/pages/Packages/children/Permissions'),
     options,
   ),
-  Settings: loadable(() => import('~/pages/Packages/pages/Settings'), options),
+  Settings: loadable(
+    () => import('~/pages/Packages/children/Settings'),
+    options,
+  ),
   Geography: loadable(
-    () => import('~/pages/Packages/pages/Geography'),
+    () => import('~/pages/Packages/children/Geography'),
     options,
   ),
-  Messages: loadable(() => import('~/pages/Packages/pages/Messages'), options),
+  Messages: loadable(
+    () => import('~/pages/Packages/children/Messages'),
+    options,
+  ),
   Subscriptions: loadable(
-    () => import('~/pages/Packages/pages/Subscriptions'),
+    () => import('~/pages/Packages/children/Subscriptions'),
     options,
   ),
-  Sms: loadable(() => import('~/pages/Packages/pages/Sms'), options),
+  Sms: loadable(() => import('~/pages/Packages/children/Sms'), options),
   Fallback: loadable(() => import('~/pages/Fallback/index'), options),
 };
 
@@ -42,9 +55,10 @@ const PackagesRoutes: React.FC = () => {
 
   return (
     <Switch>
-      <Route strict exact path={path} component={pages.List} />
+      <Route strict exact path={path} component={pages.Introduction} />
       <Route strict path={`${path}/core`} component={pages.Core} />
       <Route strict path={`${path}/knex`} component={pages.knex} />
+      <Route strict path={`${path}/accounts`} component={pages.Accounts} />
       <Route strict path={`${path}/redis`} component={pages.Redis} />
       <Route strict path={`${path}/phones`} component={pages.Phones} />
       <Route strict path={`${path}/dataloader`} component={pages.Dataloader} />

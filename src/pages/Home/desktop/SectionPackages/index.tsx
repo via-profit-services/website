@@ -9,7 +9,7 @@ import H2 from '~/components/desktop/Typography/H2';
 import Subtitle from '~/components/desktop/Typography/Subtitle';
 import Card, { CardProps } from './PackageCard';
 import CoreIcon from '~/components/desktop/Icons/Core';
-import dotssrc from 'assets/images/dots-grey.svg';
+import dotssrc from '~assets/images/dots-grey.svg';
 
 const Section = styled.section`
   position: relative;

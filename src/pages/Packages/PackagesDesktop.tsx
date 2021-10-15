@@ -22,6 +22,8 @@ const Layout = styled(ContentArea)`
 
 const Aside = styled.aside`
   width: 250px;
+  padding-top: 1em;
+  padding-bottom: 1em;
   padding-right: ${props => props.theme.grid.desktop.gutter}px;
   border-right: 1px solid ${({ theme }) => theme.color.grey[300]};
 `;

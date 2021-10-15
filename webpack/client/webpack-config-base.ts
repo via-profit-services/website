@@ -108,8 +108,8 @@ const config: Configuration = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss'],
     alias: {
       '~': path.resolve(__dirname, '../../src'),
-      assets: path.resolve(__dirname, '../../assets'),
-      docs: path.resolve(__dirname, '../../docs'),
+      '~assets': path.resolve(__dirname, '../../assets'),
+      '~content': path.resolve(__dirname, '../../content'),
     },
   },
   node: {},

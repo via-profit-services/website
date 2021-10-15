@@ -10,10 +10,10 @@ const options: OptionsWithoutResolver<any> = {
 
 const pages = {
   Fallback: loadable(() => import('~/pages/Fallback/index'), options),
-  Core: loadable(() => import('~/pages/Docs/core/index'), options),
-  Knex: loadable(() => import('~/pages/Docs/knex/index'), options),
+  Core: loadable(() => import('~/pages/Docs/children/core/index'), options),
+  Knex: loadable(() => import('~/pages/Docs/children/knex/index'), options),
   Introduction: loadable(
-    () => import('~/pages/Docs/introduction/index'),
+    () => import('~/pages/Docs/children/introduction/index'),
     options,
   ),
 };
@@ -25,7 +25,7 @@ const DocsRoutes: React.FC = () => {
     <Switch>
       <Route strict path={`${path}/core`} component={pages.Core} />
       <Route strict path={`${path}/knex`} component={pages.Knex} />
-      <Route strict path={path} component={pages.Introduction} />
+      <Route strict exact path={path} component={pages.Introduction} />
       <Route component={pages.Fallback} />
     </Switch>
   );
