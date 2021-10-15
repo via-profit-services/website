@@ -19,6 +19,10 @@
     "defaultMessage": "Permissions package",
     "description": "Meta title of Permissions package"
   },
+  "+vnbFB": {
+    "defaultMessage": "Settings",
+    "description": "Main menu. Package settings link"
+  },
   "/BUSR7": {
     "defaultMessage": "Core v2 middlewares",
     "description": "Meta description of core.v2.0 middlewares"
@@ -74,12 +78,13 @@
     "defaultMessage": "File Storage",
     "description": "Footer. Package file-storage link"
   },
+  "2ywmdv": {
+    "defaultMessage": "Files",
+    "description": "Main menu. Package files link"
+  },
   "3EAwoY": {
     "defaultMessage": "Context",
     "description": "Docs sidebar. Core v.2.0 context"
-  },
-  "3GLH+d": {
-    "defaultMessage": "Examples"
   },
   "3MHwen": {
     "defaultMessage": "Proident eiusmod anim enim ea exercitation proident. Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -172,6 +177,10 @@
   "8+2rFU": {
     "defaultMessage": "Home page link",
     "description": "Header. «aria-label» attribute of home page link"
+  },
+  "8ELynH": {
+    "defaultMessage": "Geography",
+    "description": "Main menu. Package geography link"
   },
   "8glbuq": {
     "defaultMessage": "Core v2 Context",
@@ -361,6 +370,10 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Redis. Content paragraph 1"
   },
+  "Kcciqp": {
+    "defaultMessage": "Accounts",
+    "description": "Main menu. Package accounts link"
+  },
   "KezNm5": {
     "defaultMessage": "Open Source Project{br}{MIT} License",
     "description": "Home main screen. License label (without «MIT» word)"
@@ -373,6 +386,10 @@
     "defaultMessage": "Core",
     "description": "SectionPackages. Core. Header"
   },
+  "M4Z3yA": {
+    "defaultMessage": "Permissions",
+    "description": "Main menu. Package permissions link"
+  },
   "MrKKgE": {
     "defaultMessage": "Cookie policy",
     "description": "Main menu. Package Cookie policy link"
@@ -384,6 +401,10 @@
   "OXpB32": {
     "defaultMessage": "Knex v1.1",
     "description": "Docs sidebar. Knex v.1.1 introduction"
+  },
+  "PB13o0": {
+    "defaultMessage": "SMS",
+    "description": "Main menu. Package sms link"
   },
   "QBwZKx": {
     "defaultMessage": "Knex",
@@ -517,10 +538,6 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Knex. Content paragraph"
   },
-  "Zq7/rM": {
-    "defaultMessage": "Subscriptions package",
-    "description": "Packages. Subscriptions package title"
-  },
   "Zt4sGq": {
     "defaultMessage": "Permissions",
     "description": "packages sidebar. Permissions"
@@ -597,6 +614,10 @@
     "defaultMessage": "Accounts package",
     "description": "Meta description of Accounts package"
   },
+  "fmosFk": {
+    "defaultMessage": "Messages",
+    "description": "Main menu. Package messages link"
+  },
   "fpx7oe": {
     "defaultMessage": "Dataloader",
     "description": "packages sidebar. Dataloader"
@@ -621,6 +642,10 @@
     "defaultMessage": "Dataloader package",
     "description": "Meta description of Dataloader package"
   },
+  "hCg0E1": {
+    "defaultMessage": "Phones",
+    "description": "Main menu. Package phones link"
+  },
   "hPD7qo": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Knex. Content paragraph 2"
@@ -640,6 +665,10 @@
   "i0A3YO": {
     "defaultMessage": "MIT License",
     "description": "Section Open Source. License label"
+  },
+  "iLMczI": {
+    "defaultMessage": "Redis",
+    "description": "Main menu. Package redis link"
   },
   "iTBOgA": {
     "defaultMessage": "Close docs menu",
@@ -781,6 +810,10 @@
     "defaultMessage": "Permissions package",
     "description": "Meta description of Permissions package"
   },
+  "rLJrWG": {
+    "defaultMessage": "Dataloader",
+    "description": "Main menu. Package dataloader link"
+  },
   "rSKp/5": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Dataloader. Content paragraph"
@@ -845,10 +878,6 @@
     "defaultMessage": "Core v2 examples",
     "description": "Meta description of core.v2.0 examples"
   },
-  "v9wlMG": {
-    "defaultMessage": "Settings Manager package",
-    "description": "Packages. Settings Manager package title"
-  },
   "vNMwrW": {
     "defaultMessage": "Fugiat laborum nulla fugiat",
     "description": "Why screen. Third advantage"
@@ -899,10 +928,6 @@
   "ydd+OI": {
     "defaultMessage": "See more packages",
     "description": "SectionPackages. Link to packages page"
-  },
-  "ygH1hc": {
-    "defaultMessage": "Sms package",
-    "description": "Packages. Sms package title"
   },
   "ygzIoj": {
     "defaultMessage": "Knex",
