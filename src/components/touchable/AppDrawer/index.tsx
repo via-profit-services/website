@@ -181,6 +181,96 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
                 description: 'Main menu. Package subscriptions link',
               })}
             />
+            <DrawerItem
+              to="/packages/accounts"
+              active={pathname === '/packages/accounts'}
+              onDrawerClose={onClose}
+              label={intl.formatMessage({
+                defaultMessage: 'Accounts',
+                description: 'Main menu. Package accounts link',
+              })}
+            />
+            <DrawerItem
+              to="/packages/dataloader"
+              active={pathname === '/packages/dataloader'}
+              onDrawerClose={onClose}
+              label={intl.formatMessage({
+                defaultMessage: 'Dataloader',
+                description: 'Main menu. Package dataloader link',
+              })}
+            />
+            <DrawerItem
+              to="/packages/files"
+              active={pathname === '/packages/files'}
+              onDrawerClose={onClose}
+              label={intl.formatMessage({
+                defaultMessage: 'Files',
+                description: 'Main menu. Package files link',
+              })}
+            />
+            <DrawerItem
+              to="/packages/geography"
+              active={pathname === '/packages/geography'}
+              onDrawerClose={onClose}
+              label={intl.formatMessage({
+                defaultMessage: 'Geography',
+                description: 'Main menu. Package geography link',
+              })}
+            />
+            <DrawerItem
+              to="/packages/messages"
+              active={pathname === '/packages/messages'}
+              onDrawerClose={onClose}
+              label={intl.formatMessage({
+                defaultMessage: 'Messages',
+                description: 'Main menu. Package messages link',
+              })}
+            />
+            <DrawerItem
+              to="/packages/permissions"
+              active={pathname === '/packages/permissions'}
+              onDrawerClose={onClose}
+              label={intl.formatMessage({
+                defaultMessage: 'Permissions',
+                description: 'Main menu. Package permissions link',
+              })}
+            />
+            <DrawerItem
+              to="/packages/phones"
+              active={pathname === '/packages/phones'}
+              onDrawerClose={onClose}
+              label={intl.formatMessage({
+                defaultMessage: 'Phones',
+                description: 'Main menu. Package phones link',
+              })}
+            />
+            <DrawerItem
+              to="/packages/redis"
+              active={pathname === '/packages/redis'}
+              onDrawerClose={onClose}
+              label={intl.formatMessage({
+                defaultMessage: 'Redis',
+                description: 'Main menu. Package redis link',
+              })}
+            />
+            <DrawerItem
+              to="/packages/settings"
+              active={pathname === '/packages/settings'}
+              onDrawerClose={onClose}
+              label={intl.formatMessage({
+                defaultMessage: 'Settings',
+                description: 'Main menu. Package settings link',
+              })}
+            />
+            <DrawerItem
+              to="/packages/sms"
+              active={pathname === '/packages/sms'}
+              onDrawerClose={onClose}
+              label={intl.formatMessage({
+                defaultMessage: 'SMS',
+                description: 'Main menu. Package sms link',
+              })}
+            />
 
             <SeparatorTitle>
               <FormattedMessage

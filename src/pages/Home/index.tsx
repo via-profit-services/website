@@ -9,7 +9,10 @@ const options: OptionsWithoutResolver<any> = {
 };
 
 const Desktop = loadable(() => import('~/pages/Home/desktop/index'), options);
-const Touchable = loadable(() => import('~/pages/Home/desktop/index'), options);
+const Touchable = loadable(
+  () => import('~/pages/Home/touchable/index'),
+  options,
+);
 
 const Home: React.FC = () => {
   const mode = useSelector<ReduxState, ReduxSelectedMode>(state => state.mode);
