@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux';
 
 import { DEFAULT_LOCALE } from '~/utils/constants';
 import translationEN from '~/translations/en.json';
-import Routes from '~/routes/Routes';
+import RootRouter from '~/routes/RootRouter';
 import GlobalStyles from '~/themes/GlobalStyles';
 import * as themes from '~/themes';
-import LoadingIndicator from '~/render/desktop/components/LoadingIndicator';
-import ErrorBoundary from '~/render/desktop/components/ErrorBoundary';
+import LoadingIndicator from '~/components/desktop/LoadingIndicator';
+import ErrorBoundary from '~/components/desktop/ErrorBoundary';
 
 const messagesList = {
   en: translationEN,
@@ -37,7 +37,7 @@ const ApplicationProvider: React.FC = () => {
         <ThemeProvider theme={currentTheme}>
           <GlobalStyles />
           <React.Suspense fallback={<LoadingIndicator />}>
-            <Routes />
+            <RootRouter />
           </React.Suspense>
         </ThemeProvider>
       </IntlProvider>

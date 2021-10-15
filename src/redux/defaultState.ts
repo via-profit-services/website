@@ -1,6 +1,6 @@
 const defaultState: ReduxState = {
   theme: 'light',
-  mode: 'touchable',
+  mode: 'desktop',
 };
 
 export default defaultState;

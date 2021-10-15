@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useIntl } from 'react-intl';
 
-import { SidebarMap } from '~/render/desktop/components/Sidebar';
+import { SidebarMap } from '~/components/desktop/Sidebar';
 
 const useSidebar = () => {
   const intl = useIntl();

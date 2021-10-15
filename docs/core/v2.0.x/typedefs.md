@@ -53,7 +53,7 @@ type User {
 
 ### Node
 
-The `Node` **interface** is used to declare a type that must have an `ID`. Node is also used in connections [connections](#connections)
+The `Node` **interface** is used to declare a type that must have an `ID`. Node is also used in connections [connections](./connections.md)
 
 Example of usage:
 
@@ -66,7 +66,7 @@ type User implements Node {
 
 ### Edge
 
-The `Edge` **interface** is used to declare [connections](#connections). Each edge must contain a key `node` and `cursor`. (see [Connection spec.](https://relay.dev/graphql/connections.htm) for more details).
+The `Edge` **interface** is used to declare [connections](./connections.md). Each edge must contain a key `node` and `cursor`. (see [Connection spec.](https://relay.dev/graphql/connections.htm) for more details).
 
 Example of usage:
 
