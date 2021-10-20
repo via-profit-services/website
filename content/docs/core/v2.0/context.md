@@ -38,7 +38,7 @@ The core event emitter is contained in the `Context` object. This is a simple [N
 
 Various middleware can add their own events, for example, middleware [Knex](https://github.com/via-profit-services/knex) adds such events as: `knex-error`; `knex-warning`; `knex-debug`.
 
-To add your own events go to the [middlewares][./middlewares.md]
+To add your own events go to the [middlewares](./middlewares.md)
 
 ### Core Event emitter example
 
