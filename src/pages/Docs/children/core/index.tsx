@@ -9,15 +9,15 @@ const Fallback = loadable(() => import('~/pages/Fallback/index'), {
   fallback: <LoadingIndicator />,
 });
 
-const CoreVer1dot2 = loadable(
-  () => import('~/pages/Docs/children/core/v1.2.x/index'),
+const CoreVer1 = loadable(
+  () => import('~/pages/Docs/children/core/v1.2/index'),
   {
     fallback: <LoadingIndicator />,
   },
 );
 
-const CoreVer2dot0 = loadable(
-  () => import('~/pages/Docs/children/core/v2.0.x/index'),
+const CoreVer2 = loadable(
+  () => import('~/pages/Docs/children/core/v2.0/index'),
   {
     fallback: <LoadingIndicator />,
   },
@@ -32,8 +32,8 @@ const Core: React.FC = () => {
 
   return (
     <Switch>
-      <Route strict path={`${path}/v1.2.x`} component={CoreVer1dot2} />
-      <Route strict path={path} component={CoreVer2dot0} />
+      <Route strict path={`${path}/v1.2`} component={CoreVer1} />
+      <Route strict path={path} component={CoreVer2} />
       <Route component={Fallback} />
     </Switch>
   );

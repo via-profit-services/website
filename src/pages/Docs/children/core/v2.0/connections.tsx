@@ -4,9 +4,9 @@ import { useIntl, FormattedMessage } from 'react-intl';
 
 import RenderMarkdown from '~/components/desktop/RenderMarkdown';
 import Breadcrumbs, { Crumb } from '~/components/desktop/Breadcrumbs';
-import content from '~content/docs/core/v2.0.x/context.md';
+import content from '~content/docs/core/v2.0/connections.md';
 
-const Context: React.FC = () => {
+const Connections: React.FC = () => {
   const intl = useIntl();
 
   return (
@@ -14,15 +14,15 @@ const Context: React.FC = () => {
       <Helmet>
         <title>
           {intl.formatMessage({
-            defaultMessage: 'Context',
-            description: 'Meta title of core.v2.0 Context',
+            defaultMessage: 'Connections',
+            description: 'Meta title of core.v2.0 connections',
           })}
         </title>
         <meta
           name="description"
           content={intl.formatMessage({
-            defaultMessage: 'Core v2 Context',
-            description: 'Meta description of core.v2.0 Context',
+            defaultMessage: 'Core v2 connections',
+            description: 'Meta description of core.v2.0 connections',
           })}
         />
       </Helmet>
@@ -53,8 +53,8 @@ const Context: React.FC = () => {
             position={4}
             label={
               <FormattedMessage
-                defaultMessage="Context"
-                description="Breadcrumbs. Core Context"
+                defaultMessage="Connections"
+                description="Breadcrumbs. Core connections"
               />
             }
           />
@@ -65,4 +65,4 @@ const Context: React.FC = () => {
   );
 };
 
-export default Context;
+export default Connections;

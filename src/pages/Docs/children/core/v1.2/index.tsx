@@ -9,16 +9,16 @@ const Fallback = loadable(() => import('~/pages/Fallback/index'), {
 });
 
 const Introduction = loadable(
-  () => import('~/pages/Docs/children/core/v1.2.x/introduction'),
+  () => import('~/pages/Docs/children/core/v1.2/introduction'),
   { fallback: <LoadingIndicator /> },
 );
 
-const Api = loadable(() => import('~/pages/Docs/children/core/v1.2.x/api'), {
+const Api = loadable(() => import('~/pages/Docs/children/core/v1.2/api'), {
   fallback: <LoadingIndicator />,
 });
 
 const Middlewares = loadable(
-  () => import('~/pages/Docs/children/core/v1.2.x/middlewares'),
+  () => import('~/pages/Docs/children/core/v1.2/middlewares'),
   { fallback: <LoadingIndicator /> },
 );
 

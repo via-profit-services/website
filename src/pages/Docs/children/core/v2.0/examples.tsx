@@ -4,9 +4,9 @@ import { useIntl, FormattedMessage } from 'react-intl';
 
 import RenderMarkdown from '~/components/desktop/RenderMarkdown';
 import Breadcrumbs, { Crumb } from '~/components/desktop/Breadcrumbs';
-import content from '~content/docs/core/v2.0.x/typedefs.md';
+import content from '~content/docs/core/v2.0/examples.md';
 
-const Typedefs: React.FC = () => {
+const Introduction: React.FC = () => {
   const intl = useIntl();
 
   return (
@@ -14,15 +14,15 @@ const Typedefs: React.FC = () => {
       <Helmet>
         <title>
           {intl.formatMessage({
-            defaultMessage: 'Typedefs',
-            description: 'Meta title of core.v2.0 typedefs',
+            defaultMessage: 'Examples',
+            description: 'Meta title of core.v2.0 examples',
           })}
         </title>
         <meta
           name="description"
           content={intl.formatMessage({
-            defaultMessage: 'Core v2 typedefs',
-            description: 'Meta description of core.v2.0 typedefs',
+            defaultMessage: 'Core v2 examples',
+            description: 'Meta description of core.v2.0 examples',
           })}
         />
       </Helmet>
@@ -53,8 +53,8 @@ const Typedefs: React.FC = () => {
             position={4}
             label={
               <FormattedMessage
-                defaultMessage="Typedefs"
-                description="Breadcrumbs. Core typedefs"
+                defaultMessage="Examples"
+                description="Breadcrumbs. Core examples"
               />
             }
           />
@@ -65,4 +65,4 @@ const Typedefs: React.FC = () => {
   );
 };
 
-export default Typedefs;
+export default Introduction;

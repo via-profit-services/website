@@ -6,10 +6,10 @@ import H1 from '~/components/desktop/Typography/H1';
 const Middlewares: React.FC = () => (
   <>
     <Helmet>
-      <title>Core v1.2.x middlewares</title>
+      <title>Core v1.2 middlewares</title>
       <meta name="description" content="Core middlewares" />
     </Helmet>
-    <H1>Middlewares in Core v1.2.x</H1>
+    <H1>Middlewares in Core v1.2</H1>
   </>
 );
 

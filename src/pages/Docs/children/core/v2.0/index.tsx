@@ -10,29 +10,29 @@ const options: OptionsWithoutResolver<any> = {
 
 const pages = {
   Fallback: loadable(() => import('~/pages/Fallback/index'), options),
-  Api: loadable(() => import('~/pages/Docs/children/core/v2.0.x/api'), options),
+  Api: loadable(() => import('~/pages/Docs/children/core/v2.0/api'), options),
   Connections: loadable(
-    () => import('~/pages/Docs/children/core/v2.0.x/connections'),
+    () => import('~/pages/Docs/children/core/v2.0/connections'),
     options,
   ),
   Context: loadable(
-    () => import('~/pages/Docs/children/core/v2.0.x/context'),
+    () => import('~/pages/Docs/children/core/v2.0/context'),
     options,
   ),
   Examples: loadable(
-    () => import('~/pages/Docs/children/core/v2.0.x/examples'),
+    () => import('~/pages/Docs/children/core/v2.0/examples'),
     options,
   ),
   GettingStarted: loadable(
-    () => import('~/pages/Docs/children/core/v2.0.x/getting-started'),
+    () => import('~/pages/Docs/children/core/v2.0/getting-started'),
     options,
   ),
   Middlewares: loadable(
-    () => import('~/pages/Docs/children/core/v2.0.x/middlewares'),
+    () => import('~/pages/Docs/children/core/v2.0/middlewares'),
     options,
   ),
   Typedefs: loadable(
-    () => import('~/pages/Docs/children/core/v2.0.x/typedefs'),
+    () => import('~/pages/Docs/children/core/v2.0/typedefs'),
     options,
   ),
 };

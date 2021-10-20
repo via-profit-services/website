@@ -72,21 +72,21 @@ const useSidebar = () => {
               }),
               child: [
                 {
-                  path: '/docs/core/v1.2.x',
+                  path: '/docs/core/v1.2',
                   label: intl.formatMessage({
                     defaultMessage: 'Core v1.2',
                     description: 'Docs sidebar. Core v.1.2',
                   }),
                   child: [
                     {
-                      path: '/docs/core/v1.2.x/introduction',
+                      path: '/docs/core/v1.2/introduction',
                       label: intl.formatMessage({
                         defaultMessage: 'v.1.2.x',
                         description: 'Docs sidebar. Core v.1.2',
                       }),
                     },
                     {
-                      path: '/docs/core/v1.2.x/api',
+                      path: '/docs/core/v1.2/api',
                       label: intl.formatMessage({
                         defaultMessage: 'v.1.2.x API',
                         description: 'Docs sidebar. Core v.1.2 API',

@@ -5,6 +5,7 @@
 - [Overview](#overview)
 - [Example](#example)
 - [Typescript](#typescript)
+- [requestCounter property](#requestcounter-property)
 
 ## Overview
 
@@ -20,6 +21,7 @@ Will be passed:
   - **schema** - The current GraphQL schema returned from the previous middleware, or the initial schema if no middleware has been executed before.
   - **extensions** - The current Extensions object returned from the previous middleware, or the initial extensions if no middleware has been executed before.
   - **request** - HTTP request (`Express.Request`)
+  - **requestCounter** - HTTP request counter
 
 Possible return:
  - **context** - You should mutated this context value. **Not override and not merge with spread operator**.
@@ -115,6 +117,29 @@ const { graphQLExpress } = await factory({
 });
 // !!! This code is not valid
 ```
+
+## requestCounter property
+
+What might you need a counter for?. `requestCounter` - is simply a counter that indicates the number of requests that have arrived at your server. You can use it for logging or for example to subscribe `EventEmitter` listeners:
+
+```js
+const { graphQLExpress } = await core.factory({
+  server,
+  schema,
+  middleware: [
+    ({ context, requestCounter }) => {
+      if (requestCounter === 1) {
+        context.emitter.on("graphql-error", msg => console.error(msg));
+      }
+
+      return { context };
+    },
+    knexMiddleware
+  ]
+});
+```
+
+In this example, we are subscribing to the `graphql-error` listener. It is very important to do this once, otherwise, we will subscribe to messages every time a new http request is received.
 
 ## Typescript
 

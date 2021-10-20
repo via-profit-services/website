@@ -6,11 +6,11 @@ import H1 from '~/components/desktop/Typography/H1';
 const Api: React.FC = () => (
   <>
     <Helmet>
-      <title>Core v1.2.x api</title>
+      <title>Core v1.2 api</title>
       <meta name="description" content="Core api" />
     </Helmet>
 
-    <H1>Api of Core v1.2.x</H1>
+    <H1>Api of Core v1.2</H1>
   </>
 );
 
