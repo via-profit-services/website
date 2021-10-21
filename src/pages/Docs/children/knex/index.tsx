@@ -9,8 +9,15 @@ const Fallback = loadable(() => import('~/pages/Fallback/index'), {
   fallback: <LoadingIndicator />,
 });
 
-const KnexVer1dot1 = loadable(
-  () => import('~/pages/Docs/children/knex/v1.1.x/index'),
+const KnexVer1 = loadable(
+  () => import('~/pages/Docs/children/knex/v1.1/index'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
+
+const KnexVer2 = loadable(
+  () => import('~/pages/Docs/children/knex/v2.0/index'),
   {
     fallback: <LoadingIndicator />,
   },
@@ -25,7 +32,8 @@ const Knex: React.FC = () => {
 
   return (
     <Switch>
-      <Route strict path={`${path}/v1.1.x`} component={KnexVer1dot1} />
+      <Route strict path={`${path}/versions/v1.1`} component={KnexVer1} />
+      <Route strict path={path} component={KnexVer2} />
       <Route component={Fallback} />
     </Switch>
   );

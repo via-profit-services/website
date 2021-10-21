@@ -72,24 +72,17 @@ const useSidebar = () => {
               }),
               child: [
                 {
-                  path: '/docs/core/v1.2',
+                  path: '/docs/core/versions/v1.2',
                   label: intl.formatMessage({
                     defaultMessage: 'Core v1.2',
                     description: 'Docs sidebar. Core v.1.2',
                   }),
                   child: [
                     {
-                      path: '/docs/core/v1.2/introduction',
+                      path: '/docs/core/versions/v1.2',
                       label: intl.formatMessage({
-                        defaultMessage: 'v.1.2.x',
+                        defaultMessage: 'Introduction',
                         description: 'Docs sidebar. Core v.1.2',
-                      }),
-                    },
-                    {
-                      path: '/docs/core/v1.2/api',
-                      label: intl.formatMessage({
-                        defaultMessage: 'v.1.2.x API',
-                        description: 'Docs sidebar. Core v.1.2 API',
                       }),
                     },
                   ],
@@ -106,18 +99,34 @@ const useSidebar = () => {
           }),
           child: [
             {
-              path: '/docs/knex/v1.1.x',
+              path: '/docs/knex/getting-started',
               label: intl.formatMessage({
-                defaultMessage: 'Knex v1.1',
-                description: 'Docs sidebar. Knex v.1.1 introduction',
+                defaultMessage: 'Getting started',
+                description: 'Docs sidebar. Knex getting started',
+              }),
+            },
+            {
+              path: '/docs/knex/versions',
+              label: intl.formatMessage({
+                defaultMessage: 'Versions',
+                description: 'Docs sidebar. Knex versions',
               }),
               child: [
                 {
-                  path: '/docs/knex/v1.1.x/api',
+                  path: '/docs/knex/versions/v1.1',
                   label: intl.formatMessage({
-                    defaultMessage: 'API Reference',
-                    description: 'Docs sidebar. Knex v.1.1 API',
+                    defaultMessage: 'Knex v1.1',
+                    description: 'Docs sidebar. Knex v.1.1',
                   }),
+                  child: [
+                    {
+                      path: '/docs/knex/versions/v1.1',
+                      label: intl.formatMessage({
+                        defaultMessage: 'Introduction',
+                        description: 'Docs sidebar. Knex v.1.1',
+                      }),
+                    },
+                  ],
                 },
               ],
             },

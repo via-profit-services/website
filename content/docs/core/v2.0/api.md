@@ -34,15 +34,15 @@ import { factory, resolvers, buildQueryFilter } from '@via-profit-services/core'
 Function returns object contains `graphQLExpress` - express middleware.
 
 Arguments:
- - config - An object containing:
-   - `server` **required** - HTTP server instance.
-   - `schema` **required** - GraphQL Schema Definition. See[https://graphql.org](https://graphql.org) for more details.
-   - `persistedQueriesMap` - Persisted Queries map (Object contains key: value pairs). If persisted queries map is passed, the server will ignore the query directive in body request and read the map. See [Relay docs](https://relay.dev/docs/en/persisted-queries.html) for more details.
-    - `persistedQueryKey` - Used only together with the `persistedQueriesMap` option. The name of the parameter that will be passed the ID of the query in the Persisted Queries map. Default: `documentId`
-    - `timezone` - Server timezone. Default: `UTC`
-    - `debug` - Debug mode. Default: `false`
-    - `rootValue` - GraphQL root value.
-    * `middleware` - Middleware function or array of middlewares. See [middlewares](./middlewares) for more details.
+ - An object containing:
+  - `server` **required** **http.Server** - HTTP server instance.
+  - `schema` **required** **GraphQLSchema** - GraphQL Schema Definition. See [graphql.org](https://graphql.org) for more information.
+  - `timezone` **String** - Server timezone. Default: `UTC`.
+  - `debug` **Boolean** - Debug mode. Default: `false`.
+  - `rootValue` **Object** - GraphQL Root resolver.
+  - `persistedQueriesMap` **Object** - Persisted Queries map (Object contains key: value pairs). If persisted queries map is passed, the server will ignore the query directive in body request and read the map [Relay persisted-queries](https://relay.dev/docs/en/persisted-queries.html).
+  - `persistedQueryKey` **String** - Used only together with the `persistedQueriesMap` option. The name of the parameter that will be passed the ID of the query in the Persisted Queries map. Default: `documentId`.
+  - `middleware` **Middleware | Middleware[]** - Middlewares. See [middleware documentation](./middlewares.md) for more details.
 
 Returns:
   ExpressJs middleware
@@ -96,7 +96,7 @@ Convert input filter (partial from GraphQL request) into persist filter.
 This method takes an object of type `InputFilter` with optional keys and returns an object of type` OutputFilter` in which all keys will be present. It is important to note that some keys will be transformed or replaced. So for example, the key `filter`, which is an object, will be replaced with an array of arrays named` where`. This is done primarily for ease of use.
 
 Arguments:
-  - InputFilter - An object containing:
+  - An object containing:
     - `first` - Number of items requested per result page. `Number`.
     - `last` - Number of end-of-line items requested on the results page. `Number`.
     - `offset` - Number of elements to skip before fetching page. `Number`.
@@ -167,7 +167,7 @@ const filter = buildQueryFilter({
 _Note: You can use `first` with `after` or `last` with `before`. And you can use `first` with `offset` or `last` with `offset`._
 
 Returns:
-  - OutputFilter - An object containing:
+  - An object containing:
     - `limit` **permanent** - Limit of the results needed
     - `offset` **permanent** - Start offset of the results needed
     - `revert` **permanent** - Will be `true` if Input filter contain `last` or `before` parameters and will be `false` otherwise.
@@ -355,9 +355,9 @@ console.log(names); // <-- ['Leo', 'Raph', 'Mikey']
 Wrap node to cursor object
 
 Arguments:
- - `node` - An object containing at least the `id` key.
- - `cursorName` - Name of the cursor
- - `cursorPayload` - Payload of the cursor
+ - An object containing at least the `id` key.
+ - Name of the cursor
+ - Payload of the cursor
 
 Returns:
  - Object containing:
@@ -536,8 +536,8 @@ console.log(cursorBundle);
 Creates an object which contains a specific key
 
 Arguments:
-  - `source` - Object containing any data
-  - `keyName` - The key by which the value will be extracted
+  - Object containing any data
+  - The key by which the value will be extracted
 
 Results:
  - Object containing only key with `keyName`.
@@ -599,8 +599,8 @@ This is useful when you need to modify  the resolver response.
 Suppose you need to modify name of the user before response, but you can'n do this in `Query->user` resolver for some reason:
 
 Arguments:
- - `keys` **required** - An array of keys of the Type that needs to be resolved
- - `provider` **required** - A function to be called with the argument containing:
+ **required** - An array of keys of the Type that needs to be resolved
+ **required** - A function to be called with the argument containing:
    - `field` - Resolver field name. The function should return a value of the type for this key
 
 Returns:

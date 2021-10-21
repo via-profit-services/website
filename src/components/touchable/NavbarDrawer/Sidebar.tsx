@@ -60,6 +60,7 @@ const List = styled.div`
 const ListWrapper = styled.div`
   flex: 1;
   overflow-y: auto;
+  padding-bottom: 60px;
 `;
 
 const Sidebar: React.FC<SidebarProps> = props => {

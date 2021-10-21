@@ -4,7 +4,7 @@ import { useIntl, FormattedMessage } from 'react-intl';
 
 import RenderMarkdown from '~/components/desktop/RenderMarkdown';
 import Breadcrumbs, { Crumb } from '~/components/desktop/Breadcrumbs';
-import content from '~content/docs/core/v1.2/readme.md';
+import content from '~content/docs/knex/v2.0/getting-started.md';
 
 const Introduction: React.FC = () => {
   const intl = useIntl();
@@ -15,14 +15,14 @@ const Introduction: React.FC = () => {
         <title>
           {intl.formatMessage({
             defaultMessage: 'Getting started',
-            description: 'Meta title of core.v1.2',
+            description: 'Meta title of knex.v2.0 getting started',
           })}
         </title>
         <meta
           name="description"
           content={intl.formatMessage({
-            defaultMessage: 'Core v1 getting started',
-            description: 'Meta description of core.v1.2',
+            defaultMessage: 'Knex v2 getting started',
+            description: 'Meta description of knex.v2.0 getting started',
           })}
         />
       </Helmet>
@@ -40,12 +40,12 @@ const Introduction: React.FC = () => {
             }
           />
           <Crumb
-            link="/docs/core"
+            link="/docs/knex"
             position={3}
             label={
               <FormattedMessage
-                defaultMessage="Core"
-                description="Breadcrumbs. Docs core"
+                defaultMessage="Knex"
+                description="Breadcrumbs. Docs knex"
               />
             }
           />
@@ -53,8 +53,8 @@ const Introduction: React.FC = () => {
             position={4}
             label={
               <FormattedMessage
-                defaultMessage="Core v1.2"
-                description="Breadcrumbs. Core v1.2"
+                defaultMessage="Getting started"
+                description="Breadcrumbs. Knex getting started"
               />
             }
           />

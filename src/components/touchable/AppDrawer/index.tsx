@@ -37,6 +37,7 @@ const DrawerNav = styled.nav`
   display: flex;
   flex-flow: column;
   overflow-y: auto;
+  padding-bottom: 60px;
 `;
 
 const DrawerFallback = styled.div`

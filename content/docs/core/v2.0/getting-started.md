@@ -3,7 +3,6 @@
 ## Table of contents
 
 - [Installation](#installation)
-- [Options](#options)
 - [Basic GraphQL server](#basic-graphql-server)
 - [GraphQL server with @graphql-tools](#graphql-server-with-graphql-tools)
 - [More examples](#more-examples)
@@ -19,26 +18,14 @@ First of all you should install some peer dependencies and install the core:
 $ yarn add express graphql @via-profit-services/core
 ```
 
-## Options
-
-The Core factory takes the following parameters:
-
- - `server` **required** **http.Server** - HTTP server instance.
- - `schema` **required** **GraphQLSchema** - GraphQL Schema Definition. See [graphql.org](https://graphql.org) for more information.
- - `timezone` **String** - Server timezone. Default: `UTC`.
- - `debug` **Boolean** - Debug mode. Default: `false`.
- - `rootValue` **Object** - GraphQL Root resolver.
- - `persistedQueriesMap` **Object** - Persisted Queries map (Object contains key: value pairs). If persisted queries map is passed, the server will ignore the query directive in body request and read the map [Relay persisted-queries](https://relay.dev/docs/en/persisted-queries.html).
- - `persistedQueryKey` **String** - Used only together with the `persistedQueriesMap` option. The name of the parameter that will be passed the ID of the query in the Persisted Queries map. Default: `documentId`.
- - `middleware` **Middleware | Middleware[]** - Middlewares. See [middleware documentation](./middlewares.md) for more details.
-
-
 ## Basic GraphQL server
 
 To build your first project you should do some things:
 
 - Make your GraphQL schema
 - Create an http server using `factory` promise
+
+_Note: See the [factory api](./api.md#factory) for details on parameters_
 
 Let's make it:
 
@@ -123,6 +110,7 @@ Output:
 
 [![Edit @via-profit-services-core-node-basic](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-core-node-basic-xii7w?fontsize=14&hidenavigation=1&theme=dark&view=editor)
 
+
 ## GraphQL server with @graphql-tools
 
 We strongly recommend using [@graphql-tools](https://github.com/ardatan/graphql-tools) package to build your schemas. This package helps to combine SDL and resolvers into a single executable schema. See `makeExecutableSchema` of `@graphql-tools/schema` module.
@@ -180,6 +168,7 @@ const resolvers = {
 ```
 
 [![Edit @via-profit-services-core-node-graphql-tools](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-core-node-graphql-tools-04s8s?fontsize=14&hidenavigation=1&theme=dark)
+
 
 ## More examples
 

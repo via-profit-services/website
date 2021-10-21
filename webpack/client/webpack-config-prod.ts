@@ -30,7 +30,7 @@ module.exports = merge(baseConfig, {
     chunkFilename: 'public/js/chunk.[name].[chunkhash].js',
   },
   optimization: {
-    minimize: false,
+    minimize: true,
     splitChunks: {
       chunks: 'all',
       cacheGroups: {

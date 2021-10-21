@@ -32,7 +32,7 @@ const Core: React.FC = () => {
 
   return (
     <Switch>
-      <Route strict path={`${path}/v1.2`} component={CoreVer1} />
+      <Route strict path={`${path}/versions/v1.2`} component={CoreVer1} />
       <Route strict path={path} component={CoreVer2} />
       <Route component={Fallback} />
     </Switch>

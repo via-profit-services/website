@@ -28,6 +28,7 @@ const Nav = styled.nav`
   position: sticky;
   top: 70px;
   overflow-y: auto;
+  padding-bottom: 60px;
   max-height: calc(100vh - 54px);
 `;
 

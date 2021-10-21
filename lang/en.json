@@ -43,12 +43,13 @@
     "defaultMessage": "Subscriptions",
     "description": "Footer. Package subscriptions link"
   },
-  "04jeAy": {
-    "defaultMessage": "Introduction of @via-profit-services/core v1.2.x"
-  },
   "0kWvZ+": {
     "defaultMessage": "Close docs menu",
     "description": "Main menu. «aria-label» attribute of close button"
+  },
+  "0t4Y4e": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Core v.1.2"
   },
   "0x1oeU": {
     "defaultMessage": "Packages list",
@@ -121,6 +122,10 @@
   "4a1Qaz": {
     "defaultMessage": "Packages",
     "description": "Meta title of packages page"
+  },
+  "51+z+k": {
+    "defaultMessage": "Getting started",
+    "description": "Breadcrumbs. Knex getting started"
   },
   "53PU3E": {
     "defaultMessage": "Terms",
@@ -234,10 +239,6 @@
     "defaultMessage": "Redis package",
     "description": "Meta title of Redis package"
   },
-  "AfvqON": {
-    "defaultMessage": "v.1.2.x",
-    "description": "Docs sidebar. Core v.1.2"
-  },
   "B+T4IS": {
     "defaultMessage": "Middlewares",
     "description": "Section main touchable. List element four"
@@ -257,6 +258,14 @@
   "C91d3Y": {
     "defaultMessage": "Core",
     "description": "SectionPackages touchable. Core. Header"
+  },
+  "CEOtc4": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Knex v.1.1"
+  },
+  "CGgiQq": {
+    "defaultMessage": "Knex v2 getting started",
+    "description": "Meta description of knex.v2.0 getting started"
   },
   "CWMogT": {
     "defaultMessage": "{image}Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
@@ -334,6 +343,10 @@
     "defaultMessage": "Website",
     "description": "Footer. company website link"
   },
+  "J0EJ1p": {
+    "defaultMessage": "Getting started",
+    "description": "Meta title of knex.v2.0 getting started"
+  },
   "J6jde4": {
     "defaultMessage": "Geography package",
     "description": "Meta description of Geography package"
@@ -382,6 +395,10 @@
     "defaultMessage": "Lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home main screen. Text"
   },
+  "LRsr4o": {
+    "defaultMessage": "Getting started",
+    "description": "Docs sidebar. Knex getting started"
+  },
   "M1ndnO": {
     "defaultMessage": "Core",
     "description": "SectionPackages. Core. Header"
@@ -398,9 +415,9 @@
     "defaultMessage": "Eprehenderit qui laborum dolor cillum",
     "description": "Why screen. First advantage"
   },
-  "OXpB32": {
-    "defaultMessage": "Knex v1.1",
-    "description": "Docs sidebar. Knex v.1.1 introduction"
+  "Oa8o8R": {
+    "defaultMessage": "Knex",
+    "description": "Breadcrumbs. Docs knex"
   },
   "PB13o0": {
     "defaultMessage": "SMS",
@@ -430,9 +447,17 @@
     "defaultMessage": "Open source",
     "description": "Footer. «Open source project» label («Open source» segment)"
   },
+  "R8BsAa": {
+    "defaultMessage": "Getting started",
+    "description": "Meta title of core.v1.2"
+  },
   "RR9NSx": {
     "defaultMessage": "SMS",
     "description": "Footer. Package sms link"
+  },
+  "S3c1mc": {
+    "defaultMessage": "Getting started",
+    "description": "Meta title of knex.v1.1"
   },
   "S6VFVH": {
     "defaultMessage": "Versions",
@@ -458,13 +483,17 @@
     "defaultMessage": "Scroll to top",
     "description": "«aria-label» attribute of Scroll to top button"
   },
-  "UBBBi2": {
-    "defaultMessage": "Knex",
-    "description": "Breadcrumbs. Knex"
+  "UJODW3": {
+    "defaultMessage": "Knex v1 getting started",
+    "description": "Meta description of knex.v1.1"
   },
   "UTDA0s": {
     "defaultMessage": "Knex package",
     "description": "Meta title of Knex package"
+  },
+  "V+WEr8": {
+    "defaultMessage": "Versions",
+    "description": "Docs sidebar. Knex versions"
   },
   "VImI2V": {
     "defaultMessage": "Getting started",
@@ -501,6 +530,10 @@
   "XH/FVD": {
     "defaultMessage": "Examples",
     "description": "Meta title of core.v2.0 examples"
+  },
+  "XS3ayo": {
+    "defaultMessage": "Knex v1.1",
+    "description": "Docs sidebar. Knex v.1.1"
   },
   "XksmYF": {
     "defaultMessage": "Light",
@@ -542,10 +575,6 @@
     "defaultMessage": "Permissions",
     "description": "packages sidebar. Permissions"
   },
-  "a8ApCl": {
-    "defaultMessage": "API Reference",
-    "description": "Docs sidebar. Knex v.1.1 API"
-  },
   "aL2THo": {
     "defaultMessage": "Packages",
     "description": "Breadcrumbs. Packages"
@@ -585,6 +614,10 @@
   "dWSyIK": {
     "defaultMessage": "Legal",
     "description": "Main sidebar. Legal title"
+  },
+  "dmeAml": {
+    "defaultMessage": "Core v1 getting started",
+    "description": "Meta description of core.v1.2"
   },
   "dwWw1n": {
     "defaultMessage": "Legal",
@@ -674,6 +707,10 @@
     "defaultMessage": "Close docs menu",
     "description": "Docs menu. «aria-label» attribute"
   },
+  "iasbQi": {
+    "defaultMessage": "Core v1.2",
+    "description": "Breadcrumbs. Core v1.2"
+  },
   "ikH+Uj": {
     "defaultMessage": "Knex package",
     "description": "Meta description of knex package"
@@ -693,14 +730,6 @@
   "jacLzH": {
     "defaultMessage": "Geography",
     "description": "packages sidebar. Geography"
-  },
-  "jw3Zpe": {
-    "defaultMessage": "v.1.2.x API",
-    "description": "Docs sidebar. Core v.1.2 API"
-  },
-  "kQJFNC": {
-    "defaultMessage": "Knex v1.1",
-    "description": "Breadcrumbs. Knex v1.1.x"
   },
   "kiw+og": {
     "defaultMessage": "Via Profit Services",
@@ -910,12 +939,13 @@
     "defaultMessage": "The page may not exist or an error has occurred",
     "description": "404 page text"
   },
+  "xgii0x": {
+    "defaultMessage": "Knex v1.1",
+    "description": "Breadcrumbs. Knex v1.1"
+  },
   "xu7EiG": {
     "defaultMessage": "Sms",
     "description": "packages sidebar. Sms"
-  },
-  "y+vST4": {
-    "defaultMessage": "Introduction of @via-profit-services/jknex v1.1.x"
   },
   "y1j/tV": {
     "defaultMessage": "Connections",

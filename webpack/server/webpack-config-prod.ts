@@ -18,7 +18,7 @@ const config = merge(baseConfig, {
     chunkFilename: 'server/js/chunk.[name].[chunkhash].js',
   },
   optimization: {
-    minimize: false,
+    minimize: true,
   },
   devtool: false,
   plugins: [
