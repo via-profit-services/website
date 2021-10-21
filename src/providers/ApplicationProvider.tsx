@@ -36,9 +36,9 @@ const ApplicationProvider: React.FC = () => {
         }}>
         <ThemeProvider theme={currentTheme}>
           <GlobalStyles />
-          <React.Suspense fallback={<LoadingIndicator />}>
+          {/* <React.Suspense fallback={<LoadingIndicator />}> */}
             <RootRouter />
-          </React.Suspense>
+          {/* </React.Suspense> */}
         </ThemeProvider>
       </IntlProvider>
     </ErrorBoundary>

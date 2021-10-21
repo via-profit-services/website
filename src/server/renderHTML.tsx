@@ -106,9 +106,9 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
       <StyleSheetManager sheet={sheet.instance}>
         <StaticRouter location={url} context={context}>
           <ReduxProvider store={reduxStore}>
-            <React.Suspense fallback={null}>
+            {/* <React.Suspense fallback={null}> */}
               <ApplicationProvider />
-            </React.Suspense>
+            {/* </React.Suspense> */}
           </ReduxProvider>
         </StaticRouter>
       </StyleSheetManager>,

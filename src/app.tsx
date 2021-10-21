@@ -33,15 +33,15 @@ const bootstrap = async () => {
   const reduxStore = createReduxStore(reduxState);
 
   const render = () => {
-    (ReactDom as any).hydrateRoot(
-      document.getElementById('app'),
+    ReactDom.hydrate(
       <BrowserRouter>
         <ReduxProvider store={reduxStore}>
-          <React.Suspense fallback={null}>
-            <ApplicationProvider />
-          </React.Suspense>
+          {/* <React.Suspense fallback={null}> */}
+          <ApplicationProvider />
+          {/* </React.Suspense> */}
         </ReduxProvider>
       </BrowserRouter>,
+      document.getElementById('app'),
     );
   };
 
