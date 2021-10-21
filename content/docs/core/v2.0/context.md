@@ -4,10 +4,8 @@
 
 - [Overview](#overview)
 - [Core Event emitter](#core-event-emitter)
-- timezone property
-- services property
-- request property
-- schema property
+- [Services collection](#services-collection)
+- [Extends Context](#extends-context)
 
 ## Overview
 
@@ -24,10 +22,10 @@ According to the graphql spec, each resolver receives the following set of argum
 The baseline state of the context contains:
 
  - `emitter` - [CoreEmitter](#core-event-emitter);
- - `timezone` - timezone string
- - `services` - ServicesCollection;
- - `request` - Request;
- - `schema` - GraphQLSchema;
+ - `services` - [ServicesCollection](#services-collection);
+ - `timezone` - Server timezone;
+ - `request` - Express JS request object (See [Express req](https://expressjs.com/en/4x/api.html#req) for more details);
+ - `schema` - GraphQLSchema. (See [Graphql-js](https://graphql.org/graphql-js/type/#graphqlschema) for more details);
 
 
 ## Core Event emitter
@@ -59,3 +57,47 @@ const { graphQLExpress } = await core.factory({
 });
 ```
 
+Be careful. In this example, we use **requestCounter** property, with which we subscribe to the `graphql-error` event only once. If we do not take this into account, then with each new request to the server, we will subscribe to the event again and again.
+
+
+## Services collection
+
+The property services is used to store various services in context. So, for example, the `@via-profit-services/core` module places its service named `core` in services.
+
+For TypeScript you can expand the types using the Declaration files `*.d.ts`.
+Now you can use TypeScript autocompletion in the IDE, which will contain the current Core types with your custom types.
+
+_index.d.ts_
+
+```ts
+import "@via-profit-services/core";
+
+declare module "@via-profit-services/core" {
+  // types definitions of your own service class
+  class MyService {
+    public constructor(records: Record<string, string>);
+    public getKeys(): string[];
+    public getValues(): string[];
+  }
+
+  // extend standard ServicesCollection
+  interface ServicesCollection {
+    myService: MyService;
+  }
+}
+```
+
+_index.ts_
+
+```ts
+/// <reference path="./index.d.ts" />
+
+// Other code lines
+```
+
+[![Edit via-profit-services-core-typescript-extends-context](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-core-typescript-extends-context-51i51?fontsize=14&hidenavigation=1&theme=dark)
+
+
+## Extends Context
+
+To extend the `Context` and add your properties to it, you should use middlelevars. You can find more information on how to do this and examples in the [middleware documentation](./middlewares.md).

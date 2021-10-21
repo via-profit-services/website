@@ -179,6 +179,38 @@ Returns:
       - `start` **permanent** - string or number or date.
       - `end` **permanent** - string or number or date.
 
+### where
+
+Where - is an array of turle. Each tuple contains: field name, logical operator and value.
+
+Where clause structure:
+
+```ts
+type Where = WhereField[];
+type WhereField = [string, WhereAction, WhereValue];
+type WhereAction =
+  | '='
+  | '<>'
+  | '>'
+  | '<'
+  | '>='
+  | '<='
+  | 'in'
+  | 'notIn'
+  | 'like'
+  | 'ilike'
+  | 'is null'
+  | 'is not null';
+type WhereValue =
+  | string
+  | number
+  | boolean
+  | null
+  | readonly string[]
+  | readonly number[]
+  | undefined;
+```
+
 Example 1 of `where` key:
 
 ```js
@@ -210,6 +242,17 @@ console.log(where);
  *   ['category', '=', 21]
  * ]
  * /
+```
+
+Examples of where clause:
+
+```js
+['name', 'is not null', undefined] // eq: where name is not null
+['name', '=', 'Michelangelo'] // eq: where name = 'Michelangelo'
+['age', '>', 27] // eq: where age > 27
+['id', 'in', [1, 5]] // eq: where id in (1, 5)
+['id', 'notIn', [1, 5]] // eq: where id not in (1, 5)
+['name', 'like', 'Michel%'] // eq: where name like 'Michel%'
 ```
 
 

@@ -7,6 +7,10 @@
     "defaultMessage": "Permissions",
     "description": "Footer. Package permissions link"
   },
+  "+Qhbv2": {
+    "defaultMessage": "Knex Api",
+    "description": "Meta title of knex.v2.0 api"
+  },
   "+jqzeW": {
     "defaultMessage": "Docs",
     "description": "Appbar. Documentation link"
@@ -495,6 +499,10 @@
     "defaultMessage": "Versions",
     "description": "Docs sidebar. Knex versions"
   },
+  "V8v1vO": {
+    "defaultMessage": "Api",
+    "description": "Docs sidebar. Knex api"
+  },
   "VImI2V": {
     "defaultMessage": "Getting started",
     "description": "Meta title of core.v2.0 getting started"
@@ -850,6 +858,14 @@
   "rY3VNI": {
     "defaultMessage": "Core v2 connections",
     "description": "Meta description of core.v2.0 connections"
+  },
+  "rbOc1G": {
+    "defaultMessage": "Api",
+    "description": "Breadcrumbs. Knex api"
+  },
+  "rdpf58": {
+    "defaultMessage": "Knex Api",
+    "description": "Meta description of knex.v2.0 api"
   },
   "rszBdP": {
     "defaultMessage": "Packages",

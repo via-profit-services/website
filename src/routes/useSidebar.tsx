@@ -106,6 +106,13 @@ const useSidebar = () => {
               }),
             },
             {
+              path: '/docs/knex/api',
+              label: intl.formatMessage({
+                defaultMessage: 'Api',
+                description: 'Docs sidebar. Knex api',
+              }),
+            },
+            {
               path: '/docs/knex/versions',
               label: intl.formatMessage({
                 defaultMessage: 'Versions',

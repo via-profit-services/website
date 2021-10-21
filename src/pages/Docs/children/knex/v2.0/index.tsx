@@ -14,6 +14,10 @@ const pages = {
     () => import('~/pages/Docs/children/knex/v2.0/getting-started'),
     options,
   ),
+  Api: loadable(
+    () => import('~/pages/Docs/children/knex/v2.0/api'),
+    options,
+  ),
 };
 
 const Knex: React.FC = () => {
@@ -25,6 +29,11 @@ const Knex: React.FC = () => {
         strict
         path={`${path}/getting-started`}
         component={pages.GettingStarted}
+      />
+      <Route
+        strict
+        path={`${path}/api`}
+        component={pages.Api}
       />
       <Route component={pages.Fallback} />
     </Switch>

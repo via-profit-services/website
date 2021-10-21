@@ -4,9 +4,9 @@ import { useIntl, FormattedMessage } from 'react-intl';
 
 import RenderMarkdown from '~/components/desktop/RenderMarkdown';
 import Breadcrumbs, { Crumb } from '~/components/desktop/Breadcrumbs';
-import content from '~content/docs/knex/v2.0/getting-started.md';
+import content from '~content/docs/knex/v2.0/api.md';
 
-const GettingStarted: React.FC = () => {
+const Api: React.FC = () => {
   const intl = useIntl();
 
   return (
@@ -14,15 +14,15 @@ const GettingStarted: React.FC = () => {
       <Helmet>
         <title>
           {intl.formatMessage({
-            defaultMessage: 'Getting started',
-            description: 'Meta title of knex.v2.0 getting started',
+            defaultMessage: 'Knex Api',
+            description: 'Meta title of knex.v2.0 api',
           })}
         </title>
         <meta
           name="description"
           content={intl.formatMessage({
-            defaultMessage: 'Knex v2 getting started',
-            description: 'Meta description of knex.v2.0 getting started',
+            defaultMessage: 'Knex Api',
+            description: 'Meta description of knex.v2.0 api',
           })}
         />
       </Helmet>
@@ -53,8 +53,8 @@ const GettingStarted: React.FC = () => {
             position={4}
             label={
               <FormattedMessage
-                defaultMessage="Getting started"
-                description="Breadcrumbs. Knex getting started"
+                defaultMessage="Api"
+                description="Breadcrumbs. Knex api"
               />
             }
           />
@@ -65,4 +65,4 @@ const GettingStarted: React.FC = () => {
   );
 };
 
-export default GettingStarted;
+export default Api;
