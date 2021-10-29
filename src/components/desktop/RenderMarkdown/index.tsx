@@ -67,7 +67,7 @@ const relativeToAbsolute = (base: string, rel: string): string => {
 const titleToAnchor = (headername: string | React.ReactNode): string => {
   const anchorName = String(headername)
     .toLowerCase()
-    .replace(/\s/g, '-')
+    .replace(/[\s,\/]/g, '-')
     .replace(/[^0-9a-z-]/gi, '');
 
   return anchorName;
