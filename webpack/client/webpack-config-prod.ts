@@ -26,7 +26,7 @@ module.exports = merge(baseConfig, {
   output: {
     publicPath: '/',
     path: path.join(__dirname, '../../dist'),
-    filename: 'public/js/[name].js',
+    filename: 'public/js/bundle.[name].[chunkhash].js',
     chunkFilename: 'public/js/chunk.[name].[chunkhash].js',
   },
   optimization: {
@@ -36,19 +36,15 @@ module.exports = merge(baseConfig, {
       cacheGroups: {
         highlight: {
           test: /[\\/]node_modules[\\/](highlight\.js|react-syntax-highlighter)[\\/]/,
-          name: 'vendors.syntax-highlight',
         },
         react: {
           test: /[\\/]node_modules[\\/](react|react-router|react-router-dom|react-dom)[\\/]/,
-          name: 'vendors.react',
         },
         intl: {
           test: /[\\/]node_modules[\\/]@formatjs[\\/]/,
-          name: 'vendors.formatjs',
         },
         icons: {
           test: /[\\/]node_modules[\\/]mdi-react$/,
-          name: 'vendors.mdi-react',
         },
       },
     },
