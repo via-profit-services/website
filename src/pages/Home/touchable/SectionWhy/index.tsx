@@ -5,7 +5,7 @@ import CheckIcon from 'mdi-react/CheckIcon';
 
 import H2 from '~/components/touchable/Typography/H2';
 import Paragraph from '~/components/touchable/Typography/Paragraph';
-import schemasrc from '~assets/images/touchable-graph.png';
+import schemasrc from '~assets/images/section-why-schema.png';
 
 const Container = styled.section`
   position: relative;

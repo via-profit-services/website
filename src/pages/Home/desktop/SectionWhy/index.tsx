@@ -5,7 +5,7 @@ import CheckIcon from 'mdi-react/CheckIcon';
 
 import H2 from '~/components/desktop/Typography/H2';
 import Paragraph from '~/components/desktop/Typography/Paragraph';
-import schemasrc from '~assets/images/section-why-schema.svg';
+import schemasrc from '~assets/images/section-why-schema.png';
 
 const Section = styled.section`
   margin-top: 3rem;

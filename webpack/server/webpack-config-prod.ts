@@ -13,7 +13,7 @@ const config = merge(baseConfig, {
   output: {
     path: path.join(__dirname, '../../dist'),
     libraryTarget: 'commonjs2',
-    publicPath: '/public/',
+    publicPath: '/',
     filename: '[name].js',
     chunkFilename: 'server/js/chunk.[name].[chunkhash].js',
   },

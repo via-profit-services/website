@@ -9,6 +9,7 @@ import CompressionPlugin from 'compression-webpack-plugin';
 import { InjectManifest } from 'workbox-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ImageminWebpWebpackPlugin from 'imagemin-webp-webpack-plugin';
 
 import baseConfig from './webpack-config-base';
 
@@ -107,6 +108,20 @@ module.exports = merge(baseConfig, {
         removeStyleLinkTypeAttributes: true,
         useShortDoctype: true,
       },
+    }),
+    new ImageminWebpWebpackPlugin({
+      config: [
+        {
+          test: /\.(png|jpg|jpeg)$/,
+          options: {
+            quality: 75,
+          },
+        },
+      ],
+      overrideExtension: true,
+      detailedLogs: false,
+      silent: false,
+      strict: true,
     }),
   ],
 });

@@ -27,24 +27,34 @@ const config: Configuration = {
             loader: 'file-loader',
             options: {
               name: 'public/images/favicon.[ext]',
-              emitFile: true,
+              // emitFile: true,
             },
           },
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|webp)$/,
         exclude: /node_modules/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: 'images/[contenthash].[ext]',
-              emitFile: false,
+              name: 'public/images/[contenthash].webp',
+              // emitFile: false,
             },
           },
+        ],
+      },
+      {
+        test: /\.(gif|svg)$/,
+        exclude: /node_modules/,
+        use: [
           {
-            loader: 'image-webpack-loader',
+            loader: 'file-loader',
+            options: {
+              name: 'public/images/[contenthash].[ext]',
+              // emitFile: false,
+            },
           },
         ],
       },
