@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { loadableReady } from '@loadable/component';
 import { Provider as ReduxProvider } from 'react-redux';
+import '~/te.css';
 
 import createReduxStore from '~/redux/store';
 import reduxDefaultState from '~/redux/defaultState';

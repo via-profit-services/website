@@ -4,9 +4,9 @@ import { ProgressPlugin } from 'webpack';
 import { merge } from 'webpack-merge';
 import nodeExternals from 'webpack-node-externals';
 
-import baseConfig from './webpack-config-base';
+import commonConfig from '../webpack-config-common';
 
-const config = merge(baseConfig, {
+const config = merge(commonConfig, {
   target: 'node',
   entry: {
     index: path.resolve(__dirname, '../../src/server/index.ts'),
@@ -19,6 +19,10 @@ const config = merge(baseConfig, {
     chunkFilename: 'server/js/chunk.[name].[chunkhash].js',
   },
   mode: 'development',
+  node: {
+    __filename: true,
+    __dirname: false,
+  },
   plugins: [
     new ProgressPlugin(),
     new NodemonPlugin({

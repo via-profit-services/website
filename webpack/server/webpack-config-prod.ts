@@ -2,11 +2,11 @@ import path from 'path';
 import { merge } from 'webpack-merge';
 import CopyPlugin from 'copy-webpack-plugin';
 
-import baseConfig from './webpack-config-base';
+import commonConfig from '../webpack-config-common';
 
-const config = merge(baseConfig, {
-  mode: 'production',
+const config = merge(commonConfig, {
   target: 'node',
+  mode: 'production',
   entry: {
     index: path.resolve(__dirname, '../../src/server/index.ts'),
   },
@@ -18,9 +18,13 @@ const config = merge(baseConfig, {
     chunkFilename: 'server/js/chunk.[name].[chunkhash].js',
   },
   optimization: {
-    minimize: true,
+    minimize: false,
   },
   devtool: false,
+  node: {
+    __filename: true,
+    __dirname: false,
+  },
   plugins: [
     new CopyPlugin({
       patterns: [

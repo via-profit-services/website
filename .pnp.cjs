@@ -158,9 +158,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["helmet", "npm:4.6.0"],
             ["html-loader", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.1.2"],
             ["html-webpack-plugin", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.3.2"],
+            ["image-minimizer-webpack-plugin", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.2.0"],
             ["imagemin-mozjpeg", "npm:9.0.0"],
             ["imagemin-optipng", "npm:8.0.0"],
             ["imagemin-pngquant", "npm:9.0.2"],
+            ["imagemin-webp", "npm:6.0.0"],
             ["imagemin-webp-webpack-plugin", "npm:3.3.6"],
             ["imports-loader", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.0.0"],
             ["jpegtran", "npm:2.0.0"],
@@ -6963,9 +6965,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["helmet", "npm:4.6.0"],
             ["html-loader", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.1.2"],
             ["html-webpack-plugin", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.3.2"],
+            ["image-minimizer-webpack-plugin", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.2.0"],
             ["imagemin-mozjpeg", "npm:9.0.0"],
             ["imagemin-optipng", "npm:8.0.0"],
             ["imagemin-pngquant", "npm:9.0.2"],
+            ["imagemin-webp", "npm:6.0.0"],
             ["imagemin-webp-webpack-plugin", "npm:3.3.6"],
             ["imports-loader", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.0.0"],
             ["jpegtran", "npm:2.0.0"],
@@ -14943,6 +14947,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["image-minimizer-webpack-plugin", [
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/image-minimizer-webpack-plugin-npm-2.2.0-6dda14d19d-f145ab15cf.zip/node_modules/image-minimizer-webpack-plugin/",
+          "packageDependencies": [
+            ["image-minimizer-webpack-plugin", "npm:2.2.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.2.0", {
+          "packageLocation": "./.yarn/__virtual__/image-minimizer-webpack-plugin-virtual-90b70e1dc8/0/cache/image-minimizer-webpack-plugin-npm-2.2.0-6dda14d19d-f145ab15cf.zip/node_modules/image-minimizer-webpack-plugin/",
+          "packageDependencies": [
+            ["image-minimizer-webpack-plugin", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:2.2.0"],
+            ["@types/webpack", "npm:5.28.0"],
+            ["imagemin", "npm:7.0.1"],
+            ["klona", "npm:2.0.4"],
+            ["p-limit", "npm:3.1.0"],
+            ["schema-utils", "npm:3.1.1"],
+            ["serialize-javascript", "npm:5.0.1"],
+            ["webpack", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.59.1"]
+          ],
+          "packagePeers": [
+            "@types/webpack",
+            "webpack"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["image-q", [
         ["npm:1.1.1", {
           "packageLocation": "./.yarn/cache/image-q-npm-1.1.1-33a2fabe0a-b5ad6d107b.zip/node_modules/image-q/",
@@ -22785,6 +22816,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/serialize-javascript-npm-4.0.0-b4aeff413b-3273b3394b.zip/node_modules/serialize-javascript/",
           "packageDependencies": [
             ["serialize-javascript", "npm:4.0.0"],
+            ["randombytes", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:5.0.1", {
+          "packageLocation": "./.yarn/cache/serialize-javascript-npm-5.0.1-8ffc173f09-bb45a42769.zip/node_modules/serialize-javascript/",
+          "packageDependencies": [
+            ["serialize-javascript", "npm:5.0.1"],
             ["randombytes", "npm:2.1.0"]
           ],
           "linkType": "HARD",
