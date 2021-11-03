@@ -1,25 +1,24 @@
+import 'webpack-dev-server';
 import path from 'path';
 import fs from 'fs';
 import dotenv from 'dotenv';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { HotModuleReplacementPlugin } from 'webpack';
 import LoadablePlugin from '@loadable/webpack-plugin';
-import { merge } from 'webpack-merge';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import { DefinePlugin } from 'webpack';
 import CompressionPlugin from 'compression-webpack-plugin';
-import { InjectManifest } from 'workbox-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import 'webpack-dev-server';
+import { HotModuleReplacementPlugin } from 'webpack';
+import { merge } from 'webpack-merge';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import { DefinePlugin } from 'webpack';
+import { InjectManifest } from 'workbox-webpack-plugin';
+import Mustache from 'mustache';
 
 import commonConfig from './webpack-config-common';
 
 dotenv.config();
-
 const isDev = process.env.NODE_ENV === 'development';
-
 const config = merge(commonConfig, {
   target: 'web',
   mode: isDev ? 'development' : 'production',
@@ -56,15 +55,17 @@ const config = merge(commonConfig, {
   },
   node: {},
   devtool: isDev ? 'inline-source-map' : false,
-  devServer: isDev ? {
-    historyApiFallback: {
-      verbose: true,
-      disableDotRule: true,
-    },
-    compress: true,
-    port: Number(process.env.SERVER_PORT),
-    host: process.env.SERVER_HOSTNAME,
-  } : undefined,
+  devServer: isDev
+    ? {
+        historyApiFallback: {
+          verbose: true,
+          disableDotRule: true,
+        },
+        compress: true,
+        port: Number(process.env.SERVER_PORT),
+        host: process.env.SERVER_HOSTNAME,
+      }
+    : undefined,
   performance: {
     hints: false,
   },
@@ -72,27 +73,6 @@ const config = merge(commonConfig, {
     new LoadablePlugin({
       filename: '/public/loadable-stats.json',
     }) as any,
-    new HtmlWebpackPlugin({
-      excludeChunks: ['main'],
-      templateContent: fs.readFileSync(
-        path.resolve(__dirname, '../assets/templates/main.mustache'),
-        { encoding: 'utf8' },
-      ),
-      filename: path.resolve(
-        __dirname,
-        '../dist/server/templates/main.mustache',
-      ),
-      minify: {
-        caseSensitive: true,
-        collapseWhitespace: true,
-        keepClosingSlash: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        useShortDoctype: true,
-      },
-    }),
     new DefinePlugin({
       SC_DISABLE_SPEEDY: false, // Set as true to disable CSSOM for Yandex Webvisor
     }),
@@ -105,6 +85,15 @@ const config = merge(commonConfig, {
     ...(isDev
       ? // development only plugins
         [
+          new HtmlWebpackPlugin({
+            templateContent: Mustache.render(
+              fs.readFileSync(
+                path.resolve(__dirname, '../assets/templates/main.mustache'),
+                { encoding: 'utf8' },
+              ),
+              {},
+            ),
+          }),
           new HotModuleReplacementPlugin(),
           new ReactRefreshWebpackPlugin({
             overlay: {
@@ -118,6 +107,27 @@ const config = merge(commonConfig, {
         ]
       : // production only plugins
         [
+          new HtmlWebpackPlugin({
+            excludeChunks: ['main'],
+            templateContent: fs.readFileSync(
+              path.resolve(__dirname, '../assets/templates/main.mustache'),
+              { encoding: 'utf8' },
+            ),
+            filename: path.resolve(
+              __dirname,
+              '../dist/server/templates/main.mustache',
+            ),
+            minify: {
+              caseSensitive: true,
+              collapseWhitespace: true,
+              keepClosingSlash: true,
+              removeComments: true,
+              removeRedundantAttributes: true,
+              removeScriptTypeAttributes: true,
+              removeStyleLinkTypeAttributes: true,
+              useShortDoctype: true,
+            },
+          }),
           new FaviconsWebpackPlugin({
             mode: 'webapp',
             logo: path.resolve(__dirname, '../assets/images/favicon.png'),

@@ -1,6 +1,6 @@
 import React from 'react';
 import loadable, { OptionsWithoutResolver } from '@loadable/component';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import { Switch, Route, useRouteMatch, Redirect } from 'react-router-dom';
 
 import LoadingIndicator from '~/components/desktop/LoadingIndicator';
 
@@ -61,6 +61,7 @@ const Core: React.FC = () => {
         component={pages.Middlewares}
       />
       <Route strict path={`${path}/typedefs`} component={pages.Typedefs} />
+      <Redirect strict exact from={path} to={`${path}/getting-started`} />
       <Route component={pages.Fallback} />
     </Switch>
   );

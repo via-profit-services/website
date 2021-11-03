@@ -3,7 +3,6 @@ import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { loadableReady } from '@loadable/component';
 import { Provider as ReduxProvider } from 'react-redux';
-import '~/te.css';
 
 import createReduxStore from '~/redux/store';
 import reduxDefaultState from '~/redux/defaultState';
@@ -38,9 +37,7 @@ const bootstrap = async () => {
     enderMethod(
       <BrowserRouter>
         <ReduxProvider store={reduxStore}>
-          {/* <React.Suspense fallback={null}> */}
           <ApplicationProvider />
-          {/* </React.Suspense> */}
         </ReduxProvider>
       </BrowserRouter>,
       document.getElementById('app'),
