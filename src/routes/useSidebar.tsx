@@ -139,6 +139,30 @@ const useSidebar = () => {
             },
           ],
         },
+        //
+        {
+          path: '/docs/authentification',
+          label: intl.formatMessage({
+            defaultMessage: 'Authentification',
+            description: 'Docs sidebar. Authentification',
+          }),
+          child: [
+            {
+              path: '/docs/authentification/getting-started',
+              label: intl.formatMessage({
+                defaultMessage: 'Getting started',
+                description: 'Docs sidebar. Authentification getting started',
+              }),
+            },
+            {
+              path: '/docs/authentification/api',
+              label: intl.formatMessage({
+                defaultMessage: 'Api',
+                description: 'Docs sidebar. Authentification api',
+              }),
+            },
+          ],
+        },
       ],
     }),
     [intl],

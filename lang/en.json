@@ -107,6 +107,10 @@
     "defaultMessage": "Lightweight",
     "description": "Section main touchable. List element one"
   },
+  "3r1yji": {
+    "defaultMessage": "Authentification Api",
+    "description": "Meta title of authentification.v2.0 api"
+  },
   "3xqp66": {
     "defaultMessage": "Via-profit services",
     "description": "Home main screen. Pretitle"
@@ -299,9 +303,17 @@
     "defaultMessage": "Knex",
     "description": "Footer. Package knex link"
   },
+  "DvtcHS": {
+    "defaultMessage": "Authentification",
+    "description": "Breadcrumbs. Docs authentification"
+  },
   "E2+q8C": {
     "defaultMessage": "Sms package",
     "description": "Meta description of Sms package"
+  },
+  "E92JTN": {
+    "defaultMessage": "Getting started",
+    "description": "Breadcrumbs. Authentification getting started"
   },
   "EWh8jt": {
     "defaultMessage": "Messages package",
@@ -434,6 +446,10 @@
   "PB13o0": {
     "defaultMessage": "SMS",
     "description": "Main menu. Package sms link"
+  },
+  "Q/M63P": {
+    "defaultMessage": "Api",
+    "description": "Breadcrumbs. Authentification api"
   },
   "QBwZKx": {
     "defaultMessage": "Knex",
@@ -731,6 +747,10 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Settings. Content paragraph"
   },
+  "jUZV9A": {
+    "defaultMessage": "Authentification v2 getting started",
+    "description": "Meta description of authentification.v2.0 getting started"
+  },
   "jYpE7v": {
     "defaultMessage": "Connections and pagination",
     "description": "Docs sidebar. Core v.2.0 connections"
@@ -763,6 +783,10 @@
     "defaultMessage": "Redis",
     "description": "SectionPackages. Redis. Header"
   },
+  "mAFQqL": {
+    "defaultMessage": "Getting started",
+    "description": "Meta title of authentification.v2.0 getting started"
+  },
   "nVqWuW": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Subscriptions. Content paragraph 1"
@@ -782,6 +806,10 @@
   "ndDiZV": {
     "defaultMessage": "Getting started",
     "description": "Docs sidebar. Core v.2.0 getting started"
+  },
+  "ni5Xr1": {
+    "defaultMessage": "Authentification",
+    "description": "Docs sidebar. Authentification"
   },
   "nymWR+": {
     "defaultMessage": "Phones",
@@ -867,6 +895,10 @@
     "defaultMessage": "Knex Api",
     "description": "Meta description of knex.v2.0 api"
   },
+  "re59jW": {
+    "defaultMessage": "Authentification Api",
+    "description": "Meta description of authentification.v2.0 api"
+  },
   "rszBdP": {
     "defaultMessage": "Packages",
     "description": "Main sidebar. Packages title"
@@ -927,6 +959,10 @@
     "defaultMessage": "Fugiat laborum nulla fugiat",
     "description": "Why screen. Third advantage"
   },
+  "vO3dkI": {
+    "defaultMessage": "Getting started",
+    "description": "Docs sidebar. Authentification getting started"
+  },
   "vrbypx": {
     "defaultMessage": "Via Profit",
     "description": "Helmet meta «author»"
@@ -954,6 +990,10 @@
   "xN9EFO": {
     "defaultMessage": "The page may not exist or an error has occurred",
     "description": "404 page text"
+  },
+  "xb1B1C": {
+    "defaultMessage": "Api",
+    "description": "Docs sidebar. Authentification api"
   },
   "xgii0x": {
     "defaultMessage": "Knex v1.1",
