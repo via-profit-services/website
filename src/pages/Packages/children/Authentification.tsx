@@ -4,9 +4,9 @@ import { useIntl, FormattedMessage } from 'react-intl';
 
 import Breadcrumbs, { Crumb } from '~/components/desktop/Breadcrumbs';
 import RenderMarkdown from '~/components/desktop/RenderMarkdown';
-import content from '~content/packages/accounts.md';
+import content from '~content/packages/authentification.md';
 
-const PackagesAccounts: React.FC = () => {
+const PackagesAuthentification: React.FC = () => {
   const intl = useIntl();
 
   return (
@@ -14,15 +14,15 @@ const PackagesAccounts: React.FC = () => {
       <Helmet>
         <title>
           {intl.formatMessage({
-            defaultMessage: 'Accounts package',
-            description: 'Meta title of Accounts package',
+            defaultMessage: 'Authentification package',
+            description: 'Meta title of Authentification package',
           })}
         </title>
         <meta
           name="description"
           content={intl.formatMessage({
-            defaultMessage: 'Accounts package',
-            description: 'Meta description of Accounts package',
+            defaultMessage: 'Authentification package',
+            description: 'Meta description of Authentification package',
           })}
         />
       </Helmet>
@@ -43,8 +43,8 @@ const PackagesAccounts: React.FC = () => {
             position={3}
             label={
               <FormattedMessage
-                defaultMessage="Accounts"
-                description="Breadcrumbs. Accounts package"
+                defaultMessage="Authentification"
+                description="Breadcrumbs. Authentification package"
               />
             }
           />
@@ -55,4 +55,4 @@ const PackagesAccounts: React.FC = () => {
   );
 };
 
-export default PackagesAccounts;
+export default PackagesAuthentification;

@@ -183,12 +183,12 @@ const AppDrawer: React.FC<AppDrawerProps> = props => {
               })}
             />
             <DrawerItem
-              to="/packages/accounts"
-              active={pathname === '/packages/accounts'}
+              to="/packages/authentification"
+              active={pathname === '/packages/authentification'}
               onDrawerClose={onClose}
               label={intl.formatMessage({
-                defaultMessage: 'Accounts',
-                description: 'Main menu. Package accounts link',
+                defaultMessage: 'Authentification',
+                description: 'Main menu. Package authentification link',
               })}
             />
             <DrawerItem

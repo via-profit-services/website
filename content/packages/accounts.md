@@ -1,3 +1,0 @@
-# Package accounts
-
-Lorem ipsum

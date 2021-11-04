@@ -13,8 +13,8 @@ const pages = {
     () => import('~/pages/Packages/children/Introduction'),
     options,
   ),
-  Accounts: loadable(
-    () => import('~/pages/Packages/children/Accounts'),
+  Authentification: loadable(
+    () => import('~/pages/Packages/children/Authentification'),
     options,
   ),
   Core: loadable(() => import('~/pages/Packages/children/Core'), options),
@@ -58,7 +58,11 @@ const PackagesRoutes: React.FC = () => {
       <Route strict exact path={path} component={pages.Introduction} />
       <Route strict path={`${path}/core`} component={pages.Core} />
       <Route strict path={`${path}/knex`} component={pages.knex} />
-      <Route strict path={`${path}/accounts`} component={pages.Accounts} />
+      <Route
+        strict
+        path={`${path}/accounts`}
+        component={pages.Authentification}
+      />
       <Route strict path={`${path}/redis`} component={pages.Redis} />
       <Route strict path={`${path}/phones`} component={pages.Phones} />
       <Route strict path={`${path}/dataloader`} component={pages.Dataloader} />

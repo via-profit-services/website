@@ -127,10 +127,10 @@ const PackagesDesktop: React.FC = () => {
           }),
         },
         {
-          path: '/packages/accounts',
+          path: '/packages/authentification',
           label: intl.formatMessage({
-            defaultMessage: 'Accounts',
-            description: 'packages sidebar. Accounts',
+            defaultMessage: 'Authentification',
+            description: 'packages sidebar. Authentification',
           }),
         },
       ],

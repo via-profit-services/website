@@ -177,10 +177,10 @@ const FooterMiddle: React.FC = () => (
 
           <LinksList>
             <li>
-              <InternalLink to="/packages/accounts">
+              <InternalLink to="/packages/authentification">
                 <FormattedMessage
-                  defaultMessage="Accounts"
-                  description="Footer. Package accounts link"
+                  defaultMessage="Authentification"
+                  description="Footer. Package Authentification link"
                 />
               </InternalLink>
             </li>

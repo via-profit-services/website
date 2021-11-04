@@ -35,6 +35,10 @@
     "defaultMessage": "Main menu",
     "description": "Main sidebar title"
   },
+  "/WI9rC": {
+    "defaultMessage": "Authentification",
+    "description": "Footer. Package Authentification link"
+  },
   "/kFHHa": {
     "defaultMessage": "Flexible",
     "description": "Section main touchable. List element two"
@@ -199,9 +203,9 @@
     "defaultMessage": "Phones package",
     "description": "Meta title of Phones package"
   },
-  "8ukPi4": {
-    "defaultMessage": "Accounts package",
-    "description": "Meta title of Accounts package"
+  "9MN5hq": {
+    "defaultMessage": "Authentification package",
+    "description": "Meta title of Authentification package"
   },
   "9N/Z1h": {
     "defaultMessage": "Why",
@@ -286,6 +290,10 @@
   "DHSmDG": {
     "defaultMessage": "Sms package",
     "description": "Meta title of Sms package"
+  },
+  "DKbszN": {
+    "defaultMessage": "Authentification",
+    "description": "Main menu. Package authentification link"
   },
   "DaZRES": {
     "defaultMessage": "Knex",
@@ -387,10 +395,6 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Redis. Content paragraph 1"
   },
-  "Kcciqp": {
-    "defaultMessage": "Accounts",
-    "description": "Main menu. Package accounts link"
-  },
   "KezNm5": {
     "defaultMessage": "Open Source Project{br}{MIT} License",
     "description": "Home main screen. License label (without «MIT» word)"
@@ -402,6 +406,10 @@
   "LRsr4o": {
     "defaultMessage": "Getting started",
     "description": "Docs sidebar. Knex getting started"
+  },
+  "M+Kbj+": {
+    "defaultMessage": "Authentification",
+    "description": "Breadcrumbs. Authentification package"
   },
   "M1ndnO": {
     "defaultMessage": "Core",
@@ -519,17 +527,9 @@
     "defaultMessage": "Context",
     "description": "Breadcrumbs. Core Context"
   },
-  "WM+SBU": {
-    "defaultMessage": "Accounts",
-    "description": "packages sidebar. Accounts"
-  },
   "WXNeD2": {
     "defaultMessage": "Cookie policy",
     "description": "Footer. Cookie policy link"
-  },
-  "WjfU81": {
-    "defaultMessage": "Accounts",
-    "description": "Footer. Package accounts link"
   },
   "XA9oyK": {
     "defaultMessage": "Packages",
@@ -550,6 +550,10 @@
   "XxLcTv": {
     "defaultMessage": "Docs",
     "description": "Breadcrumbs. Docs"
+  },
+  "Y2YzYb": {
+    "defaultMessage": "Authentification package",
+    "description": "Meta description of Authentification package"
   },
   "Y5UZPR": {
     "defaultMessage": "Graphql schema with via profit services packages",
@@ -607,6 +611,10 @@
     "defaultMessage": "Phones package",
     "description": "Meta description of Phones package"
   },
+  "cRSdBd": {
+    "defaultMessage": "Authentification",
+    "description": "packages sidebar. Authentification"
+  },
   "cpMhJI": {
     "defaultMessage": "Dark",
     "description": "Header. Theme button in dark theme"
@@ -651,10 +659,6 @@
     "defaultMessage": "Github logo link",
     "description": "Footer. «aria-label» attribute of Github logo link"
   },
-  "f0J+eu": {
-    "defaultMessage": "Accounts package",
-    "description": "Meta description of Accounts package"
-  },
   "fmosFk": {
     "defaultMessage": "Messages",
     "description": "Main menu. Package messages link"
@@ -690,10 +694,6 @@
   "hPD7qo": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Knex. Content paragraph 2"
-  },
-  "hPoE/G": {
-    "defaultMessage": "Accounts",
-    "description": "Breadcrumbs. Accounts package"
   },
   "hRaDyG": {
     "defaultMessage": "Core",
