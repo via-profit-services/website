@@ -60,7 +60,7 @@ const PackagesRoutes: React.FC = () => {
       <Route strict path={`${path}/knex`} component={pages.knex} />
       <Route
         strict
-        path={`${path}/accounts`}
+        path={`${path}/authentification`}
         component={pages.Authentification}
       />
       <Route strict path={`${path}/redis`} component={pages.Redis} />
