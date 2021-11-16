@@ -14,6 +14,11 @@ Lightweight, flexible, standalone implementation of a [GraphQL HTTP (express mid
  - [Cursor pagination out of box](../docs/core/connections.md)
 
 
+## Documentation
+
+Full documentation [here](../docs/core/getting-started.md)
+
+
 ## License
 
 The MIT License (MIT)

@@ -35,6 +35,10 @@
     "defaultMessage": "Main menu",
     "description": "Main sidebar title"
   },
+  "/Uv3Vj": {
+    "defaultMessage": "Api",
+    "description": "Breadcrumbs. Redis api"
+  },
   "/WI9rC": {
     "defaultMessage": "Authentification",
     "description": "Footer. Package Authentification link"
@@ -42,6 +46,10 @@
   "/kFHHa": {
     "defaultMessage": "Flexible",
     "description": "Section main touchable. List element two"
+  },
+  "/ksJo9": {
+    "defaultMessage": "Redis",
+    "description": "Breadcrumbs. Docs redis"
   },
   "01ghRs": {
     "defaultMessage": "Geography",
@@ -171,6 +179,10 @@
     "defaultMessage": "MIT",
     "description": "Home main screen. License label. «MIT» word only"
   },
+  "6SUYIi": {
+    "defaultMessage": "Redis Api",
+    "description": "Meta description of redis.v2.0 api"
+  },
   "6cIx/L": {
     "defaultMessage": "Via Profit company logo",
     "description": "Header. «aria-label» attribute of Via Profit company logo"
@@ -230,6 +242,10 @@
   "A2Ek6v": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Core. Content paragraph"
+  },
+  "A3ym7b": {
+    "defaultMessage": "Getting started",
+    "description": "Docs sidebar. Redis getting started"
   },
   "ADh33g": {
     "defaultMessage": "Home",
@@ -306,6 +322,10 @@
   "DvtcHS": {
     "defaultMessage": "Authentification",
     "description": "Breadcrumbs. Docs authentification"
+  },
+  "E+Lbg9": {
+    "defaultMessage": "Redis Api",
+    "description": "Meta title of redis.v2.0 api"
   },
   "E2+q8C": {
     "defaultMessage": "Sms package",
@@ -387,6 +407,10 @@
     "defaultMessage": "Terms",
     "description": "Footer. Terms link"
   },
+  "K+02tI": {
+    "defaultMessage": "Api",
+    "description": "Docs sidebar. Redis api"
+  },
   "KFRlL2": {
     "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home second screen. Second card content"
@@ -458,10 +482,6 @@
   "QXNoQe": {
     "defaultMessage": "GitHub",
     "description": "Footer. GitHub link"
-  },
-  "QkOIee": {
-    "defaultMessage": "Settings",
-    "description": "packages sidebar. Settings"
   },
   "Ql6F+2": {
     "defaultMessage": "API Reference",
@@ -551,6 +571,10 @@
     "defaultMessage": "Packages",
     "description": "Footer. Title of the «Packages» section"
   },
+  "XBk9tS": {
+    "defaultMessage": "Redis",
+    "description": "Docs sidebar. Redis"
+  },
   "XH/FVD": {
     "defaultMessage": "Examples",
     "description": "Meta title of core.v2.0 examples"
@@ -583,10 +607,6 @@
     "defaultMessage": "Core",
     "description": "Breadcrumbs. Core package"
   },
-  "YuMfqi": {
-    "defaultMessage": "Messages",
-    "description": "packages sidebar. Messages"
-  },
   "Z2F6Dz": {
     "defaultMessage": "Connections",
     "description": "Breadcrumbs. Core connections"
@@ -598,10 +618,6 @@
   "ZkhZUA": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Knex. Content paragraph"
-  },
-  "Zt4sGq": {
-    "defaultMessage": "Permissions",
-    "description": "packages sidebar. Permissions"
   },
   "aL2THo": {
     "defaultMessage": "Packages",
@@ -627,13 +643,13 @@
     "defaultMessage": "Phones package",
     "description": "Meta description of Phones package"
   },
-  "cRSdBd": {
-    "defaultMessage": "Authentification",
-    "description": "packages sidebar. Authentification"
-  },
   "cpMhJI": {
     "defaultMessage": "Dark",
     "description": "Header. Theme button in dark theme"
+  },
+  "d9qQVW": {
+    "defaultMessage": "Getting started",
+    "description": "Meta title of redis.v2.0 getting started"
   },
   "dGNWK3": {
     "defaultMessage": "Via Profit company logo",
@@ -679,10 +695,6 @@
     "defaultMessage": "Messages",
     "description": "Main menu. Package messages link"
   },
-  "fpx7oe": {
-    "defaultMessage": "Dataloader",
-    "description": "packages sidebar. Dataloader"
-  },
   "g0plOz": {
     "defaultMessage": "Subscriptions",
     "description": "Main menu. Package subscriptions link"
@@ -690,6 +702,10 @@
   "g8DSkI": {
     "defaultMessage": "Dataloader",
     "description": "SectionPackages touchable. Dataloader. Header"
+  },
+  "gcCCp4": {
+    "defaultMessage": "Redis v2 getting started",
+    "description": "Meta description of redis.v2.0 getting started"
   },
   "h02828": {
     "defaultMessage": "Privacy policy",
@@ -755,10 +771,6 @@
     "defaultMessage": "Connections and pagination",
     "description": "Docs sidebar. Core v.2.0 connections"
   },
-  "jacLzH": {
-    "defaultMessage": "Geography",
-    "description": "packages sidebar. Geography"
-  },
   "kiw+og": {
     "defaultMessage": "Via Profit Services",
     "description": "Helmet «defaultTitle» param"
@@ -766,10 +778,6 @@
   "l8IWT5": {
     "defaultMessage": "Middlewares",
     "description": "Breadcrumbs. Core middlewares"
-  },
-  "lYVCON": {
-    "defaultMessage": "Subscriptions",
-    "description": "packages sidebar. Subscriptions"
   },
   "lZbWK/": {
     "defaultMessage": "Copyright {year} Via Profit",
@@ -806,14 +814,6 @@
   "ndDiZV": {
     "defaultMessage": "Getting started",
     "description": "Docs sidebar. Core v.2.0 getting started"
-  },
-  "ni5Xr1": {
-    "defaultMessage": "Authentification",
-    "description": "Docs sidebar. Authentification"
-  },
-  "nymWR+": {
-    "defaultMessage": "Phones",
-    "description": "packages sidebar. Phones"
   },
   "oIvfpm": {
     "defaultMessage": "Redis",
@@ -919,10 +919,6 @@
     "defaultMessage": "What Is It",
     "description": "Home second screen. Header"
   },
-  "tWjXdY": {
-    "defaultMessage": "Files",
-    "description": "packages sidebar. Files"
-  },
   "u/B01N": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Files. Content paragraph 2"
@@ -959,10 +955,6 @@
     "defaultMessage": "Fugiat laborum nulla fugiat",
     "description": "Why screen. Third advantage"
   },
-  "vO3dkI": {
-    "defaultMessage": "Getting started",
-    "description": "Docs sidebar. Authentification getting started"
-  },
   "vrbypx": {
     "defaultMessage": "Via Profit",
     "description": "Helmet meta «author»"
@@ -991,17 +983,9 @@
     "defaultMessage": "The page may not exist or an error has occurred",
     "description": "404 page text"
   },
-  "xb1B1C": {
-    "defaultMessage": "Api",
-    "description": "Docs sidebar. Authentification api"
-  },
   "xgii0x": {
     "defaultMessage": "Knex v1.1",
     "description": "Breadcrumbs. Knex v1.1"
-  },
-  "xu7EiG": {
-    "defaultMessage": "Sms",
-    "description": "packages sidebar. Sms"
   },
   "y1j/tV": {
     "defaultMessage": "Connections",
@@ -1022,6 +1006,10 @@
   "yjyG/7": {
     "defaultMessage": "Settings manager",
     "description": "Footer. Package settings-manager link"
+  },
+  "yoq7Mf": {
+    "defaultMessage": "Getting started",
+    "description": "Breadcrumbs. Redis getting started"
   },
   "z0PBbF": {
     "defaultMessage": "Fugiat laborum nulla fugiat cupidatat veniam pariatur in non. Adipisicing consectetur anim commodo excepteur incididunt.",

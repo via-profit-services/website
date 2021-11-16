@@ -139,30 +139,53 @@ const useSidebar = () => {
             },
           ],
         },
-        //
         {
-          path: '/docs/authentification',
+          path: '/docs/redis',
           label: intl.formatMessage({
-            defaultMessage: 'Authentification',
-            description: 'Docs sidebar. Authentification',
+            defaultMessage: 'Redis',
+            description: 'Docs sidebar. Redis',
           }),
           child: [
             {
-              path: '/docs/authentification/getting-started',
+              path: '/docs/redis/getting-started',
               label: intl.formatMessage({
                 defaultMessage: 'Getting started',
-                description: 'Docs sidebar. Authentification getting started',
+                description: 'Docs sidebar. Redis getting started',
               }),
             },
             {
-              path: '/docs/authentification/api',
+              path: '/docs/redis/api',
               label: intl.formatMessage({
                 defaultMessage: 'Api',
-                description: 'Docs sidebar. Authentification api',
+                description: 'Docs sidebar. Redis api',
               }),
             },
           ],
         },
+        //
+        // {
+        //   path: '/docs/authentification',
+        //   label: intl.formatMessage({
+        //     defaultMessage: 'Authentification',
+        //     description: 'Docs sidebar. Authentification',
+        //   }),
+        //   child: [
+        //     {
+        //       path: '/docs/authentification/getting-started',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Getting started',
+        //         description: 'Docs sidebar. Authentification getting started',
+        //       }),
+        //     },
+        //     {
+        //       path: '/docs/authentification/api',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Api',
+        //         description: 'Docs sidebar. Authentification api',
+        //       }),
+        //     },
+        //   ],
+        // },
       ],
     }),
     [intl],

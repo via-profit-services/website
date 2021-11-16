@@ -12,6 +12,7 @@ const pages = {
   Fallback: loadable(() => import('~/pages/Fallback/index'), options),
   Core: loadable(() => import('~/pages/Docs/children/core/index'), options),
   Knex: loadable(() => import('~/pages/Docs/children/knex/index'), options),
+  Redis: loadable(() => import('~/pages/Docs/children/redis/index'), options),
   Authentification: loadable(
     () => import('~/pages/Docs/children/authentification/index'),
     options,
@@ -29,6 +30,7 @@ const DocsRoutes: React.FC = () => {
     <Switch>
       <Route strict path={`${path}/core`} component={pages.Core} />
       <Route strict path={`${path}/knex`} component={pages.Knex} />
+      <Route strict path={`${path}/redis`} component={pages.Redis} />
       <Route
         strict
         path={`${path}/authentification`}
