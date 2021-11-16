@@ -1,6 +1,6 @@
 import React from 'react';
 import loadable, { OptionsWithoutResolver } from '@loadable/component';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import { Switch, Route, useRouteMatch, Redirect } from 'react-router-dom';
 
 import LoadingIndicator from '~/components/desktop/LoadingIndicator';
 
@@ -31,6 +31,7 @@ const Authentification: React.FC = () => {
         component={pages.GettingStarted}
       />
       <Route strict path={`${path}/api`} component={pages.Api} />
+      <Redirect strict exact from={path} to={`${path}/getting-started`} />
       <Route component={pages.Fallback} />
     </Switch>
   );

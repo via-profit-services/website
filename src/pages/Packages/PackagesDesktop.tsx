@@ -63,13 +63,13 @@ const PackagesDesktop: React.FC = () => {
             description: 'packages sidebar. Redis',
           }),
         },
-        // {
-        //   path: '/packages/authentification',
-        //   label: intl.formatMessage({
-        //     defaultMessage: 'Authentification',
-        //     description: 'packages sidebar. Authentification',
-        //   }),
-        // },
+        {
+          path: '/packages/authentification',
+          label: intl.formatMessage({
+            defaultMessage: 'Authentification',
+            description: 'packages sidebar. Authentification',
+          }),
+        },
         // {
         //   path: '/packages/dataloader',
         //   label: intl.formatMessage({

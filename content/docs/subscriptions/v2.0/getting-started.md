@@ -9,6 +9,8 @@
 
 ## Installation
 
+It is assumed that you have the [@via-profit-services/core](../core.md) module installed and configured.
+
 First of all you should install some peer dependencies and install the core:
 
  - [Core](../core.md) - Core module (_It is assumed that the module is already installed and configured_)
@@ -21,12 +23,11 @@ First of all you should install some peer dependencies and install the core:
  
 
 ```bash
-$ yarn add graphql-redis-subscriptions graphql-subscriptions graphql-ws ioredis ws
+$ yarn add graphql-redis-subscriptions graphql-subscriptions ioredis graphql-ws ws
+$ yarn add @via-profit-services/subscriptions
 ```
 
 ## Basic usage
-
-Soon
 
 
 [![Edit @via-profit-services-subscriptions-node-basic](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-subscriptions-node-basic-v5b45?fontsize=14&hidenavigation=1&theme=dark)

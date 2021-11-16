@@ -7,13 +7,55 @@
 
 ## Installation
 
+It is assumed that you have the [@via-profit-services/core](../core.md) module installed and configured.
+
 You need to install the peer dependencies to:
 
 ```bash
-$ yarn add @via-profit-services/core ioredis @via-profit-services/redis
+$ yarn add ioredis
+$ yarn add @via-profit-services/redis
 ```
 
 ## Basic usage
+
+Using the `factory` method, initialize middleware and then connect it. After connecting this middleware, the **Context** object will contain property `redis`, which will be a IORedis instance
+
+_index.js_
+
+```js
+const core = require("@via-profit-services/core");
+const redis = require("@via-profit-services/redis");
+const express = require("express");
+const { createServer } = require("http");
+
+const schema = require("./schema");
+
+(async () => {
+  const port = 8085;
+  const app = express();
+  const server = createServer(app);
+
+  const redisMiddleware = redis.factory({
+    host: "localhost",
+    password: "",
+    maxRetriesPerRequest: 3,
+    db: 0
+  });
+
+  const { graphQLExpress } = await core.factory({
+    server,
+    schema,
+    middleware: [redisMiddleware]
+  });
+
+  app.use("/graphql", graphQLExpress);
+
+  server.listen(port, () => {
+    console.info(`GraphQL server started at port ${port}`);
+  });
+})();
+```
+
 
 _schema.js_
 
@@ -70,43 +112,6 @@ const schema = new GraphQLSchema({
 });
 
 module.exports = schema;
-
-```
-_index.js_
-
-```js
-const core = require("@via-profit-services/core");
-const redis = require("@via-profit-services/redis");
-const express = require("express");
-const { createServer } = require("http");
-
-const schema = require("./schema");
-
-(async () => {
-  const port = 8085;
-  const app = express();
-  const server = createServer(app);
-
-  const redisMiddleware = redis.factory({
-    host: "localhost",
-    password: "",
-    maxRetriesPerRequest: 3,
-    db: 0
-  });
-
-  const { graphQLExpress } = await core.factory({
-    server,
-    schema,
-    middleware: [redisMiddleware]
-  });
-
-  app.use("/graphql", graphQLExpress);
-
-  server.listen(port, () => {
-    console.info(`GraphQL server started at port ${port}`);
-  });
-})();
-
 ```
 
 [![Edit @via-profit-services-redis-basic](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-redis-basic-fpi2q?fontsize=14&hidenavigation=1&theme=dark)
