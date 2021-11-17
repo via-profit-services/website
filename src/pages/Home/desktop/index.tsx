@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Header from '~/components/desktop/Header';
 import Footer from '~/components/desktop/Footer';
 import Meta from '~/components/desktop/Meta';
+import ScrollTopButton from '~/components/desktop/ScrollTopButton';
 
 import SectionMain from './SectionMain';
 import SectionWhatIsIt from './SectionWhatIsIt';
@@ -45,6 +46,7 @@ const HomeDesktop: React.FC = () => {
         <SectionTypescript />
       </Main>
       <Footer />
+      <ScrollTopButton />
     </>
   );
 };

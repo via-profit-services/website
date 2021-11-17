@@ -18,6 +18,10 @@ const pages = {
     () => import('~/pages/Docs/children/authentification/v2.0/api'),
     options,
   ),
+  Into: loadable(
+    () => import('~/pages/Docs/children/authentification/v2.0/introduction'),
+    options,
+  ),
 };
 
 const Authentification: React.FC = () => {
@@ -31,7 +35,8 @@ const Authentification: React.FC = () => {
         component={pages.GettingStarted}
       />
       <Route strict path={`${path}/api`} component={pages.Api} />
-      <Redirect strict exact from={path} to={`${path}/getting-started`} />
+      <Route strict path={`${path}/introduction`} component={pages.Into} />
+      <Redirect strict path={path} to={`${path}/introduction`} />
       <Route component={pages.Fallback} />
     </Switch>
   );

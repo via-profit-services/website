@@ -1,12 +1,13 @@
-# Via Profit Services / Redis
+# Via Profit Services / Knex
 
-![via-profit-services-cover](https://github.com/via-profit-services/redis/raw/master/assets/via-profit-services-cover.png)
+![via-profit-services-cover](https://github.com/via-profit-services/knex/raw/master/assets/via-profit-services-cover.png)
 
-This module is a provider that extends the GraphQL [Сontext](../docs/core/context.md) by adding `redis` instance with an already initialized connection to your database.
+This module is a provider that extends the GraphQL [Сontext](../core/context.md) by adding `Knex` instance with an already initialized connection to your database.
 
-## Documentation
+## Features
 
-Full documentation [here](../docs/redis/getting-started.md)
+ - [Easy to use](./getting-started.md#basic-usage)
+ - [Alias support](./api.md#applyaliases)
 
 
 ## License

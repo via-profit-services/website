@@ -65,7 +65,8 @@ const Core: React.FC = () => {
         component={pages.Middlewares}
       />
       <Route strict path={`${path}/typedefs`} component={pages.Typedefs} />
-      <Route strict path={path} component={pages.Intro} />
+      <Route strict path={`${path}/introduction`} component={pages.Intro} />
+      <Redirect strict path={path} to={`${path}/introduction`} />
       <Route component={pages.Fallback} />
     </Switch>
   );

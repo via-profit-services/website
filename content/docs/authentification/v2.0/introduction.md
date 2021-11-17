@@ -1,12 +1,13 @@
-# Via Profit Services / Knex
+# Via Profit Services / Authentification
 
-![via-profit-services-cover](https://github.com/via-profit-services/knex/raw/master/assets/via-profit-services-cover.png)
+![via-profit-services-cover](https://github.com/via-profit-services/authentification/raw/master/assets/via-profit-services-cover.png)
 
-This module is a provider that extends the GraphQL [Сontext](../docs/core/context.md) by adding `Knex` instance with an already initialized connection to your database.
+This module allows you to implement the JWT mechanism for authentication, and also contains a set of functions for building an authorization server
 
-## Documentation
 
-Full documentation [here](../docs/knex/getting-started.md)
+## Features
+
+ - [Easy to use](./getting-started.md)
 
 
 ## License

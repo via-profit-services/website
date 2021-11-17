@@ -1,13 +1,12 @@
-# Via Profit Services / Authentification
+# Via Profit Services / Redis
 
-![via-profit-services-cover](https://github.com/via-profit-services/authentification/raw/master/assets/via-profit-services-cover.png)
+![via-profit-services-cover](https://github.com/via-profit-services/redis/raw/master/assets/via-profit-services-cover.png)
 
-This module allows you to implement the JWT mechanism for authentication, and also contains a set of functions for building an authorization server
+This module is a provider that extends the GraphQL [Сontext](../core/context.md) by adding `redis` instance with an already initialized connection to your database.
 
+## Features
 
-## Documentation
-
-Full documentation [here](../docs/authentification/getting-started.md)
+ - [Easy to use](./getting-started.md#basic-usage)
 
 
 ## License

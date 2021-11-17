@@ -5,6 +5,7 @@ import ContentArea from '~/components/desktop/ContentArea';
 import Footer from '~/components/desktop/Footer';
 import Meta from '~/components/desktop/Meta';
 import ExamplesRouter from '~/routes/ExamplesRouter';
+import ScrollTopButton from '~/components/desktop/ScrollTopButton';
 
 const ExamplesDesktop: React.FC = () => (
   <>
@@ -14,6 +15,7 @@ const ExamplesDesktop: React.FC = () => (
       <ExamplesRouter />
     </ContentArea>
     <Footer />
+    <ScrollTopButton />
   </>
 );
 

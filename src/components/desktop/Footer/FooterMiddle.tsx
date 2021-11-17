@@ -91,6 +91,15 @@ const InternalLink = styled(Link)`
   ${linkStyles}
 `;
 
+const InternalPreLink = styled.span<{ to?: string }>`
+  ${linkStyles}
+  opacity: 0.4;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
 const ExternalLink = styled.a`
   ${linkStyles}
 `;
@@ -142,7 +151,7 @@ const FooterMiddle: React.FC = () => (
         <LinksContainer>
           <LinksList>
             <li>
-              <InternalLink to="/docs/core">
+              <InternalLink to="/docs/core/introduction">
                 <FormattedMessage
                   defaultMessage="Core"
                   description="Footer. package core link"
@@ -150,7 +159,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/docs/Knex">
+              <InternalLink to="/docs/knex/introduction">
                 <FormattedMessage
                   defaultMessage="Knex"
                   description="Footer. Package knex link"
@@ -158,7 +167,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/docs/redis">
+              <InternalLink to="/docs/redis/introduction">
                 <FormattedMessage
                   defaultMessage="Redis"
                   description="Footer. Package redis link"
@@ -166,18 +175,18 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/docs/subscriptions">
+              <InternalPreLink to="/docs/subscriptions/introduction">
                 <FormattedMessage
                   defaultMessage="Subscriptions"
                   description="Footer. Package subscriptions link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
           </LinksList>
 
           <LinksList>
             <li>
-              <InternalLink to="/docs/authentification">
+              <InternalLink to="/docs/authentification/introduction">
                 <FormattedMessage
                   defaultMessage="Authentification"
                   description="Footer. Package Authentification link"
@@ -185,63 +194,63 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/docs/permissions">
+              <InternalPreLink to="/docs/permissions/introduction">
                 <FormattedMessage
                   defaultMessage="Permissions"
                   description="Footer. Package permissions link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
             <li>
-              <InternalLink to="/docs/messages">
+              <InternalPreLink to="/docs/messages/InternalLink">
                 <FormattedMessage
                   defaultMessage="Messages"
                   description="Footer. Package messages link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
             <li>
-              <InternalLink to="/docs/sms">
+              <InternalPreLink to="/docs/sms/InternalLink">
                 <FormattedMessage
                   defaultMessage="SMS"
                   description="Footer. Package sms link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
           </LinksList>
 
           <LinksList>
             <li>
-              <InternalLink to="/docs/files">
+              <InternalPreLink to="/docs/files/InternalLink">
                 <FormattedMessage
                   defaultMessage="File Storage"
                   description="Footer. Package file-storage link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
             <li>
-              <InternalLink to="/docs/settings">
+              <InternalPreLink to="/docs/settings/InternalLink">
                 <FormattedMessage
                   defaultMessage="Settings manager"
                   description="Footer. Package settings-manager link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
             <li>
-              <InternalLink to="/docs/dataloader">
+              <InternalPreLink to="/docs/dataloader/InternalLink">
                 <FormattedMessage
                   defaultMessage="Dataloader"
                   description="Footer. Package dataloader link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
             <li>
-              <InternalLink to="/docs/geography">
+              <InternalPreLink to="/docs/geography/InternalLink">
                 <FormattedMessage
                   defaultMessage="Geography"
                   description="Footer. Package geography link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
           </LinksList>
         </LinksContainer>

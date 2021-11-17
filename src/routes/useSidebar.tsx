@@ -16,7 +16,7 @@ const useSidebar = () => {
           }),
           child: [
             {
-              path: '/docs/core',
+              path: '/docs/core/introduction',
               label: intl.formatMessage({
                 defaultMessage: 'Introduction',
                 description: 'Docs sidebar. Core v.2.0 introduction',
@@ -106,6 +106,13 @@ const useSidebar = () => {
           }),
           child: [
             {
+              path: '/docs/knex/introduction',
+              label: intl.formatMessage({
+                defaultMessage: 'Introduction',
+                description: 'Docs sidebar. Knex introduction',
+              }),
+            },
+            {
               path: '/docs/knex/getting-started',
               label: intl.formatMessage({
                 defaultMessage: 'Getting started',
@@ -154,6 +161,13 @@ const useSidebar = () => {
           }),
           child: [
             {
+              path: '/docs/redis/introduction',
+              label: intl.formatMessage({
+                defaultMessage: 'Introduction',
+                description: 'Docs sidebar. Redis introduction',
+              }),
+            },
+            {
               path: '/docs/redis/getting-started',
               label: intl.formatMessage({
                 defaultMessage: 'Getting started',
@@ -169,7 +183,7 @@ const useSidebar = () => {
             },
           ],
         },
-        
+
         {
           path: '/docs/authentification',
           label: intl.formatMessage({
@@ -177,6 +191,13 @@ const useSidebar = () => {
             description: 'Docs sidebar. Authentification',
           }),
           child: [
+            {
+              path: '/docs/authentification/introduction',
+              label: intl.formatMessage({
+                defaultMessage: 'Introduction',
+                description: 'Docs sidebar. Authentification introduction',
+              }),
+            },
             {
               path: '/docs/authentification/getting-started',
               label: intl.formatMessage({

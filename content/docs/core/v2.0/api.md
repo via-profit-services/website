@@ -83,7 +83,7 @@ Resolvers object contains:
 
 ### typeDefs
 
-`SDL` string with definitions of [Scalars](#scalars) and [Base TypeDefs](base-typedefs)
+`SDL` string with definitions of [Scalars](./typedefs.md#scalars) and [Base TypeDefs](./typedefs.md#types)
 
 ### defaultOutputFilter
 
