@@ -9,7 +9,10 @@ const options: OptionsWithoutResolver<any> = {
 };
 
 const pages = {
-  Fallback: loadable(() => import('~/pages/Fallback/index'), options),
+  Fallback: loadable(
+    () => import('~/components/both/FallbackContent/index'),
+    options,
+  ),
   GettingStarted: loadable(
     () => import('~/pages/Docs/children/redis/v2.0/getting-started'),
     options,

@@ -5,9 +5,12 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
 import LoadingIndicator from '~/components/desktop/LoadingIndicator';
 
-const Fallback = loadable(() => import('~/pages/Fallback/index'), {
-  fallback: <LoadingIndicator />,
-});
+const Fallback = loadable(
+  () => import('~/components/both/FallbackContent/index'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
 
 const KnexVer1 = loadable(
   () => import('~/pages/Docs/children/knex/v1.1/index'),

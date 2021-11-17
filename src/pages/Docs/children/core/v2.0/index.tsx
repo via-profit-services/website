@@ -9,7 +9,10 @@ const options: OptionsWithoutResolver<any> = {
 };
 
 const pages = {
-  Fallback: loadable(() => import('~/pages/Fallback/index'), options),
+  Fallback: loadable(
+    () => import('~/components/both/FallbackContent/index'),
+    options,
+  ),
   Intro: loadable(
     () => import('~/pages/Docs/children/core/v2.0/introduction'),
     options,
@@ -49,6 +52,7 @@ const Core: React.FC = () => {
       <Route strict exact path={`${path}/api`} component={pages.Api} />
       <Route
         strict
+        exact
         path={`${path}/connections`}
         component={pages.Connections}
       />

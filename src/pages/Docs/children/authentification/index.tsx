@@ -5,7 +5,7 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import LoadingIndicator from '~/components/desktop/LoadingIndicator';
 
 const Fallback = loadable(
-  () => import('~/components/desktop/FallbackContent/index'),
+  () => import('~/components/both/FallbackContent/index'),
   {
     fallback: <LoadingIndicator />,
   },

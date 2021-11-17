@@ -9,7 +9,10 @@ const options: OptionsWithoutResolver<any> = {
 };
 
 const pages = {
-  Fallback: loadable(() => import('~/pages/Fallback/index'), options),
+  Fallback: loadable(
+    () => import('~/components/both/FallbackContent/index'),
+    options,
+  ),
   Core: loadable(() => import('~/pages/Docs/children/core/index'), options),
   Knex: loadable(() => import('~/pages/Docs/children/knex/index'), options),
   Redis: loadable(() => import('~/pages/Docs/children/redis/index'), options),

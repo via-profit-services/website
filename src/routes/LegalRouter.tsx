@@ -18,7 +18,10 @@ const pages = {
     options,
   ),
   Terms: loadable(() => import('~/pages/Legal/children/Terms'), options),
-  Fallback: loadable(() => import('~/pages/Fallback/index'), options),
+  Fallback: loadable(
+    () => import('~/components/both/FallbackContent/index'),
+    options,
+  ),
 };
 
 const LegalRoutes: React.FC = () => {

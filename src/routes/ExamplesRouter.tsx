@@ -13,7 +13,10 @@ const pages = {
     () => import('~/pages/Examples/children/Introduction'),
     options,
   ),
-  Fallback: loadable(() => import('~/pages/Fallback/index'), options),
+  Fallback: loadable(
+    () => import('~/components/both/FallbackContent/index'),
+    options,
+  ),
 };
 
 const ExamplesRoutes: React.FC = () => {
