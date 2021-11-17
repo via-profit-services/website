@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 import CheckIcon from 'mdi-react/CheckIcon';
 
-import H1 from '~/components/touchable/Typography/H1';
+import H1 from '~/components/both/Typography/H1';
 import imagesrc from '~/../assets/images/touchable-section-main.jpg';
 import bearsrc from '~/../assets/images/section-main-bear.svg';
 

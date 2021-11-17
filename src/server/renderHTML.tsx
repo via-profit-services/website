@@ -15,7 +15,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import 'cookie-parser';
 import crypto from 'crypto';
 
-import { COOKIE_RECORD_THEME, COOKIE_RECORD_MODE } from '~/utils/constants';
+import { COOKIE_RECORD_THEME, COOKIE_RECORD_MODE } from '~/constants';
 import createReduxStore from '~/redux/store';
 import reduxDefaultState from '~/redux/defaultState';
 import ApplicationProvider from '~/providers/ApplicationProvider';
@@ -106,9 +106,7 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
       <StyleSheetManager sheet={sheet.instance}>
         <StaticRouter location={url} context={context}>
           <ReduxProvider store={reduxStore}>
-            {/* <React.Suspense fallback={null}> */}
-              <ApplicationProvider />
-            {/* </React.Suspense> */}
+            <ApplicationProvider />
           </ReduxProvider>
         </StaticRouter>
       </StyleSheetManager>,

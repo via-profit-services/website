@@ -1,7 +1,8 @@
 const syntaxTheme = {
   'code[class*="language-"]': {
     display: 'block',
-    overflowX: 'auto',
+    overflow: 'auto',
+    maxHeight: '600px',
     whiteSpace: 'pre',
     wordSpacing: 'normal',
     wordBreak: 'normal',

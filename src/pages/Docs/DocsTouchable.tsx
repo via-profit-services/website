@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Header from '~/components/touchable/Header';
 import Footer from '~/components/touchable/Footer';
 import NavbarButton from '~/components/touchable/NavbarDrawer/NavbarButton';
-import Meta from '~/components/desktop/Meta';
+import Meta from '~/components/both/Meta';
 import DocsRouter from '~/routes/DocsRouter';
 
 const Main = styled.main`

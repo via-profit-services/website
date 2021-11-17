@@ -16,6 +16,13 @@ const useSidebar = () => {
           }),
           child: [
             {
+              path: '/docs/core/introduction',
+              label: intl.formatMessage({
+                defaultMessage: 'Introduction',
+                description: 'Docs sidebar. Core v.2.0 introduction',
+              }),
+            },
+            {
               path: '/docs/core/getting-started',
               label: intl.formatMessage({
                 defaultMessage: 'Getting started',
@@ -99,6 +106,13 @@ const useSidebar = () => {
           }),
           child: [
             {
+              path: '/docs/knex/introduction',
+              label: intl.formatMessage({
+                defaultMessage: 'Introduction',
+                description: 'Docs sidebar. Knex introduction',
+              }),
+            },
+            {
               path: '/docs/knex/getting-started',
               label: intl.formatMessage({
                 defaultMessage: 'Getting started',
@@ -136,6 +150,67 @@ const useSidebar = () => {
                   ],
                 },
               ],
+            },
+          ],
+        },
+        {
+          path: '/docs/redis',
+          label: intl.formatMessage({
+            defaultMessage: 'Redis',
+            description: 'Docs sidebar. Redis',
+          }),
+          child: [
+            {
+              path: '/docs/redis/introduction',
+              label: intl.formatMessage({
+                defaultMessage: 'Introduction',
+                description: 'Docs sidebar. Redis introduction',
+              }),
+            },
+            {
+              path: '/docs/redis/getting-started',
+              label: intl.formatMessage({
+                defaultMessage: 'Getting started',
+                description: 'Docs sidebar. Redis getting started',
+              }),
+            },
+            {
+              path: '/docs/redis/api',
+              label: intl.formatMessage({
+                defaultMessage: 'Api',
+                description: 'Docs sidebar. Redis api',
+              }),
+            },
+          ],
+        },
+
+        {
+          path: '/docs/authentification',
+          label: intl.formatMessage({
+            defaultMessage: 'Authentification',
+            description: 'Docs sidebar. Authentification',
+          }),
+          child: [
+            {
+              path: '/docs/authentification/introduction',
+              label: intl.formatMessage({
+                defaultMessage: 'Introduction',
+                description: 'Docs sidebar. Authentification introduction',
+              }),
+            },
+            {
+              path: '/docs/authentification/getting-started',
+              label: intl.formatMessage({
+                defaultMessage: 'Getting started',
+                description: 'Docs sidebar. Authentification getting started',
+              }),
+            },
+            {
+              path: '/docs/authentification/api',
+              label: intl.formatMessage({
+                defaultMessage: 'Api',
+                description: 'Docs sidebar. Authentification api',
+              }),
             },
           ],
         },

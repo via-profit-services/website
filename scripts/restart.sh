@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+# REQUIRED nvm (https://github.com/nvm-sh/nvm)
 
 
 #-------------------------------#
@@ -6,12 +8,16 @@
 #-------------------------------#
 
 # Variables of output colors
-COLOR_RED="\033[31m";
-COLOR_YELLOW="\033[33m";
-COLOR_GREEN="\033[32m";
-COLOR_BOLD="\033[1m";
-COLOR_NORMAL="\033[0m"
+COLOR_RED="\e[31m";
+COLOR_YELLOW="\e[33m";
+COLOR_GREEN="\e[32m";
+COLOR_BOLD="\e[1m";
+COLOR_GREY="\e[2m"
+COLOR_NORMAL="\e[0m"
 
+# Node JS version will be installed by nmv
+# You can use specified version name, eg.: 16.13.0
+NODE_VERSION=16
 
 # Returns process PID
 # arguments
@@ -52,6 +58,10 @@ if [ -z "$SERVER_PORT" ]
   exit;
 fi;
 
+# install node
+source $HOME/.nvm/nvm.sh
+echo -e "${COLOR_GREY}nvm install ${NODE_VERSION}${COLOR_NORMAL}"
+echo -e "${COLOR_GREY}nvm use ${NODE_VERSION}${COLOR_NORMAL}"
 
 PID=$(getProcessPIDByPortNumber $SERVER_PORT);
 
@@ -63,6 +73,6 @@ then
 fi;
 
 
-echo -e "${COLOR_YELLOW}Start application at ${COLOR_BOLD}${SERVER_HOSTNAME}:${SERVER_PORT}${COLOR_NORMAL}";
-node index.js > /dev/null &
-echo -e "${COLOR_GREEN}Done${COLOR_NORMAL}";
+echo -e "${COLOR_YELLOW}Start application at ${COLOR_BOLD}http://${SERVER_HOSTNAME}:${SERVER_PORT}${COLOR_NORMAL}";
+/usr/bin/env node . > crash.log &
+echo -e "${COLOR_GREEN}The crash log will be saved at ${COLOR_BOLD}«./crash.log»${COLOR_NORMAL}";

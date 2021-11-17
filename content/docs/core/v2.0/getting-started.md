@@ -36,7 +36,7 @@ const {
   GraphQLSchema,
   GraphQLObjectType,
   GraphQLNonNull,
-  GraphQLString,
+  GraphQLString.
 } = require('graphql');
 
 /**
@@ -108,14 +108,19 @@ Output:
 }
 ```
 
+Now your Graphql server is ready. You can send a graphgql request to the address `http://localhost:8080/graphql`.
+
+
 [![Edit @via-profit-services-core-node-basic](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-core-node-basic-xii7w?fontsize=14&hidenavigation=1&theme=dark&view=editor)
 
 
 ## GraphQL server with @graphql-tools
 
-We strongly recommend using [@graphql-tools](https://github.com/ardatan/graphql-tools) package to build your schemas. This package helps to combine SDL and resolvers into a single executable schema. See `makeExecutableSchema` of `@graphql-tools/schema` module.
+In the previous paragraph, you learned how to configure a simple GraphQL server using vanilla graphql. But we strongly recommend using [@graphql-tools](https://github.com/ardatan/graphql-tools) package to build your schemas. This package helps to combine SDL and resolvers into a single executable schema. See `makeExecutableSchema` of `@graphql-tools/schema` module.
 
 Core module also exports its own typeDefs and resolvers. Those definitions would declare Query and Mutation root types. See [API](./api.md) and [Type defs](./typedefs.md) for more details.
+
+With @graphql-tools example:
 
 ```js
 const { createServer } = require("http");
@@ -168,6 +173,9 @@ const resolvers = {
 ```
 
 [![Edit @via-profit-services-core-node-graphql-tools](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-core-node-graphql-tools-04s8s?fontsize=14&hidenavigation=1&theme=dark)
+
+
+The **@via-profit-services/core** module has an extensive API that you can find in the [API section](./api.md).
 
 
 ## More examples

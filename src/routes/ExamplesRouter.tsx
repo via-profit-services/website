@@ -13,7 +13,10 @@ const pages = {
     () => import('~/pages/Examples/children/Introduction'),
     options,
   ),
-  Fallback: loadable(() => import('~/pages/Fallback/index'), options),
+  Fallback: loadable(
+    () => import('~/components/both/FallbackContent/index'),
+    options,
+  ),
 };
 
 const ExamplesRoutes: React.FC = () => {
@@ -21,7 +24,7 @@ const ExamplesRoutes: React.FC = () => {
 
   return (
     <Switch>
-      <Route strict path={path} component={pages.List} />
+      <Route strict exact path={path} component={pages.List} />
       <Route component={pages.Fallback} />
     </Switch>
   );

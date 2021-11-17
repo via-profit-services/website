@@ -5,9 +5,12 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
 import LoadingIndicator from '~/components/desktop/LoadingIndicator';
 
-const Fallback = loadable(() => import('~/pages/Fallback/index'), {
-  fallback: <LoadingIndicator />,
-});
+const Fallback = loadable(
+  () => import('~/components/both/FallbackContent/index'),
+  {
+    fallback: <LoadingIndicator />,
+  },
+);
 
 const CoreVer1 = loadable(
   () => import('~/pages/Docs/children/core/v1.2/index'),

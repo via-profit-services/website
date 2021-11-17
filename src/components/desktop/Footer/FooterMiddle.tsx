@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 
-import { LINK_COMPANY, LINK_GITHUB } from '~/utils/constants';
+import { LINK_COMPANY, LINK_GITHUB } from '~/constants';
 
 const Container = styled.div`
   background-color: ${props => props.theme.color.black.primary};
@@ -91,6 +91,15 @@ const InternalLink = styled(Link)`
   ${linkStyles}
 `;
 
+const InternalPreLink = styled.span<{ to?: string }>`
+  ${linkStyles}
+  opacity: 0.4;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
 const ExternalLink = styled.a`
   ${linkStyles}
 `;
@@ -142,7 +151,7 @@ const FooterMiddle: React.FC = () => (
         <LinksContainer>
           <LinksList>
             <li>
-              <InternalLink to="/packages/core">
+              <InternalLink to="/docs/core/introduction">
                 <FormattedMessage
                   defaultMessage="Core"
                   description="Footer. package core link"
@@ -150,7 +159,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/Knex">
+              <InternalLink to="/docs/knex/introduction">
                 <FormattedMessage
                   defaultMessage="Knex"
                   description="Footer. Package knex link"
@@ -158,7 +167,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/redis">
+              <InternalLink to="/docs/redis/introduction">
                 <FormattedMessage
                   defaultMessage="Redis"
                   description="Footer. Package redis link"
@@ -166,82 +175,82 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/subscriptions">
+              <InternalPreLink to="/docs/subscriptions/introduction">
                 <FormattedMessage
                   defaultMessage="Subscriptions"
                   description="Footer. Package subscriptions link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
           </LinksList>
 
           <LinksList>
             <li>
-              <InternalLink to="/packages/accounts">
+              <InternalLink to="/docs/authentification/introduction">
                 <FormattedMessage
-                  defaultMessage="Accounts"
-                  description="Footer. Package accounts link"
+                  defaultMessage="Authentification"
+                  description="Footer. Package Authentification link"
                 />
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/permissions">
+              <InternalPreLink to="/docs/permissions/introduction">
                 <FormattedMessage
                   defaultMessage="Permissions"
                   description="Footer. Package permissions link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
             <li>
-              <InternalLink to="/packages/messages">
+              <InternalPreLink to="/docs/messages/InternalLink">
                 <FormattedMessage
                   defaultMessage="Messages"
                   description="Footer. Package messages link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
             <li>
-              <InternalLink to="/packages/sms">
+              <InternalPreLink to="/docs/sms/InternalLink">
                 <FormattedMessage
                   defaultMessage="SMS"
                   description="Footer. Package sms link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
           </LinksList>
 
           <LinksList>
             <li>
-              <InternalLink to="/packages/files">
+              <InternalPreLink to="/docs/files/InternalLink">
                 <FormattedMessage
                   defaultMessage="File Storage"
                   description="Footer. Package file-storage link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
             <li>
-              <InternalLink to="/packages/settings">
+              <InternalPreLink to="/docs/settings/InternalLink">
                 <FormattedMessage
                   defaultMessage="Settings manager"
                   description="Footer. Package settings-manager link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
             <li>
-              <InternalLink to="/packages/dataloader">
+              <InternalPreLink to="/docs/dataloader/InternalLink">
                 <FormattedMessage
                   defaultMessage="Dataloader"
                   description="Footer. Package dataloader link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
             <li>
-              <InternalLink to="/packages/geography">
+              <InternalPreLink to="/docs/geography/InternalLink">
                 <FormattedMessage
                   defaultMessage="Geography"
                   description="Footer. Package geography link"
                 />
-              </InternalLink>
+              </InternalPreLink>
             </li>
           </LinksList>
         </LinksContainer>

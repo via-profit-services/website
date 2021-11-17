@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import Strong from '~/components/desktop/Typography/Strong';
+import Strong from '~/components/both/Typography/Strong';
 import Logo from '~/components/desktop/Logo/LogoInline';
 
 const Container = styled.div`

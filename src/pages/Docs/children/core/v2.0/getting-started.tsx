@@ -6,7 +6,7 @@ import RenderMarkdown from '~/components/desktop/RenderMarkdown';
 import Breadcrumbs, { Crumb } from '~/components/desktop/Breadcrumbs';
 import content from '~content/docs/core/v2.0/getting-started.md';
 
-const Introduction: React.FC = () => {
+const GettingStarted: React.FC = () => {
   const intl = useIntl();
 
   return (
@@ -65,4 +65,4 @@ const Introduction: React.FC = () => {
   );
 };
 
-export default Introduction;
+export default GettingStarted;

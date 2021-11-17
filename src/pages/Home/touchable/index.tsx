@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import Header from '~/components/touchable/Header';
 import Footer from '~/components/touchable/Footer';
-import Meta from '~/components/desktop/Meta';
+import Meta from '~/components/both/Meta';
 import SectionWhatsIsIt from './SectionWhatsIsIt';
 import SectionPackages from './SectionPackages';
 import SectionMain from './SectionMain';

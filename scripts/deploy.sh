@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Deploy script
 
@@ -7,11 +7,11 @@
 #-------------------------------#
 
 # Variables of output colors
-COLOR_RED="\033[31m";
-COLOR_YELLOW="\033[33m";
-COLOR_GREEN="\033[32m";
-COLOR_BOLD="\033[1m";
-COLOR_NORMAL="\033[0m"
+COLOR_RED="\e[31m";
+COLOR_YELLOW="\e[33m";
+COLOR_GREEN="\e[32m";
+COLOR_BOLD="\e[1m";
+COLOR_NORMAL="\e[0m"
 
 
 #-------------------------------#
@@ -36,11 +36,13 @@ echo -e "${COLOR_YELLOW}Uploading to «${REMOTE_LOCATION}»${COLOR_NORMAL}";
 
 # Copy files
 rsync -r ./dist/* "${REMOTE_LOCATION}";
+rsync ./scripts/restart.sh "${REMOTE_LOCATION}/restart";
 
 # Restart
-ssh -T "${DEPLOY_USER}@${DEPLOY_HOST}" << EOSSH
-  cd ${DEPLOY_PATH}
-  sh ${DEPLOY_PATH}restart.sh
-EOSSH
+ssh "${DEPLOY_USER}@${DEPLOY_HOST}" << EOF
+cd $DEPLOY_PATH
+chmod u+x "$(echo $DEPLOY_PATH)restart"
+./restart
+EOF
 
 echo -e "${COLOR_GREEN}Complete${COLOR_NORMAL}";

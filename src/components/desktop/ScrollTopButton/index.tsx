@@ -28,10 +28,9 @@ const SCROLL_TIMEOUT = 100;
 
 const ScrollButton: React.FC = () => {
   const intl = useIntl();
-  const [visible, setVisibility] = React.useState(
-    typeof window !== 'undefined' && window.scrollY > VISIBILITY_OFFSET,
-  );
+  const btnRef = React.useRef<HTMLButtonElement | null>(null);
   const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  const [visible, setVisibility] = React.useState(false);
 
   const handleScroll = () => {
     setVisibility(false);
@@ -48,7 +47,9 @@ const ScrollButton: React.FC = () => {
       }
 
       timeoutRef.current = setTimeout(() => {
-        setVisibility(window.scrollY > VISIBILITY_OFFSET);
+        if (btnRef.current) {
+          setVisibility(window.scrollY > VISIBILITY_OFFSET);
+        }
       }, SCROLL_TIMEOUT);
     };
     window.addEventListener('scroll', listener);
@@ -60,6 +61,7 @@ const ScrollButton: React.FC = () => {
 
   return (
     <Button
+      ref={btnRef}
       aria-label={intl.formatMessage({
         description: '«aria-label» attribute of Scroll to top button',
         defaultMessage: 'Scroll to top',

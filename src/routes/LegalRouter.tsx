@@ -18,7 +18,10 @@ const pages = {
     options,
   ),
   Terms: loadable(() => import('~/pages/Legal/children/Terms'), options),
-  Fallback: loadable(() => import('~/pages/Fallback/index'), options),
+  Fallback: loadable(
+    () => import('~/components/both/FallbackContent/index'),
+    options,
+  ),
 };
 
 const LegalRoutes: React.FC = () => {
@@ -26,9 +29,19 @@ const LegalRoutes: React.FC = () => {
 
   return (
     <Switch>
-      <Route strict path={`${path}/terms`} component={pages.Terms} />
-      <Route strict path={`${path}/privacy`} component={pages.PrivacyPolicy} />
-      <Route strict path={`${path}/cookie`} component={pages.CookiePolicy} />
+      <Route strict exact path={`${path}/terms`} component={pages.Terms} />
+      <Route
+        strict
+        exact
+        path={`${path}/privacy`}
+        component={pages.PrivacyPolicy}
+      />
+      <Route
+        strict
+        exact
+        path={`${path}/cookie`}
+        component={pages.CookiePolicy}
+      />
       <Route component={pages.Fallback} />
     </Switch>
   );

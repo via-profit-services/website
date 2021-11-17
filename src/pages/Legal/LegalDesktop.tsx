@@ -3,7 +3,8 @@ import * as React from 'react';
 import Header from '~/components/desktop/Header';
 import ContentArea from '~/components/desktop/ContentArea';
 import Footer from '~/components/desktop/Footer';
-import Meta from '~/components/desktop/Meta';
+import Meta from '~/components/both/Meta';
+import ScrollTopButton from '~/components/desktop/ScrollTopButton';
 import LegalRouter from '~/routes/LegalRouter';
 
 const LegalDesktop: React.FC = () => (
@@ -14,6 +15,7 @@ const LegalDesktop: React.FC = () => (
       <LegalRouter />
     </ContentArea>
     <Footer />
+    <ScrollTopButton />
   </>
 );
 

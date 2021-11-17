@@ -2,9 +2,9 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import H2 from '~/components/desktop/Typography/H2';
-import H3 from '~/components/desktop/Typography/H3';
-import Paragraph from '~/components/desktop/Typography/Paragraph';
+import H2 from '~/components/both/Typography/H2';
+import H3 from '~/components/both/Typography/H3';
+import Paragraph from '~/components/both/Typography/Paragraph';
 import dotssrc from '~assets/images/dots-grey.svg';
 import postgresqlsrc from '~assets/images/postgresql-logo.svg';
 

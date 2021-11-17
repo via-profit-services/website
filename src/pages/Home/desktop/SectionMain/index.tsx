@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import imagesrc from '~/../assets/images/desktop-section-main-background.jpg';
 import bearsrc from '~/../assets/images/section-main-bear.svg';
 import sirclessrc from '~/../assets/images/section-main-circles.svg';
-import Strong from '~/components/desktop/Typography/Strong';
+import Strong from '~/components/both/Typography/Strong';
 
 const Container = styled.section`
   position: relative;

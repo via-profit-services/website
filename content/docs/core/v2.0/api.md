@@ -83,7 +83,7 @@ Resolvers object contains:
 
 ### typeDefs
 
-`SDL` string with definitions of [Scalars](#scalars) and [Base TypeDefs](base-typedefs)
+`SDL` string with definitions of [Scalars](./typedefs.md#scalars) and [Base TypeDefs](./typedefs.md#types)
 
 ### defaultOutputFilter
 
@@ -639,7 +639,7 @@ Build GraphQL field resolver. This function takes as its first argument an array
 
 This is useful when you need to modify  the resolver response.
 
-Suppose you need to modify name of the user before response, but you can'n do this in `Query->user` resolver for some reason:
+Suppose you need to modify name of the user before response, but you can'n do this in `Query->user` resolver for some reason.
 
 Arguments:
  **required** - An array of keys of the Type that needs to be resolved
@@ -660,7 +660,7 @@ type Query {
 type User {
   id: ID!
   firstname: String!
-  firstname: String!
+  lastname: String!
   email: String!
 }
 ```

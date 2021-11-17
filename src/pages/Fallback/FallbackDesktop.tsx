@@ -1,24 +1,52 @@
 import * as React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useIntl } from 'react-intl';
+import { Helmet } from 'react-helmet';
+import { Route } from 'react-router-dom';
 
-import H1 from '~/components/desktop/Typography/H1';
-import Paragraph from '~/components/desktop/Typography/Paragraph';
+import Header from '~/components/desktop/Header';
+import ContentArea from '~/components/desktop/ContentArea';
+import Footer from '~/components/desktop/Footer';
+import Meta from '~/components/both/Meta';
+import FallbackContent from '~/components/both/FallbackContent';
 
-const FallbackDesktop: React.FC = () => (
-  <>
-    <H1>
-      <FormattedMessage
-        defaultMessage="Page not found"
-        description="404 page title"
-      />
-    </H1>
-    <Paragraph>
-      <FormattedMessage
-        defaultMessage="The page may not exist or an error has occurred"
-        description="404 page text"
-      />
-    </Paragraph>
-  </>
-);
+const FallbackDesktop: React.FC = () => {
+  const intl = useIntl();
+
+  return (
+    <Route
+      render={({ staticContext }) => {
+        if (staticContext) {
+          staticContext.statusCode = 404;
+        }
+
+        return (
+          <>
+            <Meta />
+            <Helmet>
+              <title>
+                {intl.formatMessage({
+                  defaultMessage: 'Page not found',
+                  description: 'Meta title of 404 error',
+                })}
+              </title>
+              <meta
+                name="description"
+                content={intl.formatMessage({
+                  defaultMessage: 'Error 404. Page not found',
+                  description: 'Meta description of 404 error',
+                })}
+              />
+            </Helmet>
+            <Header />
+            <ContentArea>
+              <FallbackContent />
+            </ContentArea>
+            <Footer />
+          </>
+        );
+      }}
+    />
+  );
+};
 
 export default FallbackDesktop;

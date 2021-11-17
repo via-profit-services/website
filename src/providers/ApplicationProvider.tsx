@@ -3,12 +3,11 @@ import { IntlProvider, MissingTranslationError } from 'react-intl';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import { useSelector } from 'react-redux';
 
-import { DEFAULT_LOCALE } from '~/utils/constants';
+import { DEFAULT_LOCALE } from '~/constants';
 import translationEN from '~/translations/en.json';
 import RootRouter from '~/routes/RootRouter';
 import GlobalStyles from '~/themes/GlobalStyles';
 import * as themes from '~/themes';
-import LoadingIndicator from '~/components/desktop/LoadingIndicator';
 import ErrorBoundary from '~/components/desktop/ErrorBoundary';
 
 const messagesList = {
@@ -37,7 +36,7 @@ const ApplicationProvider: React.FC = () => {
         <ThemeProvider theme={currentTheme}>
           <GlobalStyles />
           {/* <React.Suspense fallback={<LoadingIndicator />}> */}
-            <RootRouter />
+          <RootRouter />
           {/* </React.Suspense> */}
         </ThemeProvider>
       </IntlProvider>

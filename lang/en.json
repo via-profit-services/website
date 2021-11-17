@@ -1,8 +1,4 @@
 {
-  "+/Tyjk": {
-    "defaultMessage": "Settings Manager package",
-    "description": "Meta description of Settings Manager package"
-  },
   "+J8xit": {
     "defaultMessage": "Permissions",
     "description": "Footer. Package permissions link"
@@ -11,6 +7,10 @@
     "defaultMessage": "Knex Api",
     "description": "Meta title of knex.v2.0 api"
   },
+  "+fto4g": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Redis introduction"
+  },
   "+jqzeW": {
     "defaultMessage": "Docs",
     "description": "Appbar. Documentation link"
@@ -18,10 +18,6 @@
   "+laOpO": {
     "defaultMessage": "Examples",
     "description": "Docs sidebar. Core v.2.0 examples"
-  },
-  "+nyCIr": {
-    "defaultMessage": "Permissions package",
-    "description": "Meta title of Permissions package"
   },
   "+vnbFB": {
     "defaultMessage": "Settings",
@@ -35,9 +31,21 @@
     "defaultMessage": "Main menu",
     "description": "Main sidebar title"
   },
+  "/Uv3Vj": {
+    "defaultMessage": "Api",
+    "description": "Breadcrumbs. Redis api"
+  },
+  "/WI9rC": {
+    "defaultMessage": "Authentification",
+    "description": "Footer. Package Authentification link"
+  },
   "/kFHHa": {
     "defaultMessage": "Flexible",
     "description": "Section main touchable. List element two"
+  },
+  "/ksJo9": {
+    "defaultMessage": "Redis",
+    "description": "Breadcrumbs. Docs redis"
   },
   "01ghRs": {
     "defaultMessage": "Geography",
@@ -47,6 +55,10 @@
     "defaultMessage": "Subscriptions",
     "description": "Footer. Package subscriptions link"
   },
+  "0blK08": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Authentification introduction"
+  },
   "0kWvZ+": {
     "defaultMessage": "Close docs menu",
     "description": "Main menu. «aria-label» attribute of close button"
@@ -54,10 +66,6 @@
   "0t4Y4e": {
     "defaultMessage": "Introduction",
     "description": "Docs sidebar. Core v.1.2"
-  },
-  "0x1oeU": {
-    "defaultMessage": "Packages list",
-    "description": "Meta description of packages page"
   },
   "11HUqw": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
@@ -71,10 +79,6 @@
     "defaultMessage": "PostgreSQL logo",
     "description": "Home second screen. Alt of postgreSQL logo"
   },
-  "2CgCGq": {
-    "defaultMessage": "Dataloader package",
-    "description": "Meta title of Dataloader package"
-  },
   "2d3/Tu": {
     "defaultMessage": "Ad ullamco culpa aute sit",
     "description": "Why screen. Second advantage"
@@ -86,6 +90,10 @@
   "2ywmdv": {
     "defaultMessage": "Files",
     "description": "Main menu. Package files link"
+  },
+  "3+cw8H": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Knex introduction"
   },
   "3EAwoY": {
     "defaultMessage": "Context",
@@ -102,6 +110,10 @@
   "3qXW0v": {
     "defaultMessage": "Lightweight",
     "description": "Section main touchable. List element one"
+  },
+  "3r1yji": {
+    "defaultMessage": "Authentification Api",
+    "description": "Meta title of authentification.v2.0 api"
   },
   "3xqp66": {
     "defaultMessage": "Via-profit services",
@@ -122,10 +134,6 @@
   "4TWUD9": {
     "defaultMessage": "Middlewares",
     "description": "Meta title of core.v2.0 middlewares"
-  },
-  "4a1Qaz": {
-    "defaultMessage": "Packages",
-    "description": "Meta title of packages page"
   },
   "51+z+k": {
     "defaultMessage": "Getting started",
@@ -163,6 +171,10 @@
     "defaultMessage": "MIT",
     "description": "Home main screen. License label. «MIT» word only"
   },
+  "6SUYIi": {
+    "defaultMessage": "Redis Api",
+    "description": "Meta description of redis.v2.0 api"
+  },
   "6cIx/L": {
     "defaultMessage": "Via Profit company logo",
     "description": "Header. «aria-label» attribute of Via Profit company logo"
@@ -195,21 +207,9 @@
     "defaultMessage": "Core v2 Context",
     "description": "Meta description of core.v2.0 Context"
   },
-  "8qzU2O": {
-    "defaultMessage": "Phones package",
-    "description": "Meta title of Phones package"
-  },
-  "8ukPi4": {
-    "defaultMessage": "Accounts package",
-    "description": "Meta title of Accounts package"
-  },
   "9N/Z1h": {
     "defaultMessage": "Why",
     "description": "Why screen. Header"
-  },
-  "9l//MD": {
-    "defaultMessage": "Core",
-    "description": "packages sidebar. Core"
   },
   "9r0xPm": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -223,6 +223,10 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Core. Content paragraph"
   },
+  "A3ym7b": {
+    "defaultMessage": "Getting started",
+    "description": "Docs sidebar. Redis getting started"
+  },
   "ADh33g": {
     "defaultMessage": "Home",
     "description": "Main menu. Home link"
@@ -230,18 +234,6 @@
   "AK8McR": {
     "defaultMessage": "Core v2 getting started",
     "description": "Meta description of core.v2.0 getting started"
-  },
-  "APtMwc": {
-    "defaultMessage": "Core package",
-    "description": "Meta description of core package"
-  },
-  "ATdnSo": {
-    "defaultMessage": "Redis package",
-    "description": "Meta description of redis package"
-  },
-  "AfZjBc": {
-    "defaultMessage": "Redis package",
-    "description": "Meta title of Redis package"
   },
   "B+T4IS": {
     "defaultMessage": "Middlewares",
@@ -283,25 +275,29 @@
     "defaultMessage": "standalone",
     "description": "Section main touchable. List element three"
   },
-  "DHSmDG": {
-    "defaultMessage": "Sms package",
-    "description": "Meta title of Sms package"
+  "DKbszN": {
+    "defaultMessage": "Authentification",
+    "description": "Main menu. Package authentification link"
   },
   "DaZRES": {
     "defaultMessage": "Knex",
     "description": "Footer. Package knex link"
   },
-  "E2+q8C": {
-    "defaultMessage": "Sms package",
-    "description": "Meta description of Sms package"
+  "Dsl2LS": {
+    "defaultMessage": "Authentification v2 introduction",
+    "description": "Meta description of authentification.v2.0 introduction"
   },
-  "EWh8jt": {
-    "defaultMessage": "Messages package",
-    "description": "Meta title of Messages package"
+  "DvtcHS": {
+    "defaultMessage": "Authentification",
+    "description": "Breadcrumbs. Docs authentification"
   },
-  "EvwDCB": {
-    "defaultMessage": "Permissions",
-    "description": "Breadcrumbs. Permissions package"
+  "E+Lbg9": {
+    "defaultMessage": "Redis Api",
+    "description": "Meta title of redis.v2.0 api"
+  },
+  "E92JTN": {
+    "defaultMessage": "Getting started",
+    "description": "Breadcrumbs. Authentification getting started"
   },
   "F9gAgA": {
     "defaultMessage": "Api",
@@ -314,10 +310,6 @@
   "GjQ0IA": {
     "defaultMessage": "We have prepared several ready-made packages that are easy to install and use",
     "description": "SectionPackages. Subtitle"
-  },
-  "GkHHuv": {
-    "defaultMessage": "Knex",
-    "description": "packages sidebar. Knex"
   },
   "H/2kSg": {
     "defaultMessage": "Type definitions and scalars",
@@ -339,10 +331,6 @@
     "defaultMessage": "Terms",
     "description": "Main menu. Package Terms link"
   },
-  "IrDNBE": {
-    "defaultMessage": "Redis",
-    "description": "Breadcrumbs. Redis package"
-  },
   "Iss0k3": {
     "defaultMessage": "Website",
     "description": "Footer. company website link"
@@ -351,14 +339,6 @@
     "defaultMessage": "Getting started",
     "description": "Meta title of knex.v2.0 getting started"
   },
-  "J6jde4": {
-    "defaultMessage": "Geography package",
-    "description": "Meta description of Geography package"
-  },
-  "JZHAzi": {
-    "defaultMessage": "Knex",
-    "description": "Breadcrumbs. Knex package"
-  },
   "JtAn0P": {
     "defaultMessage": "Home",
     "description": "Breadcrumbs. Home"
@@ -366,6 +346,14 @@
   "JzKCcn": {
     "defaultMessage": "Terms",
     "description": "Footer. Terms link"
+  },
+  "K+02tI": {
+    "defaultMessage": "Api",
+    "description": "Docs sidebar. Redis api"
+  },
+  "KEgm+3": {
+    "defaultMessage": "Packages list",
+    "description": "Meta title of Packages package"
   },
   "KFRlL2": {
     "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
@@ -386,10 +374,6 @@
   "KaediE": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Redis. Content paragraph 1"
-  },
-  "Kcciqp": {
-    "defaultMessage": "Accounts",
-    "description": "Main menu. Package accounts link"
   },
   "KezNm5": {
     "defaultMessage": "Open Source Project{br}{MIT} License",
@@ -427,6 +411,10 @@
     "defaultMessage": "SMS",
     "description": "Main menu. Package sms link"
   },
+  "Q/M63P": {
+    "defaultMessage": "Api",
+    "description": "Breadcrumbs. Authentification api"
+  },
   "QBwZKx": {
     "defaultMessage": "Knex",
     "description": "SectionPackages touchable. Knex. Header"
@@ -435,13 +423,13 @@
     "defaultMessage": "GitHub",
     "description": "Footer. GitHub link"
   },
-  "QkOIee": {
-    "defaultMessage": "Settings",
-    "description": "packages sidebar. Settings"
-  },
   "Ql6F+2": {
     "defaultMessage": "API Reference",
     "description": "Docs sidebar. Core v.2.0 API"
+  },
+  "QlRmtA": {
+    "defaultMessage": "Core v2 introduction",
+    "description": "Meta description of core.v2.0 introduction"
   },
   "Qv6qRG": {
     "defaultMessage": "Subscriptions",
@@ -467,13 +455,17 @@
     "defaultMessage": "Versions",
     "description": "Docs sidebar. Core versions"
   },
+  "SBErQ0": {
+    "defaultMessage": "Introduction",
+    "description": "Meta title of knex.v2.0 introduction"
+  },
+  "SGgQC6": {
+    "defaultMessage": "Redis v2 introduction",
+    "description": "Meta description of redis.v2.0 introduction"
+  },
   "SKq6kV": {
     "defaultMessage": "Permissions",
     "description": "SectionPackages touchable. Permissions. Header"
-  },
-  "SLbbHp": {
-    "defaultMessage": "Core package",
-    "description": "Meta title of Core package"
   },
   "SdBCu7": {
     "defaultMessage": "Core v1.2",
@@ -491,10 +483,6 @@
     "defaultMessage": "Knex v1 getting started",
     "description": "Meta description of knex.v1.1"
   },
-  "UTDA0s": {
-    "defaultMessage": "Knex package",
-    "description": "Meta title of Knex package"
-  },
   "V+WEr8": {
     "defaultMessage": "Versions",
     "description": "Docs sidebar. Knex versions"
@@ -507,10 +495,6 @@
     "defaultMessage": "Getting started",
     "description": "Meta title of core.v2.0 getting started"
   },
-  "VTT0ZA": {
-    "defaultMessage": "Geography",
-    "description": "Breadcrumbs. Geography package"
-  },
   "VtNakx": {
     "defaultMessage": "GraphQL HTTP Server",
     "description": "Home main screen. Strong tag of the title"
@@ -519,21 +503,21 @@
     "defaultMessage": "Context",
     "description": "Breadcrumbs. Core Context"
   },
-  "WM+SBU": {
-    "defaultMessage": "Accounts",
-    "description": "packages sidebar. Accounts"
+  "WK1Tj4": {
+    "defaultMessage": "Introduction",
+    "description": "Meta title of core.v2.0 introduction"
   },
   "WXNeD2": {
     "defaultMessage": "Cookie policy",
     "description": "Footer. Cookie policy link"
   },
-  "WjfU81": {
-    "defaultMessage": "Accounts",
-    "description": "Footer. Package accounts link"
-  },
   "XA9oyK": {
     "defaultMessage": "Packages",
     "description": "Footer. Title of the «Packages» section"
+  },
+  "XBk9tS": {
+    "defaultMessage": "Redis",
+    "description": "Docs sidebar. Redis"
   },
   "XH/FVD": {
     "defaultMessage": "Examples",
@@ -559,33 +543,25 @@
     "defaultMessage": "Dataloader",
     "description": "Footer. Package dataloader link"
   },
-  "YTg7wn": {
-    "defaultMessage": "Core",
-    "description": "Breadcrumbs. Core package"
-  },
-  "YuMfqi": {
-    "defaultMessage": "Messages",
-    "description": "packages sidebar. Messages"
-  },
   "Z2F6Dz": {
     "defaultMessage": "Connections",
     "description": "Breadcrumbs. Core connections"
   },
-  "Z3UJ9q": {
-    "defaultMessage": "Subscriptions package",
-    "description": "Meta title of Subscriptions package"
+  "Zg4rqu": {
+    "defaultMessage": "Knex v2 introduction",
+    "description": "Meta description of knex.v2.0 introduction"
   },
   "ZkhZUA": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Knex. Content paragraph"
   },
-  "Zt4sGq": {
-    "defaultMessage": "Permissions",
-    "description": "packages sidebar. Permissions"
-  },
   "aL2THo": {
     "defaultMessage": "Packages",
     "description": "Breadcrumbs. Packages"
+  },
+  "aQqL6W": {
+    "defaultMessage": "Introduction",
+    "description": "Meta title of redis.v2.0 introduction"
   },
   "aS0EO1": {
     "defaultMessage": "Packages",
@@ -599,25 +575,17 @@
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Dataloader. Content paragraph 2"
   },
-  "bwnSqJ": {
-    "defaultMessage": "File Storage package",
-    "description": "Meta description of File Storage package"
-  },
-  "cJuge6": {
-    "defaultMessage": "Phones package",
-    "description": "Meta description of Phones package"
-  },
   "cpMhJI": {
     "defaultMessage": "Dark",
     "description": "Header. Theme button in dark theme"
   },
+  "d9qQVW": {
+    "defaultMessage": "Getting started",
+    "description": "Meta title of redis.v2.0 getting started"
+  },
   "dGNWK3": {
     "defaultMessage": "Via Profit company logo",
     "description": "Footer. «aria-label» attribute of company logo"
-  },
-  "dQGrQO": {
-    "defaultMessage": "Subscriptions",
-    "description": "Breadcrumbs. Subscriptions package"
   },
   "dWSyIK": {
     "defaultMessage": "Legal",
@@ -627,13 +595,13 @@
     "defaultMessage": "Core v1 getting started",
     "description": "Meta description of core.v1.2"
   },
+  "dqXYvg": {
+    "defaultMessage": "@via-profit-services packages list",
+    "description": "Meta description of packages page"
+  },
   "dwWw1n": {
     "defaultMessage": "Legal",
     "description": "Footer. Title of the «Legal» section"
-  },
-  "dzGiKm": {
-    "defaultMessage": "Settings Manager package",
-    "description": "Meta title of Settings Manager package"
   },
   "eCqVia": {
     "defaultMessage": "Core",
@@ -651,17 +619,9 @@
     "defaultMessage": "Github logo link",
     "description": "Footer. «aria-label» attribute of Github logo link"
   },
-  "f0J+eu": {
-    "defaultMessage": "Accounts package",
-    "description": "Meta description of Accounts package"
-  },
   "fmosFk": {
     "defaultMessage": "Messages",
     "description": "Main menu. Package messages link"
-  },
-  "fpx7oe": {
-    "defaultMessage": "Dataloader",
-    "description": "packages sidebar. Dataloader"
   },
   "g0plOz": {
     "defaultMessage": "Subscriptions",
@@ -671,6 +631,10 @@
     "defaultMessage": "Dataloader",
     "description": "SectionPackages touchable. Dataloader. Header"
   },
+  "gcCCp4": {
+    "defaultMessage": "Redis v2 getting started",
+    "description": "Meta description of redis.v2.0 getting started"
+  },
   "h02828": {
     "defaultMessage": "Privacy policy",
     "description": "Breadcrumbs. Privacy policy"
@@ -679,10 +643,6 @@
     "defaultMessage": "Typedefs",
     "description": "Meta title of core.v2.0 typedefs"
   },
-  "h684JS": {
-    "defaultMessage": "Dataloader package",
-    "description": "Meta description of Dataloader package"
-  },
   "hCg0E1": {
     "defaultMessage": "Phones",
     "description": "Main menu. Package phones link"
@@ -690,10 +650,6 @@
   "hPD7qo": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Knex. Content paragraph 2"
-  },
-  "hPoE/G": {
-    "defaultMessage": "Accounts",
-    "description": "Breadcrumbs. Accounts package"
   },
   "hRaDyG": {
     "defaultMessage": "Core",
@@ -719,25 +675,17 @@
     "defaultMessage": "Core v1.2",
     "description": "Breadcrumbs. Core v1.2"
   },
-  "ikH+Uj": {
-    "defaultMessage": "Knex package",
-    "description": "Meta description of knex package"
-  },
-  "izG9zu": {
-    "defaultMessage": "Messages package",
-    "description": "Meta description of Messages package"
-  },
   "jQHfjq": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Settings. Content paragraph"
   },
+  "jUZV9A": {
+    "defaultMessage": "Authentification v2 getting started",
+    "description": "Meta description of authentification.v2.0 getting started"
+  },
   "jYpE7v": {
     "defaultMessage": "Connections and pagination",
     "description": "Docs sidebar. Core v.2.0 connections"
-  },
-  "jacLzH": {
-    "defaultMessage": "Geography",
-    "description": "packages sidebar. Geography"
   },
   "kiw+og": {
     "defaultMessage": "Via Profit Services",
@@ -747,21 +695,21 @@
     "defaultMessage": "Middlewares",
     "description": "Breadcrumbs. Core middlewares"
   },
-  "lYVCON": {
-    "defaultMessage": "Subscriptions",
-    "description": "packages sidebar. Subscriptions"
-  },
   "lZbWK/": {
     "defaultMessage": "Copyright {year} Via Profit",
     "description": "Footer. Copiright string"
   },
-  "ldj3oM": {
-    "defaultMessage": "Settings Manager",
-    "description": "Breadcrumbs. Settings Manager package"
-  },
   "lvUUiy": {
     "defaultMessage": "Redis",
     "description": "SectionPackages. Redis. Header"
+  },
+  "m+cURs": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Core v.2.0 introduction"
+  },
+  "mAFQqL": {
+    "defaultMessage": "Getting started",
+    "description": "Meta title of authentification.v2.0 getting started"
   },
   "nVqWuW": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
@@ -783,17 +731,9 @@
     "defaultMessage": "Getting started",
     "description": "Docs sidebar. Core v.2.0 getting started"
   },
-  "nymWR+": {
-    "defaultMessage": "Phones",
-    "description": "packages sidebar. Phones"
-  },
-  "oIvfpm": {
-    "defaultMessage": "Redis",
-    "description": "packages sidebar. Redis"
-  },
-  "odCVDe": {
-    "defaultMessage": "File Storage",
-    "description": "Breadcrumbs. File Storage package"
+  "ni5Xr1": {
+    "defaultMessage": "Authentification",
+    "description": "Docs sidebar. Authentification"
   },
   "oinviI": {
     "defaultMessage": "Package overview",
@@ -807,10 +747,6 @@
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Redis. Content paragraph 2"
   },
-  "pNxENw": {
-    "defaultMessage": "Geography package",
-    "description": "Meta title of Geography package"
-  },
   "payrbn": {
     "defaultMessage": "Company",
     "description": "Footer. Title of the «Company» section"
@@ -818,10 +754,6 @@
   "pdTX0P": {
     "defaultMessage": "Proident eiusmod anim enim ea exercitation proident. Mollit mollit dolore.",
     "description": "Why screen. Second paragraph"
-  },
-  "pkblIu": {
-    "defaultMessage": "Messages",
-    "description": "Breadcrumbs. Messages package"
   },
   "pruhcA": {
     "defaultMessage": "Home",
@@ -843,10 +775,6 @@
     "defaultMessage": "Core",
     "description": "Breadcrumbs. Docs core"
   },
-  "rJJG8g": {
-    "defaultMessage": "Permissions package",
-    "description": "Meta description of Permissions package"
-  },
   "rLJrWG": {
     "defaultMessage": "Dataloader",
     "description": "Main menu. Package dataloader link"
@@ -867,6 +795,10 @@
     "defaultMessage": "Knex Api",
     "description": "Meta description of knex.v2.0 api"
   },
+  "re59jW": {
+    "defaultMessage": "Authentification Api",
+    "description": "Meta description of authentification.v2.0 api"
+  },
   "rszBdP": {
     "defaultMessage": "Packages",
     "description": "Main sidebar. Packages title"
@@ -879,17 +811,13 @@
     "defaultMessage": "Knex",
     "description": "Main menu. Package knex link"
   },
-  "t2mE5r": {
-    "defaultMessage": "Subscriptions package",
-    "description": "Meta description of Subscriptions package"
-  },
   "t3lyVE": {
     "defaultMessage": "What Is It",
     "description": "Home second screen. Header"
   },
-  "tWjXdY": {
-    "defaultMessage": "Files",
-    "description": "packages sidebar. Files"
+  "tLSiIu": {
+    "defaultMessage": "Introduction",
+    "description": "Meta title of authentification.v2.0 introduction"
   },
   "u/B01N": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -898,10 +826,6 @@
   "u3j6c3": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Core. Content paragraph 1"
-  },
-  "uI7AEU": {
-    "defaultMessage": "Phones",
-    "description": "Breadcrumbs. Phones package"
   },
   "uJCeYd": {
     "defaultMessage": "Typedefs",
@@ -927,17 +851,13 @@
     "defaultMessage": "Fugiat laborum nulla fugiat",
     "description": "Why screen. Third advantage"
   },
+  "vO3dkI": {
+    "defaultMessage": "Getting started",
+    "description": "Docs sidebar. Authentification getting started"
+  },
   "vrbypx": {
     "defaultMessage": "Via Profit",
     "description": "Helmet meta «author»"
-  },
-  "w1EyIs": {
-    "defaultMessage": "Dataloader",
-    "description": "Breadcrumbs. Dataloader package"
-  },
-  "w3zOuk": {
-    "defaultMessage": "File Storage package",
-    "description": "Meta title of File Storage package"
   },
   "w4BA8Y": {
     "defaultMessage": "Privacy Policy",
@@ -955,13 +875,13 @@
     "defaultMessage": "The page may not exist or an error has occurred",
     "description": "404 page text"
   },
+  "xb1B1C": {
+    "defaultMessage": "Api",
+    "description": "Docs sidebar. Authentification api"
+  },
   "xgii0x": {
     "defaultMessage": "Knex v1.1",
     "description": "Breadcrumbs. Knex v1.1"
-  },
-  "xu7EiG": {
-    "defaultMessage": "Sms",
-    "description": "packages sidebar. Sms"
   },
   "y1j/tV": {
     "defaultMessage": "Connections",
@@ -983,6 +903,10 @@
     "defaultMessage": "Settings manager",
     "description": "Footer. Package settings-manager link"
   },
+  "yoq7Mf": {
+    "defaultMessage": "Getting started",
+    "description": "Breadcrumbs. Redis getting started"
+  },
   "z0PBbF": {
     "defaultMessage": "Fugiat laborum nulla fugiat cupidatat veniam pariatur in non. Adipisicing consectetur anim commodo excepteur incididunt.",
     "description": "Section Open Source. Text"
@@ -990,10 +914,6 @@
   "zYP+rl": {
     "defaultMessage": "Header 3",
     "description": "Desktop. Home second screen. First card title"
-  },
-  "zfV94F": {
-    "defaultMessage": "Sms",
-    "description": "Breadcrumbs. Sms package"
   },
   "zxtoZJ": {
     "defaultMessage": "Examples",
