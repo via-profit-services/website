@@ -21,7 +21,7 @@ const ExamplesRoutes: React.FC = () => {
 
   return (
     <Switch>
-      <Route strict path={path} component={pages.List} />
+      <Route strict exact path={path} component={pages.List} />
       <Route component={pages.Fallback} />
     </Switch>
   );

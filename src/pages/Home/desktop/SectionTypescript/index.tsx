@@ -2,8 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
-import H2 from '~/components/desktop/Typography/H2';
-import Paragraph from '~/components/desktop/Typography/Paragraph';
+import H2 from '~/components/both/Typography/H2';
+import Paragraph from '~/components/both/Typography/Paragraph';
 import dotssrc from '~/../assets/images/dots-grey.svg';
 import circlessrc from '~/../assets/images/circles.svg';
 import tslogosrc from '~/../assets/images/typescript-logo.svg';

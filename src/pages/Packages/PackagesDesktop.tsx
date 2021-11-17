@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import Header from '~/components/desktop/Header';
 import ContentArea from '~/components/desktop/ContentArea';
 import Footer from '~/components/desktop/Footer';
-import Meta from '~/components/desktop/Meta';
+import Meta from '~/components/both/Meta';
 import ScrollTopButton from '~/components/desktop/ScrollTopButton';
 import Breadcrumbs, { Crumb } from '~/components/desktop/Breadcrumbs';
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import ChevronDoubleRightIcon from 'mdi-react/ChevronDoubleRightIcon';
 import { FormattedMessage } from 'react-intl';
 
-import H3 from '~/components/desktop/Typography/H3';
+import H3 from '~/components/both/Typography/H3';
 
 export type CardProps = {
   icon: React.ReactNode;

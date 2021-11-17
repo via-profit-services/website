@@ -4,9 +4,9 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import ChevronDoubleRightIcon from 'mdi-react/ChevronDoubleRightIcon';
 
-import Paragraph from '~/components/desktop/Typography/Paragraph';
-import H2 from '~/components/desktop/Typography/H2';
-import Subtitle from '~/components/desktop/Typography/Subtitle';
+import Paragraph from '~/components/both/Typography/Paragraph';
+import H2 from '~/components/both/Typography/H2';
+import Subtitle from '~/components/both/Typography/Subtitle';
 import Card, { CardProps } from './PackageCard';
 import CoreIcon from '~/components/desktop/Icons/Core';
 import dotssrc from '~assets/images/dots-grey.svg';

@@ -2,8 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
-import H2 from '~/components/touchable/Typography/H2';
-import Paragraph from '~/components/touchable/Typography/Paragraph';
+import H2 from '~/components/both/Typography/H2';
+import Paragraph from '~/components/both/Typography/Paragraph';
 import backgroundsrc from '~assets/images/touchable-section-open-source.jpg';
 
 const Section = styled.section`

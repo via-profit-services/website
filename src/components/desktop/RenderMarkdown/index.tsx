@@ -4,16 +4,16 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 
-import H1 from '~/components/desktop/Typography/H1';
-import H2 from '~/components/desktop/Typography/H2';
-import H3 from '~/components/desktop/Typography/H3';
-import H4 from '~/components/desktop/Typography/H4';
-import H5 from '~/components/desktop/Typography/H5';
-import Strong from '~/components/desktop/Typography/Strong';
-import Em from '~/components/desktop/Typography/Em';
-import Paragraph from '~/components/desktop/Typography/Paragraph';
-import { Ul, Ol } from '~/components/desktop/Typography/List';
-import Blockquote from '~/components/desktop/Typography/Blockquote';
+import H1 from '~/components/both/Typography/H1';
+import H2 from '~/components/both/Typography/H2';
+import H3 from '~/components/both/Typography/H3';
+import H4 from '~/components/both/Typography/H4';
+import H5 from '~/components/both/Typography/H5';
+import Strong from '~/components/both/Typography/Strong';
+import Em from '~/components/both/Typography/Em';
+import Paragraph from '~/components/both/Typography/Paragraph';
+import { Ul, Ol } from '~/components/both/Typography/List';
+import Blockquote from '~/components/both/Typography/Blockquote';
 import SyntaxHighlighter from '~/components/desktop/SyntaxHighlighter';
 
 const Img = styled.img`
@@ -67,7 +67,7 @@ const relativeToAbsolute = (base: string, rel: string): string => {
 const titleToAnchor = (headername: string | React.ReactNode): string => {
   const anchorName = String(headername)
     .toLowerCase()
-    .replace(/[\s,\/]/g, '-')
+    .replace(/[\s,/]/g, '-')
     .replace(/[^0-9a-z-]/gi, '');
 
   return anchorName;

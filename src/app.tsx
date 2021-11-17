@@ -33,7 +33,10 @@ const bootstrap = async () => {
   const reduxStore = createReduxStore(reduxState);
 
   const render = () => {
-    const enderMethod = process.env.NODE_ENV === 'development' ? ReactDom.render : ReactDom.hydrate;
+    const enderMethod =
+      process.env.NODE_ENV === 'development'
+        ? ReactDom.render
+        : ReactDom.hydrate;
     enderMethod(
       <BrowserRouter>
         <ReduxProvider store={reduxStore}>

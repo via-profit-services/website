@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { useIntl } from 'react-intl';
 
-import { DEFAULT_LOCALE } from '~/utils/constants';
+import { DEFAULT_LOCALE } from '~/constants';
 
 const Meta: React.FC = () => {
   const intl = useIntl();

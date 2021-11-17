@@ -28,12 +28,18 @@ const Knex: React.FC = () => {
     <Switch>
       <Route
         strict
+        exact
         path={`${path}/getting-started`}
         component={pages.GettingStarted}
       />
-      <Route strict path={`${path}/api`} component={pages.Api} />
-      <Route strict path={`${path}/introduction`} component={pages.Intro} />
-      <Redirect strict path={path} to={`${path}/introduction`} />
+      <Route strict exact path={`${path}/api`} component={pages.Api} />
+      <Route
+        strict
+        exact
+        path={`${path}/introduction`}
+        component={pages.Intro}
+      />
+      <Redirect strict exact path={path} to={`${path}/introduction`} />
       <Route component={pages.Fallback} />
     </Switch>
   );

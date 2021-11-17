@@ -3803,9 +3803,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@via-profit-services/eslint-config@npm:^0.1.18":
-  version: 0.1.18
-  resolution: "@via-profit-services/eslint-config@npm:0.1.18"
+"@via-profit-services/eslint-config@file://home/dhs/Projects/@via-profit-services/eslint-config/package-0.1.19-rc.1.tgz::locator=%40via-profit-services%2Fwebsite%40workspace%3A.":
+  version: 0.1.19-rc.1
+  resolution: "@via-profit-services/eslint-config@file://home/dhs/Projects/@via-profit-services/eslint-config/package-0.1.19-rc.1.tgz::locator=%40via-profit-services%2Fwebsite%40workspace%3A."
   dependencies:
     eslint-plugin-react: ^7.26.1
     eslint-plugin-react-hooks: ^4.2.0
@@ -3825,7 +3825,7 @@ __metadata:
       optional: true
     eslint-plugin-react-hooks:
       optional: true
-  checksum: abb4f342f442e5dd1aa86c181f425130a211f917aae824b3d915aa7e04a0d06bb02076e59fddf002d4fa4be5e958f8033dee585b1ba8dd78f05d0cbdc923eba9
+  checksum: d5c33592cfc3de76636163f9235edb70939ab01c54eac4a6db9fca0c952326cd07c56c439e3b8cdfaa642ac64449d6058d06c814e5cad203a8868abf11068575
   languageName: node
   linkType: hard
 
@@ -3907,7 +3907,7 @@ __metadata:
     "@types/workbox-webpack-plugin": ^5.1.8
     "@typescript-eslint/eslint-plugin": ^5.1.0
     "@typescript-eslint/parser": ^5.1.0
-    "@via-profit-services/eslint-config": ^0.1.18
+    "@via-profit-services/eslint-config": "file://home/dhs/Projects/@via-profit-services/eslint-config/package-0.1.19-rc.1.tgz"
     babel-core: ^6.26.3
     babel-eslint: ^10.1.0
     babel-loader: ^8.2.2

@@ -153,7 +153,7 @@
         "@types/workbox-webpack-plugin": "^5.1.8",
         "@typescript-eslint/eslint-plugin": "^5.1.0",
         "@typescript-eslint/parser": "^5.1.0",
-        "@via-profit-services/eslint-config": "^0.1.18",
+        "@via-profit-services/eslint-config": "file://home/dhs/Projects/@via-profit-services/eslint-config/package-0.1.19-rc.1.tgz",
         "babel-core": "^6.26.3",
         "babel-eslint": "^10.1.0",
         "babel-loader": "^8.2.2",

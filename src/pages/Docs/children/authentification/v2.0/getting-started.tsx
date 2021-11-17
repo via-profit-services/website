@@ -22,7 +22,8 @@ const GettingStarted: React.FC = () => {
           name="description"
           content={intl.formatMessage({
             defaultMessage: 'Authentification v2 getting started',
-            description: 'Meta description of authentification.v2.0 getting started',
+            description:
+              'Meta description of authentification.v2.0 getting started',
           })}
         />
       </Helmet>

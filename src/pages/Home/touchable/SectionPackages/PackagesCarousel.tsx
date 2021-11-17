@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import Card, { CardProps } from './PackageCard';
 import CoreIcon from '~/components/desktop/Icons/Core';
-import Paragraph from '~/components/touchable/Typography/Paragraph';
+import Paragraph from '~/components/both/Typography/Paragraph';
 
 const Bullets = styled.div`
   display: flex;

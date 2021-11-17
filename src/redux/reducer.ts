@@ -1,7 +1,7 @@
 import { Reducer } from 'redux';
 import Cookies from 'js-cookie';
 
-import { COOKIE_RECORD_THEME, COOKIE_RECORD_MODE } from '~/utils/constants';
+import { COOKIE_RECORD_THEME, COOKIE_RECORD_MODE } from '~/constants';
 
 const createReducer = (initialState: ReduxState) => {
   const reducer: Reducer<ReduxState, ReduxActions> = (

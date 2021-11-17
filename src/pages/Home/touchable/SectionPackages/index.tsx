@@ -4,8 +4,8 @@ import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import ChevronDoubleRightIcon from 'mdi-react/ChevronDoubleRightIcon';
 
-import H2 from '~/components/touchable/Typography/H2';
-import Subtitle from '~/components/touchable/Typography/Subtitle';
+import H2 from '~/components/both/Typography/H2';
+import Subtitle from '~/components/both/Typography/Subtitle';
 import PackagesCarousel from './PackagesCarousel';
 
 const Section = styled.section`

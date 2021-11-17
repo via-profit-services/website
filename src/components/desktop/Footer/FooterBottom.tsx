@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
-import Strong from '~/components/desktop/Typography/Strong';
+import Strong from '~/components/both/Typography/Strong';
 
 const Container = styled.div`
   background-color: ${props => props.theme.color.black.primary};

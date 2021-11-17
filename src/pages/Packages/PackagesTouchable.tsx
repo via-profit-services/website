@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { useIntl, FormattedMessage } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { Helmet } from 'react-helmet';
 
 import Header from '~/components/touchable/Header';
 import Footer from '~/components/touchable/Footer';
-import Meta from '~/components/desktop/Meta';
+import Meta from '~/components/both/Meta';
 
 const Main = styled.main`
   padding: 0 ${props => props.theme.grid.touchable.gutter}px;

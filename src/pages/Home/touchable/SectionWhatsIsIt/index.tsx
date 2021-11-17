@@ -2,9 +2,9 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import Paragraph from '~/components/touchable/Typography/Paragraph';
-import H2 from '~/components/touchable/Typography/H2';
-import H3 from '~/components/touchable/Typography/H3';
+import Paragraph from '~/components/both/Typography/Paragraph';
+import H2 from '~/components/both/Typography/H2';
+import H3 from '~/components/both/Typography/H3';
 import postgresqlsrc from '~assets/images/postgresql-logo.svg';
 
 const Container = styled.section`

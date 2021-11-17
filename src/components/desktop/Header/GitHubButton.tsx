@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { useIntl } from 'react-intl';
 
-import { LINK_GITHUB } from '~/utils/constants';
+import { LINK_GITHUB } from '~/constants';
 
 type Props = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 

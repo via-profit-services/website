@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 
-import { LINK_COMPANY, LINK_GITHUB } from '~/utils/constants';
+import { LINK_COMPANY, LINK_GITHUB } from '~/constants';
 
 const Container = styled.div`
   background-color: ${props => props.theme.color.black.primary};

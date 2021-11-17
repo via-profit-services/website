@@ -22,7 +22,8 @@ const Introduction: React.FC = () => {
           name="description"
           content={intl.formatMessage({
             defaultMessage: 'Authentification v2 introduction',
-            description: 'Meta description of authentification.v2.0 introduction',
+            description:
+              'Meta description of authentification.v2.0 introduction',
           })}
         />
       </Helmet>

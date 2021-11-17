@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Header from '~/components/desktop/Header';
 import ContentArea from '~/components/desktop/ContentArea';
 import Footer from '~/components/desktop/Footer';
-import Meta from '~/components/desktop/Meta';
+import Meta from '~/components/both/Meta';
 import Sidebar from '~/components/desktop/Sidebar';
 import ScrollTopButton from '~/components/desktop/ScrollTopButton';
 import useSidebar from '~/routes/useSidebar';

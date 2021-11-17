@@ -109,7 +109,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/workbox-webpack-plugin", "npm:5.1.8"],
             ["@typescript-eslint/eslint-plugin", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.1.0"],
             ["@typescript-eslint/parser", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.1.0"],
-            ["@via-profit-services/eslint-config", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:0.1.18"],
+            ["@via-profit-services/eslint-config", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#file://home/dhs/Projects/@via-profit-services/eslint-config/package-0.1.19-rc.1.tgz::locator=%40via-profit-services%2Fwebsite%40workspace%3A."],
             ["babel-core", "npm:6.26.3"],
             ["babel-eslint", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:10.1.0"],
             ["babel-loader", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:8.2.2"],
@@ -6778,17 +6778,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@via-profit-services/eslint-config", [
-        ["npm:0.1.18", {
-          "packageLocation": "./.yarn/cache/@via-profit-services-eslint-config-npm-0.1.18-6e101db714-abb4f342f4.zip/node_modules/@via-profit-services/eslint-config/",
+        ["file://home/dhs/Projects/@via-profit-services/eslint-config/package-0.1.19-rc.1.tgz::locator=%40via-profit-services%2Fwebsite%40workspace%3A.", {
+          "packageLocation": "./.yarn/cache/@via-profit-services-eslint-config-file-435d182277-d5c33592cf.zip/node_modules/@via-profit-services/eslint-config/",
           "packageDependencies": [
-            ["@via-profit-services/eslint-config", "npm:0.1.18"]
+            ["@via-profit-services/eslint-config", "file://home/dhs/Projects/@via-profit-services/eslint-config/package-0.1.19-rc.1.tgz::locator=%40via-profit-services%2Fwebsite%40workspace%3A."]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:0.1.18", {
-          "packageLocation": "./.yarn/__virtual__/@via-profit-services-eslint-config-virtual-97a83c615d/0/cache/@via-profit-services-eslint-config-npm-0.1.18-6e101db714-abb4f342f4.zip/node_modules/@via-profit-services/eslint-config/",
+        ["virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#file://home/dhs/Projects/@via-profit-services/eslint-config/package-0.1.19-rc.1.tgz::locator=%40via-profit-services%2Fwebsite%40workspace%3A.", {
+          "packageLocation": "./.yarn/__virtual__/@via-profit-services-eslint-config-virtual-eefefcdab4/0/cache/@via-profit-services-eslint-config-file-435d182277-d5c33592cf.zip/node_modules/@via-profit-services/eslint-config/",
           "packageDependencies": [
-            ["@via-profit-services/eslint-config", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:0.1.18"],
+            ["@via-profit-services/eslint-config", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#file://home/dhs/Projects/@via-profit-services/eslint-config/package-0.1.19-rc.1.tgz::locator=%40via-profit-services%2Fwebsite%40workspace%3A."],
             ["@types/eslint", null],
             ["@types/eslint-config-prettier", null],
             ["@types/eslint-import-resolver-node", null],
@@ -6916,7 +6916,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/workbox-webpack-plugin", "npm:5.1.8"],
             ["@typescript-eslint/eslint-plugin", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.1.0"],
             ["@typescript-eslint/parser", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:5.1.0"],
-            ["@via-profit-services/eslint-config", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:0.1.18"],
+            ["@via-profit-services/eslint-config", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#file://home/dhs/Projects/@via-profit-services/eslint-config/package-0.1.19-rc.1.tgz::locator=%40via-profit-services%2Fwebsite%40workspace%3A."],
             ["babel-core", "npm:6.26.3"],
             ["babel-eslint", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:10.1.0"],
             ["babel-loader", "virtual:8699a8a8239a8677b5b86d08b0b9a74fa21a2e77d4dbc25f124bb0291c1087001e2987cf2947bdb8e3ca3003f9a858b9d35e7a10b202360e2614807e2a6375ba#npm:8.2.2"],

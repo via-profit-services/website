@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 import CheckIcon from 'mdi-react/CheckIcon';
 
-import H2 from '~/components/touchable/Typography/H2';
-import Paragraph from '~/components/touchable/Typography/Paragraph';
+import H2 from '~/components/both/Typography/H2';
+import Paragraph from '~/components/both/Typography/Paragraph';
 import schemasrc from '~assets/images/section-why-schema.png';
 
 const Container = styled.section`

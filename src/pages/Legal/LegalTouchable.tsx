@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Header from '~/components/touchable/Header';
 import Footer from '~/components/touchable/Footer';
-import Meta from '~/components/desktop/Meta';
+import Meta from '~/components/both/Meta';
 import LegalRouter from '~/routes/LegalRouter';
 
 const Main = styled.main`

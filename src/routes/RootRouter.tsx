@@ -55,10 +55,10 @@ const Routes: React.FC = () => {
   return (
     <Switch>
       <Route exact path="/" component={pages.Home} />
-      <Route path="/docs" component={pages.Docs} />
-      <Route path="/packages" component={pages.Packages} />
-      <Route path="/legal" component={pages.Legal} />
-      <Route path="/examples" component={pages.Examples} />
+      <Route strict path="/docs" component={pages.Docs} />
+      <Route strict path="/legal" component={pages.Legal} />
+      <Route strict path="/examples" component={pages.Examples} />
+      <Route strict exact path="/packages" component={pages.Packages} />
       <Route component={pages.Fallback} />
     </Switch>
   );
