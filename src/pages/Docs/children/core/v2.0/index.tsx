@@ -10,6 +10,10 @@ const options: OptionsWithoutResolver<any> = {
 
 const pages = {
   Fallback: loadable(() => import('~/pages/Fallback/index'), options),
+  Intro: loadable(
+    () => import('~/pages/Docs/children/core/v2.0/introduction'),
+    options,
+  ),
   Api: loadable(() => import('~/pages/Docs/children/core/v2.0/api'), options),
   Connections: loadable(
     () => import('~/pages/Docs/children/core/v2.0/connections'),
@@ -61,7 +65,7 @@ const Core: React.FC = () => {
         component={pages.Middlewares}
       />
       <Route strict path={`${path}/typedefs`} component={pages.Typedefs} />
-      <Redirect strict exact from={path} to={`${path}/getting-started`} />
+      <Route strict path={path} component={pages.Intro} />
       <Route component={pages.Fallback} />
     </Switch>
   );

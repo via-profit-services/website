@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { useIntl, FormattedMessage } from 'react-intl';
 
-import Breadcrumbs, { Crumb } from '~/components/desktop/Breadcrumbs';
 import RenderMarkdown from '~/components/desktop/RenderMarkdown';
-import content from '~content/packages/introduction.md';
+import Breadcrumbs, { Crumb } from '~/components/desktop/Breadcrumbs';
+import content from '~content/docs/core/v2.0/introduction.md';
 
 const Introduction: React.FC = () => {
   const intl = useIntl();
@@ -14,15 +14,15 @@ const Introduction: React.FC = () => {
       <Helmet>
         <title>
           {intl.formatMessage({
-            defaultMessage: 'Packages',
-            description: 'Meta title of packages page',
+            defaultMessage: 'Introduction',
+            description: 'Meta title of core.v2.0 introduction',
           })}
         </title>
         <meta
           name="description"
           content={intl.formatMessage({
-            defaultMessage: 'Packages list',
-            description: 'Meta description of packages page',
+            defaultMessage: 'Core v2 introduction',
+            description: 'Meta description of core.v2.0 introduction',
           })}
         />
       </Helmet>
@@ -30,11 +30,21 @@ const Introduction: React.FC = () => {
         <Breadcrumbs>
           <Crumb home />
           <Crumb
+            link="/docs"
             position={2}
             label={
               <FormattedMessage
-                defaultMessage="Packages"
-                description="Breadcrumbs. Packages"
+                defaultMessage="Docs"
+                description="Breadcrumbs. Docs"
+              />
+            }
+          />
+          <Crumb
+            position={3}
+            label={
+              <FormattedMessage
+                defaultMessage="Core"
+                description="Breadcrumbs. Docs core"
               />
             }
           />

@@ -142,7 +142,7 @@ const FooterMiddle: React.FC = () => (
         <LinksContainer>
           <LinksList>
             <li>
-              <InternalLink to="/packages/core">
+              <InternalLink to="/docs/core">
                 <FormattedMessage
                   defaultMessage="Core"
                   description="Footer. package core link"
@@ -150,7 +150,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/Knex">
+              <InternalLink to="/docs/Knex">
                 <FormattedMessage
                   defaultMessage="Knex"
                   description="Footer. Package knex link"
@@ -158,7 +158,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/redis">
+              <InternalLink to="/docs/redis">
                 <FormattedMessage
                   defaultMessage="Redis"
                   description="Footer. Package redis link"
@@ -166,7 +166,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/subscriptions">
+              <InternalLink to="/docs/subscriptions">
                 <FormattedMessage
                   defaultMessage="Subscriptions"
                   description="Footer. Package subscriptions link"
@@ -177,7 +177,7 @@ const FooterMiddle: React.FC = () => (
 
           <LinksList>
             <li>
-              <InternalLink to="/packages/authentification">
+              <InternalLink to="/docs/authentification">
                 <FormattedMessage
                   defaultMessage="Authentification"
                   description="Footer. Package Authentification link"
@@ -185,7 +185,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/permissions">
+              <InternalLink to="/docs/permissions">
                 <FormattedMessage
                   defaultMessage="Permissions"
                   description="Footer. Package permissions link"
@@ -193,7 +193,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/messages">
+              <InternalLink to="/docs/messages">
                 <FormattedMessage
                   defaultMessage="Messages"
                   description="Footer. Package messages link"
@@ -201,7 +201,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/sms">
+              <InternalLink to="/docs/sms">
                 <FormattedMessage
                   defaultMessage="SMS"
                   description="Footer. Package sms link"
@@ -212,7 +212,7 @@ const FooterMiddle: React.FC = () => (
 
           <LinksList>
             <li>
-              <InternalLink to="/packages/files">
+              <InternalLink to="/docs/files">
                 <FormattedMessage
                   defaultMessage="File Storage"
                   description="Footer. Package file-storage link"
@@ -220,7 +220,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/settings">
+              <InternalLink to="/docs/settings">
                 <FormattedMessage
                   defaultMessage="Settings manager"
                   description="Footer. Package settings-manager link"
@@ -228,7 +228,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/dataloader">
+              <InternalLink to="/docs/dataloader">
                 <FormattedMessage
                   defaultMessage="Dataloader"
                   description="Footer. Package dataloader link"
@@ -236,7 +236,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalLink to="/packages/geography">
+              <InternalLink to="/docs/geography">
                 <FormattedMessage
                   defaultMessage="Geography"
                   description="Footer. Package geography link"

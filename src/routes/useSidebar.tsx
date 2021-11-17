@@ -16,6 +16,13 @@ const useSidebar = () => {
           }),
           child: [
             {
+              path: '/docs/core',
+              label: intl.formatMessage({
+                defaultMessage: 'Introduction',
+                description: 'Docs sidebar. Core v.2.0 introduction',
+              }),
+            },
+            {
               path: '/docs/core/getting-started',
               label: intl.formatMessage({
                 defaultMessage: 'Getting started',
