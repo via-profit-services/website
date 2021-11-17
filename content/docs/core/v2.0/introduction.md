@@ -8,10 +8,10 @@ Lightweight, flexible, standalone implementation of a [GraphQL HTTP (express mid
 
 ## Features
 
- - [GraphQL server](./core/getting-started.md#basic-graphql-server)
- - [Scalar types](./core/typedefs.md#scalars)
- - [Context](./core/context.md)
- - [Cursor pagination out of box](./core/connections.md)
+ - [GraphQL server](./getting-started.md#basic-graphql-server)
+ - [Scalar types](./typedefs.md#scalars)
+ - [Context](./context.md)
+ - [Cursor pagination out of box](./connections.md)
 
 ## License
 
