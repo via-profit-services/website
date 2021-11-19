@@ -45,8 +45,8 @@ At the root of the project (at the same level as package.json) create a keys dir
 ```bash
 $ mkdir ./keys
 $ cd ./keys
-$ ssh-keygen -t rsa -b 4096 -mem -f jwtRS256.key
-$ openssl rsa -in jwtRS256.key -pub out -outform PEM -out jwtRS256.key.pub
+$ ssh-keygen -t rsa -b 4096 -m PEM -f jwtRS256.key
+$ openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
 ```
 
 After executing the commands, a private key (jwtrs256.key) and a public key (jwtrs256.key.pub) will be created.
