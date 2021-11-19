@@ -4029,7 +4029,7 @@ __metadata:
     tslint-loader: ^3.5.4
     tslint-react: ^5.0.0
     tslint-react-hooks: ^2.2.2
-    typescript: ^4.4.2
+    typescript: 4.4.2
     typescript-plugin-styled-components: ^1.5.0
     ua-parser-js: ^0.7.28
     url-loader: ^4.1.1
@@ -19418,7 +19418,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"typescript@4, typescript@^4.0, typescript@^4.4.2":
+"typescript@4, typescript@4.4.2, typescript@^4.0":
   version: 4.4.2
   resolution: "typescript@npm:4.4.2"
   bin:
@@ -19438,7 +19438,7 @@ typescript@^4.3:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4#~builtin<compat/typescript>, typescript@patch:typescript@^4.0#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@4#~builtin<compat/typescript>, typescript@patch:typescript@4.4.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.0#~builtin<compat/typescript>":
   version: 4.4.2
   resolution: "typescript@patch:typescript@npm%3A4.4.2#~builtin<compat/typescript>::version=4.4.2&hash=32657b"
   bin:
