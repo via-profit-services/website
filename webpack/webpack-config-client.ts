@@ -8,10 +8,9 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import CompressionPlugin from 'compression-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { HotModuleReplacementPlugin } from 'webpack';
+import { HotModuleReplacementPlugin, DefinePlugin } from 'webpack';
 import { merge } from 'webpack-merge';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import { DefinePlugin } from 'webpack';
 import { InjectManifest } from 'workbox-webpack-plugin';
 import Mustache from 'mustache';
 

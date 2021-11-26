@@ -54,12 +54,9 @@ const schema = require("./schema");
   const server = createServer(app);
 
   const knexMiddleware = knex.factory({
-    client: "pg",
+    client: "sqlite3",
     connection: {
-      user: "dbuser",
-      database: "dbname",
-      password: "secret",
-      host: "localhost"
+      filename: "database.sqlite",
     }
   });
 
@@ -79,54 +76,16 @@ const schema = require("./schema");
 })();
 ```
 
-_schema.js_
+_resolver.js_
 
 ```js
-const { GraphQLSchema, GraphQLObjectType, GraphQLNonNull, GraphQLList, GraphQLID, GraphQLString } = require("graphql");
+const UsersResolver = async (_parent, _args, context) => {
+  const { knex } = context;
+  const users = await knex('users').select();
 
-/**
- * Simple GraphQL schema
- *
- * SDL of this schema:
- * ```graphql
- * type Query {
- *   users: [User!]!
- * }
- *
- * type User {
- *   id: ID!
- *   name: String!
- * }
- * ```
- */
-
-const User = new GraphQLObjectType({
-  name: "User",
-  fields: () => ({
-    id: { type: new GraphQLNonNull(GraphQLID) },
-    name: { type: new GraphQLNonNull(GraphQLString) }
-  })
-});
-
-const schema = new GraphQLSchema({
-  query: new GraphQLObjectType({
-    name: "Query",
-    fields: () => ({
-      users: {
-        type: new GraphQLNonNull(GraphQLList(User)),
-        resolve: async (_parent, _args, context) => {
-          const { knex } = context;
-          const users = await knex("users").select();
-
-          return users;
-        }
-      }
-    })
-  })
-});
-
-module.exports = schema;
+  return users;
+};
 ```
 
-[![Edit @via-profit-services-knex-basic](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-knex-basic-fpi2q?fontsize=14&hidenavigation=1&theme=dark)
 
+[![Edit @via-profit-services-knex-basic](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-knex-basic-i8ebn?fontsize=14&hidenavigation=1&theme=dark)

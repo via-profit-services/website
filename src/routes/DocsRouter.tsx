@@ -24,6 +24,10 @@ const pages = {
     () => import('~/pages/Docs/children/introduction/index'),
     options,
   ),
+  Permissions: loadable(
+    () => import('~/pages/Docs/children/permissions/index'),
+    options,
+  ),
 };
 
 const DocsRoutes: React.FC = () => {
@@ -34,6 +38,11 @@ const DocsRoutes: React.FC = () => {
       <Route strict path={`${path}/core`} component={pages.Core} />
       <Route strict path={`${path}/knex`} component={pages.Knex} />
       <Route strict path={`${path}/redis`} component={pages.Redis} />
+      <Route
+        strict
+        path={`${path}/permissions`}
+        component={pages.Permissions}
+      />
       <Route
         strict
         path={`${path}/authentification`}

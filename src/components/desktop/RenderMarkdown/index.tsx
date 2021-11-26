@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactMarkdown, { ReactMarkdownOptions } from 'react-markdown';
+// import rehypeRaw from 'rehype-raw';
+import { raw } from 'hast-util-raw';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
@@ -80,6 +82,9 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
 
   return (
     <ReactMarkdown
+      rehypePlugins={[
+        options => (tree, file) => raw(tree, file as any, options),
+      ]}
       components={{
         h1: p => (
           <H1>

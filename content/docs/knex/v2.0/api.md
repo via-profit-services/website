@@ -55,7 +55,7 @@ Arguments:
     - `timestampFilenamePrefix` **boolean**. If true, all seeds files will be prefixed with a timestamp `yyyymmddhhmmss_` (e.g. `20191231235959_myseed.js`). Default: `false`.
     - `stub` `string`. Seeds stub filename. Default: `undefined`.
   - `pool`. Knex Pooling.
-    - `afterCreate` **(rawDriverConnection, done) => void**. Is called when the pool aquires a new connection from the database server. `done(err, connection)` callback must be called for `knex` to be able to decide if the connection is ok or if it should be discarded right away from the pool. By default, a function will be called that will set parameters such as: `SET TIMEZONE = UTC` () and `SET CLIENT_ENCODING = UTF8`.
+    - `afterCreate` **(rawDriverConnection, done) => void**. Is called when the pool aquires a new connection from the database server. `done(err, connection)` callback must be called for `knex` to be able to decide if the connection is ok or if it should be discarded right away from the pool.
     - `min` **number**. Minimum size. Default: `0`.
     - `max` **number**. Maximum size. Default: `10`.
     - `idleTimeoutMillis` **number**. Free resouces are destroyed after this many milliseconds. Default: `10000`.

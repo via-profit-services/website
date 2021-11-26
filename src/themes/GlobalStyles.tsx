@@ -27,6 +27,27 @@ export default createGlobalStyle`
     background: ${props => props.theme.color.accent.primary};
     color: ${props => props.theme.color.text.inverse};
   }
+
+  details {
+    border-radius: 4px;
+    padding: .5em .5em 0;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+  }
+
+  details[open] {
+    padding: .5em;
+  }
+
+  details[open] summary {
+    margin-bottom: .5em;
+  }
+
   
 
   @media screen and (min-width: 600px) {

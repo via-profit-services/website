@@ -143,7 +143,9 @@ In this example, we are subscribing to the `graphql-error` listener. It is very 
 
 ## Typescript
 
-For TypeScript you can expand the types using the Declaration files `*.d.ts`.
+### Expand the Сontext type
+
+To expand the Сontext type you can expand the types using the Declaration files `*.d.ts`.
 Now you can use TypeScript autocompletion in the IDE, which will contain the current Core types with your custom types.
 
 _index.d.ts_
@@ -168,3 +170,24 @@ _index.ts_
 ```
 
 [![Edit via-profit-services-core-typescript-middleware](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/via-profit-services-core-typescript-middleware-bz1nr?fontsize=14&hidenavigation=1&theme=dark)
+
+
+
+### Create middleware
+
+_middleware.ts_
+
+```ts
+import { Middleware } from '@via-profit-services/core';
+
+const myMiddleware: Middleware = ({ context }) => {
+
+  // some code
+  
+  return {
+    context,
+  }
+}
+
+export default myMiddleware;
+```

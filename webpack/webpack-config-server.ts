@@ -48,7 +48,7 @@ const config = merge(commonConfig, {
       : // production only plugins
         []),
   ],
-  externals: isDev? [nodeExternals()] : [],
+  externals: isDev ? [nodeExternals()] : [],
 });
 
 export default config;

@@ -18,6 +18,10 @@ const pages = {
     options,
   ),
   Api: loadable(() => import('~/pages/Docs/children/redis/v2.0/api'), options),
+  Events: loadable(
+    () => import('~/pages/Docs/children/redis/v2.0/events'),
+    options,
+  ),
   Intro: loadable(
     () => import('~/pages/Docs/children/redis/v2.0/introduction'),
     options,
@@ -42,6 +46,7 @@ const Redis: React.FC = () => {
         path={`${path}/introduction`}
         component={pages.Intro}
       />
+      <Route strict exact path={`${path}/events`} component={pages.Events} />
       <Redirect strict exact path={path} to={`${path}/introduction`} />
       <Route component={pages.Fallback} />
     </Switch>

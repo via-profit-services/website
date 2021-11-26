@@ -7,10 +7,6 @@
     "defaultMessage": "Knex Api",
     "description": "Meta title of knex.v2.0 api"
   },
-  "+fto4g": {
-    "defaultMessage": "Introduction",
-    "description": "Docs sidebar. Redis introduction"
-  },
   "+jqzeW": {
     "defaultMessage": "Docs",
     "description": "Appbar. Documentation link"
@@ -19,9 +15,9 @@
     "defaultMessage": "Examples",
     "description": "Docs sidebar. Core v.2.0 examples"
   },
-  "+vnbFB": {
-    "defaultMessage": "Settings",
-    "description": "Main menu. Package settings link"
+  "+qI15d": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Knex v.2.0 introduction"
   },
   "/BUSR7": {
     "defaultMessage": "Core v2 middlewares",
@@ -55,10 +51,6 @@
     "defaultMessage": "Subscriptions",
     "description": "Footer. Package subscriptions link"
   },
-  "0blK08": {
-    "defaultMessage": "Introduction",
-    "description": "Docs sidebar. Authentification introduction"
-  },
   "0kWvZ+": {
     "defaultMessage": "Close docs menu",
     "description": "Main menu. «aria-label» attribute of close button"
@@ -75,6 +67,10 @@
     "defaultMessage": "Getting started",
     "description": "Breadcrumbs. Core getting started"
   },
+  "1E2JDJ": {
+    "defaultMessage": "Getting started",
+    "description": "Docs sidebar. Knex v.2.0 getting started"
+  },
   "2A5jIr": {
     "defaultMessage": "PostgreSQL logo",
     "description": "Home second screen. Alt of postgreSQL logo"
@@ -86,14 +82,6 @@
   "2qRiOA": {
     "defaultMessage": "File Storage",
     "description": "Footer. Package file-storage link"
-  },
-  "2ywmdv": {
-    "defaultMessage": "Files",
-    "description": "Main menu. Package files link"
-  },
-  "3+cw8H": {
-    "defaultMessage": "Introduction",
-    "description": "Docs sidebar. Knex introduction"
   },
   "3EAwoY": {
     "defaultMessage": "Context",
@@ -134,6 +122,10 @@
   "4TWUD9": {
     "defaultMessage": "Middlewares",
     "description": "Meta title of core.v2.0 middlewares"
+  },
+  "4de0sh": {
+    "defaultMessage": "Getting started",
+    "description": "Docs sidebar. Authentification v.2.0 getting started"
   },
   "51+z+k": {
     "defaultMessage": "Getting started",
@@ -183,6 +175,10 @@
     "defaultMessage": "Core v2 API",
     "description": "Meta description of core.v2.0 API"
   },
+  "6svF0C": {
+    "defaultMessage": "Events",
+    "description": "Docs sidebar. Redis v.2.0 events"
+  },
   "74l7dy": {
     "defaultMessage": "Header 3",
     "description": "Home second screen. Second card title"
@@ -199,10 +195,6 @@
     "defaultMessage": "Home page link",
     "description": "Header. «aria-label» attribute of home page link"
   },
-  "8ELynH": {
-    "defaultMessage": "Geography",
-    "description": "Main menu. Package geography link"
-  },
   "8glbuq": {
     "defaultMessage": "Core v2 Context",
     "description": "Meta description of core.v2.0 Context"
@@ -210,6 +202,10 @@
   "9N/Z1h": {
     "defaultMessage": "Why",
     "description": "Why screen. Header"
+  },
+  "9RWBNo": {
+    "defaultMessage": "Permissions v2 events",
+    "description": "Meta description of permissions.v2.0 events"
   },
   "9r0xPm": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -223,10 +219,6 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Core. Content paragraph"
   },
-  "A3ym7b": {
-    "defaultMessage": "Getting started",
-    "description": "Docs sidebar. Redis getting started"
-  },
   "ADh33g": {
     "defaultMessage": "Home",
     "description": "Main menu. Home link"
@@ -234,6 +226,10 @@
   "AK8McR": {
     "defaultMessage": "Core v2 getting started",
     "description": "Meta description of core.v2.0 getting started"
+  },
+  "B+MRB4": {
+    "defaultMessage": "Events",
+    "description": "Meta title of knex.v2.0 events"
   },
   "B+T4IS": {
     "defaultMessage": "Middlewares",
@@ -299,6 +295,10 @@
     "defaultMessage": "Getting started",
     "description": "Breadcrumbs. Authentification getting started"
   },
+  "Eujg9W": {
+    "defaultMessage": "Permissions",
+    "description": "Docs sidebar. Permissions"
+  },
   "F9gAgA": {
     "defaultMessage": "Api",
     "description": "Breadcrumbs. Core API"
@@ -319,9 +319,17 @@
     "defaultMessage": "{strong} infrastructure with middlewares collection",
     "description": "Home main screen. Title (without strong tag"
   },
+  "HLUPVS": {
+    "defaultMessage": "Redis",
+    "description": "Docs sidebar. Redis v.2.0"
+  },
   "HfEl6c": {
     "defaultMessage": "Page not found",
     "description": "404 page title"
+  },
+  "Hvcm9h": {
+    "defaultMessage": "Error 404. Page not found",
+    "description": "Meta description of 404 error"
   },
   "I/sDAp": {
     "defaultMessage": "Documentation",
@@ -335,9 +343,17 @@
     "defaultMessage": "Website",
     "description": "Footer. company website link"
   },
+  "IvZMP4": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Permissions v.2.0 introduction"
+  },
   "J0EJ1p": {
     "defaultMessage": "Getting started",
     "description": "Meta title of knex.v2.0 getting started"
+  },
+  "JO3JQQ": {
+    "defaultMessage": "Events",
+    "description": "Docs sidebar. Core v.2.0 events"
   },
   "JtAn0P": {
     "defaultMessage": "Home",
@@ -346,10 +362,6 @@
   "JzKCcn": {
     "defaultMessage": "Terms",
     "description": "Footer. Terms link"
-  },
-  "K+02tI": {
-    "defaultMessage": "Api",
-    "description": "Docs sidebar. Redis api"
   },
   "KEgm+3": {
     "defaultMessage": "Packages list",
@@ -383,21 +395,17 @@
     "defaultMessage": "Lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home main screen. Text"
   },
-  "LRsr4o": {
-    "defaultMessage": "Getting started",
-    "description": "Docs sidebar. Knex getting started"
-  },
   "M1ndnO": {
     "defaultMessage": "Core",
     "description": "SectionPackages. Core. Header"
   },
-  "M4Z3yA": {
-    "defaultMessage": "Permissions",
-    "description": "Main menu. Package permissions link"
-  },
   "MrKKgE": {
     "defaultMessage": "Cookie policy",
     "description": "Main menu. Package Cookie policy link"
+  },
+  "NMfqrO": {
+    "defaultMessage": "Api",
+    "description": "Breadcrumbs. Redis events"
   },
   "NnsvFA": {
     "defaultMessage": "Eprehenderit qui laborum dolor cillum",
@@ -407,9 +415,17 @@
     "defaultMessage": "Knex",
     "description": "Breadcrumbs. Docs knex"
   },
-  "PB13o0": {
-    "defaultMessage": "SMS",
-    "description": "Main menu. Package sms link"
+  "PIMaqw": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Authentification v.2.0 introduction"
+  },
+  "PKqlk5": {
+    "defaultMessage": "Redis Api",
+    "description": "Meta title of redis.v2.0 events"
+  },
+  "PlnZLr": {
+    "defaultMessage": "Events",
+    "description": "Docs sidebar. Knex v.2.0 events"
   },
   "Q/M63P": {
     "defaultMessage": "Api",
@@ -423,6 +439,10 @@
     "defaultMessage": "GitHub",
     "description": "Footer. GitHub link"
   },
+  "Qiar3a": {
+    "defaultMessage": "Permissions Api",
+    "description": "Meta title of permissions.v2.0 api"
+  },
   "Ql6F+2": {
     "defaultMessage": "API Reference",
     "description": "Docs sidebar. Core v.2.0 API"
@@ -435,6 +455,10 @@
     "defaultMessage": "Subscriptions",
     "description": "SectionPackages touchable. Subscriptions. Header"
   },
+  "R3vnmN": {
+    "defaultMessage": "Permissions",
+    "description": "Breadcrumbs. Docs Permissions"
+  },
   "R7qNRK": {
     "defaultMessage": "Open source",
     "description": "Footer. «Open source project» label («Open source» segment)"
@@ -446,6 +470,14 @@
   "RR9NSx": {
     "defaultMessage": "SMS",
     "description": "Footer. Package sms link"
+  },
+  "Ro7bJ/": {
+    "defaultMessage": "Events",
+    "description": "Breadcrumbs. permissions events"
+  },
+  "Ryq+pi": {
+    "defaultMessage": "Api",
+    "description": "Breadcrumbs. permissions api"
   },
   "S3c1mc": {
     "defaultMessage": "Getting started",
@@ -487,10 +519,6 @@
     "defaultMessage": "Versions",
     "description": "Docs sidebar. Knex versions"
   },
-  "V8v1vO": {
-    "defaultMessage": "Api",
-    "description": "Docs sidebar. Knex api"
-  },
   "VImI2V": {
     "defaultMessage": "Getting started",
     "description": "Meta title of core.v2.0 getting started"
@@ -514,10 +542,6 @@
   "XA9oyK": {
     "defaultMessage": "Packages",
     "description": "Footer. Title of the «Packages» section"
-  },
-  "XBk9tS": {
-    "defaultMessage": "Redis",
-    "description": "Docs sidebar. Redis"
   },
   "XH/FVD": {
     "defaultMessage": "Examples",
@@ -555,9 +579,25 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Knex. Content paragraph"
   },
+  "ZoK7F0": {
+    "defaultMessage": "Permissions",
+    "description": "Breadcrumbs. Docs permissions"
+  },
+  "a3ZnrY": {
+    "defaultMessage": "Events",
+    "description": "Docs sidebar. Permissions v.2.0 events"
+  },
+  "a82Qay": {
+    "defaultMessage": "Page not found",
+    "description": "Meta title of 404 error"
+  },
   "aL2THo": {
     "defaultMessage": "Packages",
     "description": "Breadcrumbs. Packages"
+  },
+  "aQG/df": {
+    "defaultMessage": "Introduction",
+    "description": "Meta title of Permissions.v2.0 introduction"
   },
   "aQqL6W": {
     "defaultMessage": "Introduction",
@@ -583,6 +623,10 @@
     "defaultMessage": "Getting started",
     "description": "Meta title of redis.v2.0 getting started"
   },
+  "dF2OVP": {
+    "defaultMessage": "Getting started",
+    "description": "Docs sidebar. Permissions v.2.0 getting started"
+  },
   "dGNWK3": {
     "defaultMessage": "Via Profit company logo",
     "description": "Footer. «aria-label» attribute of company logo"
@@ -590,6 +634,10 @@
   "dWSyIK": {
     "defaultMessage": "Legal",
     "description": "Main sidebar. Legal title"
+  },
+  "djvIJp": {
+    "defaultMessage": "Events",
+    "description": "Breadcrumbs. Core API"
   },
   "dmeAml": {
     "defaultMessage": "Core v1 getting started",
@@ -607,6 +655,10 @@
     "defaultMessage": "Core",
     "description": "Docs sidebar. Core"
   },
+  "eeLnLa": {
+    "defaultMessage": "Permissions Api",
+    "description": "Meta description of permissions.v2.0 api"
+  },
   "eo5xcr": {
     "defaultMessage": "Dataloader",
     "description": "SectionPackages. Dataloader. Header"
@@ -619,13 +671,9 @@
     "defaultMessage": "Github logo link",
     "description": "Footer. «aria-label» attribute of Github logo link"
   },
-  "fmosFk": {
-    "defaultMessage": "Messages",
-    "description": "Main menu. Package messages link"
-  },
-  "g0plOz": {
-    "defaultMessage": "Subscriptions",
-    "description": "Main menu. Package subscriptions link"
+  "faDOv4": {
+    "defaultMessage": "Api",
+    "description": "Docs sidebar. Redis v.2.0 api"
   },
   "g8DSkI": {
     "defaultMessage": "Dataloader",
@@ -643,9 +691,9 @@
     "defaultMessage": "Typedefs",
     "description": "Meta title of core.v2.0 typedefs"
   },
-  "hCg0E1": {
-    "defaultMessage": "Phones",
-    "description": "Main menu. Package phones link"
+  "hJB0F0": {
+    "defaultMessage": "Knex v2 events",
+    "description": "Meta description of knex.v2.0 events"
   },
   "hPD7qo": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
@@ -658,6 +706,10 @@
   "hdR+lK": {
     "defaultMessage": "Core",
     "description": "Footer. package core link"
+  },
+  "i+O8QF": {
+    "defaultMessage": "Api",
+    "description": "Docs sidebar. Permissions v.2.0 api"
   },
   "i0A3YO": {
     "defaultMessage": "MIT License",
@@ -711,6 +763,10 @@
     "defaultMessage": "Getting started",
     "description": "Meta title of authentification.v2.0 getting started"
   },
+  "mrJsJL": {
+    "defaultMessage": "Api",
+    "description": "Docs sidebar. Authentification v.2.0 api"
+  },
   "nVqWuW": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Subscriptions. Content paragraph 1"
@@ -735,9 +791,17 @@
     "defaultMessage": "Authentification",
     "description": "Docs sidebar. Authentification"
   },
+  "oEYnsc": {
+    "defaultMessage": "Getting started",
+    "description": "Meta title of permissions.v2.0 getting started"
+  },
   "oinviI": {
     "defaultMessage": "Package overview",
     "description": "Touchable package card. Link"
+  },
+  "om4pWh": {
+    "defaultMessage": "Api",
+    "description": "Docs sidebar. Knex v.2.0 api"
   },
   "p/QgQD": {
     "defaultMessage": "project",
@@ -755,6 +819,10 @@
     "defaultMessage": "Proident eiusmod anim enim ea exercitation proident. Mollit mollit dolore.",
     "description": "Why screen. Second paragraph"
   },
+  "plkb3p": {
+    "defaultMessage": "Getting started",
+    "description": "Breadcrumbs. permissions getting started"
+  },
   "pruhcA": {
     "defaultMessage": "Home",
     "description": "Appbar. Home link"
@@ -767,6 +835,10 @@
     "defaultMessage": "List of all packages",
     "description": "Touchable packages. Header"
   },
+  "qQkLtv": {
+    "defaultMessage": "Redis Api",
+    "description": "Meta description of redis.v2.0 events"
+  },
   "qivfm0": {
     "defaultMessage": "Open Source",
     "description": "Section Open Source. Header"
@@ -774,10 +846,6 @@
   "rBrEfj": {
     "defaultMessage": "Core",
     "description": "Breadcrumbs. Docs core"
-  },
-  "rLJrWG": {
-    "defaultMessage": "Dataloader",
-    "description": "Main menu. Package dataloader link"
   },
   "rSKp/5": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
@@ -819,6 +887,10 @@
     "defaultMessage": "Introduction",
     "description": "Meta title of authentification.v2.0 introduction"
   },
+  "tp0U/+": {
+    "defaultMessage": "Getting started",
+    "description": "Docs sidebar. Redis v.2.0 getting started"
+  },
   "u/B01N": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Files. Content paragraph 2"
@@ -851,9 +923,9 @@
     "defaultMessage": "Fugiat laborum nulla fugiat",
     "description": "Why screen. Third advantage"
   },
-  "vO3dkI": {
-    "defaultMessage": "Getting started",
-    "description": "Docs sidebar. Authentification getting started"
+  "vqNbBz": {
+    "defaultMessage": "Permissions v2 introduction",
+    "description": "Meta description of Permissions.v2.0 introduction"
   },
   "vrbypx": {
     "defaultMessage": "Via Profit",
@@ -871,17 +943,25 @@
     "defaultMessage": "Examples",
     "description": "Appbar. Examples link"
   },
+  "x1gOdT": {
+    "defaultMessage": "Permissions v2 getting started",
+    "description": "Meta description of permissions.v2.0 getting started"
+  },
+  "x7UnhC": {
+    "defaultMessage": "Introduction",
+    "description": "Docs sidebar. Redis v.2.0 introduction"
+  },
   "xN9EFO": {
     "defaultMessage": "The page may not exist or an error has occurred",
     "description": "404 page text"
   },
-  "xb1B1C": {
-    "defaultMessage": "Api",
-    "description": "Docs sidebar. Authentification api"
-  },
   "xgii0x": {
     "defaultMessage": "Knex v1.1",
     "description": "Breadcrumbs. Knex v1.1"
+  },
+  "xhbLZg": {
+    "defaultMessage": "Events",
+    "description": "Meta title of permissions.v2.0 events"
   },
   "y1j/tV": {
     "defaultMessage": "Connections",
@@ -906,6 +986,10 @@
   "yoq7Mf": {
     "defaultMessage": "Getting started",
     "description": "Breadcrumbs. Redis getting started"
+  },
+  "ytcXgl": {
+    "defaultMessage": "Events",
+    "description": "Breadcrumbs. Knex events"
   },
   "z0PBbF": {
     "defaultMessage": "Fugiat laborum nulla fugiat cupidatat veniam pariatur in non. Adipisicing consectetur anim commodo excepteur incididunt.",

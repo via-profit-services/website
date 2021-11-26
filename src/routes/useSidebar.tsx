@@ -65,6 +65,13 @@ const useSidebar = () => {
               }),
             },
             {
+              path: '/docs/core/events',
+              label: intl.formatMessage({
+                defaultMessage: 'Events',
+                description: 'Docs sidebar. Core v.2.0 events',
+              }),
+            },
+            {
               path: '/docs/core/examples',
               label: intl.formatMessage({
                 defaultMessage: 'Examples',
@@ -109,21 +116,28 @@ const useSidebar = () => {
               path: '/docs/knex/introduction',
               label: intl.formatMessage({
                 defaultMessage: 'Introduction',
-                description: 'Docs sidebar. Knex introduction',
+                description: 'Docs sidebar. Knex v.2.0 introduction',
               }),
             },
             {
               path: '/docs/knex/getting-started',
               label: intl.formatMessage({
                 defaultMessage: 'Getting started',
-                description: 'Docs sidebar. Knex getting started',
+                description: 'Docs sidebar. Knex v.2.0 getting started',
               }),
             },
             {
               path: '/docs/knex/api',
               label: intl.formatMessage({
                 defaultMessage: 'Api',
-                description: 'Docs sidebar. Knex api',
+                description: 'Docs sidebar. Knex v.2.0 api',
+              }),
+            },
+            {
+              path: '/docs/knex/events',
+              label: intl.formatMessage({
+                defaultMessage: 'Events',
+                description: 'Docs sidebar. Knex v.2.0 events',
               }),
             },
             {
@@ -157,33 +171,39 @@ const useSidebar = () => {
           path: '/docs/redis',
           label: intl.formatMessage({
             defaultMessage: 'Redis',
-            description: 'Docs sidebar. Redis',
+            description: 'Docs sidebar. Redis v.2.0',
           }),
           child: [
             {
               path: '/docs/redis/introduction',
               label: intl.formatMessage({
                 defaultMessage: 'Introduction',
-                description: 'Docs sidebar. Redis introduction',
+                description: 'Docs sidebar. Redis v.2.0 introduction',
               }),
             },
             {
               path: '/docs/redis/getting-started',
               label: intl.formatMessage({
                 defaultMessage: 'Getting started',
-                description: 'Docs sidebar. Redis getting started',
+                description: 'Docs sidebar. Redis v.2.0 getting started',
               }),
             },
             {
               path: '/docs/redis/api',
               label: intl.formatMessage({
                 defaultMessage: 'Api',
-                description: 'Docs sidebar. Redis api',
+                description: 'Docs sidebar. Redis v.2.0 api',
+              }),
+            },
+            {
+              path: '/docs/redis/events',
+              label: intl.formatMessage({
+                defaultMessage: 'Events',
+                description: 'Docs sidebar. Redis v.2.0 events',
               }),
             },
           ],
         },
-
         {
           path: '/docs/authentification',
           label: intl.formatMessage({
@@ -195,21 +215,60 @@ const useSidebar = () => {
               path: '/docs/authentification/introduction',
               label: intl.formatMessage({
                 defaultMessage: 'Introduction',
-                description: 'Docs sidebar. Authentification introduction',
+                description:
+                  'Docs sidebar. Authentification v.2.0 introduction',
               }),
             },
             {
               path: '/docs/authentification/getting-started',
               label: intl.formatMessage({
                 defaultMessage: 'Getting started',
-                description: 'Docs sidebar. Authentification getting started',
+                description:
+                  'Docs sidebar. Authentification v.2.0 getting started',
               }),
             },
             {
               path: '/docs/authentification/api',
               label: intl.formatMessage({
                 defaultMessage: 'Api',
-                description: 'Docs sidebar. Authentification api',
+                description: 'Docs sidebar. Authentification v.2.0 api',
+              }),
+            },
+          ],
+        },
+        {
+          path: '/docs/permissions',
+          label: intl.formatMessage({
+            defaultMessage: 'Permissions',
+            description: 'Docs sidebar. Permissions',
+          }),
+          child: [
+            {
+              path: '/docs/permissions/introduction',
+              label: intl.formatMessage({
+                defaultMessage: 'Introduction',
+                description: 'Docs sidebar. Permissions v.2.0 introduction',
+              }),
+            },
+            {
+              path: '/docs/permissions/getting-started',
+              label: intl.formatMessage({
+                defaultMessage: 'Getting started',
+                description: 'Docs sidebar. Permissions v.2.0 getting started',
+              }),
+            },
+            {
+              path: '/docs/permissions/api',
+              label: intl.formatMessage({
+                defaultMessage: 'Api',
+                description: 'Docs sidebar. Permissions v.2.0 api',
+              }),
+            },
+            {
+              path: '/docs/permissions/events',
+              label: intl.formatMessage({
+                defaultMessage: 'Events',
+                description: 'Docs sidebar. Permissions v.2.0 events',
               }),
             },
           ],

@@ -14,21 +14,24 @@ const pages = {
     options,
   ),
   GettingStarted: loadable(
-    () => import('~/pages/Docs/children/knex/v2.0/getting-started'),
+    () => import('~/pages/Docs/children/permissions/v2.0/getting-started'),
+    options,
+  ),
+  Api: loadable(
+    () => import('~/pages/Docs/children/permissions/v2.0/api'),
     options,
   ),
   Intro: loadable(
-    () => import('~/pages/Docs/children/knex/v2.0/introduction'),
+    () => import('~/pages/Docs/children/permissions/v2.0/introduction'),
     options,
   ),
-  Api: loadable(() => import('~/pages/Docs/children/knex/v2.0/api'), options),
   Events: loadable(
-    () => import('~/pages/Docs/children/knex/v2.0/events'),
+    () => import('~/pages/Docs/children/permissions/v2.0/events'),
     options,
   ),
 };
 
-const Knex: React.FC = () => {
+const Permissions: React.FC = () => {
   const { path } = useRouteMatch();
 
   return (
@@ -53,4 +56,4 @@ const Knex: React.FC = () => {
   );
 };
 
-export default Knex;
+export default Permissions;

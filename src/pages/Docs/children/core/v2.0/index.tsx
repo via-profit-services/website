@@ -42,6 +42,10 @@ const pages = {
     () => import('~/pages/Docs/children/core/v2.0/typedefs'),
     options,
   ),
+  Events: loadable(
+    () => import('~/pages/Docs/children/core/v2.0/events'),
+    options,
+  ),
 };
 
 const Core: React.FC = () => {
@@ -50,13 +54,14 @@ const Core: React.FC = () => {
   return (
     <Switch>
       <Route strict exact path={`${path}/api`} component={pages.Api} />
+      <Route strict exact path={`${path}/events`} component={pages.Events} />
+      <Route strict exact path={`${path}/context`} component={pages.Context} />
       <Route
         strict
         exact
         path={`${path}/connections`}
         component={pages.Connections}
       />
-      <Route strict exact path={`${path}/context`} component={pages.Context} />
       <Route
         strict
         exact
@@ -87,6 +92,7 @@ const Core: React.FC = () => {
         path={`${path}/introduction`}
         component={pages.Intro}
       />
+
       <Redirect strict exact path={path} to={`${path}/introduction`} />
       <Route component={pages.Fallback} />
     </Switch>
