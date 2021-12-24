@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactMarkdown, { ReactMarkdownOptions } from 'react-markdown';
-// import rehypeRaw from 'rehype-raw';
+import ReactMarkdown, { Options as ReactMarkdownOptions } from 'react-markdown';
 import { raw } from 'hast-util-raw';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 
@@ -78,7 +77,7 @@ const titleToAnchor = (headername: string | React.ReactNode): string => {
 const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
   const { children, components, ...otherProps } = props;
   const { pathname } = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <ReactMarkdown
@@ -136,6 +135,7 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
             {p.children}
           </H5>
         ),
+
         img: Img,
         blockquote: Blockquote,
         b: Strong,
@@ -147,7 +147,7 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
           if (href.match(/^(http|https):\/\//)) {
             return (
               <ExternalLink
-                target="__blank"
+                target="_blank"
                 rel="noopener noreferrer"
                 title={typeof title === 'string' ? title : undefined}
                 href={href}>
@@ -187,7 +187,7 @@ const MarkdownRender: React.FC<ReactMarkdownOptions> = props => {
                       window.pageYOffset +
                       yOffset;
 
-                    history.push(`${pathname}#${anchorName}`);
+                    navigate(`${pathname}#${anchorName}`);
                     window.scrollTo({ top: y, behavior: 'smooth' });
                   }
                 }}

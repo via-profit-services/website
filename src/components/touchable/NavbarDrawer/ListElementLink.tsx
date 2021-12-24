@@ -1,9 +1,8 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import { Link, useRouteMatch, useHistory } from 'react-router-dom';
+import { Link, useMatch, useHistory } from 'react-router-dom';
 
 export const linkStyles = css<{ $active?: boolean }>`
-  margin: 0.2em 0;
   display: block;
   padding: 1em;
   text-decoration: none;
@@ -43,7 +42,7 @@ type Props = {
 
 const ListElementLink: React.FC<Props> = props => {
   const { children, path, onDrawerClose } = props;
-  const match = useRouteMatch({
+  const match = useMatch({
     path,
     sensitive: true,
     exact: true,

@@ -1,6 +1,6 @@
 import React from 'react';
 import loadable, { OptionsWithoutResolver } from '@loadable/component';
-import { Switch, Route, useRouteMatch, Redirect } from 'react-router-dom';
+import { Switch, Route, useMatch, Redirect } from 'react-router-dom';
 
 import LoadingIndicator from '~/components/desktop/LoadingIndicator';
 
@@ -28,7 +28,7 @@ const pages = {
 };
 
 const Authentification: React.FC = () => {
-  const { path } = useRouteMatch();
+  const { path } = useMatch();
 
   return (
     <Switch>

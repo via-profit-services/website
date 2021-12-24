@@ -1,4 +1,4 @@
-# Connections and cursor pagination
+## Connections and cursor pagination
 
 The core contains a set of types, methods and resolvers that will facilitate the creation and handling of connections as described in the [specification](https://relay.dev/graphql/connections.htm). Contains helpers for implementing cursor pagination and legacy pagination by offset/limit.
 

@@ -1,23 +1,23 @@
 import * as React from 'react';
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import loadable, { OptionsWithoutResolver } from '@loadable/component';
 
 import LoadingIndicator from '~/components/desktop/LoadingIndicator';
+import HomePageTemplate from '~/templates/HomePageTemplate';
 
 const options: OptionsWithoutResolver<any> = {
   fallback: <LoadingIndicator />,
 };
 
-const pages = {
-  Home: loadable(() => import('~/pages/Home/index'), options),
-  Docs: loadable(() => import('~/pages/Docs/index'), options),
-  Legal: loadable(() => import('~/pages/Legal/index'), options),
-  Packages: loadable(() => import('~/pages/Packages/index'), options),
-  Examples: loadable(() => import('~/pages/Examples/index'), options),
-  Fallback: loadable(() => import('~/pages/Fallback/index'), options),
-};
+const DocsRouter = loadable(() => import('~/routes/DocsRouter/index'), options);
+const Home = loadable(() => import('~/pages/Home/index'), options);
+const Fallback = loadable(() => import('~/pages/Fallback/index'), options);
+const FallbackContent = loadable(
+  () => import('~/components/both/FallbackContent'),
+  options,
+);
 
-const Routes: React.FC = () => {
+const RootRouter: React.FC = () => {
   const { pathname, hash } = useLocation();
   const locationPathnameRef = React.useRef<string>('');
 
@@ -53,15 +53,16 @@ const Routes: React.FC = () => {
   }, [hash, pathname]);
 
   return (
-    <Switch>
-      <Route exact path="/" component={pages.Home} />
-      <Route strict path="/docs" component={pages.Docs} />
-      <Route strict path="/legal" component={pages.Legal} />
-      <Route strict path="/examples" component={pages.Examples} />
-      <Route strict exact path="/packages" component={pages.Packages} />
-      <Route component={pages.Fallback} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<HomePageTemplate />}>
+        <Route index element={<Home />} />
+        <Route path="*" element={<FallbackContent />} />
+      </Route>
+
+      <Route path="/docs/*" element={<DocsRouter />} />
+      <Route path="*" element={<Fallback />} />
+    </Routes>
   );
 };
 
-export default Routes;
+export default RootRouter;

@@ -1,4 +1,4 @@
-# GraphQL Core types and scalars
+## GraphQL types and scalars
 
 ## Table of contents
  - [Scalars](#scalars)

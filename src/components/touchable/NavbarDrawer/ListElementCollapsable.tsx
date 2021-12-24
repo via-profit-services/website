@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { useRouteMatch } from 'react-router-dom';
-import Collapsible from 'react-collapsible';
+import { useMatch } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
 
+import Collapsible from '~/components/both/Collapsible';
 import { linkStyles } from './ListElementLink';
 
 type Props = {
@@ -33,21 +33,19 @@ const TriggerLabel = styled.span`
 
 const ListElementCollapsable: React.FC<Props> = props => {
   const { path, children, label } = props;
-  const match = useRouteMatch(path);
+  const match = useMatch(path);
   const [open, setOpen] = React.useState<boolean>(match !== null);
 
   return (
     <Collapsible
+      open={open}
+      onToggle={setOpen}
       trigger={
         <Trigger $open={open} $active={match !== null}>
           <TriggerLabel>{label}</TriggerLabel>
           <ChevronRightIcon size="1em" color="currentColor" />
         </Trigger>
-      }
-      triggerTagName="div"
-      open={open}
-      handleTriggerClick={() => setOpen(!open)}
-      transitionTime={120}>
+      }>
       <>{children}</>
     </Collapsible>
   );

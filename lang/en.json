@@ -63,10 +63,6 @@
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Permissions. Content paragraph"
   },
-  "1CMduV": {
-    "defaultMessage": "Getting started",
-    "description": "Breadcrumbs. Core getting started"
-  },
   "1E2JDJ": {
     "defaultMessage": "Getting started",
     "description": "Docs sidebar. Knex v.2.0 getting started"
@@ -123,21 +119,9 @@
     "defaultMessage": "Middlewares",
     "description": "Meta title of core.v2.0 middlewares"
   },
-  "4de0sh": {
-    "defaultMessage": "Getting started",
-    "description": "Docs sidebar. Authentification v.2.0 getting started"
-  },
-  "51+z+k": {
-    "defaultMessage": "Getting started",
-    "description": "Breadcrumbs. Knex getting started"
-  },
   "53PU3E": {
     "defaultMessage": "Terms",
     "description": "Breadcrumbs. Terms of use"
-  },
-  "5Nz9LN": {
-    "defaultMessage": "Examples",
-    "description": "Breadcrumbs. Core examples"
   },
   "5ZcWj8": {
     "defaultMessage": "Files",
@@ -174,10 +158,6 @@
   "6oMTE0": {
     "defaultMessage": "Core v2 API",
     "description": "Meta description of core.v2.0 API"
-  },
-  "6svF0C": {
-    "defaultMessage": "Events",
-    "description": "Docs sidebar. Redis v.2.0 events"
   },
   "74l7dy": {
     "defaultMessage": "Header 3",
@@ -295,14 +275,6 @@
     "defaultMessage": "Getting started",
     "description": "Breadcrumbs. Authentification getting started"
   },
-  "Eujg9W": {
-    "defaultMessage": "Permissions",
-    "description": "Docs sidebar. Permissions"
-  },
-  "F9gAgA": {
-    "defaultMessage": "Api",
-    "description": "Breadcrumbs. Core API"
-  },
   "FM8hka": {
     "defaultMessage": "Cookie policy",
     "description": "Breadcrumbs. Cookie policy"
@@ -318,10 +290,6 @@
   "H3888Z": {
     "defaultMessage": "{strong} infrastructure with middlewares collection",
     "description": "Home main screen. Title (without strong tag"
-  },
-  "HLUPVS": {
-    "defaultMessage": "Redis",
-    "description": "Docs sidebar. Redis v.2.0"
   },
   "HfEl6c": {
     "defaultMessage": "Page not found",
@@ -342,10 +310,6 @@
   "Iss0k3": {
     "defaultMessage": "Website",
     "description": "Footer. company website link"
-  },
-  "IvZMP4": {
-    "defaultMessage": "Introduction",
-    "description": "Docs sidebar. Permissions v.2.0 introduction"
   },
   "J0EJ1p": {
     "defaultMessage": "Getting started",
@@ -410,14 +374,6 @@
   "NnsvFA": {
     "defaultMessage": "Eprehenderit qui laborum dolor cillum",
     "description": "Why screen. First advantage"
-  },
-  "Oa8o8R": {
-    "defaultMessage": "Knex",
-    "description": "Breadcrumbs. Docs knex"
-  },
-  "PIMaqw": {
-    "defaultMessage": "Introduction",
-    "description": "Docs sidebar. Authentification v.2.0 introduction"
   },
   "PKqlk5": {
     "defaultMessage": "Redis Api",
@@ -527,10 +483,6 @@
     "defaultMessage": "GraphQL HTTP Server",
     "description": "Home main screen. Strong tag of the title"
   },
-  "W3cpJn": {
-    "defaultMessage": "Context",
-    "description": "Breadcrumbs. Core Context"
-  },
   "WK1Tj4": {
     "defaultMessage": "Introduction",
     "description": "Meta title of core.v2.0 introduction"
@@ -567,10 +519,6 @@
     "defaultMessage": "Dataloader",
     "description": "Footer. Package dataloader link"
   },
-  "Z2F6Dz": {
-    "defaultMessage": "Connections",
-    "description": "Breadcrumbs. Core connections"
-  },
   "Zg4rqu": {
     "defaultMessage": "Knex v2 introduction",
     "description": "Meta description of knex.v2.0 introduction"
@@ -582,10 +530,6 @@
   "ZoK7F0": {
     "defaultMessage": "Permissions",
     "description": "Breadcrumbs. Docs permissions"
-  },
-  "a3ZnrY": {
-    "defaultMessage": "Events",
-    "description": "Docs sidebar. Permissions v.2.0 events"
   },
   "a82Qay": {
     "defaultMessage": "Page not found",
@@ -623,10 +567,6 @@
     "defaultMessage": "Getting started",
     "description": "Meta title of redis.v2.0 getting started"
   },
-  "dF2OVP": {
-    "defaultMessage": "Getting started",
-    "description": "Docs sidebar. Permissions v.2.0 getting started"
-  },
   "dGNWK3": {
     "defaultMessage": "Via Profit company logo",
     "description": "Footer. «aria-label» attribute of company logo"
@@ -634,10 +574,6 @@
   "dWSyIK": {
     "defaultMessage": "Legal",
     "description": "Main sidebar. Legal title"
-  },
-  "djvIJp": {
-    "defaultMessage": "Events",
-    "description": "Breadcrumbs. Core API"
   },
   "dmeAml": {
     "defaultMessage": "Core v1 getting started",
@@ -671,10 +607,6 @@
     "defaultMessage": "Github logo link",
     "description": "Footer. «aria-label» attribute of Github logo link"
   },
-  "faDOv4": {
-    "defaultMessage": "Api",
-    "description": "Docs sidebar. Redis v.2.0 api"
-  },
   "g8DSkI": {
     "defaultMessage": "Dataloader",
     "description": "SectionPackages touchable. Dataloader. Header"
@@ -707,10 +639,6 @@
     "defaultMessage": "Core",
     "description": "Footer. package core link"
   },
-  "i+O8QF": {
-    "defaultMessage": "Api",
-    "description": "Docs sidebar. Permissions v.2.0 api"
-  },
   "i0A3YO": {
     "defaultMessage": "MIT License",
     "description": "Section Open Source. License label"
@@ -722,10 +650,6 @@
   "iTBOgA": {
     "defaultMessage": "Close docs menu",
     "description": "Docs menu. «aria-label» attribute"
-  },
-  "iasbQi": {
-    "defaultMessage": "Core v1.2",
-    "description": "Breadcrumbs. Core v1.2"
   },
   "jQHfjq": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
@@ -743,10 +667,6 @@
     "defaultMessage": "Via Profit Services",
     "description": "Helmet «defaultTitle» param"
   },
-  "l8IWT5": {
-    "defaultMessage": "Middlewares",
-    "description": "Breadcrumbs. Core middlewares"
-  },
   "lZbWK/": {
     "defaultMessage": "Copyright {year} Via Profit",
     "description": "Footer. Copiright string"
@@ -762,10 +682,6 @@
   "mAFQqL": {
     "defaultMessage": "Getting started",
     "description": "Meta title of authentification.v2.0 getting started"
-  },
-  "mrJsJL": {
-    "defaultMessage": "Api",
-    "description": "Docs sidebar. Authentification v.2.0 api"
   },
   "nVqWuW": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
@@ -786,10 +702,6 @@
   "ndDiZV": {
     "defaultMessage": "Getting started",
     "description": "Docs sidebar. Core v.2.0 getting started"
-  },
-  "ni5Xr1": {
-    "defaultMessage": "Authentification",
-    "description": "Docs sidebar. Authentification"
   },
   "oEYnsc": {
     "defaultMessage": "Getting started",
@@ -843,10 +755,6 @@
     "defaultMessage": "Open Source",
     "description": "Section Open Source. Header"
   },
-  "rBrEfj": {
-    "defaultMessage": "Core",
-    "description": "Breadcrumbs. Docs core"
-  },
   "rSKp/5": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit",
     "description": "SectionPackages touchable. Dataloader. Content paragraph"
@@ -854,10 +762,6 @@
   "rY3VNI": {
     "defaultMessage": "Core v2 connections",
     "description": "Meta description of core.v2.0 connections"
-  },
-  "rbOc1G": {
-    "defaultMessage": "Api",
-    "description": "Breadcrumbs. Knex api"
   },
   "rdpf58": {
     "defaultMessage": "Knex Api",
@@ -887,10 +791,6 @@
     "defaultMessage": "Introduction",
     "description": "Meta title of authentification.v2.0 introduction"
   },
-  "tp0U/+": {
-    "defaultMessage": "Getting started",
-    "description": "Docs sidebar. Redis v.2.0 getting started"
-  },
   "u/B01N": {
     "defaultMessage": "Mollit mollit dolore reprehenderit exercitation laborum eu amet dolor mollit exercitation labore Lorem exercitation. Reprehenderit qui laborum dolor cillum et velit proident esse aliqua.",
     "description": "SectionPackages. Files. Content paragraph 2"
@@ -898,10 +798,6 @@
   "u3j6c3": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Core. Content paragraph 1"
-  },
-  "uJCeYd": {
-    "defaultMessage": "Typedefs",
-    "description": "Breadcrumbs. Core typedefs"
   },
   "uLCR0p": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
@@ -947,17 +843,9 @@
     "defaultMessage": "Permissions v2 getting started",
     "description": "Meta description of permissions.v2.0 getting started"
   },
-  "x7UnhC": {
-    "defaultMessage": "Introduction",
-    "description": "Docs sidebar. Redis v.2.0 introduction"
-  },
   "xN9EFO": {
     "defaultMessage": "The page may not exist or an error has occurred",
     "description": "404 page text"
-  },
-  "xgii0x": {
-    "defaultMessage": "Knex v1.1",
-    "description": "Breadcrumbs. Knex v1.1"
   },
   "xhbLZg": {
     "defaultMessage": "Events",
@@ -986,10 +874,6 @@
   "yoq7Mf": {
     "defaultMessage": "Getting started",
     "description": "Breadcrumbs. Redis getting started"
-  },
-  "ytcXgl": {
-    "defaultMessage": "Events",
-    "description": "Breadcrumbs. Knex events"
   },
   "z0PBbF": {
     "defaultMessage": "Fugiat laborum nulla fugiat cupidatat veniam pariatur in non. Adipisicing consectetur anim commodo excepteur incididunt.",

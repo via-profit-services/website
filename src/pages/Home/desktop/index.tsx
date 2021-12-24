@@ -25,28 +25,12 @@ const HomeDesktop: React.FC = () => {
 
   return (
     <>
-      <Meta />
-      <Helmet>
-        <meta
-          name="description"
-          content={intl.formatMessage({
-            defaultMessage:
-              'Documentation of packages @via-profit-services with examples',
-            description: 'Home page. Meta description',
-          })}
-        />
-      </Helmet>
-      <Header variant="home-page" />
-      <Main>
-        <SectionMain />
-        <SectionWhatIsIt />
-        <SectionWhy />
-        <SectionPackages />
-        <SectionOpenSource />
-        <SectionTypescript />
-      </Main>
-      <Footer />
-      <ScrollTopButton />
+      <SectionMain />
+      <SectionWhatIsIt />
+      <SectionWhy />
+      <SectionPackages />
+      <SectionOpenSource />
+      <SectionTypescript />
     </>
   );
 };

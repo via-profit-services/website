@@ -10,8 +10,8 @@ module.exports = {
     [
       'babel-plugin-styled-components',
       {
-        minify: true,
-        displayName: false,
+        minify: process.env.NODE_ENV !== 'development',
+        displayName: process.env.NODE_ENV === 'development',
         pure: true,
         ssr: true,
       },
@@ -20,50 +20,6 @@ module.exports = {
       '@babel/plugin-transform-typescript',
       {
         allowNamespaces: true,
-      },
-    ],
-    [
-      'babel-plugin-import',
-      {
-        libraryName: '@material-ui/styles',
-        libraryDirectory: '',
-        camel2DashComponentName: false,
-      },
-      'mui-styles',
-    ],
-    [
-      'babel-plugin-import',
-      {
-        libraryName: '@material-ui/core/colors',
-        libraryDirectory: '',
-        camel2DashComponentName: false,
-      },
-      'mui-core-colors',
-    ],
-    [
-      'babel-plugin-import',
-      {
-        libraryName: '@material-ui/core',
-        libraryDirectory: '',
-        camel2DashComponentName: false,
-      },
-      'core',
-    ],
-    [
-      'babel-plugin-import',
-      {
-        libraryName: '@material-ui/icons',
-        libraryDirectory: 'esm',
-        camel2DashComponentName: false,
-      },
-      'icons',
-    ],
-    [
-      'babel-plugin-import',
-      {
-        libraryName: 'lodash',
-        libraryDirectory: '',
-        camel2DashComponentName: false,
       },
     ],
     [

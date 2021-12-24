@@ -79,21 +79,21 @@ const useSidebar = () => {
               }),
             },
             {
-              path: '/docs/core/versions',
+              path: '/docs/core/v1.2',
               label: intl.formatMessage({
                 defaultMessage: 'Versions',
                 description: 'Docs sidebar. Core versions',
               }),
               child: [
                 {
-                  path: '/docs/core/versions/v1.2',
+                  path: '/docs/core/v1.2',
                   label: intl.formatMessage({
                     defaultMessage: 'Core v1.2',
                     description: 'Docs sidebar. Core v.1.2',
                   }),
                   child: [
                     {
-                      path: '/docs/core/versions/v1.2',
+                      path: '/docs/core/v1.2',
                       label: intl.formatMessage({
                         defaultMessage: 'Introduction',
                         description: 'Docs sidebar. Core v.1.2',
@@ -141,21 +141,21 @@ const useSidebar = () => {
               }),
             },
             {
-              path: '/docs/knex/versions',
+              path: '/docs/knex/',
               label: intl.formatMessage({
                 defaultMessage: 'Versions',
                 description: 'Docs sidebar. Knex versions',
               }),
               child: [
                 {
-                  path: '/docs/knex/versions/v1.1',
+                  path: '/docs/knex/v1.1',
                   label: intl.formatMessage({
                     defaultMessage: 'Knex v1.1',
                     description: 'Docs sidebar. Knex v.1.1',
                   }),
                   child: [
                     {
-                      path: '/docs/knex/versions/v1.1',
+                      path: '/docs/knex/v1.1',
                       label: intl.formatMessage({
                         defaultMessage: 'Introduction',
                         description: 'Docs sidebar. Knex v.1.1',
@@ -167,112 +167,112 @@ const useSidebar = () => {
             },
           ],
         },
-        {
-          path: '/docs/redis',
-          label: intl.formatMessage({
-            defaultMessage: 'Redis',
-            description: 'Docs sidebar. Redis v.2.0',
-          }),
-          child: [
-            {
-              path: '/docs/redis/introduction',
-              label: intl.formatMessage({
-                defaultMessage: 'Introduction',
-                description: 'Docs sidebar. Redis v.2.0 introduction',
-              }),
-            },
-            {
-              path: '/docs/redis/getting-started',
-              label: intl.formatMessage({
-                defaultMessage: 'Getting started',
-                description: 'Docs sidebar. Redis v.2.0 getting started',
-              }),
-            },
-            {
-              path: '/docs/redis/api',
-              label: intl.formatMessage({
-                defaultMessage: 'Api',
-                description: 'Docs sidebar. Redis v.2.0 api',
-              }),
-            },
-            {
-              path: '/docs/redis/events',
-              label: intl.formatMessage({
-                defaultMessage: 'Events',
-                description: 'Docs sidebar. Redis v.2.0 events',
-              }),
-            },
-          ],
-        },
-        {
-          path: '/docs/authentification',
-          label: intl.formatMessage({
-            defaultMessage: 'Authentification',
-            description: 'Docs sidebar. Authentification',
-          }),
-          child: [
-            {
-              path: '/docs/authentification/introduction',
-              label: intl.formatMessage({
-                defaultMessage: 'Introduction',
-                description:
-                  'Docs sidebar. Authentification v.2.0 introduction',
-              }),
-            },
-            {
-              path: '/docs/authentification/getting-started',
-              label: intl.formatMessage({
-                defaultMessage: 'Getting started',
-                description:
-                  'Docs sidebar. Authentification v.2.0 getting started',
-              }),
-            },
-            {
-              path: '/docs/authentification/api',
-              label: intl.formatMessage({
-                defaultMessage: 'Api',
-                description: 'Docs sidebar. Authentification v.2.0 api',
-              }),
-            },
-          ],
-        },
-        {
-          path: '/docs/permissions',
-          label: intl.formatMessage({
-            defaultMessage: 'Permissions',
-            description: 'Docs sidebar. Permissions',
-          }),
-          child: [
-            {
-              path: '/docs/permissions/introduction',
-              label: intl.formatMessage({
-                defaultMessage: 'Introduction',
-                description: 'Docs sidebar. Permissions v.2.0 introduction',
-              }),
-            },
-            {
-              path: '/docs/permissions/getting-started',
-              label: intl.formatMessage({
-                defaultMessage: 'Getting started',
-                description: 'Docs sidebar. Permissions v.2.0 getting started',
-              }),
-            },
-            {
-              path: '/docs/permissions/api',
-              label: intl.formatMessage({
-                defaultMessage: 'Api',
-                description: 'Docs sidebar. Permissions v.2.0 api',
-              }),
-            },
-            {
-              path: '/docs/permissions/events',
-              label: intl.formatMessage({
-                defaultMessage: 'Events',
-                description: 'Docs sidebar. Permissions v.2.0 events',
-              }),
-            },
-          ],
-        },
+        // {
+        //   path: '/docs/redis',
+        //   label: intl.formatMessage({
+        //     defaultMessage: 'Redis',
+        //     description: 'Docs sidebar. Redis v.2.0',
+        //   }),
+        //   child: [
+        //     {
+        //       path: '/docs/redis/introduction',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Introduction',
+        //         description: 'Docs sidebar. Redis v.2.0 introduction',
+        //       }),
+        //     },
+        //     {
+        //       path: '/docs/redis/getting-started',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Getting started',
+        //         description: 'Docs sidebar. Redis v.2.0 getting started',
+        //       }),
+        //     },
+        //     {
+        //       path: '/docs/redis/api',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Api',
+        //         description: 'Docs sidebar. Redis v.2.0 api',
+        //       }),
+        //     },
+        //     {
+        //       path: '/docs/redis/events',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Events',
+        //         description: 'Docs sidebar. Redis v.2.0 events',
+        //       }),
+        //     },
+        //   ],
+        // },
+        // {
+        //   path: '/docs/authentification',
+        //   label: intl.formatMessage({
+        //     defaultMessage: 'Authentification',
+        //     description: 'Docs sidebar. Authentification',
+        //   }),
+        //   child: [
+        //     {
+        //       path: '/docs/authentification/introduction',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Introduction',
+        //         description:
+        //           'Docs sidebar. Authentification v.2.0 introduction',
+        //       }),
+        //     },
+        //     {
+        //       path: '/docs/authentification/getting-started',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Getting started',
+        //         description:
+        //           'Docs sidebar. Authentification v.2.0 getting started',
+        //       }),
+        //     },
+        //     {
+        //       path: '/docs/authentification/api',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Api',
+        //         description: 'Docs sidebar. Authentification v.2.0 api',
+        //       }),
+        //     },
+        //   ],
+        // },
+        // {
+        //   path: '/docs/permissions',
+        //   label: intl.formatMessage({
+        //     defaultMessage: 'Permissions',
+        //     description: 'Docs sidebar. Permissions',
+        //   }),
+        //   child: [
+        //     {
+        //       path: '/docs/permissions/introduction',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Introduction',
+        //         description: 'Docs sidebar. Permissions v.2.0 introduction',
+        //       }),
+        //     },
+        //     {
+        //       path: '/docs/permissions/getting-started',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Getting started',
+        //         description: 'Docs sidebar. Permissions v.2.0 getting started',
+        //       }),
+        //     },
+        //     {
+        //       path: '/docs/permissions/api',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Api',
+        //         description: 'Docs sidebar. Permissions v.2.0 api',
+        //       }),
+        //     },
+        //     {
+        //       path: '/docs/permissions/events',
+        //       label: intl.formatMessage({
+        //         defaultMessage: 'Events',
+        //         description: 'Docs sidebar. Permissions v.2.0 events',
+        //       }),
+        //     },
+        //   ],
+        // },
       ],
     }),
     [intl],

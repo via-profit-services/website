@@ -126,12 +126,14 @@ const bootstrap = async () => {
    * Common location. Just render HTML
    */
   app.get('*', async (req, res) => {
-    const { html, context } = await renderHTML({ req });
+    const { html } = await renderHTML({ req });
 
-    return res
-      .status(context.statusCode || 200)
-      .set({ 'Content-Type': 'text/html; charset=utf-8' })
-      .send(html);
+    return (
+      res
+        // .status(context.statusCode || 200)
+        .set({ 'Content-Type': 'text/html; charset=utf-8' })
+        .send(html)
+    );
   });
 
   /**

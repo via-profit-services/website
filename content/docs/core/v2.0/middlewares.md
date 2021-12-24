@@ -1,4 +1,4 @@
-# Core middlewares
+## Middlewares
 
 ## Table of contents
 

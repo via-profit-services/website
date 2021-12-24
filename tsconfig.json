@@ -13,6 +13,10 @@
     "allowJs": true,
     "jsx": "react",
     "baseUrl": "./src",
+    "types": [
+      "react/next",
+      "react-dom/next"
+    ],
     "paths": {
       "~/*": [
         "./*"
@@ -25,10 +29,10 @@
       ],
     }
   },
-    "include": [
-      "src/**/*"
-    ],
-    "exclude": [
-      "node_modules/**/*"
-    ]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules/**/*"
+  ]
 }

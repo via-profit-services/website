@@ -5,7 +5,7 @@ import React from 'react';
 import { ChunkExtractor } from '@loadable/server';
 import { renderToString } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
-import { StaticRouter, StaticContext } from 'react-router';
+import { StaticRouter } from 'react-router-dom/server';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import UAParser from 'ua-parser-js';
 import path from 'path';
@@ -34,7 +34,7 @@ interface Props {
 
 type RenderHTMLPayload = {
   html: string;
-  context: StaticContext;
+  // context: StaticContext;
 };
 
 dotenv.config();
@@ -77,9 +77,9 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
     return cache.get<RenderHTMLPayload>(cacheKey);
   }
 
-  const context: StaticContext = {
-    statusCode: 200,
-  };
+  // const context: StaticContext = {
+  //   statusCode: 200,
+  // };
 
   // combine redux state with default state, detected mode and the user cookies
   const reduxPreloadedStore: ReduxState = {
@@ -104,7 +104,7 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
   const htmlContent = renderToString(
     webExtractor.collectChunks(
       <StyleSheetManager sheet={sheet.instance}>
-        <StaticRouter location={url} context={context}>
+        <StaticRouter location={url}>
           <ReduxProvider store={reduxStore}>
             <ApplicationProvider />
           </ReduxProvider>
@@ -147,7 +147,7 @@ const renderHTML = async (props: Props): Promise<RenderHTMLPayload> => {
     htmlContent,
   });
 
-  const payload = { context, html };
+  const payload = { html };
 
   cache.set<RenderHTMLPayload>(cacheKey, payload, '24hours');
 

@@ -91,7 +91,7 @@ const InternalLink = styled(Link)`
   ${linkStyles}
 `;
 
-const InternalPreLink = styled.span<{ to?: string }>`
+const InternalPreLink = styled.span`
   ${linkStyles}
   opacity: 0.4;
   text-decoration: none;
@@ -175,7 +175,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalPreLink to="/docs/subscriptions/introduction">
+              <InternalPreLink>
                 <FormattedMessage
                   defaultMessage="Subscriptions"
                   description="Footer. Package subscriptions link"
@@ -194,7 +194,7 @@ const FooterMiddle: React.FC = () => (
               </InternalLink>
             </li>
             <li>
-              <InternalPreLink to="/docs/permissions/introduction">
+              <InternalPreLink>
                 <FormattedMessage
                   defaultMessage="Permissions"
                   description="Footer. Package permissions link"
@@ -202,7 +202,7 @@ const FooterMiddle: React.FC = () => (
               </InternalPreLink>
             </li>
             <li>
-              <InternalPreLink to="/docs/messages/InternalLink">
+              <InternalPreLink>
                 <FormattedMessage
                   defaultMessage="Messages"
                   description="Footer. Package messages link"
@@ -210,7 +210,7 @@ const FooterMiddle: React.FC = () => (
               </InternalPreLink>
             </li>
             <li>
-              <InternalPreLink to="/docs/sms/InternalLink">
+              <InternalPreLink>
                 <FormattedMessage
                   defaultMessage="SMS"
                   description="Footer. Package sms link"
@@ -221,7 +221,7 @@ const FooterMiddle: React.FC = () => (
 
           <LinksList>
             <li>
-              <InternalPreLink to="/docs/files/InternalLink">
+              <InternalPreLink>
                 <FormattedMessage
                   defaultMessage="File Storage"
                   description="Footer. Package file-storage link"
@@ -229,7 +229,7 @@ const FooterMiddle: React.FC = () => (
               </InternalPreLink>
             </li>
             <li>
-              <InternalPreLink to="/docs/settings/InternalLink">
+              <InternalPreLink>
                 <FormattedMessage
                   defaultMessage="Settings manager"
                   description="Footer. Package settings-manager link"
@@ -237,7 +237,7 @@ const FooterMiddle: React.FC = () => (
               </InternalPreLink>
             </li>
             <li>
-              <InternalPreLink to="/docs/dataloader/InternalLink">
+              <InternalPreLink>
                 <FormattedMessage
                   defaultMessage="Dataloader"
                   description="Footer. Package dataloader link"
@@ -245,7 +245,7 @@ const FooterMiddle: React.FC = () => (
               </InternalPreLink>
             </li>
             <li>
-              <InternalPreLink to="/docs/geography/InternalLink">
+              <InternalPreLink>
                 <FormattedMessage
                   defaultMessage="Geography"
                   description="Footer. Package geography link"

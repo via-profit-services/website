@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 import React from 'react';
 import loadable from '@loadable/component';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import { Switch, Route, useMatch } from 'react-router-dom';
 
 import LoadingIndicator from '~/components/desktop/LoadingIndicator';
 
@@ -31,7 +31,7 @@ type UrlParams = {
 };
 
 const Knex: React.FC = () => {
-  const { path } = useRouteMatch<UrlParams>();
+  const { path } = useMatch<UrlParams>();
 
   return (
     <Switch>

@@ -1,4 +1,4 @@
-# Core API
+## API
 
 You can use helpers by exporting them from the module:
 

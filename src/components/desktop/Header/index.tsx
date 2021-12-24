@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import { Link, useRouteMatch } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 import ThemeButton from './ThemeButton';
@@ -111,7 +111,7 @@ const Header: React.FC<Props> = props => {
   const { variant } = props;
   const currentVariant = variant ?? 'second-page';
   const [isSticky, setIsSticky] = React.useState(false);
-  const { path } = useRouteMatch();
+  const { pathname } = useLocation();
   const intl = useIntl();
   const headerRef = React.useRef<HTMLDivElement | null>(null);
 
@@ -157,13 +157,13 @@ const Header: React.FC<Props> = props => {
           />
         </LogoLink>
         <Navbar>
-          <NavLink to="/" $isActive={path === '/'}>
+          <NavLink to="/" $isActive={pathname === '/'}>
             <FormattedMessage
               defaultMessage="Home"
               description="Appbar. Home link"
             />
           </NavLink>
-          <NavLink to="/docs" $isActive={path.match(/^\/docs/) !== null}>
+          <NavLink to="/docs" $isActive={pathname.match(/^\/docs/) !== null}>
             <FormattedMessage
               defaultMessage="Docs"
               description="Appbar. Documentation link"
@@ -171,7 +171,7 @@ const Header: React.FC<Props> = props => {
           </NavLink>
           <NavLink
             to="/packages"
-            $isActive={path.match(/^\/packages/) !== null}>
+            $isActive={pathname.match(/^\/packages/) !== null}>
             <FormattedMessage
               defaultMessage="Packages"
               description="Appbar. Packages link"
@@ -179,7 +179,7 @@ const Header: React.FC<Props> = props => {
           </NavLink>
           <NavLink
             to="/examples"
-            $isActive={path.match(/^\/examples/) !== null}>
+            $isActive={pathname.match(/^\/examples/) !== null}>
             <FormattedMessage
               defaultMessage="Examples"
               description="Appbar. Examples link"

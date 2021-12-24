@@ -1,4 +1,4 @@
-## Core Event emitter
+## Event emitter
 
 The core event emitter is contained in the `Context` object. This is a simple [Node Emitter class](https://nodejs.org/api/events.html#class-eventemitter). By default, Core emitter implements the following events:
 
@@ -8,7 +8,7 @@ Various middleware can add their own events, for example, middleware [Knex](http
 
 To add your own events go to the [middlewares](./middlewares.md)
 
-### Core Event emitter example
+## Core Event emitter example
 
 ```js
 const { graphQLExpress } = await core.factory({

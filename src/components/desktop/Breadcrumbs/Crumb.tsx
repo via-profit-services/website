@@ -63,10 +63,18 @@ const CrumbChunkLabel = styled.span`
 `;
 
 const isCrumbChunk = (props: CrumbProps): props is CrumbChunk =>
-  'link' in props && 'label' in props && 'position' in props;
+  'link' in props &&
+  typeof props.link !== 'undefined' &&
+  'label' in props &&
+  typeof props.label !== 'undefined' &&
+  'position' in props &&
+  typeof props.position !== 'undefined';
 
 const isCrumbLast = (props: CrumbProps): props is CrumbLast =>
-  'label' in props && 'position' in props;
+  'label' in props &&
+  typeof props.label !== 'undefined' &&
+  'position' in props &&
+  typeof props.position !== 'undefined';
 
 const isCrumbHome = (props: CrumbProps): props is CrumbHome =>
   'home' in props && props.home;

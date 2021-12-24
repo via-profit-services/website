@@ -1,4 +1,4 @@
-# Via Profit Services / Core
+## Introduction
 
 ![via-profit-services-cover](https://github.com/via-profit-services/core/raw/master/assets/via-profit-services-cover.png)
 

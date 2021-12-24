@@ -132,6 +132,7 @@ const config: Configuration = {
       '~': path.resolve(__dirname, '../src'),
       '~assets': path.resolve(__dirname, '../assets'),
       '~content': path.resolve(__dirname, '../content'),
+      '~templates': path.resolve(__dirname, '../templates'),
     },
   },
   ignoreWarnings: [

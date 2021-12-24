@@ -33,18 +33,35 @@ const bootstrap = async () => {
   const reduxStore = createReduxStore(reduxState);
 
   const render = () => {
-    const enderMethod =
+    const rootElem = document.querySelector('#app');
+    if (!rootElem) {
+      throw new Error('Failed to find the root element');
+    }
+
+    const root =
       process.env.NODE_ENV === 'development'
-        ? ReactDom.render
-        : ReactDom.hydrate;
-    enderMethod(
+        ? ReactDom.createRoot(rootElem)
+        : ReactDom.hydrateRoot(rootElem);
+
+    root.render(
       <BrowserRouter>
         <ReduxProvider store={reduxStore}>
           <ApplicationProvider />
         </ReduxProvider>
       </BrowserRouter>,
-      document.getElementById('app'),
     );
+    // const enderMethod =
+    //   process.env.NODE_ENV === 'development'
+    //     ? ReactDom.render
+    //     : ReactDom.hydrate;
+    // enderMethod(
+    //   <BrowserRouter>
+    //     <ReduxProvider store={reduxStore}>
+    //       <ApplicationProvider />
+    //     </ReduxProvider>
+    //   </BrowserRouter>,
+    //   document.getElementById('app'),
+    // );
   };
 
   if (process.env.NODE_ENV === 'development') {
