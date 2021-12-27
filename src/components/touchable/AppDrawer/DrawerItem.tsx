@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import { Link, LinkProps, useHistory } from 'react-router-dom';
+import { Link, LinkProps, useNavigate } from 'react-router-dom';
 
 export type DrawerItemProps = LinkProps & {
   label: React.ReactNode;
@@ -42,13 +42,13 @@ const IconWrapper = styled.span`
 
 const DrawerItem: React.FC<DrawerItemProps> = props => {
   const { active, label, icon, onDrawerClose, ...linkProps } = props;
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClick: React.MouseEventHandler<HTMLAnchorElement> = e => {
     e.preventDefault();
     onDrawerClose();
 
-    history.push(e.currentTarget.getAttribute('href') || '');
+    navigate(e.currentTarget.getAttribute('href') || '');
   };
 
   return (

@@ -7,13 +7,9 @@ import ThemeButton from './ThemeButton';
 import GitHubButton from './GitHubButton';
 import LogoInline from '~/components/desktop/Logo/LogoInline';
 
-type Props = {
-  variant?: 'home-page' | 'second-page';
-};
-
 type ContainerStyledProps = {
   $isSticky: boolean;
-  $variant: NonNullable<Props['variant']>;
+  $variant: 'home-page' | 'second-page';
 };
 
 type LinkStyledProps = {
@@ -107,13 +103,15 @@ const StyledThemeButton = styled(ThemeButton)`
   margin-left: 1rem;
 `;
 
-const Header: React.FC<Props> = props => {
-  const { variant } = props;
-  const currentVariant = variant ?? 'second-page';
+const Header: React.FC = () => {
   const [isSticky, setIsSticky] = React.useState(false);
   const { pathname } = useLocation();
   const intl = useIntl();
   const headerRef = React.useRef<HTMLDivElement | null>(null);
+  const variant = React.useMemo(
+    () => (pathname === '/' ? 'home-page' : 'second-page'),
+    [pathname],
+  );
 
   React.useEffect(() => {
     const cachedRef = headerRef.current;
@@ -140,7 +138,7 @@ const Header: React.FC<Props> = props => {
   }, [variant]);
 
   return (
-    <Container ref={headerRef} $isSticky={isSticky} $variant={currentVariant}>
+    <Container ref={headerRef} $isSticky={isSticky} $variant={variant}>
       <Inner>
         <LogoLink
           to="/"

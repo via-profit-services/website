@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import loadable from '@loadable/component';
 import { Switch, Route, useMatch } from 'react-router-dom';
@@ -11,26 +12,23 @@ const Fallback = loadable(
   },
 );
 
-const AuthentificationVer2 = loadable(
-  () => import('~/pages/Docs/children/authentification/v2.0/index'),
-  {
-    fallback: <LoadingIndicator />,
-  },
-);
+const RedisVer2 = loadable(() => import('~/pages/Docs/redis/v2.0/index'), {
+  fallback: <LoadingIndicator />,
+});
 
 type UrlParams = {
   version?: string;
 };
 
-const Authentification: React.FC = () => {
+const Redis: React.FC = () => {
   const { path } = useMatch<UrlParams>();
 
   return (
     <Switch>
-      <Route strict path={path} component={AuthentificationVer2} />
+      <Route strict path={path} component={RedisVer2} />
       <Route component={Fallback} />
     </Switch>
   );
 };
 
-export default Authentification;
+export default Redis;

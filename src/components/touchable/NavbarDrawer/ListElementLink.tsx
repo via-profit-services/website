@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import { Link, useMatch, useHistory } from 'react-router-dom';
+import { Link, useMatch, useNavigate } from 'react-router-dom';
 
 export const linkStyles = css<{ $active?: boolean }>`
   display: block;
@@ -44,17 +44,16 @@ const ListElementLink: React.FC<Props> = props => {
   const { children, path, onDrawerClose } = props;
   const match = useMatch({
     path,
-    sensitive: true,
-    exact: true,
+    end: true,
   });
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleClick: React.MouseEventHandler<HTMLAnchorElement> = e => {
     e.preventDefault();
     onDrawerClose();
 
-    history.push(e.currentTarget.getAttribute('href') || '');
+    navigate(e.currentTarget.getAttribute('href') || '');
   };
 
   return (

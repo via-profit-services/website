@@ -13,41 +13,35 @@ const Fallback = loadable(
   options,
 );
 const Intro = loadable(
-  () => import('~/pages/Docs/children/core/v2.0/introduction'),
+  () => import('~/pages/Docs/core/v2.0/introduction'),
   options,
 );
-const Api = loadable(
-  () => import('~/pages/Docs/children/core/v2.0/api'),
-  options,
-);
+const Api = loadable(() => import('~/pages/Docs/core/v2.0/api'), options);
 const Connections = loadable(
-  () => import('~/pages/Docs/children/core/v2.0/connections'),
+  () => import('~/pages/Docs/core/v2.0/connections'),
   options,
 );
 const Context = loadable(
-  () => import('~/pages/Docs/children/core/v2.0/context'),
+  () => import('~/pages/Docs/core/v2.0/context'),
   options,
 );
 const Examples = loadable(
-  () => import('~/pages/Docs/children/core/v2.0/examples'),
+  () => import('~/pages/Docs/core/v2.0/examples'),
   options,
 );
 const GettingStarted = loadable(
-  () => import('~/pages/Docs/children/core/v2.0/getting-started'),
+  () => import('~/pages/Docs/core/v2.0/getting-started'),
   options,
 );
 const Middlewares = loadable(
-  () => import('~/pages/Docs/children/core/v2.0/middlewares'),
+  () => import('~/pages/Docs/core/v2.0/middlewares'),
   options,
 );
 const Typedefs = loadable(
-  () => import('~/pages/Docs/children/core/v2.0/typedefs'),
+  () => import('~/pages/Docs/core/v2.0/typedefs'),
   options,
 );
-const Events = loadable(
-  () => import('~/pages/Docs/children/core/v2.0/events'),
-  options,
-);
+const Events = loadable(() => import('~/pages/Docs/core/v2.0/events'), options);
 
 const Corev2Router: React.FC = () => (
   <Routes>

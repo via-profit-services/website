@@ -12,13 +12,16 @@ const Fallback = loadable(
   () => import('~/components/both/FallbackContent/index'),
   options,
 );
-const Index = loadable(() => import('~/pages/Docs/core/v1.2/index'), options);
+const Authentification2Router = loadable(
+  () => import('~/routes/DocsRouter/AuthentificationRouter/v2'),
+  options,
+);
 
-const Corev1Router: React.FC = () => (
+const KnexRouter: React.FC = () => (
   <Routes>
-    <Route path="/" element={<Index />} />
+    <Route path="/*" element={<Authentification2Router />} />
     <Route path="*" element={<Fallback />} />
   </Routes>
 );
 
-export default Corev1Router;
+export default KnexRouter;

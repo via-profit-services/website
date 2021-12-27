@@ -8,8 +8,12 @@ const options: OptionsWithoutResolver<any> = {
   fallback: <LoadingIndicator />,
 };
 
-const Desktop = loadable(() => import('~/pages/Home/desktop/index'), options);
-const Touchable = loadable(
+const HomeDesktop = loadable(
+  () => import('~/pages/Home/desktop/index'),
+  options,
+);
+
+const HomeTouchable = loadable(
   () => import('~/pages/Home/touchable/index'),
   options,
 );
@@ -17,14 +21,7 @@ const Touchable = loadable(
 const Home: React.FC = () => {
   const mode = useSelector<ReduxState, ReduxSelectedMode>(state => state.mode);
 
-  switch (mode) {
-    case 'touchable':
-      return <Touchable />;
-
-    case 'desktop':
-    default:
-      return <Desktop />;
-  }
+  return mode === 'desktop' ? <HomeDesktop /> : <HomeTouchable />;
 };
 
 export default Home;

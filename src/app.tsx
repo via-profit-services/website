@@ -50,18 +50,6 @@ const bootstrap = async () => {
         </ReduxProvider>
       </BrowserRouter>,
     );
-    // const enderMethod =
-    //   process.env.NODE_ENV === 'development'
-    //     ? ReactDom.render
-    //     : ReactDom.hydrate;
-    // enderMethod(
-    //   <BrowserRouter>
-    //     <ReduxProvider store={reduxStore}>
-    //       <ApplicationProvider />
-    //     </ReduxProvider>
-    //   </BrowserRouter>,
-    //   document.getElementById('app'),
-    // );
   };
 
   if (process.env.NODE_ENV === 'development') {

@@ -1,13 +1,23 @@
 import * as React from 'react';
 import loadable, { OptionsWithoutResolver } from '@loadable/component';
 import { Routes, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import LoadingIndicator from '~/components/desktop/LoadingIndicator';
-import DocPageTemplate from '~/templates/DocPageTemplate';
 
 const options: OptionsWithoutResolver<any> = {
   fallback: <LoadingIndicator />,
 };
+
+const DocPageTemplateDesktop = loadable(
+  () => import('~/templates/DocPageTemplateDesktop'),
+  options,
+);
+
+const DocPageTemplateTouchable = loadable(
+  () => import('~/templates/DocPageTemplateTouchable'),
+  options,
+);
 
 const Fallback = loadable(
   () => import('~/components/both/FallbackContent/index'),
@@ -15,7 +25,7 @@ const Fallback = loadable(
 );
 
 const Introduction = loadable(
-  () => import('~/pages/Docs/children/introduction/index'),
+  () => import('~/pages/Docs/introduction/index'),
   options,
 );
 
@@ -29,15 +39,21 @@ const KnexRouter = loadable(
   options,
 );
 
-const DocsRoutes: React.FC = () => (
-  <Routes>
-    <Route path="/" element={<DocPageTemplate />}>
-      <Route index element={<Introduction />} />
-      <Route path="/core/*" element={<CoreRouter />} />
-      <Route path="/knex/*" element={<KnexRouter />} />
-      <Route path="*" element={<Fallback />} />
-    </Route>
-  </Routes>
-);
+const DocsRoutes: React.FC = () => {
+  const mode = useSelector<ReduxState, ReduxSelectedMode>(state => state.mode);
+  const Template =
+    mode === 'desktop' ? DocPageTemplateDesktop : DocPageTemplateTouchable;
+
+  return (
+    <Routes>
+      <Route path="/" element={<Template />}>
+        <Route index element={<Introduction />} />
+        <Route path="/core/*" element={<CoreRouter />} />
+        <Route path="/knex/*" element={<KnexRouter />} />
+        <Route path="*" element={<Fallback />} />
+      </Route>
+    </Routes>
+  );
+};
 
 export default DocsRoutes;

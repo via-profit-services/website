@@ -51,6 +51,12 @@
     "defaultMessage": "Subscriptions",
     "description": "Footer. Package subscriptions link"
   },
+  "04EU/U": {
+    "defaultMessage": "You should use the mobile version to view the site"
+  },
+  "0RzFfg": {
+    "defaultMessage": "Strange window size"
+  },
   "0kWvZ+": {
     "defaultMessage": "Close docs menu",
     "description": "Main menu. «aria-label» attribute of close button"
@@ -107,6 +113,9 @@
     "defaultMessage": "Via Profit Services - is a lightweight, flexible, standalone implementation of a GraphQL HTTP (express middleware) which allows you to run an Express GraphQL server, build connections with pagination (Cursored or Limit-offset type), make your own extentions, read detailed logs, use global context with structured dataloaders and module containers, use some extra GraphQL Scalar types as DateTime, Money and so on",
     "description": "Home second screen. First card content"
   },
+  "460sYk": {
+    "defaultMessage": "With this size of your browser window, it will be impossible to use the site"
+  },
   "4MIGfe": {
     "defaultMessage": "Knex",
     "description": "Docs sidebar. Knex"
@@ -162,6 +171,9 @@
   "74l7dy": {
     "defaultMessage": "Header 3",
     "description": "Home second screen. Second card title"
+  },
+  "7S0Iui": {
+    "defaultMessage": "Switch to desktop version"
   },
   "7atvZ+": {
     "defaultMessage": "MIT license",
@@ -263,17 +275,9 @@
     "defaultMessage": "Authentification v2 introduction",
     "description": "Meta description of authentification.v2.0 introduction"
   },
-  "DvtcHS": {
-    "defaultMessage": "Authentification",
-    "description": "Breadcrumbs. Docs authentification"
-  },
   "E+Lbg9": {
     "defaultMessage": "Redis Api",
     "description": "Meta title of redis.v2.0 api"
-  },
-  "E92JTN": {
-    "defaultMessage": "Getting started",
-    "description": "Breadcrumbs. Authentification getting started"
   },
   "FM8hka": {
     "defaultMessage": "Cookie policy",
@@ -367,6 +371,9 @@
     "defaultMessage": "Cookie policy",
     "description": "Main menu. Package Cookie policy link"
   },
+  "NLqzPb": {
+    "defaultMessage": "Switch to mobile version"
+  },
   "NMfqrO": {
     "defaultMessage": "Api",
     "description": "Breadcrumbs. Redis events"
@@ -382,10 +389,6 @@
   "PlnZLr": {
     "defaultMessage": "Events",
     "description": "Docs sidebar. Knex v.2.0 events"
-  },
-  "Q/M63P": {
-    "defaultMessage": "Api",
-    "description": "Breadcrumbs. Authentification api"
   },
   "QBwZKx": {
     "defaultMessage": "Knex",
@@ -798,6 +801,9 @@
   "u3j6c3": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",
     "description": "SectionPackages. Core. Content paragraph 1"
+  },
+  "uFwuK8": {
+    "defaultMessage": "You should use the desktop version to view the site"
   },
   "uLCR0p": {
     "defaultMessage": "Proident eiusmod consequat proident ipsum. Non labore ullamco tempor mollit mollit dolore ipsum exercitation occaecat reprehenderit. Proident eiusmod anim enim ea exercitation proident.",

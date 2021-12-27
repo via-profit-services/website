@@ -1,25 +1,15 @@
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Outlet } from 'react-router-dom';
 
-import Breadcrumbs, { Crumb } from '~/components/desktop/Breadcrumbs';
 import Meta from '~/components/both/Meta';
 import Header from '~/components/desktop/Header';
 import ContentArea from '~/components/desktop/ContentArea';
 import Footer from '~/components/desktop/Footer';
 import Sidebar from '~/components/desktop/Sidebar';
-import ScrollTopButton from '~/components/desktop/ScrollTopButton';
 import useSidebar from '~/routes/useSidebar';
-
-export type Props = {
-  metaTitle?: string;
-  metaDescription?: string;
-  breadCrumbs?: {
-    label: string;
-    link?: string;
-  }[];
-};
+import ScrollTopButton from '~/components/desktop/ScrollTopButton';
+import DeviceInformer from '~/components/desktop/DeviceInformer';
 
 const Wrapper = styled.div`
   flex: 1;
@@ -48,17 +38,12 @@ const Main = styled.main`
 
 const Article = styled.article``;
 
-const DocPageTemplate: React.FC<Props> = props => {
-  const { metaTitle, metaDescription, breadCrumbs } = props;
+const DocPageTemplateDesktop: React.FC = () => {
   const sidebarMap = useSidebar();
 
   return (
     <>
       <Meta />
-      <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-      </Helmet>
       <Header />
       <Wrapper>
         <Layout>
@@ -67,34 +52,16 @@ const DocPageTemplate: React.FC<Props> = props => {
           </Aside>
           <Main>
             <Article>
-              <section>
-                <nav>
-                  <Breadcrumbs>
-                    <Crumb home />
-                    <>
-                      {[...(breadCrumbs || [])].map(
-                        ({ label, link }, index) => (
-                          <Crumb
-                            key={index.toString()}
-                            position={index + 2}
-                            link={link}
-                            label={label}
-                          />
-                        ),
-                      )}
-                    </>
-                  </Breadcrumbs>
-                </nav>
-                <Outlet />
-              </section>
+              <Outlet />
             </Article>
           </Main>
         </Layout>
       </Wrapper>
       <Footer />
       <ScrollTopButton />
+      <DeviceInformer />
     </>
   );
 };
 
-export default DocPageTemplate;
+export default DocPageTemplateDesktop;

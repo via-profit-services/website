@@ -13,22 +13,23 @@ const Fallback = loadable(
   options,
 );
 const Intro = loadable(
-  () => import('~/pages/Docs/knex/v2.0/introduction'),
+  () => import('~/pages/Docs/authentification/v2.0/introduction'),
   options,
 );
-const Api = loadable(() => import('~/pages/Docs/knex/v2.0/api'), options);
+const Api = loadable(
+  () => import('~/pages/Docs/authentification/v2.0/api'),
+  options,
+);
 const GettingStarted = loadable(
-  () => import('~/pages/Docs/knex/v2.0/getting-started'),
+  () => import('~/pages/Docs/authentification/v2.0/getting-started'),
   options,
 );
-const Events = loadable(() => import('~/pages/Docs/knex/v2.0/events'), options);
 
 const Knexv2Router: React.FC = () => (
   <Routes>
     <Route path="/introduction" element={<Intro />} />
     <Route path="/getting-started" element={<GettingStarted />} />
     <Route path="/api" element={<Api />} />
-    <Route path="/events" element={<Events />} />
     <Route path="*" element={<Fallback />} />
   </Routes>
 );

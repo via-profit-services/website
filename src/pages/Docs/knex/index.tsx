@@ -12,26 +12,28 @@ const Fallback = loadable(
   },
 );
 
-const Ver2 = loadable(
-  () => import('~/pages/Docs/children/permissions/v2.0/index'),
-  {
-    fallback: <LoadingIndicator />,
-  },
-);
+const KnexVer1 = loadable(() => import('~/pages/Docs/knex/v1.1/index'), {
+  fallback: <LoadingIndicator />,
+});
+
+const KnexVer2 = loadable(() => import('~/pages/Docs/knex/v2.0/index'), {
+  fallback: <LoadingIndicator />,
+});
 
 type UrlParams = {
   version?: string;
 };
 
-const Permissions: React.FC = () => {
+const Knex: React.FC = () => {
   const { path } = useMatch<UrlParams>();
 
   return (
     <Switch>
-      <Route strict path={path} component={Ver2} />
+      <Route strict path={`${path}/versions/v1.1`} component={KnexVer1} />
+      <Route strict path={path} component={KnexVer2} />
       <Route component={Fallback} />
     </Switch>
   );
 };
 
-export default Permissions;
+export default Knex;

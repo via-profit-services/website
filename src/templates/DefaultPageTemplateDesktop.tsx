@@ -1,22 +1,19 @@
 import * as React from 'react';
+import { Outlet } from 'react-router-dom';
 
 import Header from '~/components/desktop/Header';
-import ContentArea from '~/components/desktop/ContentArea';
 import Footer from '~/components/desktop/Footer';
 import Meta from '~/components/both/Meta';
 import ScrollTopButton from '~/components/desktop/ScrollTopButton';
-import LegalRouter from '~/routes/LegalRouter';
 
-const LegalDesktop: React.FC = () => (
+const DefaultPageTemplateDesktop: React.FC = () => (
   <>
     <Meta />
     <Header />
-    <ContentArea>
-      <LegalRouter />
-    </ContentArea>
+    <Outlet />
     <Footer />
     <ScrollTopButton />
   </>
 );
 
-export default LegalDesktop;
+export default DefaultPageTemplateDesktop;

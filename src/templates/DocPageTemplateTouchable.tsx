@@ -1,11 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { Outlet } from 'react-router-dom';
 
 import Header from '~/components/touchable/Header';
 import Footer from '~/components/touchable/Footer';
+import DeviceInformer from '~/components/touchable/DeviceInformer';
 import NavbarButton from '~/components/touchable/NavbarDrawer/NavbarButton';
 import Meta from '~/components/both/Meta';
-import DocsRouter from '~/routes/DocsRouter';
 
 const Main = styled.main`
   padding: 0 ${props => props.theme.grid.touchable.gutter}px;
@@ -16,18 +17,19 @@ const Main = styled.main`
 
 const Article = styled.article``;
 
-const Docs: React.FC = () => (
+const DocPageTemplateTouchable: React.FC = () => (
   <>
     <Meta />
     <Header />
     <NavbarButton />
     <Main>
       <Article>
-        <DocsRouter />
+        <Outlet />
       </Article>
     </Main>
     <Footer />
+    <DeviceInformer />
   </>
 );
 
-export default Docs;
+export default DocPageTemplateTouchable;

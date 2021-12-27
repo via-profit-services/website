@@ -14,19 +14,16 @@ const pages = {
     options,
   ),
   GettingStarted: loadable(
-    () => import('~/pages/Docs/children/permissions/v2.0/getting-started'),
+    () => import('~/pages/Docs/permissions/v2.0/getting-started'),
     options,
   ),
-  Api: loadable(
-    () => import('~/pages/Docs/children/permissions/v2.0/api'),
-    options,
-  ),
+  Api: loadable(() => import('~/pages/Docs/permissions/v2.0/api'), options),
   Intro: loadable(
-    () => import('~/pages/Docs/children/permissions/v2.0/introduction'),
+    () => import('~/pages/Docs/permissions/v2.0/introduction'),
     options,
   ),
   Events: loadable(
-    () => import('~/pages/Docs/children/permissions/v2.0/events'),
+    () => import('~/pages/Docs/permissions/v2.0/events'),
     options,
   ),
 };

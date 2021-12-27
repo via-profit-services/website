@@ -12,26 +12,23 @@ const Fallback = loadable(
   },
 );
 
-const RedisVer2 = loadable(
-  () => import('~/pages/Docs/children/redis/v2.0/index'),
-  {
-    fallback: <LoadingIndicator />,
-  },
-);
+const Ver2 = loadable(() => import('~/pages/Docs/permissions/v2.0/index'), {
+  fallback: <LoadingIndicator />,
+});
 
 type UrlParams = {
   version?: string;
 };
 
-const Redis: React.FC = () => {
+const Permissions: React.FC = () => {
   const { path } = useMatch<UrlParams>();
 
   return (
     <Switch>
-      <Route strict path={path} component={RedisVer2} />
+      <Route strict path={path} component={Ver2} />
       <Route component={Fallback} />
     </Switch>
   );
 };
 
-export default Redis;
+export default Permissions;

@@ -1,18 +1,24 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-
-  body, html {
-    margin: 0;
-    padding: 0;
+  html {
+    height: 100%;
     font-weight: 400;
     font-family: system-ui;
     font-size: ${props => props.theme.fontSize}px;
+  }
+  body {
+    margin: 0;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: ${props => props.theme.color.text.primary};
     background-color: ${props => props.theme.color.background.primary};
     overflow-wrap: break-word;
     height: 100%;
+  }
+  @media all and (max-width: 380px) {
+    html {
+      font-size: ${props => props.theme.fontSize - 4}px;
+    }
   }
   * {
     box-sizing: border-box;

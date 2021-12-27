@@ -12,10 +12,7 @@ const Fallback = loadable(
   () => import('~/components/both/FallbackContent/index'),
   options,
 );
-const Index = loadable(
-  () => import('~/pages/Docs/children/knex/v1.1/index'),
-  options,
-);
+const Index = loadable(() => import('~/pages/Docs/knex/v1.1/index'), options);
 
 const Knexv1Router: React.FC = () => (
   <Routes>
